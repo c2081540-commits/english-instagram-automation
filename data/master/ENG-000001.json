@@ -1,0 +1,22 @@
+{
+  "content_id": "ENG-000001",
+  "category": "grammar",
+  "difficulty": "beginner",
+  "seasonal": false,
+  "question": "I have lived here ___ 2020.",
+  "choices": ["for", "since"],
+  "answer_type": "single",
+  "best_answer": "since",
+  "acceptable_answers": ["since"],
+  "explanation": "Use 'since' with the point in time when an action or state began.",
+  "key_difference": "'Since' marks a starting point; 'for' expresses a duration.",
+  "examples": ["I have studied English since 2020.", "I have studied English for six years."],
+  "tip": "Use since + starting point and for + length of time.",
+  "visual_required": true,
+  "visual_type": "text_quiz_carousel",
+  "visual_description": "A clean two-slide grammar quiz with a question slide and an answer slide.",
+  "instagram_caption": "I have lived here ___ 2020. A. for B. since — Answer: since. Use 'since' for a starting point.",
+  "threads_parent_text": "Quick grammar quiz: I have lived here ___ 2020. A. for B. since",
+  "threads_answer_text": "Answer: B. since. Use 'since' with a starting point; use 'for' with a duration.",
+  "publish_at": "2026-08-20T09:00:00+09:00"
+}
