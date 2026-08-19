@@ -8,18 +8,23 @@ from .renderer import BACKGROUND, CANVAS_SIZE, RenderError, TEXT, _font, _wrap
 from .validation import validate
 
 HEADINGS = {
-    "answer": "ANSWER",
-    "point": "POINT",
-    "meaning": "MEANING",
-    "example": "EXAMPLE",
-    "difference": "DIFFERENCE",
-    "also_natural": "ALSO NATURAL",
-    "tip": "TIP",
+    "answer": "答え",
+    "point": "ポイント",
+    "hint": "ヒント",
+    "meaning": "意味",
+    "example": "例文",
+    "difference": "使い分け",
+    "also_natural": "こんな言い方も",
+    "tip": "補足",
 }
+
+GENERIC_HINT = "答えを見る前に、もう一度考えてみよう。"
+FORBIDDEN_HINT_PHRASES = ("を選びます", "を表す語", "に使う前置詞")
 
 STYLES = {
     "answer": {"accent": "#26734D", "background": "#FFFFFF", "border": "#C8E4D4"},
     "point": {"accent": "#2B67A0", "background": "#FFFFFF", "border": "#CADCED"},
+    "hint": {"accent": "#2B67A0", "background": "#FFFFFF", "border": "#CADCED"},
     "meaning": {"accent": "#2B67A0", "background": "#FFFFFF", "border": "#CADCED"},
     "example": {"accent": "#5E6268", "background": "#FFFFFF", "border": "#D9D9D6"},
     "difference": {"accent": "#B96822", "background": "#FFFFFF", "border": "#EED2B8"},
@@ -48,17 +53,23 @@ def _example(content: dict) -> str:
 def _sections(content: dict) -> list[tuple[str, str]]:
     category = content.get("category")
     if category == "grammar":
-        sections = [("point", _required_text(content, "explanation")),
-                    ("example", _example(content))]
+        sections = [("answer", _answer_text(content)), ("example", _example(content))]
+        difference = content.get("key_difference")
+        if isinstance(difference, str) and difference.strip():
+            sections.append(("difference", difference.strip()))
     elif category == "vocabulary":
-        sections = [("meaning", _required_text(content, "explanation")),
+        sections = [("answer", _answer_text(content)),
+                    ("meaning", _required_text(content, "explanation")),
                     ("example", _example(content))]
         difference = content.get("key_difference")
         if isinstance(difference, str) and difference.strip():
             sections.append(("difference", difference.strip()))
     elif category == "situation":
-        sections = [("also_natural", _required_text(content, "also_natural")),
-                    ("point", _required_text(content, "explanation"))]
+        sections = [("answer", _answer_text(content)),
+                    ("also_natural", _required_text(content, "also_natural"))]
+        point = content.get("explanation")
+        if isinstance(point, str) and point.strip():
+            sections.append(("point", point.strip()))
     else:
         raise RenderError("Answer renderer category must be grammar, vocabulary, or situation")
 
@@ -66,6 +77,34 @@ def _sections(content: dict) -> list[tuple[str, str]]:
     if isinstance(tip, str) and tip.strip():
         sections.append(("tip", tip.strip()))
     return sections
+
+
+def _top_section(content: dict) -> tuple[str, str]:
+    kind = "hint"
+    approved = content.get("answer_hint_approved")
+    if not isinstance(approved, bool):
+        raise RenderError("answer_hint_approved must be boolean")
+    if not approved:
+        return kind, GENERIC_HINT
+    text = _required_text(content, "answer_hint")
+    answer = _required_text(content, "best_answer")
+    if answer.casefold() in text.casefold():
+        raise RenderError("answer_hint must not contain the best_answer")
+    if any(phrase in text for phrase in FORBIDDEN_HINT_PHRASES):
+        raise RenderError("answer_hint contains a prohibited answer-leading phrase")
+    return kind, text
+
+
+def _answer_text(content: dict) -> str:
+    answer = _required_text(content, "best_answer")
+    choices = content.get("choices")
+    try:
+        index = choices.index(answer)
+    except (AttributeError, ValueError):
+        raise RenderError("best_answer must exactly match a choice")
+    if index >= 26:
+        raise RenderError("Answer choice index exceeds supported labels")
+    return f"{chr(ord('A') + index)}. {answer}"
 
 
 def _wrap_paragraphs(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont,
@@ -96,7 +135,7 @@ def _draw_icon(draw: ImageDraw.ImageDraw, position: tuple[int, int], kind: str, 
         draw.rounded_rectangle((x, y, x + size, y + size), radius=size // 6, fill=color)
         draw.line((x + size * .22, y + size * .54, x + size * .42, y + size * .75,
                    x + size * .80, y + size * .25), fill="#FFFFFF", width=stroke, joint="curve")
-    elif kind in {"point", "meaning"}:
+    elif kind in {"point", "hint", "meaning"}:
         draw.ellipse((x + size * .23, y + size * .05, x + size * .77, y + size * .62), outline=color, width=stroke)
         draw.line((x + size * .38, y + size * .65, x + size * .62, y + size * .65), fill=color, width=stroke)
         draw.line((x + size * .41, y + size * .78, x + size * .59, y + size * .78), fill=color, width=stroke)
@@ -137,6 +176,63 @@ def _draw_section(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], kin
         y += font.size + spacing
 
 
+def _draw_answer_section(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str) -> None:
+    style = STYLES["answer"]
+    draw.rounded_rectangle(box, radius=24, fill=style["background"], outline=style["border"], width=3)
+    _draw_heading(draw, (box[0] + 34, box[1] + 24), "answer", 34)
+    from .renderer import _draw_centered_text
+    _draw_centered_text(draw, text, (box[0] + 34, box[1] + 82, box[2] - 34, box[3] - 28), 88, 54, 2)
+
+
+def _natural_height(draw: ImageDraw.ImageDraw, kind: str, text: str, is_top: bool = False) -> tuple[int, int]:
+    if is_top:
+        lines = _wrap_paragraphs(draw, text, _font(48), 888)
+        return max(190, min(250, 58 + len(lines) * 64)), 250
+    if kind == "answer":
+        return 260, 340
+    lines = _wrap_paragraphs(draw, text, _font(48), 884)
+    natural = 110 + len(lines) * 64
+    if kind == "example":
+        return max(240, min(340, natural)), 340
+    return max(180, min(280, natural)), 280
+
+
+def _layout(draw: ImageDraw.ImageDraw, top_text: str,
+            sections: list[tuple[str, str]]) -> tuple[int, int, list[tuple[int, int]]]:
+    available_top, available_bottom = 54, 1286
+    heights = [_natural_height(draw, "hint", top_text, is_top=True)[0]]
+    maximums = [_natural_height(draw, "hint", top_text, is_top=True)[1]]
+    for kind, text in sections:
+        height, maximum = _natural_height(draw, kind, text)
+        heights.append(height)
+        maximums.append(maximum)
+
+    gaps = [24] * (len(heights) - 1)
+    available = available_bottom - available_top - 64
+    extra = available - sum(heights) - sum(gaps)
+    if extra < 0:
+        raise RenderError("Answer sections exceed the available canvas height")
+
+    for index in range(len(gaps)):
+        growth = min(40, extra // (len(gaps) - index))
+        gaps[index] += growth
+        extra -= growth
+    for index in range(len(heights)):
+        growth = min(maximums[index] - heights[index], extra // (len(heights) - index))
+        heights[index] += growth
+        extra -= growth
+
+    heading_y = available_top + extra // 2
+    top_box_y = heading_y + 64
+    boxes: list[tuple[int, int]] = [(top_box_y, top_box_y + heights[0])]
+    y = boxes[0][1]
+    for index, height in enumerate(heights[1:]):
+        y += gaps[index]
+        boxes.append((y, y + height))
+        y += height
+    return heading_y, top_box_y, boxes
+
+
 def render_answer(master_path: Path) -> Path:
     source_json = require_file(master_path)
     try:
@@ -146,27 +242,27 @@ def render_answer(master_path: Path) -> Path:
     if not isinstance(content, dict):
         raise RenderError("Master JSON root must be an object")
     validate(content)
+    top_kind, top_text = _top_section(content)
     sections = _sections(content)
-    if len(sections) > 3:
-        raise RenderError("Answer template supports at most three detail sections")
+    if len(sections) > 4:
+        raise RenderError("Answer template supports at most four detail sections")
 
     canvas = Image.new("RGB", CANVAS_SIZE, BACKGROUND)
     draw = ImageDraw.Draw(canvas)
-    _draw_heading(draw, (64, 54), "answer", 40)
+    heading_y, _, boxes = _layout(draw, top_text, sections)
+    _draw_heading(draw, (64, heading_y), top_kind, 40)
 
-    answer_box = (64, 118, 1016, 326)
-    answer_style = STYLES["answer"]
-    draw.rounded_rectangle(answer_box, radius=28, fill=answer_style["background"], outline=answer_style["border"], width=3)
-    answer = _required_text(content, "best_answer")
+    answer_box = (64, boxes[0][0], 1016, boxes[0][1])
+    top_style = STYLES[top_kind]
+    draw.rounded_rectangle(answer_box, radius=28, fill=top_style["background"], outline=top_style["border"], width=3)
     from .renderer import _draw_centered_text
-    _draw_centered_text(draw, answer, (96, 144, 984, 300), 88, 54, 2)
+    _draw_centered_text(draw, top_text, (96, boxes[0][0] + 26, 984, boxes[0][1] - 26), 48, 32, 3)
 
-    top, bottom, gap = 370, 1286, 24
-    section_height = (bottom - top - gap * (len(sections) - 1)) // len(sections)
-    for index, (kind, text) in enumerate(sections):
-        y1 = top + index * (section_height + gap)
-        y2 = bottom if index == len(sections) - 1 else y1 + section_height
-        _draw_section(draw, (64, y1, 1016, y2), kind, text)
+    for (kind, text), (y1, y2) in zip(sections, boxes[1:]):
+        if kind == "answer":
+            _draw_answer_section(draw, (64, y1, 1016, y2), text)
+        else:
+            _draw_section(draw, (64, y1, 1016, y2), kind, text)
 
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
     output = IMAGE_DIR / f"{content['content_id']}-answer.png"

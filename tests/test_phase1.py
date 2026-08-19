@@ -75,7 +75,7 @@ class Phase1Tests(unittest.TestCase):
 
     def test_oversized_answer_section_fails_closed(self):
         content = json.loads((MASTER_DIR / "ENG-000003.json").read_text())
-        content["explanation"] = "長すぎる説明です。" * 500
+        content["answer_hint"] = "長すぎるヒントです。" * 500
         temporary = MASTER_DIR / "ENG-999999.json"
         temporary.write_text(json.dumps(content, ensure_ascii=False), encoding="utf-8")
         try:
@@ -86,6 +86,41 @@ class Phase1Tests(unittest.TestCase):
 
     def test_answer_box_backgrounds_are_white(self):
         self.assertTrue(all(style["background"] == "#FFFFFF" for style in STYLES.values()))
+
+    def test_answer_hint_cannot_reveal_best_answer(self):
+        content = json.loads((MASTER_DIR / "ENG-000003.json").read_text())
+        content["answer_hint"] = "The answer is for."
+        temporary = MASTER_DIR / "ENG-999999.json"
+        temporary.write_text(json.dumps(content, ensure_ascii=False), encoding="utf-8")
+        try:
+            with self.assertRaises(RenderError):
+                render_answer(temporary)
+        finally:
+            temporary.unlink()
+
+    def test_unapproved_answer_hint_uses_generic_fallback(self):
+        from instagram_automation.answer_renderer import GENERIC_HINT, _top_section
+        content = json.loads((MASTER_DIR / "ENG-000003.json").read_text())
+        content["answer_hint_approved"] = False
+        content["answer_hint"] = ""
+        self.assertEqual(_top_section(content), ("hint", GENERIC_HINT))
+
+    def test_answer_hint_rejects_leading_phrases(self):
+        from instagram_automation.answer_renderer import _top_section
+        content = json.loads((MASTER_DIR / "ENG-000003.json").read_text())
+        content["answer_hint"] = "期間に使う前置詞を選びます。"
+        with self.assertRaises(RenderError):
+            _top_section(content)
+
+    def test_answer_labels_and_choice_prefix(self):
+        from instagram_automation.answer_renderer import HEADINGS, _answer_text
+        self.assertEqual(
+            {key: HEADINGS[key] for key in ("hint", "point", "answer", "meaning", "example", "difference", "also_natural")},
+            {"hint": "ヒント", "point": "ポイント", "answer": "答え", "meaning": "意味",
+             "example": "例文", "difference": "使い分け", "also_natural": "こんな言い方も"},
+        )
+        content = json.loads((MASTER_DIR / "ENG-000003.json").read_text())
+        self.assertEqual(_answer_text(content), "B. for")
 
 
 if __name__ == "__main__":

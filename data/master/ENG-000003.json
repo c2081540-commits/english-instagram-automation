@@ -7,6 +7,8 @@
   "choices": ["since", "for", "from", "during"],
   "answer_type": "single",
   "best_answer": "for",
+  "answer_hint": "「five years」は、いつ始まったか？ それともどのくらい続いているか？",
+  "answer_hint_approved": true,
   "acceptable_answers": ["for"],
   "explanation": "forは期間、sinceは開始時点を表します。",
   "key_difference": null,
