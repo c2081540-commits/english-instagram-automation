@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "review_policy": {
+    "single_pass": true,
+    "on_reject": "discard",
+    "allow_repair": false,
+    "response": {
+      "status": "PASS or REJECT",
+      "reason": "null or concise rejection reason"
+    }
+  },
+  "review_checks": {
+    "english": [
+      "natural and grammatical question",
+      "specified answer is valid and unambiguous",
+      "examples are natural",
+      "answer and explanation do not conflict"
+    ],
+    "japanese": [
+      "natural concise Japanese for adult learners",
+      "hint does not reveal the answer",
+      "hint and explanation are not repetitive",
+      "no translation-manual tone"
+    ],
+    "image": [
+      "source image matches the question",
+      "required subject, state, or action is visible",
+      "no contradiction, obvious generation failure, or unwanted text"
+    ]
+  },
+  "items": [
+    {
+      "content_id": "ENG-000002",
+      "review_scope": {
+        "english": true,
+        "japanese": true,
+        "image": true
+      },
+      "english": {
+        "question": "The ice cream is ___.",
+        "choices": [
+          "melting",
+          "freezing",
+          "boiling",
+          "drying"
+        ],
+        "answer_type": "single",
+        "best_answer": "melting",
+        "acceptable_answers": [
+          "melting"
+        ],
+        "examples": [
+          "The ice cream is melting."
+        ]
+      },
+      "japanese": {
+        "explanation": "melt ＝ 溶ける",
+        "answer_hint": "写真のアイスに、今どんな変化が起きている？",
+        "answer_hint_approved": true,
+        "example_translations": [
+          "アイスクリームが溶けています。"
+        ],
+        "key_difference": "freeze ＝ 凍る",
+        "also_natural": null,
+        "tip": null
+      },
+      "image": {
+        "source_image_path": "assets/source/ice-cream-placeholder.png",
+        "visual_description": "An ice cream cone beginning to melt."
+      },
+      "platforms": {
+        "instagram": {
+          "content_id": "ENG-000002",
+          "best_answer": "melting"
+        },
+        "threads": {
+          "content_id": "ENG-000002",
+          "best_answer": "melting"
+        }
+      }
+    },
+    {
+      "content_id": "ENG-000003",
+      "review_scope": {
+        "english": true,
+        "japanese": true,
+        "image": false
+      },
+      "english": {
+        "question": "I've lived here ___ five years.",
+        "choices": [
+          "since",
+          "for",
+          "from",
+          "during"
+        ],
+        "answer_type": "single",
+        "best_answer": "for",
+        "acceptable_answers": [
+          "for"
+        ],
+        "examples": [
+          "I've lived here for five years."
+        ]
+      },
+      "japanese": {
+        "explanation": "forは期間、sinceは開始時点を表します。",
+        "answer_hint": "「five years」は、いつ始まったか？ それともどのくらい続いているか？",
+        "answer_hint_approved": true,
+        "example_translations": [
+          "私はここに5年間住んでいます。"
+        ],
+        "key_difference": null,
+        "also_natural": null,
+        "tip": null
+      },
+      "image": null,
+      "platforms": {
+        "instagram": {
+          "content_id": "ENG-000003",
+          "best_answer": "for"
+        },
+        "threads": {
+          "content_id": "ENG-000003",
+          "best_answer": "for"
+        }
+      }
+    },
+    {
+      "content_id": "ENG-000005",
+      "review_scope": {
+        "english": true,
+        "japanese": true,
+        "image": false
+      },
+      "english": {
+        "question": "Could you take a picture of us?",
+        "choices": [
+          "Of course!",
+          "I don't know."
+        ],
+        "answer_type": "best",
+        "best_answer": "Of course!",
+        "acceptable_answers": [
+          "Of course!"
+        ],
+        "examples": []
+      },
+      "japanese": {
+        "explanation": "頼まれたときは、短い返答で自然に伝わります。",
+        "answer_hint": "長い英文は必要ありません。短く自然に返すなら？",
+        "answer_hint_approved": true,
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "Sure!\nNo problem!",
+        "tip": null
+      },
+      "image": null,
+      "platforms": {
+        "instagram": {
+          "content_id": "ENG-000005",
+          "best_answer": "Of course!"
+        },
+        "threads": {
+          "content_id": "ENG-000005",
+          "best_answer": "Of course!"
+        }
+      }
+    }
+  ]
+}

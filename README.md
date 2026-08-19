@@ -22,6 +22,7 @@ python3 /absolute/path/to/english-instagram-automation/scripts/build_queue.py EN
 python3 /absolute/path/to/english-instagram-automation/scripts/dry_run.py ENG-000001
 python3 /absolute/path/to/english-instagram-automation/scripts/render_question.py ENG-000002
 python3 /absolute/path/to/english-instagram-automation/scripts/render_answer.py ENG-000003
+python3 /absolute/path/to/english-instagram-automation/scripts/prepare_review.py ENG-000002 ENG-000003 ENG-000005
 python3 -m unittest discover -s /absolute/path/to/english-instagram-automation/tests -v
 ```
 
@@ -36,6 +37,20 @@ Set `problem_image_path` to a repository-relative file directly inside `assets/s
 ## Answer image renderer
 
 The answer renderer creates `1080 × 1350` PNG files at the fixed path `artifacts/images/<content_id>-answer.png`. Japanese-only UI labels and section order are fixed for `grammar`, `vocabulary`, and `situation`. The top section is a non-revealing `ヒント`; the next box shows the computed choice letter and exact answer, followed by category-specific `意味`, `例文`, `使い分け`, `こんな言い方も`, or `ポイント`. Set `answer_hint_approved` to `true` only for a reviewed hint. When it is `false`, the renderer uses the fixed generic cushion instead; approved hints containing `best_answer` or prohibited answer-leading phrases are rejected. Box heights are measured from content and constrained by section-specific minimums and maximums, with remaining space assigned to gaps and overall balance. English and Japanese text use Noto Sans JP. Stable colored heading icons are drawn directly with Pillow. Fixed accents are green for `答え`, blue for `ヒント`/`ポイント`/`意味`, neutral gray for `例文`, orange for `使い分け`, and purple for `こんな言い方も`. Every box has a white `#FFFFFF` background; color is limited to headings, icons, and borders. Missing required data, unsupported categories, oversized text, and overflowing sections stop rendering without fallback.
+
+## Low-cost review preparation
+
+`prepare_review.py` performs free machine checks before any Codex review: required master fields, content ID and answer validity, field length limits, fixed source-image presence for visual questions, rendered question/answer image presence and PNG/RGB/1080×1350 properties, and Instagram/Threads content ID and answer consistency. Machine failures are saved immediately as compact REJECT results and are not added to a review payload.
+
+Passing items are batched into one JSON payload under `data/review/payloads/`. Each item contains its English, Japanese, and—only when `visual_required` is true—source-image review data. The payload explicitly requires one review pass and `REJECT → discard`, with no repair or re-review loop. It excludes Pillow-composed post images because their fixed template is covered by machine checks.
+
+Future Codex automation should return one compact decision per item. Place its batch decision file directly under `data/review/decisions/`, then apply it with:
+
+```bash
+python3 /absolute/path/to/english-instagram-automation/scripts/apply_review_results.py review-batch DECISION_NAME
+```
+
+Final results are stored as `data/review/results/<content_id>.json` with only `content_id`, `status`, and `reason`. A REJECT reason is mandatory and limited to 160 characters. No correction path exists.
 
 All paths are derived from each script/module's resolved `__file__`. Inputs are accepted only from this repository's `data/master`; missing or invalid data stops processing without fallback or automatic correction.
 
