@@ -8,7 +8,7 @@ Validated master English-learning content is converted into a pending Instagram 
 - `data/queue/`: generated Instagram queue JSON
 - `artifacts/images/`: fixed output location for rendered question images
 - `assets/source/`: problem-specific source images (no directory fallback)
-- `assets/fonts/`: repository-pinned Noto Sans JP/Noto Emoji fonts and OFL license
+- `assets/fonts/`: repository-pinned Noto Sans JP font and OFL license
 - `src/instagram_automation/`: validation, paths, and queue builder
 - `scripts/`: queue generation and dry-run commands
 - `tests/`: standard-library unit tests
@@ -35,7 +35,7 @@ Set `problem_image_path` to a repository-relative file directly inside `assets/s
 
 ## Answer image renderer
 
-The answer renderer creates `1080 × 1350` PNG files at the fixed path `artifacts/images/<content_id>-answer.png`. Its headings, emoji mapping, section order, and layout are fixed for `grammar`, `vocabulary`, and `situation`; unused optional sections receive no reserved space. English and Japanese text use Noto Sans JP, while fixed heading emoji use the repository-pinned Noto Emoji font. English examples use the first `examples` item and require a matching Japanese entry in `example_translations`. Situation content requires `also_natural`. Oversized text, unsupported categories, and missing required section data stop rendering without fallback.
+The answer renderer creates `1080 × 1350` PNG files at the fixed path `artifacts/images/<content_id>-answer.png`. Its headings, icon mapping, section order, and layout are fixed for `grammar`, `vocabulary`, and `situation`; unused optional sections receive no reserved space. English and Japanese text use Noto Sans JP. Stable colored heading icons are drawn directly with Pillow. Fixed accents are green for ANSWER, blue for POINT/MEANING, neutral gray for EXAMPLE, orange for DIFFERENCE, and purple for ALSO NATURAL. Every box has a white `#FFFFFF` background; color is limited to headings, icons, and borders. English examples use the first `examples` item and require a matching Japanese entry in `example_translations`. Situation content requires `also_natural`. Oversized text, unsupported categories, and missing required section data stop rendering without fallback.
 
 All paths are derived from each script/module's resolved `__file__`. Inputs are accepted only from this repository's `data/master`; missing or invalid data stops processing without fallback or automatic correction.
 

@@ -8,7 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from instagram_automation.paths import MASTER_DIR  # noqa: E402
-from instagram_automation.answer_renderer import render_answer  # noqa: E402
+from instagram_automation.answer_renderer import STYLES, render_answer  # noqa: E402
 from instagram_automation.queue import build_queue  # noqa: E402
 from instagram_automation.renderer import CANVAS_SIZE, RenderError, render_question  # noqa: E402
 from instagram_automation.validation import ValidationError, validate  # noqa: E402
@@ -83,6 +83,9 @@ class Phase1Tests(unittest.TestCase):
                 render_answer(temporary)
         finally:
             temporary.unlink()
+
+    def test_answer_box_backgrounds_are_white(self):
+        self.assertTrue(all(style["background"] == "#FFFFFF" for style in STYLES.values()))
 
 
 if __name__ == "__main__":

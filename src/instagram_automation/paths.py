@@ -6,7 +6,6 @@ QUEUE_DIR = REPO_ROOT / "data" / "queue"
 IMAGE_DIR = REPO_ROOT / "artifacts" / "images"
 SOURCE_IMAGE_DIR = REPO_ROOT / "assets" / "source"
 FONT_PATH = REPO_ROOT / "assets" / "fonts" / "NotoSansJP-VariableFont_wght.ttf"
-EMOJI_FONT_PATH = REPO_ROOT / "assets" / "fonts" / "NotoEmoji-VariableFont_wght.ttf"
 
 
 def require_file(path: Path) -> Path:
