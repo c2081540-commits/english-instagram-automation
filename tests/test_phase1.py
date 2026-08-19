@@ -9,6 +9,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from instagram_automation.paths import MASTER_DIR  # noqa: E402
 from instagram_automation.queue import build_queue  # noqa: E402
+from instagram_automation.renderer import CANVAS_SIZE, RenderError, render_question  # noqa: E402
 from instagram_automation.validation import ValidationError, validate  # noqa: E402
 
 
@@ -37,6 +38,30 @@ class Phase1Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaises(ValueError):
                 build_queue(Path(directory) / "ENG-000001.json")
+
+    def test_three_question_layouts_render_as_png(self):
+        for content_id in ("ENG-000002", "ENG-000003", "ENG-000004"):
+            with self.subTest(content_id=content_id):
+                output = render_question(MASTER_DIR / f"{content_id}.json")
+                from PIL import Image
+                with Image.open(output) as rendered:
+                    self.assertEqual(rendered.size, CANVAS_SIZE)
+                    self.assertEqual(rendered.format, "PNG")
+
+    def test_oversized_question_fails_closed(self):
+        content = dict(self.content)
+        content["question"] = "word " * 1000
+        content["visual_required"] = False
+        content["choices"] = ["yes", "no"]
+        content["best_answer"] = "yes"
+        content["acceptable_answers"] = ["yes"]
+        temporary = MASTER_DIR / "ENG-999999.json"
+        temporary.write_text(json.dumps(content), encoding="utf-8")
+        try:
+            with self.assertRaises(RenderError):
+                render_question(temporary)
+        finally:
+            temporary.unlink()
 
 
 if __name__ == "__main__":

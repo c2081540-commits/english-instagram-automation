@@ -1,0 +1,23 @@
+{
+  "content_id": "ENG-000003",
+  "category": "grammar",
+  "difficulty": "beginner",
+  "seasonal": false,
+  "question": "I've lived here ___ five years.",
+  "choices": ["since", "for", "from", "during"],
+  "answer_type": "single",
+  "best_answer": "for",
+  "acceptable_answers": ["for"],
+  "explanation": "Use 'for' with a duration.",
+  "key_difference": "Use 'since' with a starting point.",
+  "examples": ["I've lived here for five years."],
+  "tip": "For + duration.",
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "instagram_caption": "I've lived here ___ five years. A. since B. for C. from D. during",
+  "threads_parent_text": "I've lived here ___ five years. A. since B. for C. from D. during",
+  "threads_answer_text": "Answer: B. for.",
+  "publish_at": "2026-08-22T09:00:00+09:00"
+}

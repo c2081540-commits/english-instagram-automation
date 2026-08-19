@@ -1,0 +1,23 @@
+{
+  "content_id": "ENG-000002",
+  "category": "vocabulary",
+  "difficulty": "beginner",
+  "seasonal": false,
+  "question": "The ice cream is ___.",
+  "choices": ["melting", "freezing", "boiling", "drying"],
+  "answer_type": "single",
+  "best_answer": "melting",
+  "acceptable_answers": ["melting"],
+  "explanation": "Melting means changing from a solid into a liquid because of heat.",
+  "key_difference": "Freezing is the opposite change: liquid to solid.",
+  "examples": ["The ice is melting in the sun."],
+  "tip": "Look for the change caused by warmth.",
+  "visual_required": true,
+  "visual_type": "photo",
+  "visual_description": "An ice cream cone beginning to melt.",
+  "problem_image_path": "assets/source/ice-cream-placeholder.png",
+  "instagram_caption": "The ice cream is ___. A. melting B. freezing C. boiling D. drying",
+  "threads_parent_text": "The ice cream is ___. A. melting B. freezing C. boiling D. drying",
+  "threads_answer_text": "Answer: A. melting.",
+  "publish_at": "2026-08-21T09:00:00+09:00"
+}
