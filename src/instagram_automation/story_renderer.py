@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 import re
 from datetime import datetime
@@ -5,7 +7,8 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from .paths import NORMAL_MASTER_DIR, STORY_IMAGE_DIR, THREADS_NORMAL_MASTER_DIR
+from .paths import (NORMAL_MASTER_DIR, STORY_CHARACTER_PATH, STORY_IMAGE_DIR,
+                    THREADS_NORMAL_MASTER_DIR)
 from .renderer import RenderError, _font, _wrap
 
 CANVAS_SIZE = (1080, 1920)
@@ -18,6 +21,9 @@ MARKER_YELLOW = "#F6E58D"
 CONTENT_ID = re.compile(r"^ENG-\d{6}$")
 REQUIRED = {"content_id", "content_type", "theme", "threads_text",
             "story_headline", "story_body", "publish_at"}
+CHARACTER_HEIGHT = 350
+CHARACTER_RIGHT = 1000
+CHARACTER_BOTTOM = 1780
 
 
 def _read_direct(path: Path, expected_dir: Path, label: str) -> dict:
@@ -104,6 +110,34 @@ def _fit_body(draw: ImageDraw.ImageDraw, text: str) -> tuple[ImageFont.FreeTypeF
     raise RenderError("story_body exceeds layout limits")
 
 
+def character_placement(source_size: tuple[int, int]) -> tuple[int, int, int, int]:
+    width, height = source_size
+    if width <= 0 or height <= 0:
+        raise RenderError("character image has invalid dimensions")
+    display_height = CHARACTER_HEIGHT
+    display_width = round(width * display_height / height)
+    if display_width > 400:
+        display_width = 400
+        display_height = round(height * display_width / width)
+    left = CHARACTER_RIGHT - display_width
+    top = CHARACTER_BOTTOM - display_height
+    return left, top, display_width, display_height
+
+
+def load_character(path: Path = STORY_CHARACTER_PATH) -> tuple[Image.Image, tuple[int, int, int, int]] | None:
+    if not path.exists():
+        return None
+    if not path.is_file():
+        raise RenderError(f"character path is not a file: {path}")
+    try:
+        with Image.open(path) as source:
+            placement = character_placement(source.size)
+            resized = source.convert("RGB").resize((placement[2], placement[3]), Image.Resampling.LANCZOS)
+    except OSError as exc:
+        raise RenderError(f"character image is unreadable: {path}") from exc
+    return resized, placement
+
+
 def render_story(master_path: Path) -> Path:
     content = load_story_master(master_path)
     canvas = Image.new("RGB", CANVAS_SIZE, BACKGROUND)
@@ -137,6 +171,11 @@ def render_story(master_path: Path) -> Path:
         else:
             draw.text((130, y), line, font=body_font, fill=TEXT)
         y += body_font.size + 18
+
+    character = load_character()
+    if character is not None:
+        character_image, placement = character
+        canvas.paste(character_image, (placement[0], placement[1]))
 
     draw.text((92, 1742), "@eigo_yarinaoshi", font=_font(30), fill=BLUE)
 

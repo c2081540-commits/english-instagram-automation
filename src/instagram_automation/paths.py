@@ -15,6 +15,7 @@ REVIEW_RESULT_DIR = REVIEW_DIR / "results"
 STORY_IMAGE_DIR = REPO_ROOT / "artifacts" / "stories"
 THREADS_REPO_ROOT = WORKSPACE_ROOT / "english-threads-automation"
 THREADS_NORMAL_MASTER_DIR = THREADS_REPO_ROOT / "data" / "master" / "normal"
+STORY_CHARACTER_PATH = REPO_ROOT / "assets" / "character" / "story-guide.png"
 
 
 def require_file(path: Path) -> Path:

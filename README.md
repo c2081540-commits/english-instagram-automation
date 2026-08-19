@@ -10,6 +10,7 @@ Validated master English-learning content is converted into a pending Instagram 
 - `artifacts/stories/`: fixed output location for rendered Stories images
 - `assets/source/`: problem-specific source images (no directory fallback)
 - `assets/fonts/`: repository-pinned Noto Sans JP font and OFL license
+- `assets/character/story-guide.png`: optional fixed Stories guide character
 - `src/instagram_automation/`: validation, paths, and queue builder
 - `scripts/`: queue generation and dry-run commands
 - `tests/`: standard-library unit tests
@@ -56,7 +57,7 @@ Final results are stored as `data/review/results/<content_id>.json` with only `c
 
 ## Stories renderer
 
-The Stories renderer converts the same normal master used by Threads into a fixed `1080 × 1920` RGB PNG. It uses Pillow and the repository-pinned Noto Sans JP font to draw an off-white outer background, white-board panel, blue accents, one restrained yellow marker line, the fixed label `オトナの英語やり直し`, `story_headline`, mechanically wrapped `story_body`, and the footer `@eigo_yarinaoshi`. It does not use photos, AI image generation, gradients, CTA, or ads.
+The Stories renderer converts the same normal master used by Threads into a fixed `1080 × 1920` RGB PNG. It uses Pillow and the repository-pinned Noto Sans JP font to draw an off-white outer background, white-board panel, blue accents, one restrained yellow marker line, the fixed label `オトナの英語やり直し`, `story_headline`, mechanically wrapped `story_body`, and the footer `@eigo_yarinaoshi`. When `assets/character/story-guide.png` exists, the same fixed character is resized with its aspect ratio preserved and placed at the lower right; when absent, the text-only template still renders. It does not regenerate characters, use AI image generation, gradients, CTA, or ads.
 
 Normal masters are placed directly under `data/master/normal/`. Every required field must exactly match the fixed sibling source at `english-threads-automation/data/master/normal/`; otherwise rendering stops. Headline and body have hard character and layout limits, and the renderer fails closed instead of shrinking below the minimum font size.
 
