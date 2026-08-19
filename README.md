@@ -7,6 +7,7 @@ Validated master English-learning content is converted into a pending Instagram 
 - `data/master/`: canonical content JSON input
 - `data/queue/`: generated Instagram queue JSON
 - `artifacts/images/`: fixed output location for rendered question images
+- `artifacts/stories/`: fixed output location for rendered Stories images
 - `assets/source/`: problem-specific source images (no directory fallback)
 - `assets/fonts/`: repository-pinned Noto Sans JP font and OFL license
 - `src/instagram_automation/`: validation, paths, and queue builder
@@ -22,6 +23,7 @@ python3 /absolute/path/to/english-instagram-automation/scripts/build_queue.py EN
 python3 /absolute/path/to/english-instagram-automation/scripts/dry_run.py ENG-000001
 python3 /absolute/path/to/english-instagram-automation/scripts/render_question.py ENG-000002
 python3 /absolute/path/to/english-instagram-automation/scripts/render_answer.py ENG-000003
+python3 /absolute/path/to/english-instagram-automation/scripts/render_story.py ENG-100001
 python3 /absolute/path/to/english-instagram-automation/scripts/prepare_review.py ENG-000002 ENG-000003 ENG-000005
 python3 -m unittest discover -s /absolute/path/to/english-instagram-automation/tests -v
 ```
@@ -51,6 +53,12 @@ python3 /absolute/path/to/english-instagram-automation/scripts/apply_review_resu
 ```
 
 Final results are stored as `data/review/results/<content_id>.json` with only `content_id`, `status`, and `reason`. A REJECT reason is mandatory and limited to 160 characters. No correction path exists.
+
+## Stories renderer
+
+The Stories renderer converts the same normal master used by Threads into a fixed `1080 × 1920` RGB PNG. It uses Pillow and the repository-pinned Noto Sans JP font to draw an off-white outer background, white-board panel, blue accents, one restrained yellow marker line, the fixed label `オトナの英語やり直し`, `story_headline`, mechanically wrapped `story_body`, and the footer `@eigo_yarinaoshi`. It does not use photos, AI image generation, gradients, CTA, or ads.
+
+Normal masters are placed directly under `data/master/normal/`. Every required field must exactly match the fixed sibling source at `english-threads-automation/data/master/normal/`; otherwise rendering stops. Headline and body have hard character and layout limits, and the renderer fails closed instead of shrinking below the minimum font size.
 
 All paths are derived from each script/module's resolved `__file__`. Inputs are accepted only from this repository's `data/master`; missing or invalid data stops processing without fallback or automatic correction.
 
