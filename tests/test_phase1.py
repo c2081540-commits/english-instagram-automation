@@ -8,6 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from instagram_automation.paths import MASTER_DIR  # noqa: E402
+from instagram_automation.answer_renderer import render_answer  # noqa: E402
 from instagram_automation.queue import build_queue  # noqa: E402
 from instagram_automation.renderer import CANVAS_SIZE, RenderError, render_question  # noqa: E402
 from instagram_automation.validation import ValidationError, validate  # noqa: E402
@@ -60,6 +61,26 @@ class Phase1Tests(unittest.TestCase):
         try:
             with self.assertRaises(RenderError):
                 render_question(temporary)
+        finally:
+            temporary.unlink()
+
+    def test_three_answer_templates_render_as_png(self):
+        for content_id in ("ENG-000003", "ENG-000002", "ENG-000005"):
+            with self.subTest(content_id=content_id):
+                output = render_answer(MASTER_DIR / f"{content_id}.json")
+                from PIL import Image
+                with Image.open(output) as rendered:
+                    self.assertEqual(rendered.size, CANVAS_SIZE)
+                    self.assertEqual(rendered.format, "PNG")
+
+    def test_oversized_answer_section_fails_closed(self):
+        content = json.loads((MASTER_DIR / "ENG-000003.json").read_text())
+        content["explanation"] = "長すぎる説明です。" * 500
+        temporary = MASTER_DIR / "ENG-999999.json"
+        temporary.write_text(json.dumps(content, ensure_ascii=False), encoding="utf-8")
+        try:
+            with self.assertRaises(RenderError):
+                render_answer(temporary)
         finally:
             temporary.unlink()
 
