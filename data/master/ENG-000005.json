@@ -4,12 +4,17 @@
   "difficulty": "beginner",
   "seasonal": false,
   "question": "Could you take a picture of us?",
-  "choices": ["Of course!", "I don't know."],
+  "choices": [
+    "Of course!",
+    "I don't know."
+  ],
   "answer_type": "best",
   "best_answer": "Of course!",
   "answer_hint": "長い英文は必要ありません。短く自然に返すなら？",
   "answer_hint_approved": true,
-  "acceptable_answers": ["Of course!"],
+  "acceptable_answers": [
+    "Of course!"
+  ],
   "explanation": "頼まれたときは、短い返答で自然に伝わります。",
   "key_difference": null,
   "examples": [],
@@ -23,5 +28,7 @@
   "instagram_caption": "Could you take a picture of us? — Of course!",
   "threads_parent_text": "Could you take a picture of us?",
   "threads_answer_text": "Of course! You can also say: Sure! / No problem!",
-  "publish_at": "2026-08-24T09:00:00+09:00"
+  "publish_at": "2026-08-24T09:00:00+09:00",
+  "question_guide_ja": "こう頼まれたら、どう返す？",
+  "question_role": "learning_sentence"
 }

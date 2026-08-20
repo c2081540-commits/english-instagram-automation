@@ -25,8 +25,10 @@ def build_queue(master_path: Path, execution_eligibility: str = "scheduled") -> 
         "status": "pending",
         "execution_eligibility": execution_eligibility,
         "carousel": [
-            {"order": 1, "role": "question", "image_path": str(IMAGE_DIR / f"{content_id}-question.png")},
-            {"order": 2, "role": "answer", "image_path": str(IMAGE_DIR / f"{content_id}-answer.png")},
+            {"order": 1, "role": "question", "image_path":
+             (IMAGE_DIR / f"{content_id}-question.png").relative_to(REPO_ROOT).as_posix()},
+            {"order": 2, "role": "answer", "image_path":
+             (IMAGE_DIR / f"{content_id}-answer.png").relative_to(REPO_ROOT).as_posix()},
         ],
         "caption": content["instagram_caption"],
     }

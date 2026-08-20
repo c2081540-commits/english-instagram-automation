@@ -18,6 +18,39 @@ RECEIPT_DIR = REPO_ROOT / "data" / "receipts"
 MASTER_DIR = REPO_ROOT / "data" / "master"
 
 
+def validate_queue_for_post(queue: dict) -> None:
+    if not isinstance(queue, dict):
+        raise PostingError("MALFORMED_QUEUE", "Queue root must be an object")
+    if queue.get("platform") != "instagram":
+        raise PostingError("MALFORMED_QUEUE", "Queue platform must be instagram")
+    if queue.get("content_type") not in {"quiz", "normal"}:
+        raise PostingError("MALFORMED_QUEUE", "Unsupported Instagram content_type")
+    try:
+        publish_at = datetime.fromisoformat(queue["publish_at"])
+    except (KeyError, TypeError, ValueError) as exc:
+        raise PostingError("MALFORMED_QUEUE", "publish_at must be ISO 8601") from exc
+    if publish_at.tzinfo is None:
+        raise PostingError("MALFORMED_QUEUE", "publish_at must include timezone")
+    if queue.get("status") == "pending" and queue.get("remote_post_id"):
+        raise PostingError("DUPLICATE_PREVENTED", "Pending queue already has a remote_post_id")
+    if queue["content_type"] == "quiz":
+        carousel = queue.get("carousel")
+        roles = [(item.get("order"), item.get("role")) for item in carousel or []
+                 if isinstance(item, dict)]
+        if roles != [(1, "question"), (2, "answer")] or not all(
+                isinstance(item.get("image_path"), str) and item["image_path"] for item in carousel or []):
+            raise PostingError("MALFORMED_QUEUE", "Quiz carousel must be question then answer")
+        if not isinstance(queue.get("caption"), str) or not queue["caption"].strip():
+            raise PostingError("MALFORMED_QUEUE", "Quiz caption is required")
+        expected = [f"{queue.get('content_id')}-question.png", f"{queue.get('content_id')}-answer.png"]
+        if [Path(item["image_path"]).name for item in carousel] != expected:
+            raise PostingError("MALFORMED_QUEUE", "Carousel assets do not match content_id")
+    elif not isinstance(queue.get("story_image"), str) or not queue["story_image"]:
+        raise PostingError("MALFORMED_QUEUE", "Story image is required")
+    elif Path(queue["story_image"]).name != f"{queue.get('content_id')}-story.png":
+        raise PostingError("MALFORMED_QUEUE", "Story asset does not match content_id")
+
+
 def _write_json_atomic(path: Path, value: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
@@ -51,6 +84,8 @@ class PublicMediaResolver:
             raise PostingError("BLOCKED_MEDIA_URL", "Media asset must be inside the repository") from exc
         if not resolved.is_file():
             raise PostingError("BLOCKED_MEDIA_URL", f"Media asset is missing: {relative.as_posix()}")
+        if "placeholder" in relative.as_posix().casefold() or "dummy" in relative.as_posix().casefold():
+            raise PostingError("BLOCKED_MEDIA_URL", "Placeholder or dummy media is prohibited")
         url = urljoin(self.base_url, relative.as_posix())
         if self.require_https and urlparse(url).scheme != "https":
             raise PostingError("BLOCKED_MEDIA_URL", "Public media URL must use HTTPS")
@@ -63,6 +98,8 @@ def select_one_due(now: datetime, queue_dir: Path = QUEUE_DIR) -> Path | None:
     candidates = []
     for path in queue_dir.glob("ENG-*.json"):
         queue = json.loads(path.read_text(encoding="utf-8"))
+        if queue.get("platform") == "instagram":
+            validate_queue_for_post(queue)
         if (queue.get("platform") == "instagram" and queue.get("status") == "pending" and
                 queue.get("execution_eligibility") == "scheduled"):
             publish_at = datetime.fromisoformat(queue["publish_at"])
@@ -100,6 +137,7 @@ def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
              now: datetime | None = None) -> dict:
     now = now or datetime.now(ZoneInfo("Asia/Tokyo"))
     queue = json.loads(queue_path.read_text(encoding="utf-8"))
+    validate_queue_for_post(queue)
     if queue.get("status") != "pending":
         raise PostingError("DUPLICATE_PREVENTED", "Only pending content may be posted")
     if queue.get("execution_eligibility") != "scheduled" or datetime.fromisoformat(queue["publish_at"]) > now:

@@ -49,6 +49,9 @@ class InstagramMetaPostingTests(unittest.TestCase):
     def queue_copy(self, content_id):
         queue = json.loads((REPO_ROOT / "data" / "queue" / f"{content_id}.json").read_text(encoding="utf-8"))
         queue["execution_eligibility"] = "scheduled"
+        queue["status"] = "pending"
+        for field in ("remote_post_id", "posted_at", "error"):
+            queue.pop(field, None)
         target = self.root / f"{content_id}.json"
         target.write_text(json.dumps(queue, ensure_ascii=False), encoding="utf-8")
         return target
@@ -103,12 +106,25 @@ class InstagramMetaPostingTests(unittest.TestCase):
             InstagramSecrets.from_env()
         self.assertEqual(caught.exception.code, "MISSING_SECRET")
 
+    def test_malformed_queue_and_placeholder_fail_closed(self):
+        queue = json.loads(self.queue_copy("ENG-000009").read_text())
+        queue["carousel"] = list(reversed(queue["carousel"]))
+        with self.assertRaises(PostingError):
+            posting.validate_queue_for_post(queue)
+        with self.assertRaises(PostingError) as caught:
+            self.resolver.resolve("assets/source/ice-cream-placeholder.png")
+        self.assertEqual(caught.exception.code, "BLOCKED_MEDIA_URL")
+
     def test_due_selector_excludes_hold_future_and_posted(self):
         queue_dir = self.root / "queue"
         queue_dir.mkdir()
         source_ids = ("ENG-000006", "ENG-000007", "ENG-000009")
         for content_id in source_ids:
             queue = json.loads((REPO_ROOT / "data" / "queue" / f"{content_id}.json").read_text(encoding="utf-8"))
+            if content_id == "ENG-000009":
+                queue["status"] = "pending"
+                queue.pop("remote_post_id", None)
+                queue.pop("posted_at", None)
             (queue_dir / f"{content_id}.json").write_text(json.dumps(queue), encoding="utf-8")
         self.assertIsNone(posting.select_one_due(datetime.fromisoformat("2026-08-20T14:00:00+09:00"), queue_dir))
         selected = posting.select_one_due(datetime.fromisoformat("2026-08-20T16:00:00+09:00"), queue_dir)

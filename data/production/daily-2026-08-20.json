@@ -39,9 +39,11 @@
       "problem_image_path": null,
       "instagram_caption": "この to の後ろ、動詞はどの形？ まずは選択肢から考えてみてください。",
       "instagram_hashtags": [],
-      "threads_parent_text": "学校で習ったはず。覚えてる？",
-      "threads_answer_text": "💡 表現全体のまとまりに注目。\n\n✅ 正解は B. seeing\n\nlook forward to の to は前置詞なので、後ろには動名詞を置きます。",
-      "publish_at": "2026-08-20T07:00:00+09:00"
+      "threads_parent_text": "これ、意外と迷う。",
+      "threads_answer_text": "💡 正解は B. seeing\n\nlook forward to の後ろは動名詞です。",
+      "publish_at": "2026-08-20T07:00:00+09:00",
+      "question_guide_ja": "「再会が楽しみ」ならどれ？",
+      "question_role": "learning_sentence"
     },
     {
       "content_id": "ENG-000007",
@@ -78,9 +80,11 @@
       "problem_image_path": null,
       "instagram_caption": "arrive の後ろに入る前置詞、場所の捉え方がポイントです。",
       "instagram_hashtags": [],
-      "threads_parent_text": "どれが入る？",
-      "threads_answer_text": "💡 場所を地点として捉えるか、広い地域として捉えるかに注目。\n\n✅ 正解は A. at\n\n建物や地点への到着には arrive at を使います。",
-      "publish_at": "2026-08-20T09:30:00+09:00"
+      "threads_parent_text": "パッと答えられる？",
+      "threads_answer_text": "💡 正解は A. at\n\nat → 駅・会社などの地点\nin → 東京・日本などの地域",
+      "publish_at": "2026-08-20T09:30:00+09:00",
+      "question_guide_ja": "「会社に着いた」ならどれ？",
+      "question_role": "learning_sentence"
     },
     {
       "content_id": "ENG-000008",
@@ -120,8 +124,10 @@
       "instagram_caption": "身支度でよく使う動作です。写真を見て英語を選んでみてください。",
       "instagram_hashtags": [],
       "threads_parent_text": "この状態、英語なら？",
-      "threads_answer_text": "💡 腕まわりの服に起きている動きに注目。\n\n✅ 正解は A. rolling up\n\nroll up は「巻き上げる、まくる」という意味です。",
-      "publish_at": "2026-08-20T12:00:00+09:00"
+      "threads_answer_text": "💡 正解は A. rolling up\n\nroll up ＝ 巻き上げる、まくる",
+      "publish_at": "2026-08-20T12:00:00+09:00",
+      "question_guide_ja": null,
+      "question_role": null
     },
     {
       "content_id": "ENG-000009",
@@ -158,9 +164,11 @@
       "problem_image_path": null,
       "instagram_caption": "by と until、仕事の締め切りならどちらが自然でしょう？",
       "instagram_hashtags": [],
-      "threads_parent_text": "4つのうち、一番自然なのは？",
-      "threads_answer_text": "💡 期限内の完了か、その時点までの継続かを考えます。\n\n✅ 正解は A. by Friday\n\nby Friday は「金曜日までに」。until Friday は「金曜日までずっと」です。",
-      "publish_at": "2026-08-20T15:00:00+09:00"
+      "threads_parent_text": "一度考えてみて。",
+      "threads_answer_text": "💡 正解は A. by Friday\n\nby Friday → 金曜までに完了\nuntil Friday → 金曜まで継続",
+      "publish_at": "2026-08-20T15:00:00+09:00",
+      "question_guide_ja": "「金曜日までに送る」ならどれ？",
+      "question_role": "learning_sentence"
     },
     {
       "content_id": "ENG-000010",
@@ -199,8 +207,10 @@
       "instagram_caption": "暑い室内でこう頼まれたら、自然な返答はどれ？",
       "instagram_hashtags": [],
       "threads_parent_text": "とっさに返せる？",
-      "threads_answer_text": "💡 引き受けるだけなら、長い説明は必要ありません。\n\n✅ 正解は A. Sure.\n\nOf course. や No problem. でも自然です。",
-      "publish_at": "2026-08-20T18:00:00+09:00"
+      "threads_answer_text": "💡 正解は A. Sure.\n\n依頼を引き受けるなら Sure. で自然です。",
+      "publish_at": "2026-08-20T18:00:00+09:00",
+      "question_guide_ja": null,
+      "question_role": null
     },
     {
       "content_id": "ENG-000011",
@@ -236,9 +246,11 @@
       "problem_image_path": null,
       "instagram_caption": "カフェやレストランで聞かれる一言。追加がないときの自然な返し方は？",
       "instagram_hashtags": [],
-      "threads_parent_text": "こう聞かれたら何て返す？",
-      "threads_answer_text": "💡 追加の注文がないことを短く伝えます。\n\n✅ 正解は A. That's all, thank you.\n\nNo, that's everything. や No, thank you. も使えます。",
-      "publish_at": "2026-08-20T20:30:00+09:00"
+      "threads_parent_text": "これ分かったら基礎はOK。",
+      "threads_answer_text": "💡 正解は A. That's all, thank you.\n\n注文が以上だと丁寧に伝える返答です。",
+      "publish_at": "2026-08-20T20:30:00+09:00",
+      "question_guide_ja": "こう聞かれたら、どう返す？",
+      "question_role": "learning_sentence"
     }
   ],
   "normal": {

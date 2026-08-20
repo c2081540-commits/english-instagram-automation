@@ -34,7 +34,9 @@
   "question_repeats_visual": null,
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は at。具体的な時刻には at を使います。",
-  "publish_at": "2026-08-23T18:00:00+09:00"
+  "threads_parent_text": "ここ、よく迷います。",
+  "threads_answer_text": "💡 正解は A. at\n\nat 3 p.m. → 3時に\non Monday → 月曜に",
+  "publish_at": "2026-08-23T18:00:00+09:00",
+  "question_guide_ja": "自然なのはどっち？",
+  "question_role": "learning_sentence"
 }

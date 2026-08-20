@@ -31,8 +31,10 @@
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は Yes, please.。助けをお願いするなら Yes, please. が自然です。",
+  "threads_answer_text": "💡 正解は A. Yes, please.\n\n助けをお願いするなら Yes, please. が自然です。",
   "publish_at": "2026-08-25T20:30:00+09:00",
   "situation_purpose": "accept_help_offer",
-  "response_family": "short_affirmative_response"
+  "response_family": "short_affirmative_response",
+  "question_guide_ja": null,
+  "question_role": null
 }

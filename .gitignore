@@ -4,3 +4,5 @@
 .env.*
 !.env.example
 data/test_receipts/
+__pycache__/
+*.py[cod]

@@ -31,8 +31,10 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は Yes, please.。勧めを受けるなら Yes, please. が自然です。",
+  "threads_answer_text": "💡 正解は A. Yes, please.\n\n勧めを受けるなら Yes, please. が自然です。",
   "publish_at": "2026-08-21T18:00:00+09:00",
   "situation_purpose": "accept_refreshment_offer",
-  "response_family": "short_affirmative_response"
+  "response_family": "short_affirmative_response",
+  "question_guide_ja": null,
+  "question_role": null
 }

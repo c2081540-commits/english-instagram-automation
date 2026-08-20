@@ -36,7 +36,9 @@
   "question_repeats_visual": null,
   "instagram_caption": "日常で使える英語をチェック。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は that。物を説明する関係代名詞に that を使えます。",
-  "publish_at": "2026-08-25T12:00:00+09:00"
+  "threads_parent_text": "10秒でどうぞ。",
+  "threads_answer_text": "💡 正解は A. that\n\n物を説明する関係代名詞に that を使えます。",
+  "publish_at": "2026-08-25T12:00:00+09:00",
+  "question_guide_ja": "「私が買った本」ならどれ？",
+  "question_role": "learning_sentence"
 }

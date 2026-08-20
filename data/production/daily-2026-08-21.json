@@ -39,10 +39,12 @@
       "question_repeats_visual": null,
       "instagram_caption": "まずは3秒で考えてみよう。",
       "instagram_hashtags": [],
-      "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "正解は goes。Tom の現在形には -s を付けます。",
+      "threads_parent_text": "これ、意外と迷う。",
+      "threads_answer_text": "💡 正解は B. goes\n\nTom の現在形には -s を付けます。",
       "publish_at": "2026-08-21T07:00:00+09:00",
-      "answer_point": "he / she / Tom → 動詞に s"
+      "answer_point": "he / she / Tom → 動詞に s",
+      "question_guide_ja": "「トムは8時出勤」ならどっち？",
+      "question_role": "learning_sentence"
     },
     {
       "content_id": "ENG-000013",
@@ -80,10 +82,12 @@
       "question_repeats_visual": null,
       "instagram_caption": "基礎表現をひとつ確認。",
       "instagram_hashtags": [],
-      "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "正解は was。過去の状態には was を使います。",
+      "threads_parent_text": "パッと答えられる？",
+      "threads_answer_text": "💡 正解は B. was\n\n過去の状態には was を使います。",
       "publish_at": "2026-08-21T09:30:00+09:00",
-      "answer_point": "yesterday → 過去形"
+      "answer_point": "yesterday → 過去形",
+      "question_guide_ja": "「昨日は大忙し」ならどっち？",
+      "question_role": "learning_sentence"
     },
     {
       "content_id": "ENG-000014",
@@ -124,8 +128,10 @@
       "instagram_caption": "日常で使える英語をチェック。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "正解は open。open は「開いている」です。",
-      "publish_at": "2026-08-21T12:00:00+09:00"
+      "threads_answer_text": "💡 正解は A. open\n\nopen は「開いている」です。",
+      "publish_at": "2026-08-21T12:00:00+09:00",
+      "question_guide_ja": null,
+      "question_role": null
     },
     {
       "content_id": "ENG-000015",
@@ -165,9 +171,11 @@
       "question_repeats_visual": null,
       "instagram_caption": "パッと選べる？",
       "instagram_hashtags": [],
-      "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "正解は by。交通手段には by を使います。",
-      "publish_at": "2026-08-21T15:00:00+09:00"
+      "threads_parent_text": "一度考えてみて。",
+      "threads_answer_text": "💡 正解は A. by\n\nby train → 電車で\nwith a friend → 友達と",
+      "publish_at": "2026-08-21T15:00:00+09:00",
+      "question_guide_ja": "一番自然なのはどれ？",
+      "question_role": "learning_sentence"
     },
     {
       "content_id": "ENG-000016",
@@ -202,10 +210,12 @@
       "instagram_caption": "短い英語クイズです。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "正解は Yes, please.。勧めを受けるなら Yes, please. が自然です。",
+      "threads_answer_text": "💡 正解は A. Yes, please.\n\n勧めを受けるなら Yes, please. が自然です。",
       "publish_at": "2026-08-21T18:00:00+09:00",
       "situation_purpose": "accept_refreshment_offer",
-      "response_family": "short_affirmative_response"
+      "response_family": "short_affirmative_response",
+      "question_guide_ja": null,
+      "question_role": null
     },
     {
       "content_id": "ENG-000017",
@@ -241,11 +251,13 @@
       "question_repeats_visual": null,
       "instagram_caption": "今日の1問。答えは2枚目へ。",
       "instagram_hashtags": [],
-      "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "正解は It's near the bank.。場所を伝える短い返答が自然です。",
+      "threads_parent_text": "これ分かったら基礎はOK。",
+      "threads_answer_text": "💡 正解は A. It's near the bank.\n\n場所を伝える短い返答が自然です。",
       "publish_at": "2026-08-21T20:30:00+09:00",
       "situation_purpose": "ask_for_directions",
-      "response_family": "information_request"
+      "response_family": "information_request",
+      "question_guide_ja": "こう聞かれたら、どう返す？",
+      "question_role": "learning_sentence"
     }
   ],
   "normal": {

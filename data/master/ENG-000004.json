@@ -4,13 +4,20 @@
   "difficulty": "beginner",
   "seasonal": false,
   "question": "She ___ coffee every morning.",
-  "choices": ["drink", "drinks"],
+  "choices": [
+    "drink",
+    "drinks"
+  ],
   "answer_type": "single",
   "best_answer": "drinks",
-  "acceptable_answers": ["drinks"],
+  "acceptable_answers": [
+    "drinks"
+  ],
   "explanation": "Use the third-person singular form 'drinks' with 'she'.",
   "key_difference": "The present-simple verb takes -s with he, she, or it.",
-  "examples": ["He drinks tea every morning."],
+  "examples": [
+    "He drinks tea every morning."
+  ],
   "tip": "He, she, it: add -s.",
   "visual_required": false,
   "visual_type": null,
@@ -19,5 +26,7 @@
   "instagram_caption": "She ___ coffee every morning. A. drink B. drinks",
   "threads_parent_text": "She ___ coffee every morning. A. drink B. drinks",
   "threads_answer_text": "Answer: B. drinks.",
-  "publish_at": "2026-08-23T09:00:00+09:00"
+  "publish_at": "2026-08-23T09:00:00+09:00",
+  "question_guide_ja": "「毎朝飲む」ならどっち？",
+  "question_role": "learning_sentence"
 }

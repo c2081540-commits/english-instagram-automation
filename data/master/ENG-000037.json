@@ -34,7 +34,9 @@
   "question_repeats_visual": null,
   "instagram_caption": "基礎表現をひとつ確認。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は yet。否定文の「まだ」には yet を使います。",
-  "publish_at": "2026-08-25T09:30:00+09:00"
+  "threads_parent_text": "パッと答えられる？",
+  "threads_answer_text": "💡 正解は A. yet\n\n否定文の「まだ」には yet を使います。",
+  "publish_at": "2026-08-25T09:30:00+09:00",
+  "question_guide_ja": "「昼食はまだ」ならどっち？",
+  "question_role": "learning_sentence"
 }

@@ -1,0 +1,77 @@
+name: Production due post
+
+on:
+  repository_dispatch:
+    types: [due-post-check]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: english-instagram-production-posting
+  cancel-in-progress: false
+
+jobs:
+  post-one-due-item:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out queue and posting code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify clean checkout
+        run: |
+          git diff --exit-code
+          git diff --cached --exit-code
+
+      - name: Verify required secrets exist
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          META_GRAPH_API_VERSION: ${{ secrets.META_GRAPH_API_VERSION }}
+        run: |
+          test -n "$INSTAGRAM_ACCESS_TOKEN"
+          test -n "$INSTAGRAM_USER_ID"
+          test -n "$META_GRAPH_API_VERSION"
+
+      - name: Run the platform-independent posting entry point
+        id: post
+        continue-on-error: true
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          META_GRAPH_API_VERSION: ${{ secrets.META_GRAPH_API_VERSION }}
+        run: python3 scripts/run_due_post.py --live
+
+      - name: Persist queue and receipt state when changed
+        id: persist
+        run: |
+          if git diff --quiet -- data/queue data/receipts; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/queue data/receipts
+          queue_file="$(git diff --cached --name-only -- data/queue | head -n 1)"
+          if [ -n "$queue_file" ]; then
+            content_id="$(basename "$queue_file" .json)"
+          else
+            content_id="state-recovery"
+          fi
+          git commit -m "post: $content_id instagram"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Propagate posting failure after state persistence
+        if: steps.post.outcome == 'failure'
+        run: exit 1

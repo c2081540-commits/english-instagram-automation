@@ -14,6 +14,10 @@ BORDER = "#D6D6D6"
 LABEL_FILL = "#111111"
 LABEL_TEXT = "#FFFFFF"
 LETTERS = "ABCD"
+TEXT_TEMPLATE_ACCENT = "#2563EB"
+TEXT_TEMPLATE_ACCENT_BACKGROUND = "#EEF4FF"
+TEXT_TEMPLATE_ENGLISH = "#111827"
+TEXT_TEMPLATE_DIVIDER = "#E5E7EB"
 
 
 class RenderError(ValueError):
@@ -79,6 +83,19 @@ def _draw_centered_text(draw: ImageDraw.ImageDraw, text: str, box: tuple[int, in
         y += height + spacing
 
 
+def _draw_fixed_centered_text(draw: ImageDraw.ImageDraw, text: str,
+                              box: tuple[int, int, int, int], size: int, color: str,
+                              max_lines: int = 1) -> None:
+    font, lines, spacing = _fit_text(draw, text, box, size, size, max_lines)
+    heights = [draw.textbbox((0, 0), line, font=font)[3] for line in lines]
+    total = sum(heights) + spacing * (len(lines) - 1)
+    y = box[1] + (box[3] - box[1] - total) / 2
+    for line, height in zip(lines, heights):
+        width = draw.textbbox((0, 0), line, font=font)[2]
+        draw.text((box[0] + (box[2] - box[0] - width) / 2, y), line, fill=color, font=font)
+        y += height + spacing
+
+
 def _draw_choice(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], letter: str, text: str) -> None:
     draw.rounded_rectangle(box, radius=24, fill=BACKGROUND, outline=BORDER, width=3)
     diameter = 72
@@ -136,12 +153,33 @@ def render_question(master_path: Path) -> Path:
         else:
             boxes = [(80, 880, 1000, 1055), (80, 1085, 1000, 1260)]
     elif len(choices) == 4:
-        _draw_centered_text(draw, content["question"], (80, 100, 1000, 500), 96, 52, 4)
-        boxes = [(64, 580, 526, 850), (554, 580, 1016, 850),
-                 (64, 900, 526, 1170), (554, 900, 1016, 1170)]
+        draw.rounded_rectangle((64, 154, 1016, 392), radius=28,
+                               fill=TEXT_TEMPLATE_ACCENT_BACKGROUND)
+        draw.rounded_rectangle((64, 154, 78, 392), radius=7, fill=TEXT_TEMPLATE_ACCENT)
+        is_meta = content["question_role"] == "meta_instruction"
+        guide_box = (88, 184, 1008, 362) if is_meta else (104, 184, 982, 362)
+        guide_size = 54 if is_meta else 58
+        _draw_fixed_centered_text(draw, content["question_guide_ja"],
+                                  guide_box, guide_size, TEXT_TEMPLATE_ACCENT)
+        if not is_meta:
+            _draw_fixed_centered_text(draw, content["question"],
+                                      (80, 440, 1000, 630), 68,
+                                      TEXT_TEMPLATE_ENGLISH, max_lines=2)
+        draw.line((80, 670, 1000, 670), fill=TEXT_TEMPLATE_DIVIDER, width=3)
+        boxes = [(64, 722, 526, 962), (554, 722, 1016, 962),
+                 (64, 1006, 526, 1246), (554, 1006, 1016, 1246)]
     else:
-        _draw_centered_text(draw, content["question"], (80, 130, 1000, 550), 100, 54, 4)
-        boxes = [(80, 650, 1000, 890), (80, 950, 1000, 1190)]
+        draw.rounded_rectangle((64, 154, 1016, 392), radius=28,
+                               fill=TEXT_TEMPLATE_ACCENT_BACKGROUND)
+        draw.rounded_rectangle((64, 154, 78, 392), radius=7, fill=TEXT_TEMPLATE_ACCENT)
+        if content["question_role"] == "meta_instruction":
+            raise RenderError("meta_instruction is not supported for two-choice quizzes")
+        _draw_fixed_centered_text(draw, content["question_guide_ja"],
+                                  (104, 184, 982, 362), 58, TEXT_TEMPLATE_ACCENT)
+        _draw_fixed_centered_text(draw, content["question"],
+                                  (80, 440, 1000, 630), 68, TEXT_TEMPLATE_ENGLISH, max_lines=2)
+        draw.line((80, 670, 1000, 670), fill=TEXT_TEMPLATE_DIVIDER, width=3)
+        boxes = [(80, 722, 1000, 950), (80, 1010, 1000, 1238)]
 
     for index, (choice, box) in enumerate(zip(choices, boxes)):
         _draw_choice(draw, box, LETTERS[index], choice)

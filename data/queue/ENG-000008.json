@@ -10,12 +10,12 @@
     {
       "order": 1,
       "role": "question",
-      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000008-question.png"
+      "image_path": "artifacts/images/ENG-000008-question.png"
     },
     {
       "order": 2,
       "role": "answer",
-      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000008-answer.png"
+      "image_path": "artifacts/images/ENG-000008-answer.png"
     }
   ],
   "caption": "身支度でよく使う動作です。写真を見て英語を選んでみてください。"

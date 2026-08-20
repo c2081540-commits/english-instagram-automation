@@ -32,7 +32,9 @@
   "problem_image_path": null,
   "instagram_caption": "カフェやレストランで聞かれる一言。追加がないときの自然な返し方は？",
   "instagram_hashtags": [],
-  "threads_parent_text": "こう聞かれたら何て返す？",
-  "threads_answer_text": "💡 追加の注文がないことを短く伝えます。\n\n✅ 正解は A. That's all, thank you.\n\nNo, that's everything. や No, thank you. も使えます。",
-  "publish_at": "2026-08-20T20:30:00+09:00"
+  "threads_parent_text": "これ分かったら基礎はOK。",
+  "threads_answer_text": "💡 正解は A. That's all, thank you.\n\n注文が以上だと丁寧に伝える返答です。",
+  "publish_at": "2026-08-20T20:30:00+09:00",
+  "question_guide_ja": "こう聞かれたら、どう返す？",
+  "question_role": "learning_sentence"
 }

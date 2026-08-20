@@ -31,8 +31,10 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は No, it's free.。空席なら No, it's free. と伝えられます。",
+  "threads_answer_text": "💡 正解は A. No, it's free.\n\n空席なら No, it's free. と伝えられます。",
   "publish_at": "2026-08-26T18:00:00+09:00",
   "situation_purpose": "explain_seat_availability",
-  "response_family": "information_response"
+  "response_family": "information_response",
+  "question_guide_ja": null,
+  "question_role": null
 }

@@ -56,6 +56,8 @@ class Phase1Tests(unittest.TestCase):
         content["choices"] = ["yes", "no"]
         content["best_answer"] = "yes"
         content["acceptable_answers"] = ["yes"]
+        content["question_guide_ja"] = "「長い問題」ならどっち？"
+        content["question_role"] = "learning_sentence"
         temporary = MASTER_DIR / "ENG-999999.json"
         temporary.write_text(json.dumps(content), encoding="utf-8")
         try:

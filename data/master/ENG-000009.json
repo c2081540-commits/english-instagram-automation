@@ -33,7 +33,9 @@
   "problem_image_path": null,
   "instagram_caption": "by と until、仕事の締め切りならどちらが自然でしょう？",
   "instagram_hashtags": [],
-  "threads_parent_text": "4つのうち、一番自然なのは？",
-  "threads_answer_text": "💡 期限内の完了か、その時点までの継続かを考えます。\n\n✅ 正解は A. by Friday\n\nby Friday は「金曜日までに」。until Friday は「金曜日までずっと」です。",
-  "publish_at": "2026-08-20T15:00:00+09:00"
+  "threads_parent_text": "一度考えてみて。",
+  "threads_answer_text": "💡 正解は A. by Friday\n\nby Friday → 金曜までに完了\nuntil Friday → 金曜まで継続",
+  "publish_at": "2026-08-20T15:00:00+09:00",
+  "question_guide_ja": "「金曜日までに送る」ならどれ？",
+  "question_role": "learning_sentence"
 }

@@ -32,9 +32,11 @@
   "question_repeats_visual": null,
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は It's near the bank.。場所を伝える短い返答が自然です。",
+  "threads_parent_text": "これ分かったら基礎はOK。",
+  "threads_answer_text": "💡 正解は A. It's near the bank.\n\n場所を伝える短い返答が自然です。",
   "publish_at": "2026-08-21T20:30:00+09:00",
   "situation_purpose": "ask_for_directions",
-  "response_family": "information_request"
+  "response_family": "information_request",
+  "question_guide_ja": "こう聞かれたら、どう返す？",
+  "question_role": "learning_sentence"
 }

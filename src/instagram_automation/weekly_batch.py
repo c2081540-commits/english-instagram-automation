@@ -150,8 +150,8 @@ def build_weekly_review_payload(week: dict) -> dict:
         items.append({
             "content_id": item["content_id"],
             "content_type": "quiz",
-            "english": {key: item[key] for key in ("question", "choices", "answer_type", "best_answer", "examples")},
-            "japanese": {key: item.get(key) for key in ("answer_hint", "answer_point", "explanation", "example_translations", "key_difference", "also_natural")},
+            "english": {key: item[key] for key in ("question_role", "question", "choices", "answer_type", "best_answer", "examples")},
+            "japanese": {key: item.get(key) for key in ("question_guide_ja", "answer_hint", "answer_point", "explanation", "example_translations", "key_difference", "also_natural")},
             "visual": visual,
         })
     for item in week["normals"]:

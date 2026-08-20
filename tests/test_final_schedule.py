@@ -28,13 +28,16 @@ class FinalInstagramScheduleTests(unittest.TestCase):
         self.assertEqual(self.schedule["timezone"], "Asia/Tokyo")
         validate_schedule_items(self.schedule["items"])
 
-    def test_all_49_queues_are_pending_and_trackable(self):
+    def test_all_49_queues_are_trackable_and_known_post_is_reconciled(self):
         self.assertEqual(len(self.queues), 49)
         for queue in self.queues:
             validate_queue_state(queue)
-            self.assertEqual(queue["status"], "pending")
             for field in ("content_id", "platform", "publish_at", "status"):
                 self.assertIn(field, queue)
+        posted = [queue for queue in self.queues if queue["status"] == "posted"]
+        self.assertEqual([queue["content_id"] for queue in posted], ["ENG-000009"])
+        self.assertTrue(posted[0]["remote_post_id"])
+        self.assertEqual(sum(queue["status"] == "pending" for queue in self.queues), 48)
 
     def test_carousel_order_and_story_slot(self):
         quizzes = [queue for queue in self.queues if queue["content_type"] == "quiz"]
@@ -47,7 +50,9 @@ class FinalInstagramScheduleTests(unittest.TestCase):
 
     def test_past_slots_are_held_without_rescheduling(self):
         held = [queue for queue in self.queues if queue["execution_eligibility"] == "past_due_hold"]
-        self.assertEqual([queue["content_id"] for queue in held], ["ENG-000006", "ENG-000007", "ENG-000008"])
+        self.assertEqual([queue["content_id"] for queue in held],
+                         ["ENG-000006", "ENG-000007", "ENG-000008", "ENG-000010", "ENG-000011",
+                          "ENG-100002"])
         self.assertTrue(all(queue["publish_at"].startswith("2026-08-20T") for queue in held))
 
     def test_posted_is_never_selected_for_repost(self):

@@ -214,6 +214,40 @@ WEEK_ITEMS = [
            "Let's take a short break.", "少し休憩しましょう。"),
 ]
 
+QUESTION_GUIDES = {
+    "ENG-000012": "「トムは8時出勤」ならどっち？",
+    "ENG-000013": "「昨日は大忙し」ならどっち？",
+    "ENG-000015": "一番自然なのはどれ？",
+    "ENG-000017": "こう聞かれたら、どう返す？",
+    "ENG-000018": "「東京に住む」ならどっち？",
+    "ENG-000019": "「昼食を終えた」ならどれ？",
+    "ENG-000021": "一番自然なのはどれ？",
+    "ENG-000022": "こんなとき、英語でどう言う？",
+    "ENG-000024": "「私のより重い」ならどれ？",
+    "ENG-000025": "「今、夕食中」ならどっち？",
+    "ENG-000028": "自然なのはどっち？",
+    "ENG-000029": "こんなとき、英語でどう言う？",
+    "ENG-000030": "「近くに銀行がある」ならどれ？",
+    "ENG-000031": "「早起きしないと」ならどっち？",
+    "ENG-000033": "自然なのはどっち？",
+    "ENG-000035": "正しい英文はどれ？",
+    "ENG-000036": "「英語を話せる？」ならどっち？",
+    "ENG-000037": "「昼食はまだ」ならどっち？",
+    "ENG-000038": "「私が買った本」ならどれ？",
+    "ENG-000040": "こんなとき、英語でどう言う？",
+    "ENG-000042": "「9時に開く」ならどっち？",
+    "ENG-000043": "「2020年から」ならどっち？",
+    "ENG-000045": "自然なのはどっち？",
+    "ENG-000047": "「休憩する」の意味になるのはどれ？",
+}
+
+for _item in WEEK_ITEMS:
+    _item["question_guide_ja"] = QUESTION_GUIDES.get(_item["content_id"])
+    _item["question_role"] = (None if _item["visual_required"] else
+                              ("meta_instruction" if _item["content_id"] in {
+                                  "ENG-000035", "ENG-000047"} else "learning_sentence"))
+
+
 SITUATION_METADATA = {
     "ENG-000016": ("accept_refreshment_offer", "short_affirmative_response"),
     "ENG-000017": ("ask_for_directions", "information_request"),

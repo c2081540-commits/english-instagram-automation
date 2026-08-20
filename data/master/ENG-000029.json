@@ -32,9 +32,11 @@
   "question_repeats_visual": null,
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は That's okay.。That's okay. は相手を安心させる返事です。",
+  "threads_parent_text": "これ分かったら基礎はOK。",
+  "threads_answer_text": "💡 正解は A. That's okay.\n\nThat's okay. は相手を安心させる返事です。",
   "publish_at": "2026-08-23T20:30:00+09:00",
   "situation_purpose": "respond_to_apology",
-  "response_family": "social_response"
+  "response_family": "social_response",
+  "question_guide_ja": "こんなとき、英語でどう言う？",
+  "question_role": "learning_sentence"
 }

@@ -36,7 +36,9 @@
   "question_repeats_visual": null,
   "instagram_caption": "パッと選べる？",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は by。交通手段には by を使います。",
-  "publish_at": "2026-08-21T15:00:00+09:00"
+  "threads_parent_text": "一度考えてみて。",
+  "threads_answer_text": "💡 正解は A. by\n\nby train → 電車で\nwith a friend → 友達と",
+  "publish_at": "2026-08-21T15:00:00+09:00",
+  "question_guide_ja": "一番自然なのはどれ？",
+  "question_role": "learning_sentence"
 }

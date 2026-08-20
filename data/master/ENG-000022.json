@@ -32,9 +32,11 @@
   "question_repeats_visual": null,
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は You're welcome.。You're welcome. はお礼への基本の返事です。",
+  "threads_parent_text": "ここ、よく迷います。",
+  "threads_answer_text": "💡 正解は A. You're welcome.\n\nYou're welcome. はお礼への基本の返事です。",
   "publish_at": "2026-08-22T18:00:00+09:00",
   "situation_purpose": "respond_to_thanks",
-  "response_family": "social_response"
+  "response_family": "social_response",
+  "question_guide_ja": "こんなとき、英語でどう言う？",
+  "question_role": "learning_sentence"
 }

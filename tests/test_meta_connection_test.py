@@ -81,14 +81,17 @@ class InstagramConnectionTestTests(unittest.TestCase):
         self.assertEqual(urls, ["https://graph.instagram.com/v25.0/instagram-user-id",
                                 "https://graph.instagram.com/v25.0/instagram-user-id/content_publishing_limit"])
 
-    def test_flag_is_required_and_production_queue_stays_pending(self):
+    def test_flag_is_required_and_production_queue_stays_unchanged(self):
         result = subprocess.run([sys.executable, str(REPO_ROOT / "scripts" / "run_meta_connection_test.py")],
                                 check=True, capture_output=True, text=True)
         self.assertIn("DRY RUN ONLY", result.stdout)
         queues = [json.loads(path.read_text()) for path in (REPO_ROOT / "data" / "queue").glob("ENG-*.json")]
         production = [item for item in queues if item.get("platform") == "instagram"]
         self.assertEqual(len(production), 49)
-        self.assertTrue(all(item["status"] == "pending" and "remote_post_id" not in item for item in production))
+        posted = [item for item in production if item["status"] == "posted"]
+        self.assertEqual([item["content_id"] for item in posted], ["ENG-000009"])
+        self.assertTrue(all(item["status"] == "pending" and "remote_post_id" not in item
+                            for item in production if item["content_id"] != "ENG-000009"))
 
 
 if __name__ == "__main__":

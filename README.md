@@ -37,6 +37,10 @@ The renderer uses Pillow for deterministic direct PNG drawing at `1080 × 1350`.
 
 Set `problem_image_path` to a repository-relative file directly inside `assets/source/` when `visual_required` is `true`. Output is always fixed to `artifacts/images/<content_id>-question.png`. Missing inputs, paths outside the fixed directory, unsupported choice counts, and oversized text stop rendering without fallback.
 
+Question画像テンプレートは `visual_required` だけで固定分岐します。`true` は承認済みの英語問題＋visual＋選択肢、`false` は `question_guide_ja`（青帯、58px）＋英文（68px）＋区切り線＋選択肢（最大48px）です。文字問題の日本語設問は固定パターン、1行30文字以内、2択は「どっち」、4択は「どれ」とし、欠落・誤パターン・文法ルール漏れはfail closedします。visual問題への日本語設問帯追加は行いません。
+
+text問題はさらに `question_role` で機械分岐します。`learning_sentence` は日本語設問と学習対象英文を両方表示し、`meta_instruction` は日本語設問だけを表示して同義の `Which ...?` / `Choose ...` 等の英語メタ指示を非表示にします。英語メタ指示を `learning_sentence` として二重表示すること、または学習対象英文を `meta_instruction` として消すことはvalidationで拒否します。
+
 ## Answer image renderer
 
 The answer renderer creates `1080 × 1350` PNG files at the fixed path `artifacts/images/<content_id>-answer.png`. Japanese-only UI labels and section order are fixed for `grammar`, `vocabulary`, and `situation`. The top section is a non-revealing `ヒント`; the next box shows the computed choice letter and exact answer, followed by category-specific `意味`, `例文`, `使い分け`, `こんな言い方も`, or `ポイント`. Set `answer_hint_approved` to `true` only for a reviewed hint. When it is `false`, the renderer uses the fixed generic cushion instead; approved hints containing `best_answer` or prohibited answer-leading phrases are rejected. Box heights are measured from content and constrained by section-specific minimums and maximums, with remaining space assigned to gaps and overall balance. English and Japanese text use Noto Sans JP. Stable colored heading icons are drawn directly with Pillow. Fixed accents are green for `答え`, blue for `ヒント`/`ポイント`/`意味`, neutral gray for `例文`, orange for `使い分け`, and purple for `こんな言い方も`. Every box has a white `#FFFFFF` background; color is limited to headings, icons, and borders. Missing required data, unsupported categories, oversized text, and overflowing sections stop rendering without fallback.
@@ -139,6 +143,25 @@ published media IDはgitignoreされた`data/test_receipts/`へ保存し、acces
 
 `python3 scripts/export_weekly_review.py YYYY-MM-DD` は問題・回答・Storiesのcontact sheet、両媒体dry-run、集計レポートを `artifacts/weekly/YYYY-MM-DD/` に出力します。
 
+## 本番自動実行の接続
+
+`.github/workflows/post-due.yml` は `repository_dispatch` の `due-post-check` と手動の
+`workflow_dispatch` だけを入口にし、`scripts/run_due_post.py --live` を1回呼びます。投稿時刻・本文・画像は
+workflowへ持たせず、queueを唯一の正とします。同一workflowの並列実行はconcurrencyで直列化し、queueまたは
+receiptに実変更がある場合だけ対象パスをcommitして`main`へ通常pushします。空commit、force push、全ファイルの
+一括stageは行いません。
+
+GitHub Actions Secretsには `INSTAGRAM_ACCESS_TOKEN`、`INSTAGRAM_USER_ID`、
+`META_GRAPH_API_VERSION` を登録します。値はコード・workflow・READMEへ保存しません。公開画像は現在のpublic GitHub
+Raw方式を使うため、repoをprivate化した場合は投稿を`BLOCKED_MEDIA_URL`で停止します。
+
+`examples/gas/dispatch_due_posts.gs` は5分間隔の時刻トリガー用サンプルです。Apps ScriptのScript Propertiesへ
+`GITHUB_DISPATCH_TOKEN`、`GITHUB_OWNER`、`INSTAGRAM_REPOSITORY`、`THREADS_REPOSITORY` を設定し、
+`installFiveMinuteTrigger()`を一度だけ実行します。GASは両repoへdispatchするだけで、queueやMeta secretを扱いません。
+
+将来systemdへ移行する場合も、repoを同期した上で同じ `python3 scripts/run_due_post.py --live` を排他実行し、
+変更されたqueue/receiptだけを通常commit/pushする構造を維持します。
+
 ## Future phases
 
-Future work may add answer-image rendering, AI-generated source images, Meta API publishing, scheduled Codex generation, insights, and optimization. These are intentionally absent from the current implementation.
+Future work may add scheduled Codex generation, insights, and optimization. These are intentionally absent from the current implementation.

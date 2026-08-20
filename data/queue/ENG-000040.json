@@ -10,12 +10,12 @@
     {
       "order": 1,
       "role": "question",
-      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000040-question.png"
+      "image_path": "artifacts/images/ENG-000040-question.png"
     },
     {
       "order": 2,
       "role": "answer",
-      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000040-answer.png"
+      "image_path": "artifacts/images/ENG-000040-answer.png"
     }
   ],
   "caption": "短い英語クイズです。"

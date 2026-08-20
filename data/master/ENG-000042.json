@@ -34,8 +34,10 @@
   "question_repeats_visual": null,
   "instagram_caption": "まずは3秒で考えてみよう。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は opens。単数の主語には opens を使います。",
+  "threads_parent_text": "これ、意外と迷う。",
+  "threads_answer_text": "💡 正解は B. opens\n\n単数の主語には opens を使います。",
   "publish_at": "2026-08-26T07:00:00+09:00",
-  "answer_point": "単数の主語 → 動詞に s"
+  "answer_point": "単数の主語 → 動詞に s",
+  "question_guide_ja": "「9時に開く」ならどっち？",
+  "question_role": "learning_sentence"
 }

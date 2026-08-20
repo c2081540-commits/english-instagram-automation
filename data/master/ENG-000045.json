@@ -34,7 +34,9 @@
   "question_repeats_visual": null,
   "instagram_caption": "パッと選べる？",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は on。曜日を含む日には on を使います。",
-  "publish_at": "2026-08-26T15:00:00+09:00"
+  "threads_parent_text": "一度考えてみて。",
+  "threads_answer_text": "💡 正解は A. on\n\non Monday → 月曜に\nat nine → 9時に",
+  "publish_at": "2026-08-26T15:00:00+09:00",
+  "question_guide_ja": "自然なのはどっち？",
+  "question_role": "learning_sentence"
 }

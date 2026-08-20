@@ -34,7 +34,7 @@
       "platform": "instagram",
       "content_type": "quiz",
       "publish_at": "2026-08-20T15:00:00+09:00",
-      "status": "pending",
+      "status": "posted",
       "execution_eligibility": "scheduled"
     },
     {
@@ -43,7 +43,7 @@
       "content_type": "quiz",
       "publish_at": "2026-08-20T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "past_due_hold"
     },
     {
       "content_id": "ENG-000011",
@@ -51,7 +51,7 @@
       "content_type": "quiz",
       "publish_at": "2026-08-20T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "past_due_hold"
     },
     {
       "content_id": "ENG-100002",
@@ -59,7 +59,7 @@
       "content_type": "normal",
       "publish_at": "2026-08-20T22:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "past_due_hold"
     },
     {
       "content_id": "ENG-000012",

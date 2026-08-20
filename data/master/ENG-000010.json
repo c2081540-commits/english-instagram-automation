@@ -35,6 +35,8 @@
   "instagram_caption": "暑い室内でこう頼まれたら、自然な返答はどれ？",
   "instagram_hashtags": [],
   "threads_parent_text": "とっさに返せる？",
-  "threads_answer_text": "💡 引き受けるだけなら、長い説明は必要ありません。\n\n✅ 正解は A. Sure.\n\nOf course. や No problem. でも自然です。",
-  "publish_at": "2026-08-20T18:00:00+09:00"
+  "threads_answer_text": "💡 正解は A. Sure.\n\n依頼を引き受けるなら Sure. で自然です。",
+  "publish_at": "2026-08-20T18:00:00+09:00",
+  "question_guide_ja": null,
+  "question_role": null
 }

@@ -1,0 +1,312 @@
+{
+  "items": [
+    {
+      "content_id": "ENG-000006",
+      "type": "TYPE A",
+      "question_guide_ja": "「再会が楽しみ」ならどれ？",
+      "displayed_english": "I'm looking forward to ___ you again.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000007",
+      "type": "TYPE A",
+      "question_guide_ja": "「会社に着いた」ならどれ？",
+      "displayed_english": "I arrived ___ the office at 8:30.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000009",
+      "type": "TYPE A",
+      "question_guide_ja": "「金曜日までに送る」ならどれ？",
+      "displayed_english": "I'll send you the file ___.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000011",
+      "type": "TYPE A",
+      "question_guide_ja": "こう聞かれたら、どう返す？",
+      "displayed_english": "Would you like anything else?",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000012",
+      "type": "TYPE A",
+      "question_guide_ja": "「トムは8時出勤」ならどっち？",
+      "displayed_english": "Tom ___ to work at eight.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000013",
+      "type": "TYPE A",
+      "question_guide_ja": "「昨日は大忙し」ならどっち？",
+      "displayed_english": "I ___ busy yesterday.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000015",
+      "type": "TYPE A",
+      "question_guide_ja": "一番自然なのはどれ？",
+      "displayed_english": "I go to work ___ train.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000017",
+      "type": "TYPE A",
+      "question_guide_ja": "こう聞かれたら、どう返す？",
+      "displayed_english": "Where is the station?",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000018",
+      "type": "TYPE A",
+      "question_guide_ja": "「東京に住む」ならどっち？",
+      "displayed_english": "They ___ in Tokyo.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000019",
+      "type": "TYPE A",
+      "question_guide_ja": "「昼食を終えた」ならどれ？",
+      "displayed_english": "I have ___ finished lunch.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000021",
+      "type": "TYPE A",
+      "question_guide_ja": "一番自然なのはどれ？",
+      "displayed_english": "Please call me ___ lunch.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000022",
+      "type": "TYPE A",
+      "question_guide_ja": "こんなとき、英語でどう言う？",
+      "displayed_english": "Thank you for your help.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000024",
+      "type": "TYPE A",
+      "question_guide_ja": "「私のより重い」ならどれ？",
+      "displayed_english": "This bag is ___ than mine.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000025",
+      "type": "TYPE A",
+      "question_guide_ja": "「今、夕食中」ならどっち？",
+      "displayed_english": "We ___ dinner now.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000028",
+      "type": "TYPE A",
+      "question_guide_ja": "自然なのはどっち？",
+      "displayed_english": "I have a meeting ___ 3 p.m.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000029",
+      "type": "TYPE A",
+      "question_guide_ja": "こんなとき、英語でどう言う？",
+      "displayed_english": "Sorry I'm late.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000030",
+      "type": "TYPE A",
+      "question_guide_ja": "「近くに銀行がある」ならどれ？",
+      "displayed_english": "There ___ a bank near here.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000031",
+      "type": "TYPE A",
+      "question_guide_ja": "「早起きしないと」ならどっち？",
+      "displayed_english": "I ___ get up early tomorrow.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000033",
+      "type": "TYPE A",
+      "question_guide_ja": "自然なのはどっち？",
+      "displayed_english": "I stayed home ___ it was raining.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000035",
+      "type": "TYPE B",
+      "question_guide_ja": "正しい英文はどれ？",
+      "displayed_english": null,
+      "english_meta_instruction_removed": "YES",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000036",
+      "type": "TYPE A",
+      "question_guide_ja": "「英語を話せる？」ならどっち？",
+      "displayed_english": "Can you ___ English?",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000037",
+      "type": "TYPE A",
+      "question_guide_ja": "「昼食はまだ」ならどっち？",
+      "displayed_english": "I haven't eaten lunch ___.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000038",
+      "type": "TYPE A",
+      "question_guide_ja": "「私が買った本」ならどれ？",
+      "displayed_english": "This is the book ___ I bought.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000040",
+      "type": "TYPE A",
+      "question_guide_ja": "こんなとき、英語でどう言う？",
+      "displayed_english": "I didn't catch that.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000042",
+      "type": "TYPE A",
+      "question_guide_ja": "「9時に開く」ならどっち？",
+      "displayed_english": "My office ___ at nine.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000043",
+      "type": "TYPE A",
+      "question_guide_ja": "「2020年から」ならどっち？",
+      "displayed_english": "I've known her ___ 2020.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000045",
+      "type": "TYPE A",
+      "question_guide_ja": "自然なのはどっち？",
+      "displayed_english": "Let's meet ___ Monday morning.",
+      "english_meta_instruction_removed": "NO",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    },
+    {
+      "content_id": "ENG-000047",
+      "type": "TYPE B",
+      "question_guide_ja": "「休憩する」の意味になるのはどれ？",
+      "displayed_english": null,
+      "english_meta_instruction_removed": "YES",
+      "ja_en_role_overlap": "PASS",
+      "answer_leak": "PASS",
+      "best_answer_unchanged": "PASS",
+      "threads_hook_overlap": "PASS"
+    }
+  ]
+}

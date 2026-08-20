@@ -20,6 +20,7 @@ MAX_LENGTHS = {
     "example": 240,
     "example_translation": 240,
     "instagram_caption": 2200,
+    "question_guide_ja": 30,
     "threads_parent_text": 500,
     "threads_answer_text": 500,
 }
@@ -55,7 +56,7 @@ def _check_length(value: object, limit: int, field: str) -> None:
 
 def _check_lengths(content: dict) -> None:
     for field in ("question", "explanation", "answer_hint", "instagram_caption",
-                  "threads_parent_text", "threads_answer_text"):
+                  "question_guide_ja", "threads_parent_text", "threads_answer_text"):
         _check_length(content.get(field), MAX_LENGTHS[field], field)
     for index, choice in enumerate(content.get("choices", [])):
         _check_length(choice, MAX_LENGTHS["choice"], f"choices[{index}]")

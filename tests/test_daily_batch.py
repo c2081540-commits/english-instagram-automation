@@ -115,6 +115,7 @@ class DailyBatchTests(unittest.TestCase):
         item["choices"] = ["see", "seeing"]
         item["best_answer"] = "seeing"
         item["acceptable_answers"] = ["seeing"]
+        item["question_guide_ja"] = "「また会う」ならどっち？"
         validate_daily_batch(candidate, self.existing)
 
     def test_visual_question_must_not_repeat_image_context(self):

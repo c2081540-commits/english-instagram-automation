@@ -36,7 +36,9 @@
   "question_repeats_visual": null,
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は take a break。「休憩する」は take a break です。",
-  "publish_at": "2026-08-26T20:30:00+09:00"
+  "threads_parent_text": "これ分かったら基礎はOK。",
+  "threads_answer_text": "💡 正解は A. take a break\n\n「休憩する」は take a break です。",
+  "publish_at": "2026-08-26T20:30:00+09:00",
+  "question_guide_ja": "「休憩する」の意味になるのはどれ？",
+  "question_role": "meta_instruction"
 }

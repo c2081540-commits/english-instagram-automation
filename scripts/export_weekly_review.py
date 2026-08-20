@@ -71,6 +71,11 @@ def main():
                                 f"story: artifacts/stories/{item['content_id']}-story.png", ""])
 
     contact_sheet(question_entries, output / "quiz-questions.png", "question")
+    changed_entries = [(item["content_id"], REPO_ROOT / "artifacts" / "images" /
+                        f"{item['content_id']}-question.png")
+                       for item in week["quizzes"]
+                       if item.get("question_role") == "meta_instruction"]
+    contact_sheet(changed_entries, output / "quiz-question-role-fixes.png", "question", columns=2)
     contact_sheet(answer_entries, output / "quiz-answers.png", "answer")
     contact_sheet(story_entries, output / "stories.png", "story", columns=4)
     (output / "threads-dry-run.txt").write_text("\n".join(thread_lines), encoding="utf-8")

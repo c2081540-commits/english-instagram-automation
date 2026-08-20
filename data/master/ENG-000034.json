@@ -33,8 +33,10 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は Of course.。許可するときは Of course. と返せます。",
+  "threads_answer_text": "💡 正解は A. Of course.\n\n許可するときは Of course. と返せます。",
   "publish_at": "2026-08-24T18:00:00+09:00",
   "situation_purpose": "grant_permission",
-  "response_family": "short_affirmative_response"
+  "response_family": "short_affirmative_response",
+  "question_guide_ja": null,
+  "question_role": null
 }

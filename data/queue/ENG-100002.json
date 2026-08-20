@@ -5,6 +5,6 @@
   "channel": "stories",
   "publish_at": "2026-08-20T22:30:00+09:00",
   "status": "pending",
-  "execution_eligibility": "scheduled",
+  "execution_eligibility": "past_due_hold",
   "story_image": "artifacts/stories/ENG-100002-story.png"
 }

@@ -36,8 +36,10 @@
   "question_repeats_visual": null,
   "instagram_caption": "まずは3秒で考えてみよう。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は is。単数の a bank には There is を使います。",
+  "threads_parent_text": "これ、意外と迷う。",
+  "threads_answer_text": "💡 正解は A. is\n\n単数の a bank には There is を使います。",
   "publish_at": "2026-08-24T07:00:00+09:00",
-  "answer_point": "a bank は単数 → There is"
+  "answer_point": "a bank は単数 → There is",
+  "question_guide_ja": "「近くに銀行がある」ならどれ？",
+  "question_role": "learning_sentence"
 }

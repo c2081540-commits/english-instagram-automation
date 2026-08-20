@@ -10,12 +10,12 @@
     {
       "order": 1,
       "role": "question",
-      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000026-question.png"
+      "image_path": "artifacts/images/ENG-000026-question.png"
     },
     {
       "order": 2,
       "role": "answer",
-      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000026-answer.png"
+      "image_path": "artifacts/images/ENG-000026-answer.png"
     }
   ],
   "caption": "日常で使える英語をチェック。"

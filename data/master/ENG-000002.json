@@ -4,16 +4,27 @@
   "difficulty": "beginner",
   "seasonal": false,
   "question": "The ice cream is ___.",
-  "choices": ["melting", "freezing", "boiling", "drying"],
+  "choices": [
+    "melting",
+    "freezing",
+    "boiling",
+    "drying"
+  ],
   "answer_type": "single",
   "best_answer": "melting",
   "answer_hint": "写真のアイスに、今どんな変化が起きている？",
   "answer_hint_approved": true,
-  "acceptable_answers": ["melting"],
+  "acceptable_answers": [
+    "melting"
+  ],
   "explanation": "melt ＝ 溶ける",
   "key_difference": "freeze ＝ 凍る",
-  "examples": ["The ice cream is melting."],
-  "example_translations": ["アイスクリームが溶けています。"],
+  "examples": [
+    "The ice cream is melting."
+  ],
+  "example_translations": [
+    "アイスクリームが溶けています。"
+  ],
   "tip": null,
   "visual_required": true,
   "visual_type": "photo",
@@ -22,5 +33,7 @@
   "instagram_caption": "The ice cream is ___. A. melting B. freezing C. boiling D. drying",
   "threads_parent_text": "The ice cream is ___. A. melting B. freezing C. boiling D. drying",
   "threads_answer_text": "Answer: A. melting.",
-  "publish_at": "2026-08-21T09:00:00+09:00"
+  "publish_at": "2026-08-21T09:00:00+09:00",
+  "question_guide_ja": null,
+  "question_role": null
 }

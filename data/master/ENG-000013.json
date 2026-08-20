@@ -34,8 +34,10 @@
   "question_repeats_visual": null,
   "instagram_caption": "基礎表現をひとつ確認。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は was。過去の状態には was を使います。",
+  "threads_parent_text": "パッと答えられる？",
+  "threads_answer_text": "💡 正解は B. was\n\n過去の状態には was を使います。",
   "publish_at": "2026-08-21T09:30:00+09:00",
-  "answer_point": "yesterday → 過去形"
+  "answer_point": "yesterday → 過去形",
+  "question_guide_ja": "「昨日は大忙し」ならどっち？",
+  "question_role": "learning_sentence"
 }

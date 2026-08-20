@@ -36,7 +36,9 @@
   "question_repeats_visual": null,
   "instagram_caption": "パッと選べる？",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "正解は after。名詞の前には after を置けます。",
-  "publish_at": "2026-08-22T15:00:00+09:00"
+  "threads_parent_text": "一度考えてみて。",
+  "threads_answer_text": "💡 正解は A. after\n\nafter lunch → 昼食後\nlater → あとで",
+  "publish_at": "2026-08-22T15:00:00+09:00",
+  "question_guide_ja": "一番自然なのはどれ？",
+  "question_role": "learning_sentence"
 }
