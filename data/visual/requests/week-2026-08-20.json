@@ -1,0 +1,190 @@
+{
+  "start_date": "2026-08-20",
+  "end_date": "2026-08-26",
+  "batch_generation": true,
+  "request_count": 14,
+  "requests": [
+    {
+      "content_id": "ENG-000008",
+      "visual_type": "photo",
+      "visual_description": "A clear waist-up photo of an office worker using both hands to roll up one shirt sleeve. The rolling action and sleeve are fully visible. No text, logos, extra hands, or distorted fingers.",
+      "source_path": "assets/source/ENG-000008-roll-up-sleeves.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000010",
+      "visual_type": "photo",
+      "visual_description": "A bright summer office scene with one coworker feeling warm and politely gesturing toward a clearly visible wall-mounted air conditioner while another coworker holds its remote. No text, logos, or watermark.",
+      "source_path": "assets/source/ENG-000010-air-conditioner-request.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000014",
+      "visual_type": "photo",
+      "visual_description": "A clearly open office door, with the doorway and open door panel fully visible. No people, text, signs, logos, or watermark.",
+      "source_path": "assets/source/ENG-000014-open-door.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000016",
+      "visual_type": "photo",
+      "visual_description": "A server politely offering a clear glass of cold water to an office worker on a hot summer day. The offered water and gesture are obvious. No text, menu words, logos, or watermark.",
+      "source_path": "assets/source/ENG-000016-water-offer.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000020",
+      "visual_type": "photo",
+      "visual_description": "An adult office worker carrying one medium cardboard box securely with both arms. The carrying action is clear. No text, labels, logos, or watermark.",
+      "source_path": "assets/source/ENG-000020-carrying-box.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000023",
+      "visual_type": "photo",
+      "visual_description": "A summer office with an open window letting in bright heat, one coworker politely gesturing toward it and another ready to close it. No text, logos, or watermark.",
+      "source_path": "assets/source/ENG-000023-close-window.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000026",
+      "visual_type": "photo",
+      "visual_description": "A clearly empty ceramic coffee cup viewed slightly from above on a clean desk. The empty inside is visible. No text, logos, or watermark.",
+      "source_path": "assets/source/ENG-000026-empty-cup.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000027",
+      "visual_type": "photo",
+      "visual_description": "A busy summer city road filled with slow-moving cars, clearly showing traffic congestion. No readable signs, license text, logos, or watermark.",
+      "source_path": "assets/source/ENG-000027-crowded-road.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000032",
+      "visual_type": "photo",
+      "visual_description": "An adult office worker clearly walking upward on indoor stairs, one foot on a higher step. No text, signs, logos, or watermark.",
+      "source_path": "assets/source/ENG-000032-climbing-stairs.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000034",
+      "visual_type": "photo",
+      "visual_description": "A person politely gesturing toward an empty chair beside a seated coworker in a simple office break area. The empty chair and request are clear. No text, logos, or watermark.",
+      "source_path": "assets/source/ENG-000034-empty-chair.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000039",
+      "visual_type": "photo",
+      "visual_description": "A reusable water bottle lying on a summer picnic table with a small visible stream of water leaking from a loose cap. No text, logos, or watermark.",
+      "source_path": "assets/source/ENG-000039-leaking-bottle.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000041",
+      "visual_type": "photo",
+      "visual_description": "One office worker struggling to carry several plain boxes while a coworker offers help with an open-hand gesture. The need for help is obvious. No text, labels, logos, or watermark.",
+      "source_path": "assets/source/ENG-000041-help-with-boxes.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000044",
+      "visual_type": "photo",
+      "visual_description": "An adult at a clean desk folding a plain sheet of paper in half with both hands. The fold action is obvious. No text on paper, logos, or watermark.",
+      "source_path": "assets/source/ENG-000044-folding-paper.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    },
+    {
+      "content_id": "ENG-000046",
+      "visual_type": "photo",
+      "visual_description": "A commuter train with one clearly empty seat beside an adult passenger who makes a welcoming gesture toward it. Summer clothing, no readable signs, logos, or watermark.",
+      "source_path": "assets/source/ENG-000046-empty-train-seat.png",
+      "status": "READY",
+      "constraints": [
+        "no text",
+        "no logos",
+        "no watermark",
+        "image must be essential to the question"
+      ]
+    }
+  ]
+}

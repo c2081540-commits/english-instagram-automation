@@ -1,0 +1,82 @@
+{
+  "quiz_total": 42,
+  "normal_total": 7,
+  "categories": {
+    "grammar_usage": 15,
+    "visual_vocabulary": 8,
+    "natural_choice": 6,
+    "situation": 11,
+    "review": 2
+  },
+  "difficulties": {
+    "easy_plus": 8,
+    "easy": 21,
+    "very_easy": 13
+  },
+  "choice_counts": {
+    "2": 17,
+    "4": 25
+  },
+  "visual_required": 14,
+  "seasonal": 6,
+  "short_affirmative_situations": 5,
+  "situation_purposes": {
+    "accept_action_request": 2,
+    "finish_ordering": 1,
+    "accept_refreshment_offer": 1,
+    "ask_for_directions": 1,
+    "respond_to_thanks": 1,
+    "respond_to_apology": 1,
+    "grant_permission": 1,
+    "ask_for_repetition": 1,
+    "accept_help_offer": 1,
+    "explain_seat_availability": 1
+  },
+  "normal_categories": {
+    "learning_habit": 2,
+    "memory_tip": 1,
+    "common_mistake": 1,
+    "skill_practice": 2,
+    "study_method": 1
+  },
+  "initial_pass": 49,
+  "reject": 0,
+  "replacements": 0,
+  "duplicate_reject": 0,
+  "start_date": "2026-08-20",
+  "end_date": "2026-08-26",
+  "visual_ids": [
+    "ENG-000008",
+    "ENG-000010",
+    "ENG-000014",
+    "ENG-000016",
+    "ENG-000020",
+    "ENG-000023",
+    "ENG-000026",
+    "ENG-000027",
+    "ENG-000032",
+    "ENG-000034",
+    "ENG-000039",
+    "ENG-000041",
+    "ENG-000044",
+    "ENG-000046"
+  ],
+  "seasonal_ids": [
+    "ENG-000010",
+    "ENG-000016",
+    "ENG-000023",
+    "ENG-000027",
+    "ENG-000039",
+    "ENG-000046"
+  ],
+  "normal_themes": [
+    "スキマ時間",
+    "勉強を始めるハードル",
+    "単語学習",
+    "文法の復習",
+    "リスニング",
+    "音読",
+    "復習"
+  ],
+  "review_batches": 1
+}

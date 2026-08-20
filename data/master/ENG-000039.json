@@ -1,0 +1,42 @@
+{
+  "content_id": "ENG-000039",
+  "category": "vocabulary",
+  "production_category": "visual_vocabulary",
+  "difficulty": "very_easy",
+  "seasonal": true,
+  "question": "The bottle is ___.",
+  "choices": [
+    "leaking",
+    "shining",
+    "growing",
+    "sleeping"
+  ],
+  "answer_type": "single",
+  "best_answer": "leaking",
+  "acceptable_answers": [
+    "leaking"
+  ],
+  "answer_hint": "ボトルから何が起きている？",
+  "answer_hint_approved": true,
+  "explanation": "leak は「漏れる」です。",
+  "key_difference": null,
+  "examples": [
+    "The bottle is leaking."
+  ],
+  "example_translations": [
+    "ボトルから漏れています。"
+  ],
+  "also_natural": null,
+  "tip": null,
+  "visual_required": true,
+  "visual_type": "photo",
+  "visual_description": "A reusable water bottle lying on a summer picnic table with a small visible stream of water leaking from a loose cap. No text, logos, or watermark.",
+  "problem_image_path": "assets/source/ENG-000039-leaking-bottle.png",
+  "image_information_role": "essential",
+  "question_repeats_visual": false,
+  "instagram_caption": "パッと選べる？",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は leaking。leak は「漏れる」です。",
+  "publish_at": "2026-08-25T15:00:00+09:00"
+}

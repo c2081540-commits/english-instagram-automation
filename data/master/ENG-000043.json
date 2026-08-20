@@ -1,0 +1,40 @@
+{
+  "content_id": "ENG-000043",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty": "easy",
+  "seasonal": false,
+  "question": "I've known her ___ 2020.",
+  "choices": [
+    "since",
+    "for"
+  ],
+  "answer_type": "single",
+  "best_answer": "since",
+  "acceptable_answers": [
+    "since"
+  ],
+  "answer_hint": "2020は期間？開始時点？",
+  "answer_hint_approved": true,
+  "explanation": "開始時点には since を使います。",
+  "key_difference": "since 2020 → 2020年から\nfor five years → 5年間",
+  "examples": [
+    "I've worked here since April."
+  ],
+  "example_translations": [
+    "4月からここで働いています。"
+  ],
+  "also_natural": null,
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "instagram_caption": "基礎表現をひとつ確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は since。開始時点には since を使います。",
+  "publish_at": "2026-08-26T09:30:00+09:00"
+}

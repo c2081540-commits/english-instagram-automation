@@ -1,0 +1,72 @@
+{
+  "production_date": "2026-08-22",
+  "items": [
+    {
+      "content_id": "ENG-000018",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000018-question.png",
+      "answer_image": "artifacts/images/ENG-000018-answer.png",
+      "caption": "まずは3秒で考えてみよう。",
+      "hashtags": [],
+      "publish_at": "2026-08-22T07:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-000019",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000019-question.png",
+      "answer_image": "artifacts/images/ENG-000019-answer.png",
+      "caption": "基礎表現をひとつ確認。",
+      "hashtags": [],
+      "publish_at": "2026-08-22T09:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-000020",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000020-question.png",
+      "answer_image": "artifacts/images/ENG-000020-answer.png",
+      "caption": "日常で使える英語をチェック。",
+      "hashtags": [],
+      "publish_at": "2026-08-22T12:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000021",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000021-question.png",
+      "answer_image": "artifacts/images/ENG-000021-answer.png",
+      "caption": "パッと選べる？",
+      "hashtags": [],
+      "publish_at": "2026-08-22T15:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000022",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000022-question.png",
+      "answer_image": "artifacts/images/ENG-000022-answer.png",
+      "caption": "短い英語クイズです。",
+      "hashtags": [],
+      "publish_at": "2026-08-22T17:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-000023",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000023-question.png",
+      "answer_image": "artifacts/images/ENG-000023-answer.png",
+      "caption": "今日の1問。答えは2枚目へ。",
+      "hashtags": [],
+      "publish_at": "2026-08-22T19:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-100004",
+      "content_type": "normal",
+      "story_image": "artifacts/stories/ENG-100004-story.png",
+      "publish_at": "2026-08-22T21:00:00+09:00",
+      "status": "READY"
+    }
+  ]
+}

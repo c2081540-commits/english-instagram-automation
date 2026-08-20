@@ -1,0 +1,300 @@
+{
+  "review_mode": "single_batch",
+  "quality_profile": "restart_adult_jp",
+  "results": [
+    {
+      "content_id": "ENG-000006",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000007",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000008",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000009",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000010",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000011",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000012",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000013",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000014",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000015",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000016",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000017",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000018",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000019",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000020",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000021",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000022",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000023",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000024",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000025",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000026",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000027",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000028",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000029",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000030",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000031",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000032",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000033",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000034",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000035",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000036",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000037",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000038",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000039",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000040",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000041",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000042",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000043",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000044",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000045",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-000046",
+      "status": "PASS",
+      "reason": null,
+      "image_status": "READY"
+    },
+    {
+      "content_id": "ENG-000047",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-100002",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-100003",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-100004",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-100005",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-100006",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-100007",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    },
+    {
+      "content_id": "ENG-100008",
+      "status": "PASS",
+      "reason": null,
+      "image_status": null
+    }
+  ]
+}

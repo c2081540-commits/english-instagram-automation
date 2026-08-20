@@ -1,0 +1,38 @@
+{
+  "content_id": "ENG-000016",
+  "category": "situation",
+  "production_category": "situation",
+  "difficulty": "easy",
+  "seasonal": true,
+  "question": "Would you like some water?",
+  "choices": [
+    "Yes, please.",
+    "I am water."
+  ],
+  "answer_type": "best",
+  "best_answer": "Yes, please.",
+  "acceptable_answers": [
+    "Yes, please."
+  ],
+  "answer_hint": "ほしいときの短い返事は？",
+  "answer_hint_approved": true,
+  "explanation": "勧めを受けるなら Yes, please. が自然です。",
+  "key_difference": null,
+  "examples": [],
+  "example_translations": [],
+  "also_natural": "Sure, thanks.",
+  "tip": null,
+  "visual_required": true,
+  "visual_type": "photo",
+  "visual_description": "A server politely offering a clear glass of cold water to an office worker on a hot summer day. The offered water and gesture are obvious. No text, menu words, logos, or watermark.",
+  "problem_image_path": "assets/source/ENG-000016-water-offer.png",
+  "image_information_role": "essential",
+  "question_repeats_visual": false,
+  "instagram_caption": "短い英語クイズです。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は Yes, please.。勧めを受けるなら Yes, please. が自然です。",
+  "publish_at": "2026-08-21T18:00:00+09:00",
+  "situation_purpose": "accept_refreshment_offer",
+  "response_family": "short_affirmative_response"
+}

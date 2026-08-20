@@ -81,6 +81,20 @@ Daily candidates fail closed above 70 characters for a question, 25 characters f
 
 問題は3〜5秒で論点が分かる短さを優先します。70文字・25文字・45文字はfail closed上限であり、推奨値ではありません。画像は解答に必要な情報を担う場合だけ使用し、問題文で画像の状況を重複説明しません。回答画像は必要なBOXだけを使い、例文は原則1件、使い分けは短い対比を優先します。一括レビューは「英語・正解」「日本語」「画像」「挫折者向けとして3〜5秒で理解できるか」の4点を1回で判定し、REJECTを修正ループへ送りません。
 
+## 7日量産テスト
+
+`python3 scripts/build_weekly_trial.py YYYY-MM-DD` は指定開始日から7日分（42 quiz＋7 normal）を生成し、週全体のカテゴリ・難易度・2択/4択・visual・seasonal・重複を検査します。原稿確定後に `python3 scripts/prepare_weekly_visuals.py YYYY-MM-DD` でvisual対象だけを単一requestへまとめます。未生成素材は `WAITING_FOR_VISUAL` のままで、ダミー画像は使用しません。
+
+週次品質では、シチュエーション問題に `situation_purpose` と `response_family` を持たせます。`Sure. / Of course. / Yes, please. / Go ahead.` などの短い肯定返答は同じ広域ファミリーとして数え、同じ週へ偏らないようfail closedで検査します。基礎文法は必要な場合だけ `answer_point` に40文字以内・改行なしの1行ポイントを持てます。Normal投稿は `normal_category` で学習習慣、勉強法、英語小ネタ、よくある勘違い、覚え方、実用表現、技能練習を区別し、週内で4カテゴリ以上を使用します。
+
+## 正式投稿スケジュール
+
+投稿枠は `config/schedule.json` で管理します。`python3 scripts/finalize_week_schedule.py YYYY-MM-DD` は、確認済み週次原稿の順序を変えず、6件のFeed Quizと22:30のStoriesを7日分のqueueへ確定します。Quiz carouselは常に問題画像が1枚目、回答画像が2枚目です。queueは `content_id / platform / publish_at / status` を持ち、初期状態は `pending` です。`posted` は再実行対象になりません。
+
+実行時点で過去の枠は日時を変更せず `execution_eligibility: past_due_hold` として保持し、自動実行対象から除外します。翌日への詰め込みや時刻変更は行いません。Meta API投稿処理は未実装です。
+
+`python3 scripts/export_weekly_review.py YYYY-MM-DD` は問題・回答・Storiesのcontact sheet、両媒体dry-run、集計レポートを `artifacts/weekly/YYYY-MM-DD/` に出力します。
+
 ## Future phases
 
 Future work may add answer-image rendering, AI-generated source images, Meta API publishing, scheduled Codex generation, insights, and optimization. These are intentionally absent from the current implementation.

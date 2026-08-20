@@ -1,0 +1,38 @@
+{
+  "content_id": "ENG-000046",
+  "category": "situation",
+  "production_category": "situation",
+  "difficulty": "easy",
+  "seasonal": true,
+  "question": "Is this seat taken?",
+  "choices": [
+    "No, it's free.",
+    "It's very summer."
+  ],
+  "answer_type": "best",
+  "best_answer": "No, it's free.",
+  "acceptable_answers": [
+    "No, it's free."
+  ],
+  "answer_hint": "空いている席なら？",
+  "answer_hint_approved": true,
+  "explanation": "空席なら No, it's free. と伝えられます。",
+  "key_difference": null,
+  "examples": [],
+  "example_translations": [],
+  "also_natural": "No, go ahead.",
+  "tip": null,
+  "visual_required": true,
+  "visual_type": "photo",
+  "visual_description": "A commuter train with one clearly empty seat beside an adult passenger who makes a welcoming gesture toward it. Summer clothing, no readable signs, logos, or watermark.",
+  "problem_image_path": "assets/source/ENG-000046-empty-train-seat.png",
+  "image_information_role": "essential",
+  "question_repeats_visual": false,
+  "instagram_caption": "短い英語クイズです。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は No, it's free.。空席なら No, it's free. と伝えられます。",
+  "publish_at": "2026-08-26T18:00:00+09:00",
+  "situation_purpose": "explain_seat_availability",
+  "response_family": "information_response"
+}

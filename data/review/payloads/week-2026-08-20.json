@@ -1,0 +1,1287 @@
+{
+  "schema_version": 1,
+  "single_batch_review": true,
+  "quality_profile": "restart_adult_jp",
+  "checks": [
+    "英語・正解",
+    "日本語",
+    "画像",
+    "挫折者向けとして3〜5秒で理解できるか"
+  ],
+  "on_reject": "discard_and_replace_without_repair",
+  "items": [
+    {
+      "content_id": "ENG-000006",
+      "content_type": "quiz",
+      "english": {
+        "question": "I'm looking forward to ___ you again.",
+        "choices": [
+          "see",
+          "seeing",
+          "saw",
+          "seen"
+        ],
+        "answer_type": "single",
+        "best_answer": "seeing",
+        "examples": [
+          "I'm looking forward to seeing you."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "look forward to は、かたまりで考えよう。",
+        "answer_point": "look forward to → 後ろは動詞ing",
+        "explanation": "look forward to の後ろは動名詞です。",
+        "example_translations": [
+          "お会いするのを楽しみにしています。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000007",
+      "content_type": "quiz",
+      "english": {
+        "question": "I arrived ___ the office at 8:30.",
+        "choices": [
+          "at",
+          "in",
+          "to",
+          "on"
+        ],
+        "answer_type": "single",
+        "best_answer": "at",
+        "examples": [
+          "We arrived at the station."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "office は「地点」？それとも「地域」？",
+        "answer_point": null,
+        "explanation": "建物や地点には arrive at を使います。",
+        "example_translations": [
+          "駅に着きました。"
+        ],
+        "key_difference": "at → 駅・会社などの地点\nin → 東京・日本などの地域",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000008",
+      "content_type": "quiz",
+      "english": {
+        "question": "He is ___ his sleeves.",
+        "choices": [
+          "rolling up",
+          "tying",
+          "tearing",
+          "buttoning"
+        ],
+        "answer_type": "single",
+        "best_answer": "rolling up",
+        "examples": [
+          "He rolled up his sleeves."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "袖に起きている動きは？",
+        "answer_point": null,
+        "explanation": "roll up ＝ 巻き上げる、まくる",
+        "example_translations": [
+          "彼は袖をまくりました。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A clear waist-up photo of an office worker using both hands to roll up one shirt sleeve. The rolling action and sleeve are fully visible. No text, logos, extra hands, or distorted fingers.",
+        "source_image_path": "assets/source/ENG-000008-roll-up-sleeves.png"
+      }
+    },
+    {
+      "content_id": "ENG-000009",
+      "content_type": "quiz",
+      "english": {
+        "question": "I'll send you the file ___.",
+        "choices": [
+          "by Friday",
+          "until Friday",
+          "since Friday",
+          "for Friday"
+        ],
+        "answer_type": "best",
+        "best_answer": "by Friday",
+        "examples": [
+          "I'll send it by Friday."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "金曜日が「期限」なのがポイント。",
+        "answer_point": null,
+        "explanation": "by Friday は「金曜までに完了」です。",
+        "example_translations": [
+          "金曜までに送ります。"
+        ],
+        "key_difference": "by Friday → 金曜までに完了\nuntil Friday → 金曜まで継続",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000010",
+      "content_type": "quiz",
+      "english": {
+        "question": "Could you turn on the AC?",
+        "choices": [
+          "Sure.",
+          "Maybe yesterday.",
+          "It's a chair.",
+          "See you later."
+        ],
+        "answer_type": "best",
+        "best_answer": "Sure.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "短く引き受けるなら？",
+        "answer_point": null,
+        "explanation": "依頼を引き受けるなら Sure. で自然です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "Of course.\nNo problem."
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A bright summer office scene with one coworker feeling warm and politely gesturing toward a clearly visible wall-mounted air conditioner while another coworker holds its remote. No text, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000010-air-conditioner-request.png"
+      }
+    },
+    {
+      "content_id": "ENG-000011",
+      "content_type": "quiz",
+      "english": {
+        "question": "Would you like anything else?",
+        "choices": [
+          "That's all, thank you.",
+          "I like anything.",
+          "Yes, I am else.",
+          "It was nothing."
+        ],
+        "answer_type": "best",
+        "best_answer": "That's all, thank you.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "追加がなければ、短くどう返す？",
+        "answer_point": null,
+        "explanation": "注文が以上だと丁寧に伝える返答です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "No, that's everything.\nNo, thank you."
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000012",
+      "content_type": "quiz",
+      "english": {
+        "question": "Tom ___ to work at eight.",
+        "choices": [
+          "go",
+          "goes"
+        ],
+        "answer_type": "single",
+        "best_answer": "goes",
+        "examples": [
+          "Tom goes home at six."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "主語は Tom。動詞の形は？",
+        "answer_point": "he / she / Tom → 動詞に s",
+        "explanation": "Tom の現在形には -s を付けます。",
+        "example_translations": [
+          "トムは6時に帰宅します。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000013",
+      "content_type": "quiz",
+      "english": {
+        "question": "I ___ busy yesterday.",
+        "choices": [
+          "am",
+          "was"
+        ],
+        "answer_type": "single",
+        "best_answer": "was",
+        "examples": [
+          "I was tired yesterday."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "yesterday に注目。",
+        "answer_point": "yesterday → 過去形",
+        "explanation": "過去の状態には was を使います。",
+        "example_translations": [
+          "昨日は疲れていました。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000014",
+      "content_type": "quiz",
+      "english": {
+        "question": "The door is ___.",
+        "choices": [
+          "open",
+          "closed",
+          "broken",
+          "missing"
+        ],
+        "answer_type": "single",
+        "best_answer": "open",
+        "examples": [
+          "The door is open."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "ドアの今の状態は？",
+        "answer_point": null,
+        "explanation": "open は「開いている」です。",
+        "example_translations": [
+          "ドアは開いています。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A clearly open office door, with the doorway and open door panel fully visible. No people, text, signs, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000014-open-door.png"
+      }
+    },
+    {
+      "content_id": "ENG-000015",
+      "content_type": "quiz",
+      "english": {
+        "question": "I go to work ___ train.",
+        "choices": [
+          "by",
+          "with",
+          "on",
+          "at"
+        ],
+        "answer_type": "best",
+        "best_answer": "by",
+        "examples": [
+          "I go to work by train."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "移動手段の言い方は？",
+        "answer_point": null,
+        "explanation": "交通手段には by を使います。",
+        "example_translations": [
+          "電車で通勤します。"
+        ],
+        "key_difference": "by train → 電車で\nwith a friend → 友達と",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000016",
+      "content_type": "quiz",
+      "english": {
+        "question": "Would you like some water?",
+        "choices": [
+          "Yes, please.",
+          "I am water."
+        ],
+        "answer_type": "best",
+        "best_answer": "Yes, please.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "ほしいときの短い返事は？",
+        "answer_point": null,
+        "explanation": "勧めを受けるなら Yes, please. が自然です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "Sure, thanks."
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A server politely offering a clear glass of cold water to an office worker on a hot summer day. The offered water and gesture are obvious. No text, menu words, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000016-water-offer.png"
+      }
+    },
+    {
+      "content_id": "ENG-000017",
+      "content_type": "quiz",
+      "english": {
+        "question": "Where is the station?",
+        "choices": [
+          "It's near the bank.",
+          "I am a station.",
+          "At three years.",
+          "Yes, I do."
+        ],
+        "answer_type": "best",
+        "best_answer": "It's near the bank.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "場所を聞かれています。",
+        "answer_point": null,
+        "explanation": "場所を伝える短い返答が自然です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "It's just ahead."
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000018",
+      "content_type": "quiz",
+      "english": {
+        "question": "They ___ in Tokyo.",
+        "choices": [
+          "live",
+          "lives"
+        ],
+        "answer_type": "single",
+        "best_answer": "live",
+        "examples": [
+          "They live near the station."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "主語は they。-s は必要？",
+        "answer_point": "I / you / we / they → 動詞は原形",
+        "explanation": "they の現在形には -s を付けません。",
+        "example_translations": [
+          "彼らは駅の近くに住んでいます。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000019",
+      "content_type": "quiz",
+      "english": {
+        "question": "I have ___ finished lunch.",
+        "choices": [
+          "just",
+          "yet",
+          "ever",
+          "tomorrow"
+        ],
+        "answer_type": "single",
+        "best_answer": "just",
+        "examples": [
+          "I've just finished work."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "たった今終えたなら？",
+        "answer_point": null,
+        "explanation": "just は「たった今」を表します。",
+        "example_translations": [
+          "仕事を終えたところです。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000020",
+      "content_type": "quiz",
+      "english": {
+        "question": "She is ___ the box.",
+        "choices": [
+          "carrying",
+          "opening",
+          "dropping",
+          "kicking"
+        ],
+        "answer_type": "single",
+        "best_answer": "carrying",
+        "examples": [
+          "She is carrying a box."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "箱をどうしている？",
+        "answer_point": null,
+        "explanation": "carry は「運ぶ」です。",
+        "example_translations": [
+          "彼女は箱を運んでいます。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "An adult office worker carrying one medium cardboard box securely with both arms. The carrying action is clear. No text, labels, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000020-carrying-box.png"
+      }
+    },
+    {
+      "content_id": "ENG-000021",
+      "content_type": "quiz",
+      "english": {
+        "question": "Please call me ___ lunch.",
+        "choices": [
+          "after",
+          "later",
+          "ago",
+          "next"
+        ],
+        "answer_type": "best",
+        "best_answer": "after",
+        "examples": [
+          "Let's talk after lunch."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "後ろに lunch が続く形は？",
+        "answer_point": null,
+        "explanation": "名詞の前には after を置けます。",
+        "example_translations": [
+          "昼食後に話しましょう。"
+        ],
+        "key_difference": "after lunch → 昼食後\nlater → あとで",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000022",
+      "content_type": "quiz",
+      "english": {
+        "question": "Thank you for your help.",
+        "choices": [
+          "You're welcome.",
+          "Good morning.",
+          "See you yesterday.",
+          "I am help."
+        ],
+        "answer_type": "best",
+        "best_answer": "You're welcome.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "お礼への定番の返事は？",
+        "answer_point": null,
+        "explanation": "You're welcome. はお礼への基本の返事です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "No problem."
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000023",
+      "content_type": "quiz",
+      "english": {
+        "question": "Could you close the window?",
+        "choices": [
+          "Sure.",
+          "I like windows."
+        ],
+        "answer_type": "best",
+        "best_answer": "Sure.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "頼みを引き受けるなら？",
+        "answer_point": null,
+        "explanation": "短い依頼には Sure. で自然に返せます。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "Of course."
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A summer office with an open window letting in bright heat, one coworker politely gesturing toward it and another ready to close it. No text, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000023-close-window.png"
+      }
+    },
+    {
+      "content_id": "ENG-000024",
+      "content_type": "quiz",
+      "english": {
+        "question": "This bag is ___ than mine.",
+        "choices": [
+          "heavy",
+          "heavier",
+          "heaviest",
+          "more heavy"
+        ],
+        "answer_type": "single",
+        "best_answer": "heavier",
+        "examples": [
+          "This box is heavier than that one."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "than の前はどの形？",
+        "answer_point": "than があれば比較級",
+        "explanation": "2つを比べるときは比較級を使います。",
+        "example_translations": [
+          "この箱はあの箱より重いです。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000025",
+      "content_type": "quiz",
+      "english": {
+        "question": "We ___ dinner now.",
+        "choices": [
+          "eat",
+          "are eating"
+        ],
+        "answer_type": "single",
+        "best_answer": "are eating",
+        "examples": [
+          "We are eating dinner now."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "now に注目。",
+        "answer_point": "now → be動詞＋動詞ing",
+        "explanation": "今している動作には現在進行形を使います。",
+        "example_translations": [
+          "今、夕食を食べています。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000026",
+      "content_type": "quiz",
+      "english": {
+        "question": "The cup is ___.",
+        "choices": [
+          "empty",
+          "full",
+          "hot",
+          "broken"
+        ],
+        "answer_type": "single",
+        "best_answer": "empty",
+        "examples": [
+          "My cup is empty."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "カップの中を見てみよう。",
+        "answer_point": null,
+        "explanation": "empty は「空の」です。",
+        "example_translations": [
+          "私のカップは空です。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A clearly empty ceramic coffee cup viewed slightly from above on a clean desk. The empty inside is visible. No text, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000026-empty-cup.png"
+      }
+    },
+    {
+      "content_id": "ENG-000027",
+      "content_type": "quiz",
+      "english": {
+        "question": "The road is ___.",
+        "choices": [
+          "crowded",
+          "quiet",
+          "empty",
+          "closed"
+        ],
+        "answer_type": "single",
+        "best_answer": "crowded",
+        "examples": [
+          "The road is crowded today."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "道路の混み具合は？",
+        "answer_point": null,
+        "explanation": "crowded は「混雑した」です。",
+        "example_translations": [
+          "今日は道路が混んでいます。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A busy summer city road filled with slow-moving cars, clearly showing traffic congestion. No readable signs, license text, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000027-crowded-road.png"
+      }
+    },
+    {
+      "content_id": "ENG-000028",
+      "content_type": "quiz",
+      "english": {
+        "question": "I have a meeting ___ 3 p.m.",
+        "choices": [
+          "at",
+          "on"
+        ],
+        "answer_type": "best",
+        "best_answer": "at",
+        "examples": [
+          "The meeting starts at three."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "時刻の前に置く語は？",
+        "answer_point": null,
+        "explanation": "具体的な時刻には at を使います。",
+        "example_translations": [
+          "会議は3時に始まります。"
+        ],
+        "key_difference": "at 3 p.m. → 3時に\non Monday → 月曜に",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000029",
+      "content_type": "quiz",
+      "english": {
+        "question": "Sorry I'm late.",
+        "choices": [
+          "That's okay.",
+          "Here you are.",
+          "I am late.",
+          "Good night."
+        ],
+        "answer_type": "best",
+        "best_answer": "That's okay.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "謝られたときの短い返事は？",
+        "answer_point": null,
+        "explanation": "That's okay. は相手を安心させる返事です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "No worries."
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000030",
+      "content_type": "quiz",
+      "english": {
+        "question": "There ___ a bank near here.",
+        "choices": [
+          "is",
+          "are",
+          "be",
+          "have"
+        ],
+        "answer_type": "single",
+        "best_answer": "is",
+        "examples": [
+          "There is a cafe nearby."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "後ろの名詞は単数？",
+        "answer_point": "a bank は単数 → There is",
+        "explanation": "単数の a bank には There is を使います。",
+        "example_translations": [
+          "近くにカフェがあります。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000031",
+      "content_type": "quiz",
+      "english": {
+        "question": "I ___ get up early tomorrow.",
+        "choices": [
+          "have to",
+          "has to"
+        ],
+        "answer_type": "single",
+        "best_answer": "have to",
+        "examples": [
+          "I have to leave now."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "主語は I。どちらの形？",
+        "answer_point": "I / you / we / they → have to",
+        "explanation": "I には have to を使います。",
+        "example_translations": [
+          "もう出なければなりません。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000032",
+      "content_type": "quiz",
+      "english": {
+        "question": "He is ___ the stairs.",
+        "choices": [
+          "climbing",
+          "cleaning",
+          "closing",
+          "counting"
+        ],
+        "answer_type": "single",
+        "best_answer": "climbing",
+        "examples": [
+          "He is climbing the stairs."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "階段で何をしている？",
+        "answer_point": null,
+        "explanation": "climb は「登る」です。",
+        "example_translations": [
+          "彼は階段を登っています。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "An adult office worker clearly walking upward on indoor stairs, one foot on a higher step. No text, signs, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000032-climbing-stairs.png"
+      }
+    },
+    {
+      "content_id": "ENG-000033",
+      "content_type": "quiz",
+      "english": {
+        "question": "I stayed home ___ it was raining.",
+        "choices": [
+          "because",
+          "so"
+        ],
+        "answer_type": "best",
+        "best_answer": "because",
+        "examples": [
+          "I left early because I was tired."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "後ろは理由？結果？",
+        "answer_point": null,
+        "explanation": "理由を続けるときは because を使います。",
+        "example_translations": [
+          "疲れていたので早く帰りました。"
+        ],
+        "key_difference": "because → 理由\nso → 結果",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000034",
+      "content_type": "quiz",
+      "english": {
+        "question": "May I sit here?",
+        "choices": [
+          "Of course.",
+          "I sit daily.",
+          "It is a pen.",
+          "Last week."
+        ],
+        "answer_type": "best",
+        "best_answer": "Of course.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "席を使ってよいなら？",
+        "answer_point": null,
+        "explanation": "許可するときは Of course. と返せます。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "Sure."
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A person politely gesturing toward an empty chair beside a seated coworker in a simple office break area. The empty chair and request are clear. No text, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000034-empty-chair.png"
+      }
+    },
+    {
+      "content_id": "ENG-000035",
+      "content_type": "quiz",
+      "english": {
+        "question": "Which sentence is correct?",
+        "choices": [
+          "He plays tennis.",
+          "He play tennis.",
+          "He playing tennis.",
+          "He is play tennis."
+        ],
+        "answer_type": "single",
+        "best_answer": "He plays tennis.",
+        "examples": [
+          "He works on Fridays."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "he と現在形に注目。",
+        "answer_point": null,
+        "explanation": "he の現在形には動詞へ -s を付けます。",
+        "example_translations": [
+          "彼は金曜日に働きます。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000036",
+      "content_type": "quiz",
+      "english": {
+        "question": "Can you ___ English?",
+        "choices": [
+          "speak",
+          "speaks"
+        ],
+        "answer_type": "single",
+        "best_answer": "speak",
+        "examples": [
+          "I can speak a little English."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "can の後ろはどの形？",
+        "answer_point": "can の後ろ → 動詞の原形",
+        "explanation": "can の後ろには動詞の原形を置きます。",
+        "example_translations": [
+          "英語を少し話せます。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000037",
+      "content_type": "quiz",
+      "english": {
+        "question": "I haven't eaten lunch ___.",
+        "choices": [
+          "yet",
+          "already"
+        ],
+        "answer_type": "single",
+        "best_answer": "yet",
+        "examples": [
+          "I haven't finished yet."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "まだ食べていないなら？",
+        "answer_point": null,
+        "explanation": "否定文の「まだ」には yet を使います。",
+        "example_translations": [
+          "まだ終わっていません。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000038",
+      "content_type": "quiz",
+      "english": {
+        "question": "This is the book ___ I bought.",
+        "choices": [
+          "that",
+          "where",
+          "when",
+          "what"
+        ],
+        "answer_type": "single",
+        "best_answer": "that",
+        "examples": [
+          "This is the bag that I bought."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "book を後ろから説明する語は？",
+        "answer_point": null,
+        "explanation": "物を説明する関係代名詞に that を使えます。",
+        "example_translations": [
+          "これは私が買ったバッグです。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000039",
+      "content_type": "quiz",
+      "english": {
+        "question": "The bottle is ___.",
+        "choices": [
+          "leaking",
+          "shining",
+          "growing",
+          "sleeping"
+        ],
+        "answer_type": "single",
+        "best_answer": "leaking",
+        "examples": [
+          "The bottle is leaking."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "ボトルから何が起きている？",
+        "answer_point": null,
+        "explanation": "leak は「漏れる」です。",
+        "example_translations": [
+          "ボトルから漏れています。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A reusable water bottle lying on a summer picnic table with a small visible stream of water leaking from a loose cap. No text, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000039-leaking-bottle.png"
+      }
+    },
+    {
+      "content_id": "ENG-000040",
+      "content_type": "quiz",
+      "english": {
+        "question": "I didn't catch that.",
+        "choices": [
+          "Could you repeat that?",
+          "I catch a train."
+        ],
+        "answer_type": "best",
+        "best_answer": "Could you repeat that?",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "聞き取れなかったら、どう頼む？",
+        "answer_point": null,
+        "explanation": "聞き返すときの自然な依頼表現です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "Could you say that again?"
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000041",
+      "content_type": "quiz",
+      "english": {
+        "question": "Do you need any help?",
+        "choices": [
+          "Yes, please.",
+          "I need yesterday."
+        ],
+        "answer_type": "best",
+        "best_answer": "Yes, please.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "助けが必要なら？",
+        "answer_point": null,
+        "explanation": "助けをお願いするなら Yes, please. が自然です。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "That would be great."
+      },
+      "visual": {
+        "status": "READY",
+        "description": "One office worker struggling to carry several plain boxes while a coworker offers help with an open-hand gesture. The need for help is obvious. No text, labels, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000041-help-with-boxes.png"
+      }
+    },
+    {
+      "content_id": "ENG-000042",
+      "content_type": "quiz",
+      "english": {
+        "question": "My office ___ at nine.",
+        "choices": [
+          "open",
+          "opens"
+        ],
+        "answer_type": "single",
+        "best_answer": "opens",
+        "examples": [
+          "The store opens at ten."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "主語は単数。動詞の形は？",
+        "answer_point": "単数の主語 → 動詞に s",
+        "explanation": "単数の主語には opens を使います。",
+        "example_translations": [
+          "店は10時に開きます。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000043",
+      "content_type": "quiz",
+      "english": {
+        "question": "I've known her ___ 2020.",
+        "choices": [
+          "since",
+          "for"
+        ],
+        "answer_type": "single",
+        "best_answer": "since",
+        "examples": [
+          "I've worked here since April."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "2020は期間？開始時点？",
+        "answer_point": null,
+        "explanation": "開始時点には since を使います。",
+        "example_translations": [
+          "4月からここで働いています。"
+        ],
+        "key_difference": "since 2020 → 2020年から\nfor five years → 5年間",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000044",
+      "content_type": "quiz",
+      "english": {
+        "question": "She is ___ the paper.",
+        "choices": [
+          "folding",
+          "pouring",
+          "unlocking",
+          "throwing"
+        ],
+        "answer_type": "single",
+        "best_answer": "folding",
+        "examples": [
+          "She is folding the paper."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "紙をどうしている？",
+        "answer_point": null,
+        "explanation": "fold は「折る」です。",
+        "example_translations": [
+          "彼女は紙を折っています。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": {
+        "status": "READY",
+        "description": "An adult at a clean desk folding a plain sheet of paper in half with both hands. The fold action is obvious. No text on paper, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000044-folding-paper.png"
+      }
+    },
+    {
+      "content_id": "ENG-000045",
+      "content_type": "quiz",
+      "english": {
+        "question": "Let's meet ___ Monday morning.",
+        "choices": [
+          "on",
+          "at"
+        ],
+        "answer_type": "best",
+        "best_answer": "on",
+        "examples": [
+          "Let's meet on Friday."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "曜日を含む日の前は？",
+        "answer_point": null,
+        "explanation": "曜日を含む日には on を使います。",
+        "example_translations": [
+          "金曜日に会いましょう。"
+        ],
+        "key_difference": "on Monday → 月曜に\nat nine → 9時に",
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-000046",
+      "content_type": "quiz",
+      "english": {
+        "question": "Is this seat taken?",
+        "choices": [
+          "No, it's free.",
+          "It's very summer."
+        ],
+        "answer_type": "best",
+        "best_answer": "No, it's free.",
+        "examples": []
+      },
+      "japanese": {
+        "answer_hint": "空いている席なら？",
+        "answer_point": null,
+        "explanation": "空席なら No, it's free. と伝えられます。",
+        "example_translations": [],
+        "key_difference": null,
+        "also_natural": "No, go ahead."
+      },
+      "visual": {
+        "status": "READY",
+        "description": "A commuter train with one clearly empty seat beside an adult passenger who makes a welcoming gesture toward it. Summer clothing, no readable signs, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000046-empty-train-seat.png"
+      }
+    },
+    {
+      "content_id": "ENG-000047",
+      "content_type": "quiz",
+      "english": {
+        "question": "Which one means '休憩する'?",
+        "choices": [
+          "take a break",
+          "make a break",
+          "do a break",
+          "get a breaking"
+        ],
+        "answer_type": "single",
+        "best_answer": "take a break",
+        "examples": [
+          "Let's take a short break."
+        ]
+      },
+      "japanese": {
+        "answer_hint": "break と一緒に使う動詞は？",
+        "answer_point": null,
+        "explanation": "「休憩する」は take a break です。",
+        "example_translations": [
+          "少し休憩しましょう。"
+        ],
+        "key_difference": null,
+        "also_natural": null
+      },
+      "visual": null
+    },
+    {
+      "content_id": "ENG-100002",
+      "content_type": "normal",
+      "japanese": {
+        "normal_category": "learning_habit",
+        "theme": "スキマ時間",
+        "threads_text": "仕事が忙しい日に、英語のための30分を探すと始めにくくなります。\n\n通勤中に単語を5個見る。昼休みに1問解く。帰宅後に英文を1回だけ音読する。\n\nまとまった時間を待たず、すでにある行動の前後に小さな学習を置くと、今日から始めやすくなります。",
+        "story_headline": "英語の30分が取れない日に。",
+        "story_body": "まとまった時間を待たなくて大丈夫。\n\n✓ 通勤中に単語を5個\n✓ 昼休みに1問\n✓ 帰宅後に英文を1回音読\n\nすでにある行動の前後に、小さな学習を置いてみよう。"
+      }
+    },
+    {
+      "content_id": "ENG-100003",
+      "content_type": "normal",
+      "japanese": {
+        "normal_category": "learning_habit",
+        "theme": "勉強を始めるハードル",
+        "threads_text": "英語を始める前に、何をやるか迷って時間が過ぎることがあります。\n\n今日は教材を机に出し、最初の1問に付箋を貼っておく。\n\n始める判断を先に済ませると、仕事後の負担を減らせます。",
+        "story_headline": "教材を開く前に迷う人へ。",
+        "story_body": "今日やる場所を1つだけ決めよう。\n\n✓ テキストを机に出す\n✓ 最初の1問に付箋を貼る\n\n始める判断を先に済ませると、仕事後でも動きやすくなります。"
+      }
+    },
+    {
+      "content_id": "ENG-100004",
+      "content_type": "normal",
+      "japanese": {
+        "normal_category": "memory_tip",
+        "theme": "単語学習",
+        "threads_text": "単語帳を見て意味が分かっても、会話で出てこないことがあります。\n\n今日は新しい単語を1つ選び、短い例文を作って声に出す。\n\n意味と使う場面を一緒に覚えられます。",
+        "story_headline": "単語を覚えても使えないとき。",
+        "story_body": "単語だけで終わらせず、短い例文を1つ声に出そう。\n\nwork → I work in Tokyo.\n\n使う場面と一緒に覚えると、思い出しやすくなります。"
+      }
+    },
+    {
+      "content_id": "ENG-100005",
+      "content_type": "normal",
+      "japanese": {
+        "normal_category": "common_mistake",
+        "theme": "文法の復習",
+        "threads_text": "文法書を最初から読み直すと、量の多さで止まりやすくなります。\n\n間違えた1問のルールを確認し、自分の例文を1つ作る。\n\n今日はその1項目だけで十分です。",
+        "story_headline": "文法は全部覚え直さなくていい。",
+        "story_body": "間違えた1問だけ確認しよう。\n\n✓ なぜその答えか\n✓ 自分の例文を1つ\n\n広く読み直すより、使える形を1つ増やそう。"
+      }
+    },
+    {
+      "content_id": "ENG-100006",
+      "content_type": "normal",
+      "japanese": {
+        "normal_category": "skill_practice",
+        "theme": "リスニング",
+        "threads_text": "英語を長く聞き流しても、聞こえない部分がそのままになることがあります。\n\n今日は10秒だけ選び、全体・単語・英文確認の順で3回聞く。\n\n短い範囲なら音を丁寧に確認できます。",
+        "story_headline": "聞き取れない音があるとき。",
+        "story_body": "同じ10秒を3回聞いてみよう。\n\n1回目：全体\n2回目：聞こえた単語\n3回目：英文を見ながら\n\n長時間流すより、短く確認できます。"
+      }
+    },
+    {
+      "content_id": "ENG-100007",
+      "content_type": "normal",
+      "japanese": {
+        "normal_category": "skill_practice",
+        "theme": "音読",
+        "threads_text": "音読で速さを追うと、発音も意味も曖昧になりがちです。\n\n今日は1文だけ選び、意味を確認してゆっくり3回読む。\n\n正確に言える文を1つ作る練習です。",
+        "story_headline": "音読で口が止まる人へ。",
+        "story_body": "速く読む必要はありません。\n\n✓ 1文だけ選ぶ\n✓ 意味を確認する\n✓ ゆっくり3回読む\n\n正確に言える文を1つ作ろう。"
+      }
+    },
+    {
+      "content_id": "ENG-100008",
+      "content_type": "normal",
+      "japanese": {
+        "normal_category": "study_method",
+        "theme": "復習",
+        "threads_text": "復習範囲を広げすぎると、何から手を付けるか迷います。\n\n昨日間違えた問題を1問選び、答えの理由を言ってみる。\n\n新しい教材を増やす前に、理解の穴を1つ埋められます。",
+        "story_headline": "復習する問題を迷ったら。",
+        "story_body": "昨日間違えた問題を1問だけ解き直そう。\n\n答えを覚えていても、理由を言えればOK。\n\n新しい教材を増やす前に、昨日の穴を1つ埋めよう。"
+      }
+    }
+  ]
+}

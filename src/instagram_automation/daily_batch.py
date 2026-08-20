@@ -60,12 +60,12 @@ def validate_quiz_candidate(item: dict) -> None:
     _top_section(item)
     _sections(item)
     production_category = item.get("production_category")
-    if production_category not in EXPECTED_MIX:
+    if production_category not in {*EXPECTED_MIX, "review"}:
         raise ValueError("production_category is invalid")
     hashtags = item.get("instagram_hashtags")
     if not isinstance(hashtags, list) or any(not isinstance(tag, str) for tag in hashtags):
         raise ValueError("instagram_hashtags must be a list of strings")
-    if item.get("difficulty") not in {"beginner", "intermediate"}:
+    if item.get("difficulty") not in {"beginner", "intermediate", "very_easy", "easy", "easy_plus"}:
         raise ValueError("difficulty is outside the restart-adult profile")
     if len(item["question"]) > limits["question_max"]:
         raise ValueError("question exceeds the SNS limit of 70 characters")

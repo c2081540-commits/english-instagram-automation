@@ -10,16 +10,28 @@
       "difficulty": "intermediate",
       "seasonal": false,
       "question": "I'm looking forward to ___ you again.",
-      "choices": ["see", "seeing", "saw", "seen"],
+      "choices": [
+        "see",
+        "seeing",
+        "saw",
+        "seen"
+      ],
       "answer_type": "single",
       "best_answer": "seeing",
-      "acceptable_answers": ["seeing"],
+      "acceptable_answers": [
+        "seeing"
+      ],
       "answer_hint": "look forward to は、かたまりで考えよう。",
       "answer_hint_approved": true,
       "explanation": "look forward to の後ろは動名詞です。",
+      "answer_point": "look forward to → 後ろは動詞ing",
       "key_difference": null,
-      "examples": ["I'm looking forward to seeing you."],
-      "example_translations": ["お会いするのを楽しみにしています。"],
+      "examples": [
+        "I'm looking forward to seeing you."
+      ],
+      "example_translations": [
+        "お会いするのを楽しみにしています。"
+      ],
       "tip": null,
       "visual_required": false,
       "visual_type": null,
@@ -29,7 +41,7 @@
       "instagram_hashtags": [],
       "threads_parent_text": "学校で習ったはず。覚えてる？",
       "threads_answer_text": "💡 表現全体のまとまりに注目。\n\n✅ 正解は B. seeing\n\nlook forward to の to は前置詞なので、後ろには動名詞を置きます。",
-      "publish_at": "2026-08-20T07:30:00+09:00"
+      "publish_at": "2026-08-20T07:00:00+09:00"
     },
     {
       "content_id": "ENG-000007",
@@ -38,16 +50,27 @@
       "difficulty": "beginner",
       "seasonal": false,
       "question": "I arrived ___ the office at 8:30.",
-      "choices": ["at", "in", "to", "on"],
+      "choices": [
+        "at",
+        "in",
+        "to",
+        "on"
+      ],
       "answer_type": "single",
       "best_answer": "at",
-      "acceptable_answers": ["at"],
+      "acceptable_answers": [
+        "at"
+      ],
       "answer_hint": "office は「地点」？それとも「地域」？",
       "answer_hint_approved": true,
       "explanation": "建物や地点には arrive at を使います。",
       "key_difference": "at → 駅・会社などの地点\nin → 東京・日本などの地域",
-      "examples": ["We arrived at the station."],
-      "example_translations": ["駅に着きました。"],
+      "examples": [
+        "We arrived at the station."
+      ],
+      "example_translations": [
+        "駅に着きました。"
+      ],
       "tip": null,
       "visual_required": false,
       "visual_type": null,
@@ -66,16 +89,27 @@
       "difficulty": "beginner",
       "seasonal": false,
       "question": "He is ___ his sleeves.",
-      "choices": ["rolling up", "tying", "tearing", "buttoning"],
+      "choices": [
+        "rolling up",
+        "tying",
+        "tearing",
+        "buttoning"
+      ],
       "answer_type": "single",
       "best_answer": "rolling up",
-      "acceptable_answers": ["rolling up"],
+      "acceptable_answers": [
+        "rolling up"
+      ],
       "answer_hint": "袖に起きている動きは？",
       "answer_hint_approved": true,
       "explanation": "roll up ＝ 巻き上げる、まくる",
       "key_difference": null,
-      "examples": ["He rolled up his sleeves."],
-      "example_translations": ["彼は袖をまくりました。"],
+      "examples": [
+        "He rolled up his sleeves."
+      ],
+      "example_translations": [
+        "彼は袖をまくりました。"
+      ],
       "tip": null,
       "visual_required": true,
       "visual_type": "photo",
@@ -96,16 +130,27 @@
       "difficulty": "beginner",
       "seasonal": false,
       "question": "I'll send you the file ___.",
-      "choices": ["by Friday", "until Friday", "since Friday", "for Friday"],
+      "choices": [
+        "by Friday",
+        "until Friday",
+        "since Friday",
+        "for Friday"
+      ],
       "answer_type": "best",
       "best_answer": "by Friday",
-      "acceptable_answers": ["by Friday"],
+      "acceptable_answers": [
+        "by Friday"
+      ],
       "answer_hint": "金曜日が「期限」なのがポイント。",
       "answer_hint_approved": true,
       "explanation": "by Friday は「金曜までに完了」です。",
       "key_difference": "by Friday → 金曜までに完了\nuntil Friday → 金曜まで継続",
-      "examples": ["I'll send it by Friday."],
-      "example_translations": ["金曜までに送ります。"],
+      "examples": [
+        "I'll send it by Friday."
+      ],
+      "example_translations": [
+        "金曜までに送ります。"
+      ],
       "tip": null,
       "visual_required": false,
       "visual_type": null,
@@ -124,13 +169,22 @@
       "difficulty": "beginner",
       "seasonal": true,
       "question": "Could you turn on the AC?",
-      "choices": ["Sure.", "Maybe yesterday.", "It's a chair.", "See you later."],
+      "choices": [
+        "Sure.",
+        "Maybe yesterday.",
+        "It's a chair.",
+        "See you later."
+      ],
       "answer_type": "best",
       "best_answer": "Sure.",
-      "acceptable_answers": ["Sure."],
+      "acceptable_answers": [
+        "Sure."
+      ],
       "answer_hint": "短く引き受けるなら？",
       "answer_hint_approved": true,
       "explanation": "依頼を引き受けるなら Sure. で自然です。",
+      "situation_purpose": "accept_action_request",
+      "response_family": "short_affirmative_response",
       "key_difference": null,
       "examples": [],
       "example_translations": [],
@@ -146,7 +200,7 @@
       "instagram_hashtags": [],
       "threads_parent_text": "とっさに返せる？",
       "threads_answer_text": "💡 引き受けるだけなら、長い説明は必要ありません。\n\n✅ 正解は A. Sure.\n\nOf course. や No problem. でも自然です。",
-      "publish_at": "2026-08-20T17:30:00+09:00"
+      "publish_at": "2026-08-20T18:00:00+09:00"
     },
     {
       "content_id": "ENG-000011",
@@ -155,13 +209,22 @@
       "difficulty": "intermediate",
       "seasonal": false,
       "question": "Would you like anything else?",
-      "choices": ["That's all, thank you.", "I like anything.", "Yes, I am else.", "It was nothing."],
+      "choices": [
+        "That's all, thank you.",
+        "I like anything.",
+        "Yes, I am else.",
+        "It was nothing."
+      ],
       "answer_type": "best",
       "best_answer": "That's all, thank you.",
-      "acceptable_answers": ["That's all, thank you."],
+      "acceptable_answers": [
+        "That's all, thank you."
+      ],
       "answer_hint": "追加がなければ、短くどう返す？",
       "answer_hint_approved": true,
       "explanation": "注文が以上だと丁寧に伝える返答です。",
+      "situation_purpose": "finish_ordering",
+      "response_family": "information_response",
       "key_difference": null,
       "examples": [],
       "example_translations": [],
@@ -175,16 +238,17 @@
       "instagram_hashtags": [],
       "threads_parent_text": "こう聞かれたら何て返す？",
       "threads_answer_text": "💡 追加の注文がないことを短く伝えます。\n\n✅ 正解は A. That's all, thank you.\n\nNo, that's everything. や No, thank you. も使えます。",
-      "publish_at": "2026-08-20T19:30:00+09:00"
+      "publish_at": "2026-08-20T20:30:00+09:00"
     }
   ],
   "normal": {
     "content_id": "ENG-100002",
     "content_type": "normal",
+    "normal_category": "learning_habit",
     "theme": "スキマ時間",
     "threads_text": "仕事が忙しい日に、英語のための30分を探すと始めにくくなります。\n\n通勤中に単語を5個見る。昼休みに1問解く。帰宅後に英文を1回だけ音読する。\n\nまとまった時間を待たず、すでにある行動の前後に小さな学習を置くと、今日から始めやすくなります。",
     "story_headline": "英語の30分が取れない日に。",
     "story_body": "まとまった時間を待たなくて大丈夫。\n\n✓ 通勤中に単語を5個\n✓ 昼休みに1問\n✓ 帰宅後に英文を1回音読\n\nすでにある行動の前後に、小さな学習を置いてみよう。",
-    "publish_at": "2026-08-20T21:00:00+09:00"
+    "publish_at": "2026-08-20T22:30:00+09:00"
   }
 }

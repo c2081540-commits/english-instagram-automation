@@ -1,0 +1,22 @@
+{
+  "content_id": "ENG-000007",
+  "platform": "instagram",
+  "content_type": "quiz",
+  "channel": "feed",
+  "publish_at": "2026-08-20T09:30:00+09:00",
+  "status": "pending",
+  "execution_eligibility": "past_due_hold",
+  "carousel": [
+    {
+      "order": 1,
+      "role": "question",
+      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000007-question.png"
+    },
+    {
+      "order": 2,
+      "role": "answer",
+      "image_path": "/Users/sekiguchijunichi/Documents/Codex/english-automation/english-instagram-automation/artifacts/images/ENG-000007-answer.png"
+    }
+  ],
+  "caption": "arrive の後ろに入る前置詞、場所の捉え方がポイントです。"
+}

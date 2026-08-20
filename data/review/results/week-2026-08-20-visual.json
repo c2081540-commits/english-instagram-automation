@@ -1,0 +1,26 @@
+{
+  "review_mode": "single_batch",
+  "scope": "14 visual quiz source assets",
+  "checks": [
+    "問題内容と一致",
+    "状態・動作が視認可能",
+    "生成崩れなし",
+    "不要な文字なし"
+  ],
+  "results": [
+    {"content_id": "ENG-000008", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000010", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000014", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000016", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000020", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000023", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000026", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000027", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000032", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000034", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000039", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000041", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000044", "status": "PASS", "reason": null},
+    {"content_id": "ENG-000046", "status": "PASS", "reason": null}
+  ]
+}

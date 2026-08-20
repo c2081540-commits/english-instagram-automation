@@ -1,0 +1,7 @@
+{
+  "timezone": "Asia/Tokyo",
+  "quiz_slots": ["07:00", "09:30", "12:00", "15:00", "18:00", "20:30"],
+  "normal_slot": "22:30",
+  "allowed_statuses": ["pending", "posted", "failed", "skipped"],
+  "past_slot_policy": "hold"
+}

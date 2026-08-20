@@ -1,0 +1,42 @@
+{
+  "content_id": "ENG-000027",
+  "category": "vocabulary",
+  "production_category": "visual_vocabulary",
+  "difficulty": "easy",
+  "seasonal": true,
+  "question": "The road is ___.",
+  "choices": [
+    "crowded",
+    "quiet",
+    "empty",
+    "closed"
+  ],
+  "answer_type": "single",
+  "best_answer": "crowded",
+  "acceptable_answers": [
+    "crowded"
+  ],
+  "answer_hint": "道路の混み具合は？",
+  "answer_hint_approved": true,
+  "explanation": "crowded は「混雑した」です。",
+  "key_difference": null,
+  "examples": [
+    "The road is crowded today."
+  ],
+  "example_translations": [
+    "今日は道路が混んでいます。"
+  ],
+  "also_natural": null,
+  "tip": null,
+  "visual_required": true,
+  "visual_type": "photo",
+  "visual_description": "A busy summer city road filled with slow-moving cars, clearly showing traffic congestion. No readable signs, license text, logos, or watermark.",
+  "problem_image_path": "assets/source/ENG-000027-crowded-road.png",
+  "image_information_role": "essential",
+  "question_repeats_visual": false,
+  "instagram_caption": "パッと選べる？",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は crowded。crowded は「混雑した」です。",
+  "publish_at": "2026-08-23T15:00:00+09:00"
+}

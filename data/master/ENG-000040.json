@@ -1,0 +1,38 @@
+{
+  "content_id": "ENG-000040",
+  "category": "situation",
+  "production_category": "situation",
+  "difficulty": "easy",
+  "seasonal": false,
+  "question": "I didn't catch that.",
+  "choices": [
+    "Could you repeat that?",
+    "I catch a train."
+  ],
+  "answer_type": "best",
+  "best_answer": "Could you repeat that?",
+  "acceptable_answers": [
+    "Could you repeat that?"
+  ],
+  "answer_hint": "聞き取れなかったら、どう頼む？",
+  "answer_hint_approved": true,
+  "explanation": "聞き返すときの自然な依頼表現です。",
+  "key_difference": null,
+  "examples": [],
+  "example_translations": [],
+  "also_natural": "Could you say that again?",
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "instagram_caption": "短い英語クイズです。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は Could you repeat that?。聞き返すときの自然な依頼表現です。",
+  "publish_at": "2026-08-25T18:00:00+09:00",
+  "situation_purpose": "ask_for_repetition",
+  "response_family": "clarification_request"
+}

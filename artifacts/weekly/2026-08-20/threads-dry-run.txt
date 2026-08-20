@@ -1,0 +1,578 @@
+[ENG-000006] 2026-08-20T07:30:00+09:00 | pending
+parent: どれが入る？
+image: assets/question_images/ENG-000006-question.png
+💡 look forward to は、かたまりで考えよう。
+
+✅ 正解は B. seeing
+
+look forward to の後ろは動名詞です。
+
+I'm looking forward to seeing you.
+＝お会いするのを楽しみにしています。
+
+[ENG-000007] 2026-08-20T09:30:00+09:00 | pending
+parent: パッと答えられる？
+image: assets/question_images/ENG-000007-question.png
+💡 office は「地点」？それとも「地域」？
+
+✅ 正解は A. at
+
+建物や地点には arrive at を使います。
+
+We arrived at the station.
+＝駅に着きました。
+
+at → 駅・会社などの地点
+in → 東京・日本などの地域
+
+[ENG-000008] 2026-08-20T12:00:00+09:00 | pending
+parent: 一番合う単語は？
+image: assets/question_images/ENG-000008-question.png
+💡 袖に起きている動きは？
+
+✅ 正解は A. rolling up
+
+roll up ＝ 巻き上げる、まくる
+
+He rolled up his sleeves.
+＝彼は袖をまくりました。
+
+[ENG-000009] 2026-08-20T15:00:00+09:00 | pending
+parent: 学校で習ったはず。覚えてる？
+image: assets/question_images/ENG-000009-question.png
+💡 金曜日が「期限」なのがポイント。
+
+✅ 正解は A. by Friday
+
+by Friday は「金曜までに完了」です。
+
+I'll send it by Friday.
+＝金曜までに送ります。
+
+by Friday → 金曜までに完了
+until Friday → 金曜まで継続
+
+[ENG-000010] 2026-08-20T17:30:00+09:00 | pending
+parent: こう聞かれたら何て返す？
+image: assets/question_images/ENG-000010-question.png
+💡 短く引き受けるなら？
+
+✅ 正解は A. Sure.
+
+Of course.
+No problem.
+でも自然です。
+
+依頼を引き受けるなら Sure. で自然です。
+
+[ENG-000011] 2026-08-20T19:30:00+09:00 | pending
+parent: 短く返すなら？
+image: assets/question_images/ENG-000011-question.png
+💡 追加がなければ、短くどう返す？
+
+✅ 正解は A. That's all, thank you.
+
+No, that's everything.
+No, thank you.
+でも自然です。
+
+注文が以上だと丁寧に伝える返答です。
+
+[ENG-000012] 2026-08-21T07:30:00+09:00 | pending
+parent: これ、意外と迷う。
+image: assets/question_images/ENG-000012-question.png
+💡 主語は Tom。動詞の形は？
+
+✅ 正解は B. goes
+
+Tom の現在形には -s を付けます。
+
+Tom goes home at six.
+＝トムは6時に帰宅します。
+
+[ENG-000013] 2026-08-21T09:30:00+09:00 | pending
+parent: 学校で習ったはず。覚えてる？
+image: assets/question_images/ENG-000013-question.png
+💡 yesterday に注目。
+
+✅ 正解は B. was
+
+過去の状態には was を使います。
+
+I was tired yesterday.
+＝昨日は疲れていました。
+
+[ENG-000014] 2026-08-21T12:00:00+09:00 | pending
+parent: 一番合う単語は？
+image: assets/question_images/ENG-000014-question.png
+💡 ドアの今の状態は？
+
+✅ 正解は A. open
+
+open は「開いている」です。
+
+The door is open.
+＝ドアは開いています。
+
+[ENG-000015] 2026-08-21T15:00:00+09:00 | pending
+parent: パッと答えられる？
+image: assets/question_images/ENG-000015-question.png
+💡 移動手段の言い方は？
+
+✅ 正解は A. by
+
+交通手段には by を使います。
+
+I go to work by train.
+＝電車で通勤します。
+
+by train → 電車で
+with a friend → 友達と
+
+[ENG-000016] 2026-08-21T17:30:00+09:00 | pending
+parent: こう聞かれたら何て返す？
+image: assets/question_images/ENG-000016-question.png
+💡 ほしいときの短い返事は？
+
+✅ 正解は A. Yes, please.
+
+Sure, thanks.
+でも自然です。
+
+勧めを受けるなら Yes, please. が自然です。
+
+[ENG-000017] 2026-08-21T19:30:00+09:00 | pending
+parent: 短く返すなら？
+image: assets/question_images/ENG-000017-question.png
+💡 場所を聞かれています。
+
+✅ 正解は A. It's near the bank.
+
+It's just ahead.
+でも自然です。
+
+場所を伝える短い返答が自然です。
+
+[ENG-000018] 2026-08-22T07:30:00+09:00 | pending
+parent: どれが入る？
+image: assets/question_images/ENG-000018-question.png
+💡 主語は they。-s は必要？
+
+✅ 正解は A. live
+
+they の現在形には -s を付けません。
+
+They live near the station.
+＝彼らは駅の近くに住んでいます。
+
+[ENG-000019] 2026-08-22T09:30:00+09:00 | pending
+parent: パッと答えられる？
+image: assets/question_images/ENG-000019-question.png
+💡 たった今終えたなら？
+
+✅ 正解は A. just
+
+just は「たった今」を表します。
+
+I've just finished work.
+＝仕事を終えたところです。
+
+[ENG-000020] 2026-08-22T12:00:00+09:00 | pending
+parent: 一番合う単語は？
+image: assets/question_images/ENG-000020-question.png
+💡 箱をどうしている？
+
+✅ 正解は A. carrying
+
+carry は「運ぶ」です。
+
+She is carrying a box.
+＝彼女は箱を運んでいます。
+
+[ENG-000021] 2026-08-22T15:00:00+09:00 | pending
+parent: 学校で習ったはず。覚えてる？
+image: assets/question_images/ENG-000021-question.png
+💡 後ろに lunch が続く形は？
+
+✅ 正解は A. after
+
+名詞の前には after を置けます。
+
+Let's talk after lunch.
+＝昼食後に話しましょう。
+
+after lunch → 昼食後
+later → あとで
+
+[ENG-000022] 2026-08-22T17:30:00+09:00 | pending
+parent: こう聞かれたら何て返す？
+image: assets/question_images/ENG-000022-question.png
+💡 お礼への定番の返事は？
+
+✅ 正解は A. You're welcome.
+
+No problem.
+でも自然です。
+
+You're welcome. はお礼への基本の返事です。
+
+[ENG-000023] 2026-08-22T19:30:00+09:00 | pending
+parent: 短く返すなら？
+image: assets/question_images/ENG-000023-question.png
+💡 頼みを引き受けるなら？
+
+✅ 正解は A. Sure.
+
+Of course.
+でも自然です。
+
+短い依頼には Sure. で自然に返せます。
+
+[ENG-000024] 2026-08-23T07:30:00+09:00 | pending
+parent: これ、意外と迷う。
+image: assets/question_images/ENG-000024-question.png
+💡 than の前はどの形？
+
+✅ 正解は B. heavier
+
+2つを比べるときは比較級を使います。
+
+This box is heavier than that one.
+＝この箱はあの箱より重いです。
+
+[ENG-000025] 2026-08-23T09:30:00+09:00 | pending
+parent: 学校で習ったはず。覚えてる？
+image: assets/question_images/ENG-000025-question.png
+💡 now に注目。
+
+✅ 正解は B. are eating
+
+今している動作には現在進行形を使います。
+
+We are eating dinner now.
+＝今、夕食を食べています。
+
+[ENG-000026] 2026-08-23T12:00:00+09:00 | pending
+parent: 一番合う単語は？
+image: assets/question_images/ENG-000026-question.png
+💡 カップの中を見てみよう。
+
+✅ 正解は A. empty
+
+empty は「空の」です。
+
+My cup is empty.
+＝私のカップは空です。
+
+[ENG-000027] 2026-08-23T15:00:00+09:00 | pending
+parent: この状態、英語なら？
+image: assets/question_images/ENG-000027-question.png
+💡 道路の混み具合は？
+
+✅ 正解は A. crowded
+
+crowded は「混雑した」です。
+
+The road is crowded today.
+＝今日は道路が混んでいます。
+
+[ENG-000028] 2026-08-23T17:30:00+09:00 | pending
+parent: これ、意外と迷う。
+image: assets/question_images/ENG-000028-question.png
+💡 時刻の前に置く語は？
+
+✅ 正解は A. at
+
+具体的な時刻には at を使います。
+
+The meeting starts at three.
+＝会議は3時に始まります。
+
+at 3 p.m. → 3時に
+on Monday → 月曜に
+
+[ENG-000029] 2026-08-23T19:30:00+09:00 | pending
+parent: 短く返すなら？
+image: assets/question_images/ENG-000029-question.png
+💡 謝られたときの短い返事は？
+
+✅ 正解は A. That's okay.
+
+No worries.
+でも自然です。
+
+That's okay. は相手を安心させる返事です。
+
+[ENG-000030] 2026-08-24T07:30:00+09:00 | pending
+parent: どれが入る？
+image: assets/question_images/ENG-000030-question.png
+💡 後ろの名詞は単数？
+
+✅ 正解は A. is
+
+単数の a bank には There is を使います。
+
+There is a cafe nearby.
+＝近くにカフェがあります。
+
+[ENG-000031] 2026-08-24T09:30:00+09:00 | pending
+parent: パッと答えられる？
+image: assets/question_images/ENG-000031-question.png
+💡 主語は I。どちらの形？
+
+✅ 正解は A. have to
+
+I には have to を使います。
+
+I have to leave now.
+＝もう出なければなりません。
+
+[ENG-000032] 2026-08-24T12:00:00+09:00 | pending
+parent: 一番合う単語は？
+image: assets/question_images/ENG-000032-question.png
+💡 階段で何をしている？
+
+✅ 正解は A. climbing
+
+climb は「登る」です。
+
+He is climbing the stairs.
+＝彼は階段を登っています。
+
+[ENG-000033] 2026-08-24T15:00:00+09:00 | pending
+parent: 学校で習ったはず。覚えてる？
+image: assets/question_images/ENG-000033-question.png
+💡 後ろは理由？結果？
+
+✅ 正解は A. because
+
+理由を続けるときは because を使います。
+
+I left early because I was tired.
+＝疲れていたので早く帰りました。
+
+because → 理由
+so → 結果
+
+[ENG-000034] 2026-08-24T17:30:00+09:00 | pending
+parent: こう聞かれたら何て返す？
+image: assets/question_images/ENG-000034-question.png
+💡 席を使ってよいなら？
+
+✅ 正解は A. Of course.
+
+Sure.
+でも自然です。
+
+許可するときは Of course. と返せます。
+
+[ENG-000035] 2026-08-24T19:30:00+09:00 | pending
+parent: パッと答えられる？
+image: assets/question_images/ENG-000035-question.png
+💡 he と現在形に注目。
+
+✅ 正解は A. He plays tennis.
+
+he の現在形には動詞へ -s を付けます。
+
+He works on Fridays.
+＝彼は金曜日に働きます。
+
+[ENG-000036] 2026-08-25T07:30:00+09:00 | pending
+parent: これ、意外と迷う。
+image: assets/question_images/ENG-000036-question.png
+💡 can の後ろはどの形？
+
+✅ 正解は A. speak
+
+can の後ろには動詞の原形を置きます。
+
+I can speak a little English.
+＝英語を少し話せます。
+
+[ENG-000037] 2026-08-25T09:30:00+09:00 | pending
+parent: 学校で習ったはず。覚えてる？
+image: assets/question_images/ENG-000037-question.png
+💡 まだ食べていないなら？
+
+✅ 正解は A. yet
+
+否定文の「まだ」には yet を使います。
+
+I haven't finished yet.
+＝まだ終わっていません。
+
+[ENG-000038] 2026-08-25T12:00:00+09:00 | pending
+parent: どれが入る？
+image: assets/question_images/ENG-000038-question.png
+💡 book を後ろから説明する語は？
+
+✅ 正解は A. that
+
+物を説明する関係代名詞に that を使えます。
+
+This is the bag that I bought.
+＝これは私が買ったバッグです。
+
+[ENG-000039] 2026-08-25T15:00:00+09:00 | pending
+parent: この状態、英語なら？
+image: assets/question_images/ENG-000039-question.png
+💡 ボトルから何が起きている？
+
+✅ 正解は A. leaking
+
+leak は「漏れる」です。
+
+The bottle is leaking.
+＝ボトルから漏れています。
+
+[ENG-000040] 2026-08-25T17:30:00+09:00 | pending
+parent: こう聞かれたら何て返す？
+image: assets/question_images/ENG-000040-question.png
+💡 聞き取れなかったら、どう頼む？
+
+✅ 正解は A. Could you repeat that?
+
+Could you say that again?
+でも自然です。
+
+聞き返すときの自然な依頼表現です。
+
+[ENG-000041] 2026-08-25T19:30:00+09:00 | pending
+parent: 短く返すなら？
+image: assets/question_images/ENG-000041-question.png
+💡 助けが必要なら？
+
+✅ 正解は A. Yes, please.
+
+That would be great.
+でも自然です。
+
+助けをお願いするなら Yes, please. が自然です。
+
+[ENG-000042] 2026-08-26T07:30:00+09:00 | pending
+parent: どれが入る？
+image: assets/question_images/ENG-000042-question.png
+💡 主語は単数。動詞の形は？
+
+✅ 正解は B. opens
+
+単数の主語には opens を使います。
+
+The store opens at ten.
+＝店は10時に開きます。
+
+[ENG-000043] 2026-08-26T09:30:00+09:00 | pending
+parent: パッと答えられる？
+image: assets/question_images/ENG-000043-question.png
+💡 2020は期間？開始時点？
+
+✅ 正解は A. since
+
+開始時点には since を使います。
+
+I've worked here since April.
+＝4月からここで働いています。
+
+since 2020 → 2020年から
+for five years → 5年間
+
+[ENG-000044] 2026-08-26T12:00:00+09:00 | pending
+parent: 一番合う単語は？
+image: assets/question_images/ENG-000044-question.png
+💡 紙をどうしている？
+
+✅ 正解は A. folding
+
+fold は「折る」です。
+
+She is folding the paper.
+＝彼女は紙を折っています。
+
+[ENG-000045] 2026-08-26T15:00:00+09:00 | pending
+parent: 学校で習ったはず。覚えてる？
+image: assets/question_images/ENG-000045-question.png
+💡 曜日を含む日の前は？
+
+✅ 正解は A. on
+
+曜日を含む日には on を使います。
+
+Let's meet on Friday.
+＝金曜日に会いましょう。
+
+on Monday → 月曜に
+at nine → 9時に
+
+[ENG-000046] 2026-08-26T17:30:00+09:00 | pending
+parent: こう聞かれたら何て返す？
+image: assets/question_images/ENG-000046-question.png
+💡 空いている席なら？
+
+✅ 正解は A. No, it's free.
+
+No, go ahead.
+でも自然です。
+
+空席なら No, it's free. と伝えられます。
+
+[ENG-000047] 2026-08-26T19:30:00+09:00 | pending
+parent: 一番合う単語は？
+image: assets/question_images/ENG-000047-question.png
+💡 break と一緒に使う動詞は？
+
+✅ 正解は A. take a break
+
+「休憩する」は take a break です。
+
+Let's take a short break.
+＝少し休憩しましょう。
+
+[ENG-100002] 2026-08-20T21:00:00+09:00 | pending
+仕事が忙しい日に、英語のための30分を探すと始めにくくなります。
+
+通勤中に単語を5個見る。昼休みに1問解く。帰宅後に英文を1回だけ音読する。
+
+まとまった時間を待たず、すでにある行動の前後に小さな学習を置くと、今日から始めやすくなります。
+
+[ENG-100003] 2026-08-21T21:00:00+09:00 | pending
+英語を始める前に、何をやるか迷って時間が過ぎることがあります。
+
+今日は教材を机に出し、最初の1問に付箋を貼っておく。
+
+始める判断を先に済ませると、仕事後の負担を減らせます。
+
+[ENG-100004] 2026-08-22T21:00:00+09:00 | pending
+単語帳を見て意味が分かっても、会話で出てこないことがあります。
+
+今日は新しい単語を1つ選び、短い例文を作って声に出す。
+
+意味と使う場面を一緒に覚えられます。
+
+[ENG-100005] 2026-08-23T21:00:00+09:00 | pending
+文法書を最初から読み直すと、量の多さで止まりやすくなります。
+
+間違えた1問のルールを確認し、自分の例文を1つ作る。
+
+今日はその1項目だけで十分です。
+
+[ENG-100006] 2026-08-24T21:00:00+09:00 | pending
+英語を長く聞き流しても、聞こえない部分がそのままになることがあります。
+
+今日は10秒だけ選び、全体・単語・英文確認の順で3回聞く。
+
+短い範囲なら音を丁寧に確認できます。
+
+[ENG-100007] 2026-08-25T21:00:00+09:00 | pending
+音読で速さを追うと、発音も意味も曖昧になりがちです。
+
+今日は1文だけ選び、意味を確認してゆっくり3回読む。
+
+正確に言える文を1つ作る練習です。
+
+[ENG-100008] 2026-08-26T21:00:00+09:00 | pending
+復習範囲を広げすぎると、何から手を付けるか迷います。
+
+昨日間違えた問題を1問選び、答えの理由を言ってみる。
+
+新しい教材を増やす前に、理解の穴を1つ埋められます。

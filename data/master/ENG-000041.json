@@ -1,0 +1,38 @@
+{
+  "content_id": "ENG-000041",
+  "category": "situation",
+  "production_category": "situation",
+  "difficulty": "easy_plus",
+  "seasonal": false,
+  "question": "Do you need any help?",
+  "choices": [
+    "Yes, please.",
+    "I need yesterday."
+  ],
+  "answer_type": "best",
+  "best_answer": "Yes, please.",
+  "acceptable_answers": [
+    "Yes, please."
+  ],
+  "answer_hint": "助けが必要なら？",
+  "answer_hint_approved": true,
+  "explanation": "助けをお願いするなら Yes, please. が自然です。",
+  "key_difference": null,
+  "examples": [],
+  "example_translations": [],
+  "also_natural": "That would be great.",
+  "tip": null,
+  "visual_required": true,
+  "visual_type": "photo",
+  "visual_description": "One office worker struggling to carry several plain boxes while a coworker offers help with an open-hand gesture. The need for help is obvious. No text, labels, logos, or watermark.",
+  "problem_image_path": "assets/source/ENG-000041-help-with-boxes.png",
+  "image_information_role": "essential",
+  "question_repeats_visual": false,
+  "instagram_caption": "今日の1問。答えは2枚目へ。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は Yes, please.。助けをお願いするなら Yes, please. が自然です。",
+  "publish_at": "2026-08-25T20:30:00+09:00",
+  "situation_purpose": "accept_help_offer",
+  "response_family": "short_affirmative_response"
+}

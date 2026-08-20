@@ -19,6 +19,8 @@
   "answer_hint": "短く引き受けるなら？",
   "answer_hint_approved": true,
   "explanation": "依頼を引き受けるなら Sure. で自然です。",
+  "situation_purpose": "accept_action_request",
+  "response_family": "short_affirmative_response",
   "key_difference": null,
   "examples": [],
   "example_translations": [],
@@ -34,5 +36,5 @@
   "instagram_hashtags": [],
   "threads_parent_text": "とっさに返せる？",
   "threads_answer_text": "💡 引き受けるだけなら、長い説明は必要ありません。\n\n✅ 正解は A. Sure.\n\nOf course. や No problem. でも自然です。",
-  "publish_at": "2026-08-20T17:30:00+09:00"
+  "publish_at": "2026-08-20T18:00:00+09:00"
 }

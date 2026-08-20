@@ -19,6 +19,8 @@
   "answer_hint": "追加がなければ、短くどう返す？",
   "answer_hint_approved": true,
   "explanation": "注文が以上だと丁寧に伝える返答です。",
+  "situation_purpose": "finish_ordering",
+  "response_family": "information_response",
   "key_difference": null,
   "examples": [],
   "example_translations": [],
@@ -32,5 +34,5 @@
   "instagram_hashtags": [],
   "threads_parent_text": "こう聞かれたら何て返す？",
   "threads_answer_text": "💡 追加の注文がないことを短く伝えます。\n\n✅ 正解は A. That's all, thank you.\n\nNo, that's everything. や No, thank you. も使えます。",
-  "publish_at": "2026-08-20T19:30:00+09:00"
+  "publish_at": "2026-08-20T20:30:00+09:00"
 }

@@ -1,0 +1,41 @@
+{
+  "content_id": "ENG-000036",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty": "very_easy",
+  "seasonal": false,
+  "question": "Can you ___ English?",
+  "choices": [
+    "speak",
+    "speaks"
+  ],
+  "answer_type": "single",
+  "best_answer": "speak",
+  "acceptable_answers": [
+    "speak"
+  ],
+  "answer_hint": "can の後ろはどの形？",
+  "answer_hint_approved": true,
+  "explanation": "can の後ろには動詞の原形を置きます。",
+  "key_difference": null,
+  "examples": [
+    "I can speak a little English."
+  ],
+  "example_translations": [
+    "英語を少し話せます。"
+  ],
+  "also_natural": null,
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "instagram_caption": "まずは3秒で考えてみよう。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は speak。can の後ろには動詞の原形を置きます。",
+  "publish_at": "2026-08-25T07:00:00+09:00",
+  "answer_point": "can の後ろ → 動詞の原形"
+}

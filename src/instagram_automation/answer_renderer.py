@@ -53,7 +53,13 @@ def _example(content: dict) -> str:
 def _sections(content: dict) -> list[tuple[str, str]]:
     category = content.get("category")
     if category == "grammar":
-        sections = [("answer", _answer_text(content)), ("example", _example(content))]
+        sections = [("answer", _answer_text(content))]
+        point = content.get("answer_point")
+        if isinstance(point, str) and point.strip():
+            if "\n" in point or len(point) > 40:
+                raise RenderError("answer_point must be one short line of at most 40 characters")
+            sections.append(("point", point.strip()))
+        sections.append(("example", _example(content)))
         difference = content.get("key_difference")
         if isinstance(difference, str) and difference.strip():
             sections.append(("difference", difference.strip()))

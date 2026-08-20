@@ -1,0 +1,40 @@
+{
+  "content_id": "ENG-000022",
+  "category": "situation",
+  "production_category": "situation",
+  "difficulty": "very_easy",
+  "seasonal": false,
+  "question": "Thank you for your help.",
+  "choices": [
+    "You're welcome.",
+    "Good morning.",
+    "See you yesterday.",
+    "I am help."
+  ],
+  "answer_type": "best",
+  "best_answer": "You're welcome.",
+  "acceptable_answers": [
+    "You're welcome."
+  ],
+  "answer_hint": "お礼への定番の返事は？",
+  "answer_hint_approved": true,
+  "explanation": "You're welcome. はお礼への基本の返事です。",
+  "key_difference": null,
+  "examples": [],
+  "example_translations": [],
+  "also_natural": "No problem.",
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "instagram_caption": "短い英語クイズです。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は You're welcome.。You're welcome. はお礼への基本の返事です。",
+  "publish_at": "2026-08-22T18:00:00+09:00",
+  "situation_purpose": "respond_to_thanks",
+  "response_family": "social_response"
+}

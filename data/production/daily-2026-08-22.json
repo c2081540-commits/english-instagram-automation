@@ -1,0 +1,262 @@
+{
+  "production_date": "2026-08-22",
+  "timezone": "Asia/Tokyo",
+  "quality_profile": "restart_adult_jp",
+  "quizzes": [
+    {
+      "content_id": "ENG-000018",
+      "category": "grammar",
+      "production_category": "grammar_usage",
+      "difficulty": "very_easy",
+      "seasonal": false,
+      "question": "They ___ in Tokyo.",
+      "choices": [
+        "live",
+        "lives"
+      ],
+      "answer_type": "single",
+      "best_answer": "live",
+      "acceptable_answers": [
+        "live"
+      ],
+      "answer_hint": "主語は they。-s は必要？",
+      "answer_hint_approved": true,
+      "explanation": "they の現在形には -s を付けません。",
+      "key_difference": null,
+      "examples": [
+        "They live near the station."
+      ],
+      "example_translations": [
+        "彼らは駅の近くに住んでいます。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "まずは3秒で考えてみよう。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は live。they の現在形には -s を付けません。",
+      "publish_at": "2026-08-22T07:00:00+09:00",
+      "answer_point": "I / you / we / they → 動詞は原形"
+    },
+    {
+      "content_id": "ENG-000019",
+      "category": "grammar",
+      "production_category": "grammar_usage",
+      "difficulty": "easy",
+      "seasonal": false,
+      "question": "I have ___ finished lunch.",
+      "choices": [
+        "just",
+        "yet",
+        "ever",
+        "tomorrow"
+      ],
+      "answer_type": "single",
+      "best_answer": "just",
+      "acceptable_answers": [
+        "just"
+      ],
+      "answer_hint": "たった今終えたなら？",
+      "answer_hint_approved": true,
+      "explanation": "just は「たった今」を表します。",
+      "key_difference": null,
+      "examples": [
+        "I've just finished work."
+      ],
+      "example_translations": [
+        "仕事を終えたところです。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "基礎表現をひとつ確認。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は just。just は「たった今」を表します。",
+      "publish_at": "2026-08-22T09:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-000020",
+      "category": "vocabulary",
+      "production_category": "visual_vocabulary",
+      "difficulty": "easy",
+      "seasonal": false,
+      "question": "She is ___ the box.",
+      "choices": [
+        "carrying",
+        "opening",
+        "dropping",
+        "kicking"
+      ],
+      "answer_type": "single",
+      "best_answer": "carrying",
+      "acceptable_answers": [
+        "carrying"
+      ],
+      "answer_hint": "箱をどうしている？",
+      "answer_hint_approved": true,
+      "explanation": "carry は「運ぶ」です。",
+      "key_difference": null,
+      "examples": [
+        "She is carrying a box."
+      ],
+      "example_translations": [
+        "彼女は箱を運んでいます。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": true,
+      "visual_type": "photo",
+      "visual_description": "An adult office worker carrying one medium cardboard box securely with both arms. The carrying action is clear. No text, labels, logos, or watermark.",
+      "problem_image_path": "assets/source/ENG-000020-carrying-box.png",
+      "image_information_role": "essential",
+      "question_repeats_visual": false,
+      "instagram_caption": "日常で使える英語をチェック。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は carrying。carry は「運ぶ」です。",
+      "publish_at": "2026-08-22T12:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000021",
+      "category": "grammar",
+      "production_category": "natural_choice",
+      "difficulty": "easy_plus",
+      "seasonal": false,
+      "question": "Please call me ___ lunch.",
+      "choices": [
+        "after",
+        "later",
+        "ago",
+        "next"
+      ],
+      "answer_type": "best",
+      "best_answer": "after",
+      "acceptable_answers": [
+        "after"
+      ],
+      "answer_hint": "後ろに lunch が続く形は？",
+      "answer_hint_approved": true,
+      "explanation": "名詞の前には after を置けます。",
+      "key_difference": "after lunch → 昼食後\nlater → あとで",
+      "examples": [
+        "Let's talk after lunch."
+      ],
+      "example_translations": [
+        "昼食後に話しましょう。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "パッと選べる？",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は after。名詞の前には after を置けます。",
+      "publish_at": "2026-08-22T15:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000022",
+      "category": "situation",
+      "production_category": "situation",
+      "difficulty": "very_easy",
+      "seasonal": false,
+      "question": "Thank you for your help.",
+      "choices": [
+        "You're welcome.",
+        "Good morning.",
+        "See you yesterday.",
+        "I am help."
+      ],
+      "answer_type": "best",
+      "best_answer": "You're welcome.",
+      "acceptable_answers": [
+        "You're welcome."
+      ],
+      "answer_hint": "お礼への定番の返事は？",
+      "answer_hint_approved": true,
+      "explanation": "You're welcome. はお礼への基本の返事です。",
+      "key_difference": null,
+      "examples": [],
+      "example_translations": [],
+      "also_natural": "No problem.",
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "短い英語クイズです。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は You're welcome.。You're welcome. はお礼への基本の返事です。",
+      "publish_at": "2026-08-22T18:00:00+09:00",
+      "situation_purpose": "respond_to_thanks",
+      "response_family": "social_response"
+    },
+    {
+      "content_id": "ENG-000023",
+      "category": "situation",
+      "production_category": "situation",
+      "difficulty": "easy",
+      "seasonal": true,
+      "question": "Could you close the window?",
+      "choices": [
+        "Sure.",
+        "I like windows."
+      ],
+      "answer_type": "best",
+      "best_answer": "Sure.",
+      "acceptable_answers": [
+        "Sure."
+      ],
+      "answer_hint": "頼みを引き受けるなら？",
+      "answer_hint_approved": true,
+      "explanation": "短い依頼には Sure. で自然に返せます。",
+      "key_difference": null,
+      "examples": [],
+      "example_translations": [],
+      "also_natural": "Of course.",
+      "tip": null,
+      "visual_required": true,
+      "visual_type": "photo",
+      "visual_description": "A summer office with an open window letting in bright heat, one coworker politely gesturing toward it and another ready to close it. No text, logos, or watermark.",
+      "problem_image_path": "assets/source/ENG-000023-close-window.png",
+      "image_information_role": "essential",
+      "question_repeats_visual": false,
+      "instagram_caption": "今日の1問。答えは2枚目へ。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は Sure.。短い依頼には Sure. で自然に返せます。",
+      "publish_at": "2026-08-22T20:30:00+09:00",
+      "situation_purpose": "accept_action_request",
+      "response_family": "short_affirmative_response"
+    }
+  ],
+  "normal": {
+    "content_id": "ENG-100004",
+    "content_type": "normal",
+    "normal_category": "memory_tip",
+    "theme": "単語学習",
+    "threads_text": "単語帳を見て意味が分かっても、会話で出てこないことがあります。\n\n今日は新しい単語を1つ選び、短い例文を作って声に出す。\n\n意味と使う場面を一緒に覚えられます。",
+    "story_headline": "単語を覚えても使えないとき。",
+    "story_body": "単語だけで終わらせず、短い例文を1つ声に出そう。\n\nwork → I work in Tokyo.\n\n使う場面と一緒に覚えると、思い出しやすくなります。",
+    "publish_at": "2026-08-22T22:30:00+09:00"
+  }
+}

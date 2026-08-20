@@ -1,0 +1,43 @@
+{
+  "content_id": "ENG-000024",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty": "very_easy",
+  "seasonal": false,
+  "question": "This bag is ___ than mine.",
+  "choices": [
+    "heavy",
+    "heavier",
+    "heaviest",
+    "more heavy"
+  ],
+  "answer_type": "single",
+  "best_answer": "heavier",
+  "acceptable_answers": [
+    "heavier"
+  ],
+  "answer_hint": "than の前はどの形？",
+  "answer_hint_approved": true,
+  "explanation": "2つを比べるときは比較級を使います。",
+  "key_difference": null,
+  "examples": [
+    "This box is heavier than that one."
+  ],
+  "example_translations": [
+    "この箱はあの箱より重いです。"
+  ],
+  "also_natural": null,
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "instagram_caption": "まずは3秒で考えてみよう。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は heavier。2つを比べるときは比較級を使います。",
+  "publish_at": "2026-08-23T07:00:00+09:00",
+  "answer_point": "than があれば比較級"
+}

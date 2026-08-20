@@ -123,16 +123,18 @@ def render_question(master_path: Path) -> Path:
     has_image = content["visual_required"] is True
 
     if has_image:
-        if len(choices) != 4:
-            raise RenderError("The image layout requires exactly 4 choices")
         _draw_centered_text(draw, content["question"], (64, 50, 1016, 240), 82, 48, 2)
         with Image.open(_source_image(content)) as raw:
-            fitted = ImageOps.fit(raw.convert("RGB"), (952, 600), method=Image.Resampling.LANCZOS)
+            image_size = (952, 600) if len(choices) == 4 else (952, 570)
+            fitted = ImageOps.fit(raw.convert("RGB"), image_size, method=Image.Resampling.LANCZOS)
         mask = Image.new("L", fitted.size, 0)
         ImageDraw.Draw(mask).rounded_rectangle((0, 0, fitted.width, fitted.height), radius=28, fill=255)
         canvas.paste(fitted, (64, 270), mask)
-        boxes = [(64, 910, 526, 1080), (554, 910, 1016, 1080),
-                 (64, 1110, 526, 1280), (554, 1110, 1016, 1280)]
+        if len(choices) == 4:
+            boxes = [(64, 910, 526, 1080), (554, 910, 1016, 1080),
+                     (64, 1110, 526, 1280), (554, 1110, 1016, 1280)]
+        else:
+            boxes = [(80, 880, 1000, 1055), (80, 1085, 1000, 1260)]
     elif len(choices) == 4:
         _draw_centered_text(draw, content["question"], (80, 100, 1000, 500), 96, 52, 4)
         boxes = [(64, 580, 526, 850), (554, 580, 1016, 850),

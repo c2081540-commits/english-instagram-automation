@@ -1,0 +1,261 @@
+{
+  "production_date": "2026-08-21",
+  "timezone": "Asia/Tokyo",
+  "quality_profile": "restart_adult_jp",
+  "quizzes": [
+    {
+      "content_id": "ENG-000012",
+      "category": "grammar",
+      "production_category": "grammar_usage",
+      "difficulty": "very_easy",
+      "seasonal": false,
+      "question": "Tom ___ to work at eight.",
+      "choices": [
+        "go",
+        "goes"
+      ],
+      "answer_type": "single",
+      "best_answer": "goes",
+      "acceptable_answers": [
+        "goes"
+      ],
+      "answer_hint": "主語は Tom。動詞の形は？",
+      "answer_hint_approved": true,
+      "explanation": "Tom の現在形には -s を付けます。",
+      "key_difference": null,
+      "examples": [
+        "Tom goes home at six."
+      ],
+      "example_translations": [
+        "トムは6時に帰宅します。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "まずは3秒で考えてみよう。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は goes。Tom の現在形には -s を付けます。",
+      "publish_at": "2026-08-21T07:00:00+09:00",
+      "answer_point": "he / she / Tom → 動詞に s"
+    },
+    {
+      "content_id": "ENG-000013",
+      "category": "grammar",
+      "production_category": "grammar_usage",
+      "difficulty": "easy",
+      "seasonal": false,
+      "question": "I ___ busy yesterday.",
+      "choices": [
+        "am",
+        "was"
+      ],
+      "answer_type": "single",
+      "best_answer": "was",
+      "acceptable_answers": [
+        "was"
+      ],
+      "answer_hint": "yesterday に注目。",
+      "answer_hint_approved": true,
+      "explanation": "過去の状態には was を使います。",
+      "key_difference": null,
+      "examples": [
+        "I was tired yesterday."
+      ],
+      "example_translations": [
+        "昨日は疲れていました。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "基礎表現をひとつ確認。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は was。過去の状態には was を使います。",
+      "publish_at": "2026-08-21T09:30:00+09:00",
+      "answer_point": "yesterday → 過去形"
+    },
+    {
+      "content_id": "ENG-000014",
+      "category": "vocabulary",
+      "production_category": "visual_vocabulary",
+      "difficulty": "very_easy",
+      "seasonal": false,
+      "question": "The door is ___.",
+      "choices": [
+        "open",
+        "closed",
+        "broken",
+        "missing"
+      ],
+      "answer_type": "single",
+      "best_answer": "open",
+      "acceptable_answers": [
+        "open"
+      ],
+      "answer_hint": "ドアの今の状態は？",
+      "answer_hint_approved": true,
+      "explanation": "open は「開いている」です。",
+      "key_difference": null,
+      "examples": [
+        "The door is open."
+      ],
+      "example_translations": [
+        "ドアは開いています。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": true,
+      "visual_type": "photo",
+      "visual_description": "A clearly open office door, with the doorway and open door panel fully visible. No people, text, signs, logos, or watermark.",
+      "problem_image_path": "assets/source/ENG-000014-open-door.png",
+      "image_information_role": "essential",
+      "question_repeats_visual": false,
+      "instagram_caption": "日常で使える英語をチェック。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は open。open は「開いている」です。",
+      "publish_at": "2026-08-21T12:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000015",
+      "category": "grammar",
+      "production_category": "natural_choice",
+      "difficulty": "easy",
+      "seasonal": false,
+      "question": "I go to work ___ train.",
+      "choices": [
+        "by",
+        "with",
+        "on",
+        "at"
+      ],
+      "answer_type": "best",
+      "best_answer": "by",
+      "acceptable_answers": [
+        "by"
+      ],
+      "answer_hint": "移動手段の言い方は？",
+      "answer_hint_approved": true,
+      "explanation": "交通手段には by を使います。",
+      "key_difference": "by train → 電車で\nwith a friend → 友達と",
+      "examples": [
+        "I go to work by train."
+      ],
+      "example_translations": [
+        "電車で通勤します。"
+      ],
+      "also_natural": null,
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "パッと選べる？",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は by。交通手段には by を使います。",
+      "publish_at": "2026-08-21T15:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000016",
+      "category": "situation",
+      "production_category": "situation",
+      "difficulty": "easy",
+      "seasonal": true,
+      "question": "Would you like some water?",
+      "choices": [
+        "Yes, please.",
+        "I am water."
+      ],
+      "answer_type": "best",
+      "best_answer": "Yes, please.",
+      "acceptable_answers": [
+        "Yes, please."
+      ],
+      "answer_hint": "ほしいときの短い返事は？",
+      "answer_hint_approved": true,
+      "explanation": "勧めを受けるなら Yes, please. が自然です。",
+      "key_difference": null,
+      "examples": [],
+      "example_translations": [],
+      "also_natural": "Sure, thanks.",
+      "tip": null,
+      "visual_required": true,
+      "visual_type": "photo",
+      "visual_description": "A server politely offering a clear glass of cold water to an office worker on a hot summer day. The offered water and gesture are obvious. No text, menu words, logos, or watermark.",
+      "problem_image_path": "assets/source/ENG-000016-water-offer.png",
+      "image_information_role": "essential",
+      "question_repeats_visual": false,
+      "instagram_caption": "短い英語クイズです。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は Yes, please.。勧めを受けるなら Yes, please. が自然です。",
+      "publish_at": "2026-08-21T18:00:00+09:00",
+      "situation_purpose": "accept_refreshment_offer",
+      "response_family": "short_affirmative_response"
+    },
+    {
+      "content_id": "ENG-000017",
+      "category": "situation",
+      "production_category": "situation",
+      "difficulty": "very_easy",
+      "seasonal": false,
+      "question": "Where is the station?",
+      "choices": [
+        "It's near the bank.",
+        "I am a station.",
+        "At three years.",
+        "Yes, I do."
+      ],
+      "answer_type": "best",
+      "best_answer": "It's near the bank.",
+      "acceptable_answers": [
+        "It's near the bank."
+      ],
+      "answer_hint": "場所を聞かれています。",
+      "answer_hint_approved": true,
+      "explanation": "場所を伝える短い返答が自然です。",
+      "key_difference": null,
+      "examples": [],
+      "example_translations": [],
+      "also_natural": "It's just ahead.",
+      "tip": null,
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "instagram_caption": "今日の1問。答えは2枚目へ。",
+      "instagram_hashtags": [],
+      "threads_parent_text": "3秒でどうぞ。",
+      "threads_answer_text": "正解は It's near the bank.。場所を伝える短い返答が自然です。",
+      "publish_at": "2026-08-21T20:30:00+09:00",
+      "situation_purpose": "ask_for_directions",
+      "response_family": "information_request"
+    }
+  ],
+  "normal": {
+    "content_id": "ENG-100003",
+    "content_type": "normal",
+    "normal_category": "learning_habit",
+    "theme": "勉強を始めるハードル",
+    "threads_text": "英語を始める前に、何をやるか迷って時間が過ぎることがあります。\n\n今日は教材を机に出し、最初の1問に付箋を貼っておく。\n\n始める判断を先に済ませると、仕事後の負担を減らせます。",
+    "story_headline": "教材を開く前に迷う人へ。",
+    "story_body": "今日やる場所を1つだけ決めよう。\n\n✓ テキストを机に出す\n✓ 最初の1問に付箋を貼る\n\n始める判断を先に済ませると、仕事後でも動きやすくなります。",
+    "publish_at": "2026-08-21T22:30:00+09:00"
+  }
+}

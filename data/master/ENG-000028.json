@@ -1,0 +1,40 @@
+{
+  "content_id": "ENG-000028",
+  "category": "grammar",
+  "production_category": "natural_choice",
+  "difficulty": "easy_plus",
+  "seasonal": false,
+  "question": "I have a meeting ___ 3 p.m.",
+  "choices": [
+    "at",
+    "on"
+  ],
+  "answer_type": "best",
+  "best_answer": "at",
+  "acceptable_answers": [
+    "at"
+  ],
+  "answer_hint": "時刻の前に置く語は？",
+  "answer_hint_approved": true,
+  "explanation": "具体的な時刻には at を使います。",
+  "key_difference": "at 3 p.m. → 3時に\non Monday → 月曜に",
+  "examples": [
+    "The meeting starts at three."
+  ],
+  "example_translations": [
+    "会議は3時に始まります。"
+  ],
+  "also_natural": null,
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "instagram_caption": "短い英語クイズです。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "3秒でどうぞ。",
+  "threads_answer_text": "正解は at。具体的な時刻には at を使います。",
+  "publish_at": "2026-08-23T18:00:00+09:00"
+}
