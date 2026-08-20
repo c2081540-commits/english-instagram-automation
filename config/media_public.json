@@ -1,0 +1,5 @@
+{
+  "base_url": "https://raw.githubusercontent.com/c2081540-commits/english-instagram-automation/main/",
+  "require_https": true,
+  "verify_remote_before_post": true
+}

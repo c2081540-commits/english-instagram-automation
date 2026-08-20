@@ -91,7 +91,26 @@ Daily candidates fail closed above 70 characters for a question, 25 characters f
 
 投稿枠は `config/schedule.json` で管理します。`python3 scripts/finalize_week_schedule.py YYYY-MM-DD` は、確認済み週次原稿の順序を変えず、6件のFeed Quizと22:30のStoriesを7日分のqueueへ確定します。Quiz carouselは常に問題画像が1枚目、回答画像が2枚目です。queueは `content_id / platform / publish_at / status` を持ち、初期状態は `pending` です。`posted` は再実行対象になりません。
 
-実行時点で過去の枠は日時を変更せず `execution_eligibility: past_due_hold` として保持し、自動実行対象から除外します。翌日への詰め込みや時刻変更は行いません。Meta API投稿処理は未実装です。
+実行時点で過去の枠は日時を変更せず `execution_eligibility: past_due_hold` として保持し、自動実行対象から除外します。翌日への詰め込みや時刻変更は行いません。自動実行・定期実行は未接続です。
+
+## Phase 6 Meta投稿クライアント
+
+`scripts/run_due_post.py` はqueueから `pending + scheduled + publish_at <= now` の先頭1件だけを選びます。引数なしはAPIを呼ばないdry-runで、`--live` を明示した場合だけMeta APIへ接続します。
+
+```bash
+python3 scripts/run_due_post.py --now 2026-08-20T16:00:00+09:00
+# 本番接続工程でのみ: python3 scripts/run_due_post.py --live
+```
+
+必要な環境変数（値はrepoへ保存しません）：
+
+- `INSTAGRAM_ACCESS_TOKEN`
+- `INSTAGRAM_USER_ID`
+- `META_GRAPH_API_VERSION`
+
+Feed Quizは question child container、answer child container、carousel container、publishの順です。Storiesは独立したStory containerからpublishします。成功後はremote IDとposted時刻をreceiptへ先に保存し、queueを`posted`へ原子的に更新します。`posted / failed / skipped / past_due_hold`は自動選択しません。
+
+画像URLは公開repoのGitHub Raw HTTPSを `config/media_public.json` から生成します。ローカルパスをAPIへ送りません。live時は匿名HEAD取得を検査し、repoのprivate化、404、非HTTPSでは`BLOCKED_MEDIA_URL`で停止します。安全な一時的通信エラーだけ最大2回retryし、認証・データ・media URLエラーはretryしません。
 
 `python3 scripts/export_weekly_review.py YYYY-MM-DD` は問題・回答・Storiesのcontact sheet、両媒体dry-run、集計レポートを `artifacts/weekly/YYYY-MM-DD/` に出力します。
 
