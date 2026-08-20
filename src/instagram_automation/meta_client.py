@@ -67,10 +67,36 @@ class HttpTransport:
         raise PostingError("NETWORK_TIMEOUT", "Meta request retry limit reached")
 
 
+class HttpGetTransport:
+    def __init__(self, timeout: float = 20):
+        self.timeout = timeout
+
+    def __call__(self, url: str, fields: dict) -> dict:
+        request_url = f"{url}?{urllib.parse.urlencode(fields)}"
+        try:
+            with urllib.request.urlopen(request_url, timeout=self.timeout) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            exc.read()
+            raise PostingError("CONTAINER_STATUS_FAILURE",
+                               f"Instagram container status failed with HTTP {exc.code}") from exc
+        except (urllib.error.URLError, TimeoutError, socket.timeout) as exc:
+            raise PostingError("NETWORK_TIMEOUT", "Instagram container status request failed") from exc
+        except json.JSONDecodeError as exc:
+            raise PostingError("MALFORMED_API_RESPONSE", "Container status was not valid JSON") from exc
+        if not isinstance(payload, dict):
+            raise PostingError("MALFORMED_API_RESPONSE", "Container status must be an object")
+        return payload
+
+
 class InstagramMetaClient:
-    def __init__(self, secrets: InstagramSecrets, transport=None):
+    def __init__(self, secrets: InstagramSecrets, transport=None, get_transport=None,
+                 sleep=None, status_attempts: int = 10):
         self.secrets = secrets
         self.transport = transport or HttpTransport()
+        self.get_transport = get_transport or HttpGetTransport()
+        self.sleep = sleep or time.sleep
+        self.status_attempts = status_attempts
         self.base_url = f"https://graph.instagram.com/{secrets.api_version}"
 
     def _post(self, path: str, fields: dict, failure_code: str) -> str:
@@ -103,6 +129,24 @@ class InstagramMetaClient:
                           {"media_type": "STORIES", "image_url": image_url},
                           "CONTAINER_CREATION_FAILURE")
 
+    def wait_until_ready(self, creation_id: str) -> None:
+        for attempt in range(self.status_attempts):
+            payload = self.get_transport(
+                f"{self.base_url}/{creation_id}",
+                {"fields": "status_code,status", "access_token": self.secrets.access_token},
+            )
+            status = payload.get("status_code")
+            if status in {"FINISHED", "PUBLISHED"}:
+                return
+            if status in {"ERROR", "EXPIRED"}:
+                raise PostingError("CONTAINER_STATUS_FAILURE", f"Instagram container status: {status}")
+            if status != "IN_PROGRESS":
+                raise PostingError("MALFORMED_API_RESPONSE", "Unknown Instagram container status")
+            if attempt + 1 < self.status_attempts:
+                self.sleep(2)
+        raise PostingError("CONTAINER_STATUS_FAILURE", "Instagram container was not ready in time")
+
     def publish(self, creation_id: str) -> str:
+        self.wait_until_ready(creation_id)
         return self._post(f"{self.secrets.user_id}/media_publish", {"creation_id": creation_id},
                           "PUBLISH_FAILURE")

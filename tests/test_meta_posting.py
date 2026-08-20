@@ -59,6 +59,12 @@ class InstagramMetaPostingTests(unittest.TestCase):
         result = posting.post_one(target, client, self.resolver, datetime.fromisoformat("2026-08-20T16:00:00+09:00"))
         self.assertEqual([call[0] for call in client.calls], ["child", "child", "carousel", "publish"])
         self.assertEqual(result["status"], "posted")
+        carousel_call = client.calls[2]
+        self.assertEqual(carousel_call[0], "carousel")
+        self.assertEqual(carousel_call[1][1],
+                         "by と until、仕事の締め切りならどちらが自然でしょう？\n\n"
+                         "#英語学習 #英語やり直し #英文法 #英語初心者")
+        self.assertTrue(all(len(call[1]) == 1 for call in client.calls[:2]))
         self.assertTrue(result["remote_post_id"])
         self.assertTrue(result["posted_at"])
         with self.assertRaisesRegex(PostingError, "Only pending"):
@@ -115,7 +121,8 @@ class InstagramMetaPostingTests(unittest.TestCase):
     def test_token_is_not_exposed_by_client_error(self):
         token = "super-secret-token"
         client = InstagramMetaClient(InstagramSecrets(token, "user", "v1"),
-                                     transport=lambda *_: (_ for _ in ()).throw(PostingError("INVALID_TOKEN", "invalid token")))
+                                     transport=lambda *_: (_ for _ in ()).throw(PostingError("INVALID_TOKEN", "invalid token")),
+                                     get_transport=lambda *_: {"status_code": "FINISHED"})
         with self.assertRaises(PostingError) as caught:
             client.publish("container")
         self.assertNotIn(token, str(caught.exception))
@@ -123,7 +130,8 @@ class InstagramMetaPostingTests(unittest.TestCase):
     def test_instagram_login_host_is_used_for_content_publishing(self):
         calls = []
         client = InstagramMetaClient(InstagramSecrets("token", "user", "v25.0"),
-                                     transport=lambda url, fields: calls.append(url) or {"id": "remote"})
+                                     transport=lambda url, fields: calls.append(url) or {"id": "remote"},
+                                     get_transport=lambda *_: {"status_code": "FINISHED"})
         child = client.create_child_container("https://example.com/question.png")
         carousel = client.create_carousel_container([child], "caption")
         client.create_story_container("https://example.com/story.png")
@@ -134,6 +142,25 @@ class InstagramMetaPostingTests(unittest.TestCase):
             "https://graph.instagram.com/v25.0/user/media",
             "https://graph.instagram.com/v25.0/user/media_publish",
         ])
+
+    def test_publish_waits_for_container_and_is_finite(self):
+        statuses = iter([{"status_code": "IN_PROGRESS"}, {"status_code": "FINISHED"}])
+        posts = []
+        client = InstagramMetaClient(
+            InstagramSecrets("token", "user", "v25.0"),
+            transport=lambda url, fields: posts.append(url) or {"id": "published"},
+            get_transport=lambda *_: next(statuses), sleep=lambda _: None, status_attempts=2)
+        self.assertEqual(client.publish("carousel"), "published")
+        self.assertEqual(posts, ["https://graph.instagram.com/v25.0/user/media_publish"])
+
+        blocked = InstagramMetaClient(
+            InstagramSecrets("token", "user", "v25.0"),
+            transport=lambda *_: {"id": "must-not-publish"},
+            get_transport=lambda *_: {"status_code": "IN_PROGRESS"},
+            sleep=lambda _: None, status_attempts=2)
+        with self.assertRaises(PostingError) as caught:
+            blocked.publish("carousel")
+        self.assertEqual(caught.exception.code, "CONTAINER_STATUS_FAILURE")
 
 
 if __name__ == "__main__":

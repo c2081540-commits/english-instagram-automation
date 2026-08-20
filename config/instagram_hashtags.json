@@ -1,0 +1,10 @@
+{
+  "common": ["#英語学習", "#英語やり直し"],
+  "categories": {
+    "grammar_usage": ["#英文法", "#大人の勉強"],
+    "visual_vocabulary": ["#英単語", "#英語初心者"],
+    "natural_choice": ["#英文法", "#英語初心者"],
+    "situation": ["#英会話", "#英語フレーズ"],
+    "review": ["#英語勉強", "#大人の勉強"]
+  }
+}

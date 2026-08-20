@@ -10,10 +10,12 @@ from urllib.parse import urljoin, urlparse
 from zoneinfo import ZoneInfo
 
 from .meta_client import PostingError
+from .hashtags import HashtagConfigError, build_final_caption
 from .paths import QUEUE_DIR, REPO_ROOT
 
 MEDIA_CONFIG = REPO_ROOT / "config" / "media_public.json"
 RECEIPT_DIR = REPO_ROOT / "data" / "receipts"
+MASTER_DIR = REPO_ROOT / "data" / "master"
 
 
 def _write_json_atomic(path: Path, value: dict) -> None:
@@ -72,12 +74,26 @@ def select_one_due(now: datetime, queue_dir: Path = QUEUE_DIR) -> Path | None:
 def dry_run(queue: dict, resolver: PublicMediaResolver) -> str:
     if queue["content_type"] == "quiz":
         assets = [resolver.resolve(slide["image_path"]) for slide in queue["carousel"]]
+        final_caption = final_quiz_caption(queue)
         flow = "child(question) -> child(answer) -> carousel container -> publish"
         return (f"{queue['content_id']} | instagram | {queue['publish_at']} | carousel Quiz | "
-                f"assets={assets} | caption=yes | {flow}")
+                f"assets={assets} | caption=yes | hashtags={final_caption.count('#')} | {flow}")
     asset = resolver.resolve(queue["story_image"])
     return (f"{queue['content_id']} | instagram | {queue['publish_at']} | Story Normal | "
             f"asset={asset} | caption=no | story container -> publish")
+
+
+def final_quiz_caption(queue: dict) -> str:
+    master_path = MASTER_DIR / f"{queue.get('content_id', '')}.json"
+    if not master_path.is_file():
+        raise PostingError("INVALID_HASHTAG_CONFIG", "Quiz master is missing for final caption")
+    master = json.loads(master_path.read_text(encoding="utf-8"))
+    if queue.get("caption") != master.get("instagram_caption"):
+        raise PostingError("CAPTION_MISMATCH", "Queue caption does not match the approved master caption")
+    try:
+        return build_final_caption(queue["caption"], master.get("production_category"))
+    except (HashtagConfigError, KeyError) as exc:
+        raise PostingError("INVALID_HASHTAG_CONFIG", str(exc)) from exc
 
 
 def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
@@ -98,7 +114,7 @@ def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
         if queue["content_type"] == "quiz":
             child_ids = [client.create_child_container(resolver.resolve(slide["image_path"]))
                          for slide in queue["carousel"]]
-            container_id = client.create_carousel_container(child_ids, queue["caption"])
+            container_id = client.create_carousel_container(child_ids, final_quiz_caption(queue))
         else:
             container_id = client.create_story_container(resolver.resolve(queue["story_image"]))
         remote_id = client.publish(container_id)

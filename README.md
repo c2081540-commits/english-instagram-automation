@@ -114,6 +114,11 @@ publishはすべて `https://graph.instagram.com/{META_GRAPH_API_VERSION}` を�
 `instagram_business_basic / instagram_business_content_publish` です。
 
 Feed Quizは question child container、answer child container、carousel container、publishの順です。Storiesは独立したStory containerからpublishします。成功後はremote IDとposted時刻をreceiptへ先に保存し、queueを`posted`へ原子的に更新します。`posted / failed / skipped / past_due_hold`は自動選択しません。
+publish前にcontainerの`status_code`を有限回確認し、`FINISHED`以外では投稿せずfail closedします。
+
+Feed Quizの最終captionは、承認済み本文を変更せず、`config/instagram_hashtags.json` の共通2タグと
+`production_category`別2タグを空行の後ろへ機械的に付与します。未知カテゴリ、重複、`#`欠落、空文字、
+4タグ以外はfail closedです。タグはcarousel parentだけへ渡し、child containerには渡しません。
 
 画像URLは公開repoのGitHub Raw HTTPSを `config/media_public.json` から生成します。ローカルパスをAPIへ送りません。live時は匿名HEAD取得を検査し、repoのprivate化、404、非HTTPSでは`BLOCKED_MEDIA_URL`で停止します。安全な一時的通信エラーだけ最大2回retryし、認証・データ・media URLエラーはretryしません。
 
