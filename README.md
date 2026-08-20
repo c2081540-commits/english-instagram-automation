@@ -65,7 +65,7 @@ All paths are derived from each script/module's resolved `__file__`. Inputs are 
 
 ## Phase 3 daily trial
 
-`data/production/daily-2026-08-20.json` is the single batch source for six quizzes and one normal item. `scripts/build_daily_trial.py` checks the category mix, exactly one seasonal quiz, at most two visual quizzes, ID/question duplication, length limits, and renderer compatibility before materializing the shared masters and outputs.
+`data/production/daily-2026-08-20.json` is the single batch source for six quizzes and one normal item. `python3 scripts/build_daily_trial.py 2026-08-20` checks the category mix, exactly one seasonal quiz, at most two visual quizzes, ID/question duplication, length limits, and renderer compatibility before materializing the shared masters and outputs. The date argument selects the matching fixed-path batch, so additional days do not require code changes.
 
 Questions that need an ungenerated visual are never given a placeholder: their status is `WAITING_FOR_VISUAL` in `data/production/daily-2026-08-20-status.json`. Non-visual question images, every answer image, and the normal Stories image use the existing renderers. The seven items share one compact Codex review payload at `data/review/payloads/daily-2026-08-20.json`; REJECT means discard and replacement, with a maximum of three replacements and no repair/re-review loop.
 

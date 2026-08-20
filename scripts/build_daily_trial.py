@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -33,8 +34,15 @@ def write_json(path: Path, value: dict) -> None:
 
 
 def main() -> None:
-    batch_path = REPO_ROOT / "data" / "production" / "daily-2026-08-20.json"
+    production_date = sys.argv[1] if len(sys.argv) == 2 else date.today().isoformat()
+    try:
+        date.fromisoformat(production_date)
+    except ValueError as exc:
+        raise SystemExit("Usage: build_daily_trial.py [YYYY-MM-DD]") from exc
+    batch_path = REPO_ROOT / "data" / "production" / f"daily-{production_date}.json"
     batch = read_json(batch_path)
+    if batch.get("production_date") != production_date:
+        raise ValueError("batch filename and production_date must match")
     batch_ids = {item["content_id"] for item in batch["quizzes"]} | {batch["normal"]["content_id"]}
     validate_daily_batch(batch, existing_masters(batch_ids))
 
@@ -50,10 +58,10 @@ def main() -> None:
     render_story(normal_path)
 
     status = build_daily_status(batch)
-    output = REPO_ROOT / "data" / "production" / "daily-2026-08-20-status.json"
+    output = REPO_ROOT / "data" / "production" / f"daily-{production_date}-status.json"
     write_json(output, status)
     review = build_daily_review_payload(batch)
-    write_json(REPO_ROOT / "data" / "review" / "payloads" / "daily-2026-08-20.json", review)
+    write_json(REPO_ROOT / "data" / "review" / "payloads" / f"daily-{production_date}.json", review)
     print(output)
 
 
