@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "single_batch_review": true,
+  "image_review": false,
+  "checks": [
+    "英語・文法・正解",
+    "日本語・ヒント",
+    "教材として明らかな問題がないか"
+  ],
+  "on_reject": "discard_and_replace_without_repair",
+  "max_replacements": 3,
+  "response_format": "PASS or REJECT: concise reason",
+  "items": [
+    {
+      "content_id": "ENG-000006",
+      "content_type": "quiz",
+      "english": {
+        "question": "I'm looking forward to ___ you again.",
+        "choices": [
+          "see",
+          "seeing",
+          "saw",
+          "seen"
+        ],
+        "answer_type": "single",
+        "best_answer": "seeing",
+        "examples": [
+          "I'm looking forward to seeing you next week."
+        ]
+      },
+      "japanese": {
+        "hint": "「to」の後だからと、すぐに原形だと決めてよい？表現全体のまとまりに注目。",
+        "explanation": "look forward to の to は前置詞なので、後ろには動名詞を置きます。",
+        "example_translations": [
+          "来週お会いするのを楽しみにしています。"
+        ]
+      },
+      "visual_plan": null
+    },
+    {
+      "content_id": "ENG-000007",
+      "content_type": "quiz",
+      "english": {
+        "question": "I arrived ___ the office at 8:30.",
+        "choices": [
+          "at",
+          "in",
+          "to",
+          "on"
+        ],
+        "answer_type": "single",
+        "best_answer": "at",
+        "examples": [
+          "We arrived at the station before noon."
+        ]
+      },
+      "japanese": {
+        "hint": "到着した場所は、建物や地点として捉える？それとも広い地域として捉える？",
+        "explanation": "arrive at は、建物や地点など具体的な場所への到着に使います。",
+        "example_translations": [
+          "私たちは正午前に駅へ着きました。"
+        ]
+      },
+      "visual_plan": null
+    },
+    {
+      "content_id": "ENG-000008",
+      "content_type": "quiz",
+      "english": {
+        "question": "He is ___ his sleeves.",
+        "choices": [
+          "rolling up",
+          "tying",
+          "tearing",
+          "buttoning"
+        ],
+        "answer_type": "single",
+        "best_answer": "rolling up",
+        "examples": [
+          "He rolled up his sleeves before washing the dishes."
+        ]
+      },
+      "japanese": {
+        "hint": "腕まわりの服に、どんな動きが起きている？",
+        "explanation": "roll up ＝ 巻き上げる、まくる",
+        "example_translations": [
+          "彼は皿を洗う前に袖をまくりました。"
+        ]
+      },
+      "visual_plan": {
+        "visual_type": "photo",
+        "visual_description": "A clear waist-up photo of an office worker using both hands to roll up one shirt sleeve. The rolling action and sleeve are fully visible. No text, logos, extra hands, or distorted fingers."
+      }
+    },
+    {
+      "content_id": "ENG-000009",
+      "content_type": "quiz",
+      "english": {
+        "question": "The deadline is Friday. I'll send you the file ___.",
+        "choices": [
+          "by Friday",
+          "until Friday",
+          "since Friday",
+          "for Friday"
+        ],
+        "answer_type": "best",
+        "best_answer": "by Friday",
+        "examples": [
+          "Please reply by Friday."
+        ]
+      },
+      "japanese": {
+        "hint": "必要なのは、金曜日まで続くこと？それとも期限内に完了すること？",
+        "explanation": "by Friday は、金曜日を期限としてそれまでに完了することを表します。",
+        "example_translations": [
+          "金曜日までに返信してください。"
+        ]
+      },
+      "visual_plan": null
+    },
+    {
+      "content_id": "ENG-000010",
+      "content_type": "quiz",
+      "english": {
+        "question": "It's hot in here. Could you turn on the air conditioner?",
+        "choices": [
+          "Sure.",
+          "I'm an air conditioner.",
+          "It turns me on.",
+          "I was hot yesterday."
+        ],
+        "answer_type": "best",
+        "best_answer": "Sure.",
+        "examples": []
+      },
+      "japanese": {
+        "hint": "頼まれたことを引き受けるなら、長い説明は必要？",
+        "explanation": "簡単な依頼を引き受ける場面では、短い返答が自然です。",
+        "example_translations": []
+      },
+      "visual_plan": null
+    },
+    {
+      "content_id": "ENG-000011",
+      "content_type": "quiz",
+      "english": {
+        "question": "Would you like anything else?",
+        "choices": [
+          "That's all, thank you.",
+          "I like anything.",
+          "Yes, I am else.",
+          "It was nothing."
+        ],
+        "answer_type": "best",
+        "best_answer": "That's all, thank you.",
+        "examples": []
+      },
+      "japanese": {
+        "hint": "追加の注文がないことを、店員さんへ短く伝えるなら？",
+        "explanation": "注文が以上であることを丁寧に伝える定番の返答です。",
+        "example_translations": []
+      },
+      "visual_plan": null
+    },
+    {
+      "content_id": "ENG-100002",
+      "content_type": "normal",
+      "japanese": {
+        "threads_text": "仕事が忙しい日に、英語のための30分を探すと始めにくくなります。\n\n通勤中に単語を5個見る。昼休みに1問解く。帰宅後に英文を1回だけ音読する。\n\nまとまった時間を待たず、すでにある行動の前後に小さな学習を置くと、今日から始めやすくなります。",
+        "story_headline": "英語の30分が取れない日に。",
+        "story_body": "まとまった時間を待たなくて大丈夫。\n\n✓ 通勤中に単語を5個\n✓ 昼休みに1問\n✓ 帰宅後に英文を1回音読\n\nすでにある行動の前後に、小さな学習を置いてみよう。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "content_id": "ENG-000010",
+  "category": "situation",
+  "production_category": "situation",
+  "difficulty": "beginner",
+  "seasonal": true,
+  "question": "It's hot in here. Could you turn on the air conditioner?",
+  "choices": [
+    "Sure.",
+    "I'm an air conditioner.",
+    "It turns me on.",
+    "I was hot yesterday."
+  ],
+  "answer_type": "best",
+  "best_answer": "Sure.",
+  "acceptable_answers": [
+    "Sure."
+  ],
+  "answer_hint": "頼まれたことを引き受けるなら、長い説明は必要？",
+  "answer_hint_approved": true,
+  "explanation": "簡単な依頼を引き受ける場面では、短い返答が自然です。",
+  "key_difference": null,
+  "examples": [],
+  "example_translations": [],
+  "also_natural": "Of course.\nNo problem.",
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "instagram_caption": "暑い室内でこう頼まれたら、自然な返答はどれ？",
+  "instagram_hashtags": [],
+  "threads_parent_text": "とっさに返せる？",
+  "threads_answer_text": "💡 引き受けるだけなら、長い説明は必要ありません。\n\n✅ 正解は A. Sure.\n\nOf course. や No problem. でも自然です。",
+  "publish_at": "2026-08-20T17:30:00+09:00"
+}

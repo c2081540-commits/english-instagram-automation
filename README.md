@@ -63,6 +63,12 @@ Normal masters are placed directly under `data/master/normal/`. Every required f
 
 All paths are derived from each script/module's resolved `__file__`. Inputs are accepted only from this repository's `data/master`; missing or invalid data stops processing without fallback or automatic correction.
 
+## Phase 3 daily trial
+
+`data/production/daily-2026-08-20.json` is the single batch source for six quizzes and one normal item. `scripts/build_daily_trial.py` checks the category mix, exactly one seasonal quiz, at most two visual quizzes, ID/question duplication, length limits, and renderer compatibility before materializing the shared masters and outputs.
+
+Questions that need an ungenerated visual are never given a placeholder: their status is `WAITING_FOR_VISUAL` in `data/production/daily-2026-08-20-status.json`. Non-visual question images, every answer image, and the normal Stories image use the existing renderers. The seven items share one compact Codex review payload at `data/review/payloads/daily-2026-08-20.json`; REJECT means discard and replacement, with a maximum of three replacements and no repair/re-review loop.
+
 ## Future phases
 
 Future work may add answer-image rendering, AI-generated source images, Meta API publishing, scheduled Codex generation, insights, and optimization. These are intentionally absent from the current implementation.

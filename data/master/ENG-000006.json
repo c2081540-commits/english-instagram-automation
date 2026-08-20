@@ -1,0 +1,39 @@
+{
+  "content_id": "ENG-000006",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty": "intermediate",
+  "seasonal": false,
+  "question": "I'm looking forward to ___ you again.",
+  "choices": [
+    "see",
+    "seeing",
+    "saw",
+    "seen"
+  ],
+  "answer_type": "single",
+  "best_answer": "seeing",
+  "acceptable_answers": [
+    "seeing"
+  ],
+  "answer_hint": "「to」の後だからと、すぐに原形だと決めてよい？表現全体のまとまりに注目。",
+  "answer_hint_approved": true,
+  "explanation": "look forward to の to は前置詞なので、後ろには動名詞を置きます。",
+  "key_difference": "look forward to seeing → 会うのを楽しみにする",
+  "examples": [
+    "I'm looking forward to seeing you next week."
+  ],
+  "example_translations": [
+    "来週お会いするのを楽しみにしています。"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "instagram_caption": "この to の後ろ、動詞はどの形？ まずは選択肢から考えてみてください。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "学校で習ったはず。覚えてる？",
+  "threads_answer_text": "💡 表現全体のまとまりに注目。\n\n✅ 正解は B. seeing\n\nlook forward to の to は前置詞なので、後ろには動名詞を置きます。",
+  "publish_at": "2026-08-20T07:30:00+09:00"
+}

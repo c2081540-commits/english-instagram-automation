@@ -1,0 +1,72 @@
+{
+  "production_date": "2026-08-20",
+  "items": [
+    {
+      "content_id": "ENG-000006",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000006-question.png",
+      "answer_image": "artifacts/images/ENG-000006-answer.png",
+      "caption": "この to の後ろ、動詞はどの形？ まずは選択肢から考えてみてください。",
+      "hashtags": [],
+      "publish_at": "2026-08-20T07:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-000007",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000007-question.png",
+      "answer_image": "artifacts/images/ENG-000007-answer.png",
+      "caption": "arrive の後ろに入る前置詞、場所の捉え方がポイントです。",
+      "hashtags": [],
+      "publish_at": "2026-08-20T09:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-000008",
+      "content_type": "quiz",
+      "question_status": "WAITING_FOR_VISUAL",
+      "question_image": null,
+      "answer_image": "artifacts/images/ENG-000008-answer.png",
+      "caption": "身支度でよく使う動作です。写真を見て英語を選んでみてください。",
+      "hashtags": [],
+      "publish_at": "2026-08-20T12:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000009",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000009-question.png",
+      "answer_image": "artifacts/images/ENG-000009-answer.png",
+      "caption": "by と until、仕事の締め切りならどちらが自然でしょう？",
+      "hashtags": [],
+      "publish_at": "2026-08-20T15:00:00+09:00"
+    },
+    {
+      "content_id": "ENG-000010",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000010-question.png",
+      "answer_image": "artifacts/images/ENG-000010-answer.png",
+      "caption": "暑い室内でこう頼まれたら、自然な返答はどれ？",
+      "hashtags": [],
+      "publish_at": "2026-08-20T17:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-000011",
+      "content_type": "quiz",
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000011-question.png",
+      "answer_image": "artifacts/images/ENG-000011-answer.png",
+      "caption": "カフェやレストランで聞かれる一言。追加がないときの自然な返し方は？",
+      "hashtags": [],
+      "publish_at": "2026-08-20T19:30:00+09:00"
+    },
+    {
+      "content_id": "ENG-100002",
+      "content_type": "normal",
+      "story_image": "artifacts/stories/ENG-100002-story.png",
+      "publish_at": "2026-08-20T21:00:00+09:00",
+      "status": "READY"
+    }
+  ]
+}

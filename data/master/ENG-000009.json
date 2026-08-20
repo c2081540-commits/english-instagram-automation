@@ -1,0 +1,39 @@
+{
+  "content_id": "ENG-000009",
+  "category": "grammar",
+  "production_category": "natural_choice",
+  "difficulty": "beginner",
+  "seasonal": false,
+  "question": "The deadline is Friday. I'll send you the file ___.",
+  "choices": [
+    "by Friday",
+    "until Friday",
+    "since Friday",
+    "for Friday"
+  ],
+  "answer_type": "best",
+  "best_answer": "by Friday",
+  "acceptable_answers": [
+    "by Friday"
+  ],
+  "answer_hint": "必要なのは、金曜日まで続くこと？それとも期限内に完了すること？",
+  "answer_hint_approved": true,
+  "explanation": "by Friday は、金曜日を期限としてそれまでに完了することを表します。",
+  "key_difference": "by Friday → 金曜日までに / until Friday → 金曜日までずっと",
+  "examples": [
+    "Please reply by Friday."
+  ],
+  "example_translations": [
+    "金曜日までに返信してください。"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "instagram_caption": "by と until、仕事の締め切りならどちらが自然でしょう？",
+  "instagram_hashtags": [],
+  "threads_parent_text": "4つのうち、一番自然なのは？",
+  "threads_answer_text": "💡 期限内の完了か、その時点までの継続かを考えます。\n\n✅ 正解は A. by Friday\n\nby Friday は「金曜日までに」。until Friday は「金曜日までずっと」です。",
+  "publish_at": "2026-08-20T15:00:00+09:00"
+}
