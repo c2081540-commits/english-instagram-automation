@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-21T07:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -18,5 +18,8 @@
       "image_path": "artifacts/images/ENG-000012-answer.png"
     }
   ],
-  "caption": "まずは3秒で考えてみよう。"
+  "caption": "まずは3秒で考えてみよう。",
+  "remote_post_id": "17944919298273023",
+  "posted_at": "2026-08-21T07:01:04.619519+09:00",
+  "error": null
 }
