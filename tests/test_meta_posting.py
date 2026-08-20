@@ -120,6 +120,21 @@ class InstagramMetaPostingTests(unittest.TestCase):
             client.publish("container")
         self.assertNotIn(token, str(caught.exception))
 
+    def test_instagram_login_host_is_used_for_content_publishing(self):
+        calls = []
+        client = InstagramMetaClient(InstagramSecrets("token", "user", "v25.0"),
+                                     transport=lambda url, fields: calls.append(url) or {"id": "remote"})
+        child = client.create_child_container("https://example.com/question.png")
+        carousel = client.create_carousel_container([child], "caption")
+        client.create_story_container("https://example.com/story.png")
+        client.publish(carousel)
+        self.assertEqual(calls, [
+            "https://graph.instagram.com/v25.0/user/media",
+            "https://graph.instagram.com/v25.0/user/media",
+            "https://graph.instagram.com/v25.0/user/media",
+            "https://graph.instagram.com/v25.0/user/media_publish",
+        ])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,4 +1,4 @@
 {
-  "required_permissions": ["instagram_basic", "instagram_content_publish", "pages_read_engagement"],
+  "required_permissions": ["instagram_business_basic", "instagram_business_content_publish"],
   "result_path": "data/test_receipts/instagram-live-test-result.json"
 }

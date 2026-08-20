@@ -108,6 +108,11 @@ python3 scripts/run_due_post.py --now 2026-08-20T16:00:00+09:00
 - `INSTAGRAM_USER_ID`
 - `META_GRAPH_API_VERSION`
 
+認証方式はInstagram API with Instagram Loginです。User profile、権限確認、Feed/Carousel、Stories、
+publishはすべて `https://graph.instagram.com/{META_GRAPH_API_VERSION}` を使用します。Facebook Page、
+`graph.facebook.com`、`pages_*` permissionは使用しません。投稿に必要なpermissionは
+`instagram_business_basic / instagram_business_content_publish` です。
+
 Feed Quizは question child container、answer child container、carousel container、publishの順です。Storiesは独立したStory containerからpublishします。成功後はremote IDとposted時刻をreceiptへ先に保存し、queueを`posted`へ原子的に更新します。`posted / failed / skipped / past_due_hold`は自動選択しません。
 
 画像URLは公開repoのGitHub Raw HTTPSを `config/media_public.json` から生成します。ローカルパスをAPIへ送りません。live時は匿名HEAD取得を検査し、repoのprivate化、404、非HTTPSでは`BLOCKED_MEDIA_URL`で停止します。安全な一時的通信エラーだけ最大2回retryし、認証・データ・media URLエラーはretryしません。
@@ -115,13 +120,17 @@ Feed Quizは question child container、answer child container、carousel contai
 ### 分離された実接続テスト
 
 `scripts/run_meta_connection_test.py` はproduction queueを読まず、`data/test_payloads/instagram-carousel.json`だけを使用します。フラグなしは説明表示のみで、`--live-test`がある場合だけpreflight後にテストcarouselを投稿します。
+実接続時はrepo rootの親にあるワークスペース共通 `.env` を読み込みます。シェルに既に設定された環境変数は `.env` で上書きしません。`.env` はGit管理対象外です。
 
 ```bash
 python3 scripts/run_meta_connection_test.py
 python3 scripts/run_meta_connection_test.py --live-test
 ```
 
-preflightではUser ID、token、`instagram_basic / instagram_content_publish / pages_read_engagement`、2画像の匿名HTTPS取得を検証します。成功時のcontainer IDとpublished media IDはgitignoreされた`data/test_receipts/`へ保存し、access tokenは保存しません。
+preflightではUser IDとtokenをprofile GETで検証し、`content_publishing_limit` の非破壊GETが成功することで
+`instagram_business_basic / instagram_business_content_publish` を検証します。Instagram Login APIに存在しない
+Facebook方式の `/me/permissions` は使用しません。あわせて2画像の匿名HTTPS取得を検証します。成功時のcontainer IDと
+published media IDはgitignoreされた`data/test_receipts/`へ保存し、access tokenは保存しません。
 
 `python3 scripts/export_weekly_review.py YYYY-MM-DD` は問題・回答・Storiesのcontact sheet、両媒体dry-run、集計レポートを `artifacts/weekly/YYYY-MM-DD/` に出力します。
 

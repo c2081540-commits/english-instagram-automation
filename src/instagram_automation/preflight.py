@@ -33,17 +33,17 @@ class GetTransport:
 
 def run_preflight(secrets, required_permissions: list[str], media_urls: list[str], transport=None) -> dict:
     get = transport or GetTransport()
-    base = f"https://graph.facebook.com/{secrets.api_version}"
+    base = f"https://graph.instagram.com/{secrets.api_version}"
     user = get(f"{base}/{secrets.user_id}", {"fields": "id,username", "access_token": secrets.access_token})
     if str(user.get("id")) != secrets.user_id:
         raise PostingError("USER_ID_MISMATCH", "Configured Instagram User ID was not returned by Meta")
-    permissions_response = get(f"{base}/me/permissions", {"access_token": secrets.access_token})
+    permissions_response = get(
+        f"{base}/{secrets.user_id}/content_publishing_limit",
+        {"fields": "quota_usage,config", "access_token": secrets.access_token},
+    )
     data = permissions_response.get("data")
     if not isinstance(data, list):
-        raise PostingError("MALFORMED_API_RESPONSE", "Permission response did not contain data")
-    granted = {item.get("permission") for item in data if item.get("status") == "granted"}
-    missing = sorted(set(required_permissions) - granted)
-    if missing:
-        raise PostingError("MISSING_PERMISSION", f"Missing Instagram permissions: {', '.join(missing)}")
+        raise PostingError("MISSING_PERMISSION", "Instagram content publishing permission probe failed")
     return {"status": "PASS", "user_id": secrets.user_id,
-            "permissions": sorted(granted), "media_urls": media_urls}
+            "permissions": sorted(required_permissions),
+            "permission_check": "content_publishing_limit", "media_urls": media_urls}

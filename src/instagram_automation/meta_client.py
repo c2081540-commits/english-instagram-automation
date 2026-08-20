@@ -71,7 +71,7 @@ class InstagramMetaClient:
     def __init__(self, secrets: InstagramSecrets, transport=None):
         self.secrets = secrets
         self.transport = transport or HttpTransport()
-        self.base_url = f"https://graph.facebook.com/{secrets.api_version}"
+        self.base_url = f"https://graph.instagram.com/{secrets.api_version}"
 
     def _post(self, path: str, fields: dict, failure_code: str) -> str:
         safe_fields = dict(fields, access_token=self.secrets.access_token)
