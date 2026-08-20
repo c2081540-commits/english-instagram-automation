@@ -1,7 +1,14 @@
 {
   "review_mode": "single_batch",
   "reviewed_at": "2026-08-20",
-  "image_review": false,
+  "image_review": true,
+  "quality_profile": "restart_adult_jp",
+  "checks": [
+    "英語・正解",
+    "日本語",
+    "画像",
+    "挫折者向けとして3〜5秒で理解できるか"
+  ],
   "results": [
     {"content_id": "ENG-000006", "status": "PASS", "reason": null},
     {"content_id": "ENG-000007", "status": "PASS", "reason": null},

@@ -16,21 +16,23 @@
   "acceptable_answers": [
     "rolling up"
   ],
-  "answer_hint": "腕まわりの服に、どんな動きが起きている？",
+  "answer_hint": "袖に起きている動きは？",
   "answer_hint_approved": true,
   "explanation": "roll up ＝ 巻き上げる、まくる",
   "key_difference": null,
   "examples": [
-    "He rolled up his sleeves before washing the dishes."
+    "He rolled up his sleeves."
   ],
   "example_translations": [
-    "彼は皿を洗う前に袖をまくりました。"
+    "彼は袖をまくりました。"
   ],
   "tip": null,
   "visual_required": true,
   "visual_type": "photo",
   "visual_description": "A clear waist-up photo of an office worker using both hands to roll up one shirt sleeve. The rolling action and sleeve are fully visible. No text, logos, extra hands, or distorted fingers.",
-  "problem_image_path": null,
+  "problem_image_path": "assets/source/ENG-000008-roll-up-sleeves.png",
+  "image_information_role": "essential",
+  "question_repeats_visual": false,
   "instagram_caption": "身支度でよく使う動作です。写真を見て英語を選んでみてください。",
   "instagram_hashtags": [],
   "threads_parent_text": "この状態、英語なら？",

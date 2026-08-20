@@ -1,0 +1,7 @@
+{
+  "content_id": "ENG-000002",
+  "visual_type": "photo",
+  "source_path": "assets/source/ENG-000002-melting-ice-cream.png",
+  "prompt": "A realistic close photo of a clearly recognizable vanilla ice cream cone beginning to melt in summer heat. The rounded scoop remains intact while softened edges and two or three small drips run over the upper cone. Landscape composition, natural daylight. No text, letters, numbers, choices, logos, packaging, or watermark.",
+  "forbidden_source": "assets/source/ice-cream-placeholder.png"
+}

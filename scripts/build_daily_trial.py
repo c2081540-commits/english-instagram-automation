@@ -49,7 +49,7 @@ def main() -> None:
     for quiz in batch["quizzes"]:
         master = MASTER_DIR / f"{quiz['content_id']}.json"
         write_json(master, quiz)
-        if not quiz["visual_required"]:
+        if not quiz["visual_required"] or quiz.get("problem_image_path"):
             render_question(master)
         render_answer(master)
 

@@ -16,15 +16,15 @@
   "acceptable_answers": [
     "seeing"
   ],
-  "answer_hint": "「to」の後だからと、すぐに原形だと決めてよい？表現全体のまとまりに注目。",
+  "answer_hint": "look forward to は、かたまりで考えよう。",
   "answer_hint_approved": true,
-  "explanation": "look forward to の to は前置詞なので、後ろには動名詞を置きます。",
-  "key_difference": "look forward to seeing → 会うのを楽しみにする",
+  "explanation": "look forward to の後ろは動名詞です。",
+  "key_difference": null,
   "examples": [
-    "I'm looking forward to seeing you next week."
+    "I'm looking forward to seeing you."
   ],
   "example_translations": [
-    "来週お会いするのを楽しみにしています。"
+    "お会いするのを楽しみにしています。"
   ],
   "tip": null,
   "visual_required": false,

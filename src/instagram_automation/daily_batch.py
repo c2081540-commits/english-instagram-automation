@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter
 from pathlib import Path
 
 from .answer_renderer import _sections, _top_section
-from .paths import IMAGE_DIR, REPO_ROOT, require_file
+from .paths import (IMAGE_DIR, QUALITY_CONFIG_PATH, REPO_ROOT,
+                    SOURCE_IMAGE_DIR, require_file)
 from .review import _check_lengths
 from .validation import validate
 
@@ -17,6 +19,20 @@ EXPECTED_MIX = {
 }
 MAX_VISUALS = 2
 MAX_REPLACEMENTS = 3
+
+
+def load_quality_profile() -> dict:
+    if not QUALITY_CONFIG_PATH.is_file():
+        raise FileNotFoundError(f"quality profile not found: {QUALITY_CONFIG_PATH}")
+    try:
+        profile = json.loads(QUALITY_CONFIG_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Invalid quality profile JSON: {exc}") from exc
+    if not isinstance(profile, dict):
+        raise ValueError("quality profile JSON root must be an object")
+    if profile.get("profile_id") != "restart_adult_jp":
+        raise ValueError("unsupported content quality profile")
+    return profile
 
 
 def _read_json(path: Path) -> dict:
@@ -37,6 +53,8 @@ def _duplicate_key(item: dict) -> tuple[str, str]:
 
 
 def validate_quiz_candidate(item: dict) -> None:
+    profile = load_quality_profile()
+    limits = profile["limits"]
     validate(item)
     _check_lengths(item)
     _top_section(item)
@@ -47,9 +65,35 @@ def validate_quiz_candidate(item: dict) -> None:
     hashtags = item.get("instagram_hashtags")
     if not isinstance(hashtags, list) or any(not isinstance(tag, str) for tag in hashtags):
         raise ValueError("instagram_hashtags must be a list of strings")
+    if item.get("difficulty") not in {"beginner", "intermediate"}:
+        raise ValueError("difficulty is outside the restart-adult profile")
+    if len(item["question"]) > limits["question_max"]:
+        raise ValueError("question exceeds the SNS limit of 70 characters")
+    if len(item["choices"]) not in profile["allowed_choice_counts"]:
+        raise ValueError("restart-adult quizzes support exactly 2 or 4 choices")
+    if any(len(choice) > limits["choice_max"] for choice in item["choices"]):
+        raise ValueError("choice exceeds the SNS limit of 25 characters")
+    if len(item["answer_hint"]) > limits["hint_max"]:
+        raise ValueError("answer_hint exceeds the SNS limit of 45 characters")
+    if (item["category"] == "situation" and
+            len(item["question"]) + max(map(len, item["choices"])) > limits["situation_question_plus_choice_max"]):
+        raise ValueError("situation question and choices are too long for an at-a-glance quiz")
+    sentences = [part for part in re.split(r"[.!?。！？]+", item["explanation"]) if part.strip()]
+    if len(sentences) > limits["explanation_sentences_max"]:
+        raise ValueError("explanation exceeds two sentences")
     if item["visual_required"]:
-        if item.get("problem_image_path") is not None:
-            raise ValueError("Phase 3 visual candidates must not claim an ungenerated asset")
+        if item.get("image_information_role") != "essential":
+            raise ValueError("visual must provide essential information, not decoration")
+        if item.get("question_repeats_visual") is not False:
+            raise ValueError("visual quiz question must not repeat visible context")
+        value = item.get("problem_image_path")
+        if not isinstance(value, str) or not value.strip():
+            return
+        source = (REPO_ROOT / value).resolve()
+        if source.parent != SOURCE_IMAGE_DIR.resolve() or not source.is_file():
+            raise ValueError("visual source must exist directly under assets/source")
+        if "placeholder" in source.name.casefold():
+            raise ValueError("placeholder fixtures cannot be used as daily production visuals")
     elif item.get("problem_image_path") is not None:
         raise ValueError("problem_image_path must be null when visual_required is false")
 
@@ -70,6 +114,9 @@ def validate_normal_candidate(item: dict) -> None:
 
 
 def validate_daily_batch(batch: dict, existing: list[dict] | None = None) -> None:
+    profile = load_quality_profile()
+    if batch.get("quality_profile") != profile["profile_id"]:
+        raise ValueError("daily batch must declare the restart-adult quality profile")
     quizzes = batch.get("quizzes")
     normal = batch.get("normal")
     if not isinstance(quizzes, list) or len(quizzes) != 6:
@@ -135,7 +182,10 @@ def build_daily_status(batch: dict) -> dict:
     items = []
     for quiz in batch["quizzes"]:
         content_id = quiz["content_id"]
-        if quiz["visual_required"]:
+        source_value = quiz.get("problem_image_path")
+        source_ready = (isinstance(source_value, str) and
+                        (REPO_ROOT / source_value).resolve().is_file())
+        if quiz["visual_required"] and not source_ready:
             question_status = "WAITING_FOR_VISUAL"
             question_image = None
         else:
@@ -180,8 +230,9 @@ def build_daily_review_payload(batch: dict) -> dict:
                 "explanation": quiz["explanation"],
                 "example_translations": quiz.get("example_translations", []),
             },
-            "visual_plan": ({"visual_type": quiz["visual_type"],
-                             "visual_description": quiz["visual_description"]}
+            "visual": ({"visual_type": quiz["visual_type"],
+                        "visual_description": quiz["visual_description"],
+                        "source_image_path": quiz.get("problem_image_path")}
                             if quiz["visual_required"] else None),
         })
     normal = batch["normal"]
@@ -197,8 +248,8 @@ def build_daily_review_payload(batch: dict) -> dict:
     return {
         "schema_version": 1,
         "single_batch_review": True,
-        "image_review": False,
-        "checks": ["英語・文法・正解", "日本語・ヒント", "教材として明らかな問題がないか"],
+        "image_review": any(item["visual_required"] for item in batch["quizzes"]),
+        "checks": ["英語・正解", "日本語", "画像", "挫折者向けとして3〜5秒で理解できるか"],
         "on_reject": "discard_and_replace_without_repair",
         "max_replacements": MAX_REPLACEMENTS,
         "response_format": "PASS or REJECT: concise reason",

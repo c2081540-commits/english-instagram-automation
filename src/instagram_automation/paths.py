@@ -1,6 +1,7 @@
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+QUALITY_CONFIG_PATH = REPO_ROOT / "config" / "content_quality.json"
 WORKSPACE_ROOT = REPO_ROOT.parent
 MASTER_DIR = REPO_ROOT / "data" / "master"
 NORMAL_MASTER_DIR = MASTER_DIR / "normal"

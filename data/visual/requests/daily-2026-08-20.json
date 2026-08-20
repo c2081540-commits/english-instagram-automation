@@ -1,0 +1,25 @@
+{
+  "production_date": "2026-08-20",
+  "generation_policy": {
+    "visual_target": "原則2問。内容に寄与しない場合は1問まで減らす",
+    "visual_vocabulary": "1問必須",
+    "situation": "2問中、適切な1問",
+    "forbid_placeholder_fixture": "assets/source/ice-cream-placeholder.png",
+    "forbid_text": true,
+    "reuse_generated_character_or_background": false
+  },
+  "requests": [
+    {
+      "content_id": "ENG-000008",
+      "visual_type": "photo",
+      "source_path": "assets/source/ENG-000008-roll-up-sleeves.png",
+      "prompt": "A realistic waist-up office photo of one adult worker actively rolling up one long shirt sleeve with the opposite hand. Both hands and the sleeve action are fully visible. Natural anatomy and fabric. Landscape composition. No text, letters, numbers, choices, logos, brand marks, or watermark."
+    },
+    {
+      "content_id": "ENG-000010",
+      "visual_type": "photo",
+      "source_path": "assets/source/ENG-000010-air-conditioner-request.png",
+      "prompt": "A realistic summer office scene: one coworker feels warm and politely gestures toward a clearly visible wall-mounted air conditioner while another coworker holds its blank remote. Landscape composition. No text, letters, numbers, choices, logos, brand marks, or watermark."
+    }
+  ]
+}

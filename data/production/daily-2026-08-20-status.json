@@ -24,8 +24,8 @@
     {
       "content_id": "ENG-000008",
       "content_type": "quiz",
-      "question_status": "WAITING_FOR_VISUAL",
-      "question_image": null,
+      "question_status": "READY",
+      "question_image": "artifacts/images/ENG-000008-question.png",
       "answer_image": "artifacts/images/ENG-000008-answer.png",
       "caption": "身支度でよく使う動作です。写真を見て英語を選んでみてください。",
       "hashtags": [],

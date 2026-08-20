@@ -4,7 +4,7 @@
   "production_category": "natural_choice",
   "difficulty": "beginner",
   "seasonal": false,
-  "question": "The deadline is Friday. I'll send you the file ___.",
+  "question": "I'll send you the file ___.",
   "choices": [
     "by Friday",
     "until Friday",
@@ -16,15 +16,15 @@
   "acceptable_answers": [
     "by Friday"
   ],
-  "answer_hint": "必要なのは、金曜日まで続くこと？それとも期限内に完了すること？",
+  "answer_hint": "金曜日が「期限」なのがポイント。",
   "answer_hint_approved": true,
-  "explanation": "by Friday は、金曜日を期限としてそれまでに完了することを表します。",
-  "key_difference": "by Friday → 金曜日までに / until Friday → 金曜日までずっと",
+  "explanation": "by Friday は「金曜までに完了」です。",
+  "key_difference": "by Friday → 金曜までに完了\nuntil Friday → 金曜まで継続",
   "examples": [
-    "Please reply by Friday."
+    "I'll send it by Friday."
   ],
   "example_translations": [
-    "金曜日までに返信してください。"
+    "金曜までに送ります。"
   ],
   "tip": null,
   "visual_required": false,

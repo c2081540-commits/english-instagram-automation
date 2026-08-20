@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
   "single_batch_review": true,
-  "image_review": false,
+  "image_review": true,
   "checks": [
-    "英語・文法・正解",
-    "日本語・ヒント",
-    "教材として明らかな問題がないか"
+    "英語・正解",
+    "日本語",
+    "画像",
+    "挫折者向けとして3〜5秒で理解できるか"
   ],
   "on_reject": "discard_and_replace_without_repair",
   "max_replacements": 3,
@@ -25,17 +26,17 @@
         "answer_type": "single",
         "best_answer": "seeing",
         "examples": [
-          "I'm looking forward to seeing you next week."
+          "I'm looking forward to seeing you."
         ]
       },
       "japanese": {
-        "hint": "「to」の後だからと、すぐに原形だと決めてよい？表現全体のまとまりに注目。",
-        "explanation": "look forward to の to は前置詞なので、後ろには動名詞を置きます。",
+        "hint": "look forward to は、かたまりで考えよう。",
+        "explanation": "look forward to の後ろは動名詞です。",
         "example_translations": [
-          "来週お会いするのを楽しみにしています。"
+          "お会いするのを楽しみにしています。"
         ]
       },
-      "visual_plan": null
+      "visual": null
     },
     {
       "content_id": "ENG-000007",
@@ -51,17 +52,17 @@
         "answer_type": "single",
         "best_answer": "at",
         "examples": [
-          "We arrived at the station before noon."
+          "We arrived at the station."
         ]
       },
       "japanese": {
-        "hint": "到着した場所は、建物や地点として捉える？それとも広い地域として捉える？",
-        "explanation": "arrive at は、建物や地点など具体的な場所への到着に使います。",
+        "hint": "office は「地点」？それとも「地域」？",
+        "explanation": "建物や地点には arrive at を使います。",
         "example_translations": [
-          "私たちは正午前に駅へ着きました。"
+          "駅に着きました。"
         ]
       },
-      "visual_plan": null
+      "visual": null
     },
     {
       "content_id": "ENG-000008",
@@ -77,26 +78,27 @@
         "answer_type": "single",
         "best_answer": "rolling up",
         "examples": [
-          "He rolled up his sleeves before washing the dishes."
+          "He rolled up his sleeves."
         ]
       },
       "japanese": {
-        "hint": "腕まわりの服に、どんな動きが起きている？",
+        "hint": "袖に起きている動きは？",
         "explanation": "roll up ＝ 巻き上げる、まくる",
         "example_translations": [
-          "彼は皿を洗う前に袖をまくりました。"
+          "彼は袖をまくりました。"
         ]
       },
-      "visual_plan": {
+      "visual": {
         "visual_type": "photo",
-        "visual_description": "A clear waist-up photo of an office worker using both hands to roll up one shirt sleeve. The rolling action and sleeve are fully visible. No text, logos, extra hands, or distorted fingers."
+        "visual_description": "A clear waist-up photo of an office worker using both hands to roll up one shirt sleeve. The rolling action and sleeve are fully visible. No text, logos, extra hands, or distorted fingers.",
+        "source_image_path": "assets/source/ENG-000008-roll-up-sleeves.png"
       }
     },
     {
       "content_id": "ENG-000009",
       "content_type": "quiz",
       "english": {
-        "question": "The deadline is Friday. I'll send you the file ___.",
+        "question": "I'll send you the file ___.",
         "choices": [
           "by Friday",
           "until Friday",
@@ -106,39 +108,43 @@
         "answer_type": "best",
         "best_answer": "by Friday",
         "examples": [
-          "Please reply by Friday."
+          "I'll send it by Friday."
         ]
       },
       "japanese": {
-        "hint": "必要なのは、金曜日まで続くこと？それとも期限内に完了すること？",
-        "explanation": "by Friday は、金曜日を期限としてそれまでに完了することを表します。",
+        "hint": "金曜日が「期限」なのがポイント。",
+        "explanation": "by Friday は「金曜までに完了」です。",
         "example_translations": [
-          "金曜日までに返信してください。"
+          "金曜までに送ります。"
         ]
       },
-      "visual_plan": null
+      "visual": null
     },
     {
       "content_id": "ENG-000010",
       "content_type": "quiz",
       "english": {
-        "question": "It's hot in here. Could you turn on the air conditioner?",
+        "question": "Could you turn on the AC?",
         "choices": [
           "Sure.",
-          "I'm an air conditioner.",
-          "It turns me on.",
-          "I was hot yesterday."
+          "Maybe yesterday.",
+          "It's a chair.",
+          "See you later."
         ],
         "answer_type": "best",
         "best_answer": "Sure.",
         "examples": []
       },
       "japanese": {
-        "hint": "頼まれたことを引き受けるなら、長い説明は必要？",
-        "explanation": "簡単な依頼を引き受ける場面では、短い返答が自然です。",
+        "hint": "短く引き受けるなら？",
+        "explanation": "依頼を引き受けるなら Sure. で自然です。",
         "example_translations": []
       },
-      "visual_plan": null
+      "visual": {
+        "visual_type": "photo",
+        "visual_description": "A bright summer office scene with one coworker feeling warm and politely gesturing toward a clearly visible wall-mounted air conditioner while another coworker holds its remote. No text, logos, or watermark.",
+        "source_image_path": "assets/source/ENG-000010-air-conditioner-request.png"
+      }
     },
     {
       "content_id": "ENG-000011",
@@ -156,11 +162,11 @@
         "examples": []
       },
       "japanese": {
-        "hint": "追加の注文がないことを、店員さんへ短く伝えるなら？",
-        "explanation": "注文が以上であることを丁寧に伝える定番の返答です。",
+        "hint": "追加がなければ、短くどう返す？",
+        "explanation": "注文が以上だと丁寧に伝える返答です。",
         "example_translations": []
       },
-      "visual_plan": null
+      "visual": null
     },
     {
       "content_id": "ENG-100002",

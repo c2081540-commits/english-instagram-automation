@@ -1,0 +1,17 @@
+{
+  "review_mode": "single_batch",
+  "results": [
+    {
+      "content_id": "ENG-000008",
+      "status": "PASS",
+      "reason": null,
+      "checks": ["問題内容と一致", "状態・動作が視認可能", "生成崩れなし", "不要な文字なし"]
+    },
+    {
+      "content_id": "ENG-000010",
+      "status": "PASS",
+      "reason": null,
+      "checks": ["問題内容と一致", "状態・動作が視認可能", "生成崩れなし", "不要な文字なし"]
+    }
+  ]
+}

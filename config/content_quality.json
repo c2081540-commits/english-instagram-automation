@@ -1,0 +1,31 @@
+{
+  "profile_id": "restart_adult_jp",
+  "persona": "英語学習に一度挫折し、基礎からやり直したい日本人社会人",
+  "quality_means": ["分かりやすい", "自然", "短い", "実用的", "基礎を思い出せる", "これならできそうと感じられる"],
+  "excluded_audiences": ["英語上級者", "TOEIC高得点者向け", "資格試験対策", "難関受験英語", "英語マニア向け文法"],
+  "reject_topics": ["細かな例外知識", "文脈なしの微妙なニュアンス差", "資格試験的なひっかけ", "長い背景説明"],
+  "comprehension_seconds": {"min": 3, "max": 5},
+  "limits": {
+    "question_recommended": 50,
+    "question_max": 70,
+    "choice_recommended": 15,
+    "choice_max": 25,
+    "hint_recommended": 30,
+    "hint_max": 45,
+    "situation_question_plus_choice_max": 85,
+    "explanation_sentences_max": 2
+  },
+  "allowed_choice_counts": [2, 4],
+  "visual_policy": {
+    "daily_target": 2,
+    "may_reduce_to": 1,
+    "must_contribute_to_answering": true,
+    "question_must_not_repeat_visible_context": true,
+    "placeholder_fixture_forbidden": true
+  },
+  "review_policy": {
+    "single_batch": true,
+    "checks": ["英語・正解", "日本語", "画像", "挫折者向けとして3〜5秒で理解できるか"],
+    "on_reject": "discard_and_replace_without_repair"
+  }
+}

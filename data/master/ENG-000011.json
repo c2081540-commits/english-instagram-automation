@@ -16,9 +16,9 @@
   "acceptable_answers": [
     "That's all, thank you."
   ],
-  "answer_hint": "追加の注文がないことを、店員さんへ短く伝えるなら？",
+  "answer_hint": "追加がなければ、短くどう返す？",
   "answer_hint_approved": true,
-  "explanation": "注文が以上であることを丁寧に伝える定番の返答です。",
+  "explanation": "注文が以上だと丁寧に伝える返答です。",
   "key_difference": null,
   "examples": [],
   "example_translations": [],

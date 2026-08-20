@@ -69,6 +69,18 @@ All paths are derived from each script/module's resolved `__file__`. Inputs are 
 
 Questions that need an ungenerated visual are never given a placeholder: their status is `WAITING_FOR_VISUAL` in `data/production/daily-2026-08-20-status.json`. Non-visual question images, every answer image, and the normal Stories image use the existing renderers. The seven items share one compact Codex review payload at `data/review/payloads/daily-2026-08-20.json`; REJECT means discard and replacement, with a maximum of three replacements and no repair/re-review loop.
 
+## Production visual pipeline and SNS limits
+
+Production visual requests are fixed under `data/visual/requests/`; generated PNG sources are saved directly under `assets/source/` and referenced explicitly by each master. No directory search or placeholder fallback is allowed. `ice-cream-placeholder.png` remains a renderer fixture and is rejected by the production visual check. After free PNG/path/resolution checks, the two source assets are reviewed together for content match, visible action/state, obvious generation failures, and unwanted text. Compact decisions are stored under `data/visual/reviews/` before the existing Pillow question renderer runs.
+
+Daily candidates fail closed above 70 characters for a question, 25 characters for any choice, or 45 characters for a hint. Situation quizzes also fail when the question plus longest choice exceeds 85 characters, and explanations are limited to two sentences. Recommended targets remain 50 characters for questions and 15 for choices; passing the renderer alone does not override these SNS content limits.
+
+## 最上位コンテンツ品質基準
+
+正本は `config/content_quality.json` です。対象は「英語学習に一度挫折し、基礎からやり直したい日本人社会人」であり、難化を品質向上とは扱いません。中学英語、高校初級、日常・仕事で使う基礎表現を中心に、簡単な2択・4択も積極的に許可します。上級者・資格試験・難関受験・細かな例外・ひっかけ問題は対象外です。
+
+問題は3〜5秒で論点が分かる短さを優先します。70文字・25文字・45文字はfail closed上限であり、推奨値ではありません。画像は解答に必要な情報を担う場合だけ使用し、問題文で画像の状況を重複説明しません。回答画像は必要なBOXだけを使い、例文は原則1件、使い分けは短い対比を優先します。一括レビューは「英語・正解」「日本語」「画像」「挫折者向けとして3〜5秒で理解できるか」の4点を1回で判定し、REJECTを修正ループへ送りません。
+
 ## Future phases
 
 Future work may add answer-image rendering, AI-generated source images, Meta API publishing, scheduled Codex generation, insights, and optimization. These are intentionally absent from the current implementation.

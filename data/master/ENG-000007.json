@@ -16,15 +16,15 @@
   "acceptable_answers": [
     "at"
   ],
-  "answer_hint": "到着した場所は、建物や地点として捉える？それとも広い地域として捉える？",
+  "answer_hint": "office は「地点」？それとも「地域」？",
   "answer_hint_approved": true,
-  "explanation": "arrive at は、建物や地点など具体的な場所への到着に使います。",
-  "key_difference": "arrive at the office / arrive in Tokyo",
+  "explanation": "建物や地点には arrive at を使います。",
+  "key_difference": "at → 駅・会社などの地点\nin → 東京・日本などの地域",
   "examples": [
-    "We arrived at the station before noon."
+    "We arrived at the station."
   ],
   "example_translations": [
-    "私たちは正午前に駅へ着きました。"
+    "駅に着きました。"
   ],
   "tip": null,
   "visual_required": false,
