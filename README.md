@@ -112,6 +112,17 @@ Feed Quizは question child container、answer child container、carousel contai
 
 画像URLは公開repoのGitHub Raw HTTPSを `config/media_public.json` から生成します。ローカルパスをAPIへ送りません。live時は匿名HEAD取得を検査し、repoのprivate化、404、非HTTPSでは`BLOCKED_MEDIA_URL`で停止します。安全な一時的通信エラーだけ最大2回retryし、認証・データ・media URLエラーはretryしません。
 
+### 分離された実接続テスト
+
+`scripts/run_meta_connection_test.py` はproduction queueを読まず、`data/test_payloads/instagram-carousel.json`だけを使用します。フラグなしは説明表示のみで、`--live-test`がある場合だけpreflight後にテストcarouselを投稿します。
+
+```bash
+python3 scripts/run_meta_connection_test.py
+python3 scripts/run_meta_connection_test.py --live-test
+```
+
+preflightではUser ID、token、`instagram_basic / instagram_content_publish / pages_read_engagement`、2画像の匿名HTTPS取得を検証します。成功時のcontainer IDとpublished media IDはgitignoreされた`data/test_receipts/`へ保存し、access tokenは保存しません。
+
 `python3 scripts/export_weekly_review.py YYYY-MM-DD` は問題・回答・Storiesのcontact sheet、両媒体dry-run、集計レポートを `artifacts/weekly/YYYY-MM-DD/` に出力します。
 
 ## Future phases

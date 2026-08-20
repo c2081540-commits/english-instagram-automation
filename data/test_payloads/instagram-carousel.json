@@ -1,0 +1,7 @@
+{
+  "content_id": "META-TEST-INSTAGRAM-CAROUSEL",
+  "content_type": "test_carousel",
+  "question_image": "artifacts/images/ENG-000009-question.png",
+  "answer_image": "artifacts/images/ENG-000009-answer.png",
+  "caption": "API接続テスト"
+}

@@ -1,0 +1,4 @@
+{
+  "required_permissions": ["instagram_basic", "instagram_content_publish", "pages_read_engagement"],
+  "result_path": "data/test_receipts/instagram-live-test-result.json"
+}
