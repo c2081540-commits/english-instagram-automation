@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-21T15:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -18,5 +18,8 @@
       "image_path": "artifacts/images/ENG-000015-answer.png"
     }
   ],
-  "caption": "パッと選べる？"
+  "caption": "パッと選べる？",
+  "remote_post_id": "18099261029618448",
+  "posted_at": "2026-08-21T15:00:36.902589+09:00",
+  "error": null
 }
