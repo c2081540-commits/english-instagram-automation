@@ -9,7 +9,6 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 from PIL import Image
 
 from instagram_automation.weekly_batch import (TARGET_CATEGORIES,
-                                                TARGET_CHOICES,
                                                 TARGET_DIFFICULTIES,
                                                 validate_weekly_batch)
 
@@ -30,8 +29,9 @@ class WeeklyBatchTests(unittest.TestCase):
         self.assertEqual(report["normal_total"], 7)
         self.assertEqual(report["categories"], TARGET_CATEGORIES)
         self.assertEqual(report["difficulties"], TARGET_DIFFICULTIES)
-        self.assertEqual(report["choice_counts"], {str(k): v for k, v in TARGET_CHOICES.items()})
-        self.assertEqual(report["visual_required"], 14)
+        self.assertEqual(sum(report["choice_counts"].values()), 42)
+        self.assertTrue(set(map(int, report["choice_counts"])).issubset({2, 4}))
+        self.assertEqual(report["visual_required"], 13)
         self.assertEqual(report["seasonal"], 6)
 
     def test_no_duplicate_questions_examples_hints_or_normal_themes(self):
@@ -61,7 +61,7 @@ class WeeklyBatchTests(unittest.TestCase):
         visual = [item for item in self.week["quizzes"] if item["visual_required"]]
         ready = [item for item in visual if item.get("problem_image_path")]
         waiting = [item for item in visual if not item.get("problem_image_path")]
-        self.assertEqual(len(ready), 14)
+        self.assertEqual(len(ready), 13)
         self.assertEqual(len(waiting), 0)
         for item in ready:
             self.assertTrue((REPO_ROOT / "artifacts" / "images" / f"{item['content_id']}-question.png").is_file())

@@ -4,24 +4,28 @@
   "production_category": "situation",
   "difficulty": "easy",
   "seasonal": false,
-  "question": "Sorry I'm late.",
+  "question": "Sorry I'm late. Don't ___ about it.",
   "choices": [
-    "That's okay.",
-    "Here you are.",
-    "I am late.",
-    "Good night."
+    "worry",
+    "worries",
+    "worried",
+    "worrying"
   ],
-  "answer_type": "best",
-  "best_answer": "That's okay.",
+  "answer_type": "single",
+  "best_answer": "worry",
   "acceptable_answers": [
-    "That's okay."
+    "worry"
   ],
-  "answer_hint": "謝られたときの短い返事は？",
+  "answer_hint": "Don'tの後ろの形に注目。",
   "answer_hint_approved": true,
-  "explanation": "That's okay. は相手を安心させる返事です。",
-  "key_difference": null,
-  "examples": [],
-  "example_translations": [],
+  "explanation": "Don'tの後ろでは、動詞をそのままの形で使います。",
+  "key_difference": "Don't＋動詞＝〜しないで",
+  "examples": [
+    "Don't worry about it."
+  ],
+  "example_translations": [
+    "気にしないでください。"
+  ],
   "also_natural": "No worries.",
   "tip": null,
   "visual_required": false,
@@ -33,10 +37,23 @@
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
   "threads_parent_text": "これ分かったら基礎はOK。",
-  "threads_answer_text": "💡 正解は A. That's okay.\n\nThat's okay. は相手を安心させる返事です。",
+  "threads_answer_text": "💡 正解は A. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
   "publish_at": "2026-08-23T20:30:00+09:00",
   "situation_purpose": "respond_to_apology",
   "response_family": "social_response",
-  "question_guide_ja": "こんなとき、英語でどう言う？",
-  "question_role": "learning_sentence"
+  "question_guide_ja": "「気にしないで」ならどれ？",
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "difficulty_level": "L3",
+  "learning_point": "Don't＋動詞"
 }

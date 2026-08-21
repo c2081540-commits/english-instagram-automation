@@ -4,22 +4,26 @@
   "production_category": "situation",
   "difficulty": "easy",
   "seasonal": true,
-  "question": "Is this seat taken?",
+  "question": "Is anyone ___ here?",
   "choices": [
-    "No, it's free.",
-    "It's very summer."
+    "sitting",
+    "sit"
   ],
-  "answer_type": "best",
-  "best_answer": "No, it's free.",
+  "answer_type": "single",
+  "best_answer": "sitting",
   "acceptable_answers": [
-    "No, it's free."
+    "sitting"
   ],
-  "answer_hint": "空いている席なら？",
+  "answer_hint": "今の状態を尋ねる形に注目。",
   "answer_hint_approved": true,
-  "explanation": "空席なら No, it's free. と伝えられます。",
-  "key_difference": null,
-  "examples": [],
-  "example_translations": [],
+  "explanation": "今そこに座っている人がいるか尋ねるので、isとsittingを使います。",
+  "key_difference": "be動詞＋-ing＝今していること",
+  "examples": [
+    "Is anyone sitting here?"
+  ],
+  "example_translations": [
+    "ここに誰か座っていますか？"
+  ],
   "also_natural": "No, go ahead.",
   "tip": null,
   "visual_required": true,
@@ -31,10 +35,23 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. No, it's free.\n\n空席なら No, it's free. と伝えられます。",
+  "threads_answer_text": "💡 正解は A. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
   "publish_at": "2026-08-26T18:00:00+09:00",
   "situation_purpose": "explain_seat_availability",
   "response_family": "information_response",
   "question_guide_ja": null,
-  "question_role": null
+  "question_role": null,
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": true,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "learning_point": "現在進行形の疑問文",
+  "difficulty_level": "L3"
 }

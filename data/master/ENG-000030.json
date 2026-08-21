@@ -41,5 +41,18 @@
   "publish_at": "2026-08-24T07:00:00+09:00",
   "answer_point": "a bank は単数 → There is",
   "question_guide_ja": "「近くに銀行がある」ならどれ？",
-  "question_role": "learning_sentence"
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 3,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "difficulty_level": "L1",
+  "learning_point": "There isとThere are"
 }

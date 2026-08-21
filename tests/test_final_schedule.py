@@ -35,9 +35,10 @@ class FinalInstagramScheduleTests(unittest.TestCase):
             for field in ("content_id", "platform", "publish_at", "status"):
                 self.assertIn(field, queue)
         posted = [queue for queue in self.queues if queue["status"] == "posted"]
-        self.assertEqual([queue["content_id"] for queue in posted], ["ENG-000009"])
+        self.assertEqual([queue["content_id"] for queue in posted],
+                         ["ENG-000009", "ENG-000012", "ENG-000013", "ENG-000014", "ENG-000015"])
         self.assertTrue(posted[0]["remote_post_id"])
-        self.assertEqual(sum(queue["status"] == "pending" for queue in self.queues), 48)
+        self.assertEqual(sum(queue["status"] == "pending" for queue in self.queues), 44)
 
     def test_carousel_order_and_story_slot(self):
         quizzes = [queue for queue in self.queues if queue["content_type"] == "quiz"]

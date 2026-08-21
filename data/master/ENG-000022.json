@@ -4,24 +4,28 @@
   "production_category": "situation",
   "difficulty": "very_easy",
   "seasonal": false,
-  "question": "Thank you for your help.",
+  "question": "Thank you for your help. — You're ___.",
   "choices": [
-    "You're welcome.",
-    "Good morning.",
-    "See you yesterday.",
-    "I am help."
+    "welcome",
+    "welcomed",
+    "welcoming",
+    "welcomes"
   ],
-  "answer_type": "best",
-  "best_answer": "You're welcome.",
+  "answer_type": "single",
+  "best_answer": "welcome",
   "acceptable_answers": [
+    "welcome"
+  ],
+  "answer_hint": "お礼への定番の返答は？",
+  "answer_hint_approved": true,
+  "explanation": "You're welcome.は、お礼を言われたときの定番表現です。",
+  "key_difference": "You're welcome.＝どういたしまして。",
+  "examples": [
     "You're welcome."
   ],
-  "answer_hint": "お礼への定番の返事は？",
-  "answer_hint_approved": true,
-  "explanation": "You're welcome. はお礼への基本の返事です。",
-  "key_difference": null,
-  "examples": [],
-  "example_translations": [],
+  "example_translations": [
+    "どういたしまして。"
+  ],
   "also_natural": "No problem.",
   "tip": null,
   "visual_required": false,
@@ -33,10 +37,23 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "ここ、よく迷います。",
-  "threads_answer_text": "💡 正解は A. You're welcome.\n\nYou're welcome. はお礼への基本の返事です。",
+  "threads_answer_text": "💡 正解は A. welcome\n\nYou're welcome.は、お礼を言われたときの定番表現です。\n\n🗣️ You're welcome.\n「どういたしまして。」\n\n🔑 You're welcome.＝どういたしまして。",
   "publish_at": "2026-08-22T18:00:00+09:00",
   "situation_purpose": "respond_to_thanks",
   "response_family": "social_response",
-  "question_guide_ja": "こんなとき、英語でどう言う？",
-  "question_role": "learning_sentence"
+  "question_guide_ja": "「どういたしまして」ならどれ？",
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "difficulty_level": "L2",
+  "learning_point": "You're welcome"
 }

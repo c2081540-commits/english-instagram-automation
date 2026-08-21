@@ -49,7 +49,43 @@
       "answer_image": "artifacts/images/ENG-000016-answer.png",
       "caption": "短い英語クイズです。",
       "hashtags": [],
-      "publish_at": "2026-08-21T17:30:00+09:00"
+      "publish_at": "2026-08-21T17:30:00+09:00",
+      "question": "Yes, I'd ___ some, please.",
+      "choices": [
+        "like",
+        "to like"
+      ],
+      "best_answer": "like",
+      "answer_hint": "I'dの後ろの形に注目。",
+      "explanation": "I'd like ...は、欲しいものを丁寧に伝える定番表現です。",
+      "key_difference": "I'd like ...＝〜をお願いします",
+      "examples": [
+        "Yes, I'd like some, please."
+      ],
+      "example_translations": [
+        "はい、少しいただきたいです。"
+      ],
+      "threads_answer_text": "💡 正解は A. like\n\nI'd like ...は、欲しいものを丁寧に伝える表現です。\n\n🗣️ Yes, I'd like some, please.\n「はい、少しいただきたいです。」\n\n🔑 I'd like ...＝〜をお願いします",
+      "acceptable_answers": [
+        "like"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "I'd like"
     },
     {
       "content_id": "ENG-000017",
@@ -59,7 +95,46 @@
       "answer_image": "artifacts/images/ENG-000017-answer.png",
       "caption": "今日の1問。答えは2枚目へ。",
       "hashtags": [],
-      "publish_at": "2026-08-21T19:30:00+09:00"
+      "publish_at": "2026-08-21T19:30:00+09:00",
+      "question": "It's ___ the bank.",
+      "choices": [
+        "near",
+        "nearly",
+        "next",
+        "close"
+      ],
+      "best_answer": "near",
+      "answer_hint": "後ろにthe bankがそのまま続く語は？",
+      "explanation": "nearは、後ろに場所を直接置いて「〜の近く」を表せます。",
+      "key_difference": "near the bank / next to the bank",
+      "examples": [
+        "It's near the bank."
+      ],
+      "example_translations": [
+        "銀行の近くです。"
+      ],
+      "question_guide_ja": "「銀行の近く」ならどれ？",
+      "threads_answer_text": "💡 正解は A. near\n\nnearは、後ろに場所を直接置いて「〜の近く」を表せます。\n\n🗣️ It's near the bank.\n「銀行の近くです。」\n\n🔑 near the bank / next to the bank",
+      "acceptable_answers": [
+        "near"
+      ],
+      "answer_type": "single",
+      "difficulty": "very_easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "nearとnext to"
     },
     {
       "content_id": "ENG-100003",

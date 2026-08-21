@@ -4,24 +4,28 @@
   "production_category": "situation",
   "difficulty": "very_easy",
   "seasonal": false,
-  "question": "Where is the station?",
+  "question": "It's ___ the bank.",
   "choices": [
-    "It's near the bank.",
-    "I am a station.",
-    "At three years.",
-    "Yes, I do."
+    "near",
+    "nearly",
+    "next",
+    "close"
   ],
-  "answer_type": "best",
-  "best_answer": "It's near the bank.",
+  "answer_type": "single",
+  "best_answer": "near",
   "acceptable_answers": [
+    "near"
+  ],
+  "answer_hint": "後ろにthe bankがそのまま続く語は？",
+  "answer_hint_approved": true,
+  "explanation": "nearは、後ろに場所を直接置いて「〜の近く」を表せます。",
+  "key_difference": "near the bank / next to the bank",
+  "examples": [
     "It's near the bank."
   ],
-  "answer_hint": "場所を聞かれています。",
-  "answer_hint_approved": true,
-  "explanation": "場所を伝える短い返答が自然です。",
-  "key_difference": null,
-  "examples": [],
-  "example_translations": [],
+  "example_translations": [
+    "銀行の近くです。"
+  ],
   "also_natural": "It's just ahead.",
   "tip": null,
   "visual_required": false,
@@ -33,10 +37,23 @@
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
   "threads_parent_text": "これ分かったら基礎はOK。",
-  "threads_answer_text": "💡 正解は A. It's near the bank.\n\n場所を伝える短い返答が自然です。",
+  "threads_answer_text": "💡 正解は A. near\n\nnearは、後ろに場所を直接置いて「〜の近く」を表せます。\n\n🗣️ It's near the bank.\n「銀行の近くです。」\n\n🔑 near the bank / next to the bank",
   "publish_at": "2026-08-21T20:30:00+09:00",
   "situation_purpose": "ask_for_directions",
   "response_family": "information_request",
-  "question_guide_ja": "こう聞かれたら、どう返す？",
-  "question_role": "learning_sentence"
+  "question_guide_ja": "「銀行の近く」ならどれ？",
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 3,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "difficulty_level": "L2",
+  "learning_point": "nearとnext to"
 }

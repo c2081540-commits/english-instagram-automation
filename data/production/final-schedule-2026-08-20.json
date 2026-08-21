@@ -11,7 +11,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-20T07:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "past_due_hold"
+      "execution_eligibility": "past_due_hold",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "look forward to＋-ing"
     },
     {
       "content_id": "ENG-000007",
@@ -19,7 +32,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-20T09:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "past_due_hold"
+      "execution_eligibility": "past_due_hold",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "地点のat"
     },
     {
       "content_id": "ENG-000008",
@@ -27,7 +53,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-20T12:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "past_due_hold"
+      "execution_eligibility": "past_due_hold",
+      "question": "He is ___ up his sleeves.",
+      "choices": [
+        "rolling",
+        "roll"
+      ],
+      "best_answer": "rolling",
+      "answer_hint": "isの後ろの形に注目。",
+      "explanation": "今している動作なので、isの後ろにrollingを置きます。",
+      "key_difference": null,
+      "examples": [
+        "He is rolling up his sleeves."
+      ],
+      "example_translations": [
+        "彼は袖をまくっています。"
+      ],
+      "threads_answer_text": "💡 正解は A. rolling\n\n今している動作なので、isの後ろにrollingを置きます。\n\n📝 He is rolling up his sleeves.\n「彼は袖をまくっています。」\n\n🔑 is＋-ing＝今している動作",
+      "acceptable_answers": [
+        "rolling"
+      ],
+      "answer_type": "single",
+      "difficulty": "beginner",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "現在進行形"
     },
     {
       "content_id": "ENG-000009",
@@ -43,7 +105,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-20T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "past_due_hold"
+      "execution_eligibility": "past_due_hold",
+      "question": "It's hot. He'll turn ___ the AC.",
+      "choices": [
+        "on",
+        "off"
+      ],
+      "best_answer": "on",
+      "answer_hint": "暑い部屋で、エアコンをどうする？",
+      "explanation": "turn onは、エアコンなどの電源を入れる定番表現です。",
+      "key_difference": "turn on＝つける / turn off＝消す",
+      "examples": [
+        "He'll turn on the AC."
+      ],
+      "example_translations": [
+        "彼がエアコンをつけます。"
+      ],
+      "threads_answer_text": "💡 正解は A. on\n\n暑い部屋でエアコンをつけるので、turn onを使います。\n\n🗣️ He'll turn on the AC.\n「彼がエアコンをつけます。」\n\n🔑 turn on＝つける / turn off＝消す",
+      "acceptable_answers": [
+        "on"
+      ],
+      "answer_type": "single",
+      "difficulty": "beginner",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "turn onとturn off"
     },
     {
       "content_id": "ENG-000011",
@@ -51,7 +149,46 @@
       "content_type": "quiz",
       "publish_at": "2026-08-20T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "past_due_hold"
+      "execution_eligibility": "past_due_hold",
+      "question": "Would you like anything ___?",
+      "choices": [
+        "else",
+        "other",
+        "another",
+        "again"
+      ],
+      "best_answer": "else",
+      "answer_hint": "anythingと一緒に使う語は？",
+      "explanation": "anything elseで「ほかに何か」という定番のまとまりです。",
+      "key_difference": "anything else＝ほかに何か",
+      "examples": [
+        "Would you like anything else?"
+      ],
+      "example_translations": [
+        "ほかに何かいかがですか？"
+      ],
+      "question_guide_ja": "「ほかにも何か」ならどれ？",
+      "threads_answer_text": "💡 正解は A. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
+      "acceptable_answers": [
+        "else"
+      ],
+      "answer_type": "single",
+      "difficulty": "intermediate",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "anything else"
     },
     {
       "content_id": "ENG-100002",
@@ -99,7 +236,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-21T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "Yes, I'd ___ some, please.",
+      "choices": [
+        "like",
+        "to like"
+      ],
+      "best_answer": "like",
+      "answer_hint": "I'dの後ろの形に注目。",
+      "explanation": "I'd like ...は、欲しいものを丁寧に伝える定番表現です。",
+      "key_difference": "I'd like ...＝〜をお願いします",
+      "examples": [
+        "Yes, I'd like some, please."
+      ],
+      "example_translations": [
+        "はい、少しいただきたいです。"
+      ],
+      "threads_answer_text": "💡 正解は A. like\n\nI'd like ...は、欲しいものを丁寧に伝える表現です。\n\n🗣️ Yes, I'd like some, please.\n「はい、少しいただきたいです。」\n\n🔑 I'd like ...＝〜をお願いします",
+      "acceptable_answers": [
+        "like"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "I'd like"
     },
     {
       "content_id": "ENG-000017",
@@ -107,7 +280,46 @@
       "content_type": "quiz",
       "publish_at": "2026-08-21T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "It's ___ the bank.",
+      "choices": [
+        "near",
+        "nearly",
+        "next",
+        "close"
+      ],
+      "best_answer": "near",
+      "answer_hint": "後ろにthe bankがそのまま続く語は？",
+      "explanation": "nearは、後ろに場所を直接置いて「〜の近く」を表せます。",
+      "key_difference": "near the bank / next to the bank",
+      "examples": [
+        "It's near the bank."
+      ],
+      "example_translations": [
+        "銀行の近くです。"
+      ],
+      "question_guide_ja": "「銀行の近く」ならどれ？",
+      "threads_answer_text": "💡 正解は A. near\n\nnearは、後ろに場所を直接置いて「〜の近く」を表せます。\n\n🗣️ It's near the bank.\n「銀行の近くです。」\n\n🔑 near the bank / next to the bank",
+      "acceptable_answers": [
+        "near"
+      ],
+      "answer_type": "single",
+      "difficulty": "very_easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "nearとnext to"
     },
     {
       "content_id": "ENG-100003",
@@ -123,7 +335,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-22T07:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "複数主語の現在形"
     },
     {
       "content_id": "ENG-000019",
@@ -131,7 +356,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-22T09:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "現在完了とjust"
     },
     {
       "content_id": "ENG-000020",
@@ -139,7 +377,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-22T12:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "She carries the box ___ both hands.",
+      "choices": [
+        "with",
+        "by"
+      ],
+      "best_answer": "with",
+      "answer_hint": "手段を表す前置詞を考えよう。",
+      "explanation": "with both handsで「両手で」という意味になります。",
+      "key_difference": null,
+      "examples": [
+        "She carries the box with both hands."
+      ],
+      "example_translations": [
+        "彼女は両手で箱を運びます。"
+      ],
+      "threads_answer_text": "💡 正解は A. with\n\nwith both handsで「両手で」という意味になります。\n\n📝 She carries the box with both hands.\n「彼女は両手で箱を運びます。」\n\n🔑 with＋道具・体の一部＝〜を使って",
+      "acceptable_answers": [
+        "with"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "手段を表すwith"
     },
     {
       "content_id": "ENG-000021",
@@ -147,7 +421,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-22T15:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "afterとlater"
     },
     {
       "content_id": "ENG-000022",
@@ -155,7 +442,46 @@
       "content_type": "quiz",
       "publish_at": "2026-08-22T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "Thank you for your help. — You're ___.",
+      "choices": [
+        "welcome",
+        "welcomed",
+        "welcoming",
+        "welcomes"
+      ],
+      "best_answer": "welcome",
+      "answer_hint": "お礼への定番の返答は？",
+      "explanation": "You're welcome.は、お礼を言われたときの定番表現です。",
+      "key_difference": "You're welcome.＝どういたしまして。",
+      "examples": [
+        "You're welcome."
+      ],
+      "example_translations": [
+        "どういたしまして。"
+      ],
+      "question_guide_ja": "「どういたしまして」ならどれ？",
+      "threads_answer_text": "💡 正解は A. welcome\n\nYou're welcome.は、お礼を言われたときの定番表現です。\n\n🗣️ You're welcome.\n「どういたしまして。」\n\n🔑 You're welcome.＝どういたしまして。",
+      "acceptable_answers": [
+        "welcome"
+      ],
+      "answer_type": "single",
+      "difficulty": "very_easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "You're welcome"
     },
     {
       "content_id": "ENG-000023",
@@ -163,7 +489,52 @@
       "content_type": "quiz",
       "publish_at": "2026-08-22T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "She is ___ to close the window.",
+      "choices": [
+        "about",
+        "almost"
+      ],
+      "best_answer": "about",
+      "answer_hint": "to closeの前に置ける形は？",
+      "explanation": "be about to ...で「今にも〜する」を表します。",
+      "key_difference": "be about to＋動詞＝今にも〜する",
+      "examples": [
+        "She is about to close the window."
+      ],
+      "example_translations": [
+        "彼女は今、窓を閉めようとしています。"
+      ],
+      "threads_answer_text": "💡 正解は A. about\n\nbe about to ...で「今にも〜する」を表します。\n\n🗣️ She is about to close the window.\n「彼女は今、窓を閉めようとしています。」\n\n🔑 be about to＋動詞＝今にも〜する",
+      "acceptable_answers": [
+        "about"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "question_guide_ja": "「今にも閉める」ならどっち？",
+      "question_role": "learning_sentence",
+      "learning_point": "be about to＋動詞",
+      "threads_parent_text": "答えを決めてからどうぞ。",
+      "difficulty_level": "L2"
     },
     {
       "content_id": "ENG-100004",
@@ -179,7 +550,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-23T07:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "比較級"
     },
     {
       "content_id": "ENG-000025",
@@ -187,7 +571,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-23T09:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "現在進行形"
     },
     {
       "content_id": "ENG-000026",
@@ -195,7 +592,45 @@
       "content_type": "quiz",
       "publish_at": "2026-08-23T12:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "There isn't ___ in the cup.",
+      "choices": [
+        "anything",
+        "something",
+        "nothing",
+        "everything"
+      ],
+      "best_answer": "anything",
+      "answer_hint": "否定文で使う語を考えよう。",
+      "explanation": "否定文ではanythingを使って「何も〜ない」を表します。",
+      "key_difference": null,
+      "examples": [
+        "There isn't anything in the cup."
+      ],
+      "example_translations": [
+        "カップには何も入っていません。"
+      ],
+      "threads_answer_text": "💡 正解は A. anything\n\n否定文ではanythingを使って「何も〜ない」を表します。\n\n📝 There isn't anything in the cup.\n「カップには何も入っていません。」\n\n🔑 not ... anything＝何も〜ない",
+      "acceptable_answers": [
+        "anything"
+      ],
+      "answer_type": "single",
+      "difficulty": "very_easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "否定文のanything"
     },
     {
       "content_id": "ENG-000027",
@@ -203,7 +638,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-23T15:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "There are ___ cars on the road.",
+      "choices": [
+        "too many",
+        "too much"
+      ],
+      "best_answer": "too many",
+      "answer_hint": "carsは数えられる？",
+      "explanation": "carsは数えられる名詞なので、too manyを使います。",
+      "key_difference": null,
+      "examples": [
+        "There are too many cars on the road."
+      ],
+      "example_translations": [
+        "道路には車が多すぎます。"
+      ],
+      "threads_answer_text": "💡 正解は A. too many\n\ncarsは数えられるので、too manyを使います。\n\n📝 There are too many cars on the road.\n「道路には車が多すぎます。」\n\n🔑 too many＋数えられる名詞",
+      "acceptable_answers": [
+        "too many"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "manyとmuch"
     },
     {
       "content_id": "ENG-000028",
@@ -211,7 +682,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-23T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "時刻のatと曜日のon"
     },
     {
       "content_id": "ENG-000029",
@@ -219,7 +703,46 @@
       "content_type": "quiz",
       "publish_at": "2026-08-23T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "Sorry I'm late. Don't ___ about it.",
+      "choices": [
+        "worry",
+        "worries",
+        "worried",
+        "worrying"
+      ],
+      "best_answer": "worry",
+      "answer_hint": "Don'tの後ろの形に注目。",
+      "explanation": "Don'tの後ろでは、動詞をそのままの形で使います。",
+      "key_difference": "Don't＋動詞＝〜しないで",
+      "examples": [
+        "Don't worry about it."
+      ],
+      "example_translations": [
+        "気にしないでください。"
+      ],
+      "question_guide_ja": "「気にしないで」ならどれ？",
+      "threads_answer_text": "💡 正解は A. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
+      "acceptable_answers": [
+        "worry"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "Don't＋動詞"
     },
     {
       "content_id": "ENG-100005",
@@ -235,7 +758,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-24T07:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "There isとThere are"
     },
     {
       "content_id": "ENG-000031",
@@ -243,7 +779,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-24T09:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "have to"
     },
     {
       "content_id": "ENG-000032",
@@ -251,7 +800,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-24T12:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "He is walking ___ the stairs.",
+      "choices": [
+        "up",
+        "up to"
+      ],
+      "best_answer": "up",
+      "answer_hint": "階段の途中？ それとも手前まで？",
+      "explanation": "upは「上る」、up toは「〜まで行く」です。",
+      "key_difference": null,
+      "examples": [
+        "He is walking up the stairs."
+      ],
+      "example_translations": [
+        "彼は階段を上っています。"
+      ],
+      "threads_answer_text": "💡 正解は A. up\n\n写真では階段の途中を上っているので、up the stairsです。\n\n📝 He is walking up the stairs.\n「彼は階段を上っています。」\n\n🔑 up＝上る / up to＝〜まで行く",
+      "acceptable_answers": [
+        "up"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "learning_point": "upとup toの使い分け",
+      "difficulty_level": "L2"
     },
     {
       "content_id": "ENG-000033",
@@ -259,7 +844,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-24T15:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "becauseとso"
     },
     {
       "content_id": "ENG-000034",
@@ -267,7 +865,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-24T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "What does she say to him?",
+      "choices": [
+        "You can sit here.",
+        "I can sit here."
+      ],
+      "best_answer": "You can sit here.",
+      "answer_hint": "話している相手は誰？",
+      "explanation": "相手に席を勧めるので、主語はyouになります。",
+      "key_difference": "you＝相手 / I＝自分",
+      "examples": [
+        "You can sit here."
+      ],
+      "example_translations": [
+        "ここに座っていいですよ。"
+      ],
+      "threads_answer_text": "💡 正解は A. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
+      "acceptable_answers": [
+        "You can sit here."
+      ],
+      "answer_type": "single",
+      "difficulty": "very_easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "learning_point": "会話でのyouとIの使い分け",
+      "difficulty_level": "L2"
     },
     {
       "content_id": "ENG-000035",
@@ -275,7 +909,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-24T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "三単現"
     },
     {
       "content_id": "ENG-100006",
@@ -291,7 +938,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-25T07:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "can＋動詞"
     },
     {
       "content_id": "ENG-000037",
@@ -299,7 +959,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-25T09:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "否定文のyet"
     },
     {
       "content_id": "ENG-000038",
@@ -307,7 +980,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-25T12:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "物を表すthat"
     },
     {
       "content_id": "ENG-000039",
@@ -315,7 +1001,45 @@
       "content_type": "quiz",
       "publish_at": "2026-08-25T15:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "Water is coming ___ of the bottle.",
+      "choices": [
+        "out",
+        "up",
+        "on",
+        "at"
+      ],
+      "best_answer": "out",
+      "answer_hint": "水が動いている方向は？",
+      "explanation": "come out of ...で「〜から出てくる」を表します。",
+      "key_difference": null,
+      "examples": [
+        "Water is coming out of the bottle."
+      ],
+      "example_translations": [
+        "ボトルから水が出ています。"
+      ],
+      "threads_answer_text": "💡 正解は A. out\n\n水がボトルの中から外へ出ているので、out ofを使います。\n\n📝 Water is coming out of the bottle.\n「ボトルから水が出ています。」\n\n🔑 out of＝〜の中から外へ",
+      "acceptable_answers": [
+        "out"
+      ],
+      "answer_type": "single",
+      "difficulty": "very_easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "out of"
     },
     {
       "content_id": "ENG-000040",
@@ -323,7 +1047,46 @@
       "content_type": "quiz",
       "publish_at": "2026-08-25T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "I didn't catch that. Could you ___ that?",
+      "choices": [
+        "repeat",
+        "repeats",
+        "repeated",
+        "repeating"
+      ],
+      "best_answer": "repeat",
+      "answer_hint": "Could youの後ろの形に注目。",
+      "explanation": "Could youの後ろでは、動詞をそのままの形で使います。",
+      "key_difference": "Could you＋動詞＝〜していただけますか",
+      "examples": [
+        "Could you repeat that?"
+      ],
+      "example_translations": [
+        "もう一度言っていただけますか？"
+      ],
+      "question_guide_ja": "「もう一度言って」ならどれ？",
+      "threads_answer_text": "💡 正解は A. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
+      "acceptable_answers": [
+        "repeat"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "Could you＋動詞"
     },
     {
       "content_id": "ENG-000041",
@@ -331,7 +1094,45 @@
       "content_type": "quiz",
       "publish_at": "2026-08-25T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "She offers ___ him with the boxes.",
+      "choices": [
+        "to help",
+        "help",
+        "helping",
+        "helped"
+      ],
+      "best_answer": "to help",
+      "answer_hint": "offerの後ろの形に注目。",
+      "explanation": "offer to helpで「手伝うと申し出る」という意味になります。",
+      "key_difference": "offer to＋動詞＝〜すると申し出る",
+      "examples": [
+        "She offers to help him with the boxes."
+      ],
+      "example_translations": [
+        "彼女は箱を運ぶのを手伝うと申し出ています。"
+      ],
+      "threads_answer_text": "💡 正解は A. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
+      "acceptable_answers": [
+        "to help"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy_plus",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "offer to＋動詞"
     },
     {
       "content_id": "ENG-100007",
@@ -347,7 +1148,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-26T07:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "三単現"
     },
     {
       "content_id": "ENG-000043",
@@ -355,7 +1169,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-26T09:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "sinceとfor"
     },
     {
       "content_id": "ENG-000044",
@@ -363,7 +1190,45 @@
       "content_type": "quiz",
       "publish_at": "2026-08-26T12:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "She is folding the paper ___ half.",
+      "choices": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "best_answer": "in",
+      "answer_hint": "「半分に」の定番表現は？",
+      "explanation": "fold ... in halfで「〜を半分に折る」を表します。",
+      "key_difference": null,
+      "examples": [
+        "She is folding the paper in half."
+      ],
+      "example_translations": [
+        "彼女は紙を半分に折っています。"
+      ],
+      "threads_answer_text": "💡 正解は A. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 She is folding the paper in half.\n「彼女は紙を半分に折っています。」\n\n🔑 in half＝半分に",
+      "acceptable_answers": [
+        "in"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "in half"
     },
     {
       "content_id": "ENG-000045",
@@ -371,7 +1236,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-26T15:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "曜日のonと時刻のat"
     },
     {
       "content_id": "ENG-000046",
@@ -379,7 +1257,43 @@
       "content_type": "quiz",
       "publish_at": "2026-08-26T18:00:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "question": "Is anyone ___ here?",
+      "choices": [
+        "sitting",
+        "sit"
+      ],
+      "best_answer": "sitting",
+      "answer_hint": "今の状態を尋ねる形に注目。",
+      "explanation": "今そこに座っている人がいるか尋ねるので、isとsittingを使います。",
+      "key_difference": "be動詞＋-ing＝今していること",
+      "examples": [
+        "Is anyone sitting here?"
+      ],
+      "example_translations": [
+        "ここに誰か座っていますか？"
+      ],
+      "threads_answer_text": "💡 正解は A. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
+      "acceptable_answers": [
+        "sitting"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "learning_point": "現在進行形の疑問文",
+      "difficulty_level": "L3"
     },
     {
       "content_id": "ENG-000047",
@@ -387,7 +1301,20 @@
       "content_type": "quiz",
       "publish_at": "2026-08-26T20:30:00+09:00",
       "status": "pending",
-      "execution_eligibility": "scheduled"
+      "execution_eligibility": "scheduled",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "take a break"
     },
     {
       "content_id": "ENG-100008",

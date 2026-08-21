@@ -39,5 +39,18 @@
   "publish_at": "2026-08-22T07:00:00+09:00",
   "answer_point": "I / you / we / they → 動詞は原形",
   "question_guide_ja": "「東京に住む」ならどっち？",
-  "question_role": "learning_sentence"
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "difficulty_level": "L1",
+  "learning_point": "複数主語の現在形"
 }

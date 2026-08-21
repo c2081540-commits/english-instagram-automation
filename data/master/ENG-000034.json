@@ -4,24 +4,26 @@
   "production_category": "situation",
   "difficulty": "very_easy",
   "seasonal": false,
-  "question": "May I sit here?",
+  "question": "What does she say to him?",
   "choices": [
-    "Of course.",
-    "I sit daily.",
-    "It is a pen.",
-    "Last week."
+    "You can sit here.",
+    "I can sit here."
   ],
-  "answer_type": "best",
-  "best_answer": "Of course.",
+  "answer_type": "single",
+  "best_answer": "You can sit here.",
   "acceptable_answers": [
-    "Of course."
+    "You can sit here."
   ],
-  "answer_hint": "席を使ってよいなら？",
+  "answer_hint": "話している相手は誰？",
   "answer_hint_approved": true,
-  "explanation": "許可するときは Of course. と返せます。",
-  "key_difference": null,
-  "examples": [],
-  "example_translations": [],
+  "explanation": "相手に席を勧めるので、主語はyouになります。",
+  "key_difference": "you＝相手 / I＝自分",
+  "examples": [
+    "You can sit here."
+  ],
+  "example_translations": [
+    "ここに座っていいですよ。"
+  ],
   "also_natural": "Sure.",
   "tip": null,
   "visual_required": true,
@@ -33,10 +35,23 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. Of course.\n\n許可するときは Of course. と返せます。",
+  "threads_answer_text": "💡 正解は A. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
   "publish_at": "2026-08-24T18:00:00+09:00",
   "situation_purpose": "grant_permission",
   "response_family": "short_affirmative_response",
   "question_guide_ja": null,
-  "question_role": null
+  "question_role": null,
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": true,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "learning_point": "会話でのyouとIの使い分け",
+  "difficulty_level": "L2"
 }

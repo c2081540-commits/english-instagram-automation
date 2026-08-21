@@ -20,10 +20,10 @@ class FinalQuestionTemplateTests(unittest.TestCase):
     def test_visual_flag_selects_exactly_one_template_contract(self):
         text = [item for item in self.week["quizzes"] if not item["visual_required"]]
         visual = [item for item in self.week["quizzes"] if item["visual_required"]]
-        self.assertEqual((len(text), len(visual)), (28, 14))
+        self.assertEqual((len(text), len(visual)), (29, 13))
         self.assertTrue(all(item["question_guide_ja"] for item in text))
         self.assertTrue(all(item.get("question_guide_ja") is None for item in visual))
-        self.assertEqual(sum(item["question_role"] == "learning_sentence" for item in text), 26)
+        self.assertEqual(sum(item["question_role"] == "learning_sentence" for item in text), 27)
         self.assertEqual(sum(item["question_role"] == "meta_instruction" for item in text), 2)
         self.assertTrue(all(item.get("question_role") is None for item in visual))
 

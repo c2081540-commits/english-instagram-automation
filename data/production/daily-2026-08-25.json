@@ -44,7 +44,20 @@
       "publish_at": "2026-08-25T07:00:00+09:00",
       "answer_point": "can の後ろ → 動詞の原形",
       "question_guide_ja": "「英語を話せる？」ならどっち？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "can＋動詞"
     },
     {
       "content_id": "ENG-000037",
@@ -86,7 +99,20 @@
       "threads_answer_text": "💡 正解は A. yet\n\n否定文の「まだ」には yet を使います。",
       "publish_at": "2026-08-25T09:30:00+09:00",
       "question_guide_ja": "「昼食はまだ」ならどっち？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "否定文のyet"
     },
     {
       "content_id": "ENG-000038",
@@ -130,7 +156,20 @@
       "threads_answer_text": "💡 正解は A. that\n\n物を説明する関係代名詞に that を使えます。",
       "publish_at": "2026-08-25T12:00:00+09:00",
       "question_guide_ja": "「私が買った本」ならどれ？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "物を表すthat"
     },
     {
       "content_id": "ENG-000039",
@@ -138,27 +177,27 @@
       "production_category": "visual_vocabulary",
       "difficulty": "very_easy",
       "seasonal": true,
-      "question": "The bottle is ___.",
+      "question": "Water is coming ___ of the bottle.",
       "choices": [
-        "leaking",
-        "shining",
-        "growing",
-        "sleeping"
+        "out",
+        "up",
+        "on",
+        "at"
       ],
       "answer_type": "single",
-      "best_answer": "leaking",
+      "best_answer": "out",
       "acceptable_answers": [
-        "leaking"
+        "out"
       ],
-      "answer_hint": "ボトルから何が起きている？",
+      "answer_hint": "水が動いている方向は？",
       "answer_hint_approved": true,
-      "explanation": "leak は「漏れる」です。",
+      "explanation": "come out of ...で「〜から出てくる」を表します。",
       "key_difference": null,
       "examples": [
-        "The bottle is leaking."
+        "Water is coming out of the bottle."
       ],
       "example_translations": [
-        "ボトルから漏れています。"
+        "ボトルから水が出ています。"
       ],
       "also_natural": null,
       "tip": null,
@@ -171,10 +210,23 @@
       "instagram_caption": "パッと選べる？",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. leaking\n\nleak は「漏れる」です。",
+      "threads_answer_text": "💡 正解は A. out\n\n水がボトルの中から外へ出ているので、out ofを使います。\n\n📝 Water is coming out of the bottle.\n「ボトルから水が出ています。」\n\n🔑 out of＝〜の中から外へ",
       "publish_at": "2026-08-25T15:00:00+09:00",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "out of"
     },
     {
       "content_id": "ENG-000040",
@@ -182,22 +234,28 @@
       "production_category": "situation",
       "difficulty": "easy",
       "seasonal": false,
-      "question": "I didn't catch that.",
+      "question": "I didn't catch that. Could you ___ that?",
       "choices": [
-        "Could you repeat that?",
-        "I catch a train."
+        "repeat",
+        "repeats",
+        "repeated",
+        "repeating"
       ],
-      "answer_type": "best",
-      "best_answer": "Could you repeat that?",
+      "answer_type": "single",
+      "best_answer": "repeat",
       "acceptable_answers": [
+        "repeat"
+      ],
+      "answer_hint": "Could youの後ろの形に注目。",
+      "answer_hint_approved": true,
+      "explanation": "Could youの後ろでは、動詞をそのままの形で使います。",
+      "key_difference": "Could you＋動詞＝〜していただけますか",
+      "examples": [
         "Could you repeat that?"
       ],
-      "answer_hint": "聞き取れなかったら、どう頼む？",
-      "answer_hint_approved": true,
-      "explanation": "聞き返すときの自然な依頼表現です。",
-      "key_difference": null,
-      "examples": [],
-      "example_translations": [],
+      "example_translations": [
+        "もう一度言っていただけますか？"
+      ],
       "also_natural": "Could you say that again?",
       "tip": null,
       "visual_required": false,
@@ -209,12 +267,25 @@
       "instagram_caption": "短い英語クイズです。",
       "instagram_hashtags": [],
       "threads_parent_text": "ここ、よく迷います。",
-      "threads_answer_text": "💡 正解は A. Could you repeat that?\n\n聞き返すときの自然な依頼表現です。",
+      "threads_answer_text": "💡 正解は A. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
       "publish_at": "2026-08-25T18:00:00+09:00",
       "situation_purpose": "ask_for_repetition",
       "response_family": "clarification_request",
-      "question_guide_ja": "こんなとき、英語でどう言う？",
-      "question_role": "learning_sentence"
+      "question_guide_ja": "「もう一度言って」ならどれ？",
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "Could you＋動詞"
     },
     {
       "content_id": "ENG-000041",
@@ -222,22 +293,28 @@
       "production_category": "situation",
       "difficulty": "easy_plus",
       "seasonal": false,
-      "question": "Do you need any help?",
+      "question": "She offers ___ him with the boxes.",
       "choices": [
-        "Yes, please.",
-        "I need yesterday."
+        "to help",
+        "help",
+        "helping",
+        "helped"
       ],
-      "answer_type": "best",
-      "best_answer": "Yes, please.",
+      "answer_type": "single",
+      "best_answer": "to help",
       "acceptable_answers": [
-        "Yes, please."
+        "to help"
       ],
-      "answer_hint": "助けが必要なら？",
+      "answer_hint": "offerの後ろの形に注目。",
       "answer_hint_approved": true,
-      "explanation": "助けをお願いするなら Yes, please. が自然です。",
-      "key_difference": null,
-      "examples": [],
-      "example_translations": [],
+      "explanation": "offer to helpで「手伝うと申し出る」という意味になります。",
+      "key_difference": "offer to＋動詞＝〜すると申し出る",
+      "examples": [
+        "She offers to help him with the boxes."
+      ],
+      "example_translations": [
+        "彼女は箱を運ぶのを手伝うと申し出ています。"
+      ],
       "also_natural": "That would be great.",
       "tip": null,
       "visual_required": true,
@@ -249,12 +326,25 @@
       "instagram_caption": "今日の1問。答えは2枚目へ。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. Yes, please.\n\n助けをお願いするなら Yes, please. が自然です。",
+      "threads_answer_text": "💡 正解は A. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
       "publish_at": "2026-08-25T20:30:00+09:00",
       "situation_purpose": "accept_help_offer",
       "response_family": "short_affirmative_response",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "offer to＋動詞"
     }
   ],
   "normal": {

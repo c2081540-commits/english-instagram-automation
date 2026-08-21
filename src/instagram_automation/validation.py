@@ -22,6 +22,36 @@ META_INSTRUCTION = re.compile(
 )
 
 
+def _validate_difficulty_gate(content: dict, choices: list[str], errors: list[str]) -> None:
+    gate = content.get("difficulty_gate")
+    if gate is None:
+        return
+    if not isinstance(gate, dict):
+        errors.append("difficulty_gate must be an object")
+        return
+    if gate.get("visual_only_solvable") is not False:
+        errors.append("difficulty_gate visual_only_solvable must be false")
+    if gate.get("common_sense_only") is not False:
+        errors.append("difficulty_gate common_sense_only must be false")
+    effective = gate.get("effective_choice_count")
+    if not isinstance(effective, int) or effective < 2 or effective > len(choices):
+        errors.append("difficulty_gate effective_choice_count must be between 2 and choice count")
+    if len(choices) == 2 and effective != 2:
+        errors.append("two-choice difficulty_gate effective_choice_count must be 2")
+    if len(choices) == 4 and gate.get("weak_distractor_count") != 0:
+        errors.append("four-choice difficulty_gate weak_distractor_count must be 0")
+    if gate.get("weak_distractor_count") != 0:
+        errors.append("difficulty_gate weak_distractor_count must be 0")
+    if content.get("visual_required") is True and gate.get("visual_contributes_to_decision") is not True:
+        errors.append("visual difficulty_gate must confirm visual_contributes_to_decision")
+    if gate.get("unique_answer") is not True:
+        errors.append("difficulty_gate unique_answer must be true")
+    if gate.get("difficulty") != "TARGET":
+        errors.append("difficulty_gate difficulty must be TARGET")
+    if content.get("difficulty_level") not in {"L1", "L2", "L3"}:
+        errors.append("difficulty_level must be L1, L2, or L3 when difficulty_gate is present")
+
+
 def _validate_question_guide(content: dict, choices: list[str], errors: list[str]) -> None:
     guide = content.get("question_guide_ja")
     if content.get("visual_required") is True:
@@ -98,6 +128,7 @@ def validate(content: dict) -> None:
         if not isinstance(content.get("visual_description"), str) or not content.get("visual_description", "").strip():
             errors.append("visual_description is required when visual_required is true")
     _validate_question_guide(content, choices, errors)
+    _validate_difficulty_gate(content, choices, errors)
     try:
         value = content.get("publish_at")
         parsed = datetime.fromisoformat(value) if isinstance(value, str) else None

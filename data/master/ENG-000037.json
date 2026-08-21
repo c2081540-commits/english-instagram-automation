@@ -38,5 +38,18 @@
   "threads_answer_text": "💡 正解は A. yet\n\n否定文の「まだ」には yet を使います。",
   "publish_at": "2026-08-25T09:30:00+09:00",
   "question_guide_ja": "「昼食はまだ」ならどっち？",
-  "question_role": "learning_sentence"
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "difficulty_level": "L2",
+  "learning_point": "否定文のyet"
 }

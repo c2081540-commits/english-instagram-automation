@@ -5,6 +5,7 @@ from collections import Counter
 from difflib import SequenceMatcher
 
 from .daily_batch import validate_normal_candidate, validate_quiz_candidate
+from .difficulty import validate_distribution
 
 TARGET_CATEGORIES = {
     "grammar_usage": 15,
@@ -14,8 +15,9 @@ TARGET_CATEGORIES = {
     "review": 2,
 }
 TARGET_DIFFICULTIES = {"very_easy": 13, "easy": 21, "easy_plus": 8}
-TARGET_CHOICES = {2: 17, 4: 25}
-TARGET_VISUALS = 14
+ALLOWED_CHOICE_COUNTS = {2, 4}
+MAX_VISUALS = 14
+MIN_VISUALS = 7
 TARGET_SEASONAL = 6
 NORMAL_CATEGORIES = {
     "learning_habit", "study_method", "english_trivia", "common_mistake",
@@ -39,6 +41,30 @@ def _too_similar(left: str, right: str) -> bool:
     return bool(a and b and SequenceMatcher(None, a, b).ratio() >= .9)
 
 
+def validate_difficulty_gate(item: dict) -> None:
+    gate = item.get("difficulty_gate")
+    if not isinstance(gate, dict):
+        raise ValueError(f"difficulty_gate is required: {item.get('content_id')}")
+    if gate.get("visual_only_solvable") is not False:
+        raise ValueError("visual-only solvable quizzes are not production ready")
+    if gate.get("common_sense_only") is not False:
+        raise ValueError("common-sense-only quizzes are not production ready")
+    effective = gate.get("effective_choice_count")
+    if not isinstance(effective, int) or effective < 2 or effective > len(item.get("choices", [])):
+        raise ValueError("effective_choice_count must be at least 2 and not exceed choices")
+    choice_count = len(item.get("choices", []))
+    if choice_count == 2 and effective != 2:
+        raise ValueError("two-choice quizzes require effective_choice_count 2")
+    if gate.get("weak_distractor_count") != 0:
+        raise ValueError("weak distractors are not production ready")
+    if item.get("visual_required") is True and gate.get("visual_contributes_to_decision") is not True:
+        raise ValueError("visual quizzes must use the visual as meaningful answer information")
+    if gate.get("unique_answer") is not True:
+        raise ValueError("difficulty gate requires one unique answer")
+    if gate.get("difficulty") != "TARGET":
+        raise ValueError("difficulty gate requires TARGET")
+
+
 def validate_weekly_batch(week: dict, existing: list[dict]) -> dict:
     quizzes = week.get("quizzes")
     normals = week.get("normals")
@@ -48,8 +74,12 @@ def validate_weekly_batch(week: dict, existing: list[dict]) -> dict:
         raise ValueError("weekly batch requires exactly 7 normal items")
     for item in quizzes:
         validate_quiz_candidate(item)
+        if week.get("difficulty_gate_required") is True:
+            validate_difficulty_gate(item)
     for item in normals:
         validate_normal_candidate(item)
+    if week.get("difficulty_distribution_required") is True:
+        validate_distribution(quizzes)
 
     categories = Counter(item["production_category"] for item in quizzes)
     difficulties = Counter(difficulty_bucket(item["difficulty"]) for item in quizzes)
@@ -58,10 +88,11 @@ def validate_weekly_batch(week: dict, existing: list[dict]) -> dict:
         raise ValueError(f"weekly category distribution mismatch: {dict(categories)}")
     if difficulties != Counter(TARGET_DIFFICULTIES):
         raise ValueError(f"weekly difficulty distribution mismatch: {dict(difficulties)}")
-    if choices != Counter(TARGET_CHOICES):
-        raise ValueError(f"weekly choice distribution mismatch: {dict(choices)}")
-    if sum(item["visual_required"] for item in quizzes) != TARGET_VISUALS:
-        raise ValueError("weekly visual count must be 14")
+    if not choices or not set(choices).issubset(ALLOWED_CHOICE_COUNTS):
+        raise ValueError(f"weekly choice count must use only 2 or 4: {dict(choices)}")
+    visual_count = sum(item["visual_required"] for item in quizzes)
+    if not MIN_VISUALS <= visual_count <= MAX_VISUALS:
+        raise ValueError(f"weekly visual count must be {MIN_VISUALS}-{MAX_VISUALS}")
     if sum(item["seasonal"] for item in quizzes) != TARGET_SEASONAL:
         raise ValueError("weekly seasonal count must be 6")
 
@@ -153,6 +184,7 @@ def build_weekly_review_payload(week: dict) -> dict:
             "english": {key: item[key] for key in ("question_role", "question", "choices", "answer_type", "best_answer", "examples")},
             "japanese": {key: item.get(key) for key in ("question_guide_ja", "answer_hint", "answer_point", "explanation", "example_translations", "key_difference", "also_natural")},
             "visual": visual,
+            "difficulty_gate": item.get("difficulty_gate"),
         })
     for item in week["normals"]:
         items.append({"content_id": item["content_id"], "content_type": "normal",

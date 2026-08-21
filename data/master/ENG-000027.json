@@ -4,27 +4,25 @@
   "production_category": "visual_vocabulary",
   "difficulty": "easy",
   "seasonal": true,
-  "question": "The road is ___.",
+  "question": "There are ___ cars on the road.",
   "choices": [
-    "crowded",
-    "quiet",
-    "empty",
-    "closed"
+    "too many",
+    "too much"
   ],
   "answer_type": "single",
-  "best_answer": "crowded",
+  "best_answer": "too many",
   "acceptable_answers": [
-    "crowded"
+    "too many"
   ],
-  "answer_hint": "道路の混み具合は？",
+  "answer_hint": "carsは数えられる？",
   "answer_hint_approved": true,
-  "explanation": "crowded は「混雑した」です。",
+  "explanation": "carsは数えられる名詞なので、too manyを使います。",
   "key_difference": null,
   "examples": [
-    "The road is crowded today."
+    "There are too many cars on the road."
   ],
   "example_translations": [
-    "今日は道路が混んでいます。"
+    "道路には車が多すぎます。"
   ],
   "also_natural": null,
   "tip": null,
@@ -37,8 +35,21 @@
   "instagram_caption": "パッと選べる？",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. crowded\n\ncrowded は「混雑した」です。",
+  "threads_answer_text": "💡 正解は A. too many\n\ncarsは数えられるので、too manyを使います。\n\n📝 There are too many cars on the road.\n「道路には車が多すぎます。」\n\n🔑 too many＋数えられる名詞",
   "publish_at": "2026-08-23T15:00:00+09:00",
   "question_guide_ja": null,
-  "question_role": null
+  "question_role": null,
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": true,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "difficulty_level": "L3",
+  "learning_point": "manyとmuch"
 }

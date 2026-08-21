@@ -18,5 +18,6 @@
       "image_path": "artifacts/images/ENG-000034-answer.png"
     }
   ],
-  "caption": "短い英語クイズです。"
+  "caption": "短い英語クイズです。",
+  "difficulty_level": "L2"
 }

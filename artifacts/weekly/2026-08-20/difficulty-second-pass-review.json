@@ -1,0 +1,102 @@
+[
+  {
+    "content_id": "ENG-000023",
+    "mode": "text",
+    "old_question": "She is about ___ close the window.",
+    "new_question": "She is ___ to close the window.",
+    "old_choices": [
+      "to",
+      "for",
+      "at",
+      "on"
+    ],
+    "new_choices": [
+      "about",
+      "almost"
+    ],
+    "correct_answer": "about",
+    "old_learning_point": "be about to＋動詞",
+    "new_learning_point": "be about to＋動詞",
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "unique_answer": true,
+    "difficulty": "TARGET"
+  },
+  {
+    "content_id": "ENG-000032",
+    "mode": "visual",
+    "old_question": "He is going ___ the stairs.",
+    "new_question": "He is walking ___ the stairs.",
+    "old_choices": [
+      "up",
+      "on",
+      "to",
+      "at"
+    ],
+    "new_choices": [
+      "up",
+      "up to"
+    ],
+    "correct_answer": "up",
+    "old_learning_point": "go up＝上る",
+    "new_learning_point": "upとup toの使い分け",
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "unique_answer": true,
+    "difficulty": "TARGET"
+  },
+  {
+    "content_id": "ENG-000034",
+    "mode": "visual",
+    "old_question": "She says he ___ sit there.",
+    "new_question": "What does she say to him?",
+    "old_choices": [
+      "can",
+      "cans",
+      "can to",
+      "is can"
+    ],
+    "new_choices": [
+      "You can sit here.",
+      "I can sit here."
+    ],
+    "correct_answer": "You can sit here.",
+    "old_learning_point": "can＋動詞",
+    "new_learning_point": "会話でのyouとIの使い分け",
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "unique_answer": true,
+    "difficulty": "TARGET"
+  },
+  {
+    "content_id": "ENG-000046",
+    "mode": "visual",
+    "old_question": "The seat is free, so I ___ sit there.",
+    "new_question": "Is anyone ___ here?",
+    "old_choices": [
+      "can",
+      "can to",
+      "am can",
+      "cans"
+    ],
+    "new_choices": [
+      "sitting",
+      "sit"
+    ],
+    "correct_answer": "sitting",
+    "old_learning_point": "can＋動詞",
+    "new_learning_point": "現在進行形の疑問文",
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "unique_answer": true,
+    "difficulty": "TARGET"
+  }
+]

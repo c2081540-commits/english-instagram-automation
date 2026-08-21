@@ -9,7 +9,20 @@
       "answer_image": "artifacts/images/ENG-000018-answer.png",
       "caption": "まずは3秒で考えてみよう。",
       "hashtags": [],
-      "publish_at": "2026-08-22T07:30:00+09:00"
+      "publish_at": "2026-08-22T07:30:00+09:00",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "複数主語の現在形"
     },
     {
       "content_id": "ENG-000019",
@@ -19,7 +32,20 @@
       "answer_image": "artifacts/images/ENG-000019-answer.png",
       "caption": "基礎表現をひとつ確認。",
       "hashtags": [],
-      "publish_at": "2026-08-22T09:30:00+09:00"
+      "publish_at": "2026-08-22T09:30:00+09:00",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "現在完了とjust"
     },
     {
       "content_id": "ENG-000020",
@@ -29,7 +55,43 @@
       "answer_image": "artifacts/images/ENG-000020-answer.png",
       "caption": "日常で使える英語をチェック。",
       "hashtags": [],
-      "publish_at": "2026-08-22T12:00:00+09:00"
+      "publish_at": "2026-08-22T12:00:00+09:00",
+      "question": "She carries the box ___ both hands.",
+      "choices": [
+        "with",
+        "by"
+      ],
+      "best_answer": "with",
+      "answer_hint": "手段を表す前置詞を考えよう。",
+      "explanation": "with both handsで「両手で」という意味になります。",
+      "key_difference": null,
+      "examples": [
+        "She carries the box with both hands."
+      ],
+      "example_translations": [
+        "彼女は両手で箱を運びます。"
+      ],
+      "threads_answer_text": "💡 正解は A. with\n\nwith both handsで「両手で」という意味になります。\n\n📝 She carries the box with both hands.\n「彼女は両手で箱を運びます。」\n\n🔑 with＋道具・体の一部＝〜を使って",
+      "acceptable_answers": [
+        "with"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "手段を表すwith"
     },
     {
       "content_id": "ENG-000021",
@@ -39,7 +101,20 @@
       "answer_image": "artifacts/images/ENG-000021-answer.png",
       "caption": "パッと選べる？",
       "hashtags": [],
-      "publish_at": "2026-08-22T15:00:00+09:00"
+      "publish_at": "2026-08-22T15:00:00+09:00",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "afterとlater"
     },
     {
       "content_id": "ENG-000022",
@@ -49,7 +124,46 @@
       "answer_image": "artifacts/images/ENG-000022-answer.png",
       "caption": "短い英語クイズです。",
       "hashtags": [],
-      "publish_at": "2026-08-22T17:30:00+09:00"
+      "publish_at": "2026-08-22T17:30:00+09:00",
+      "question": "Thank you for your help. — You're ___.",
+      "choices": [
+        "welcome",
+        "welcomed",
+        "welcoming",
+        "welcomes"
+      ],
+      "best_answer": "welcome",
+      "answer_hint": "お礼への定番の返答は？",
+      "explanation": "You're welcome.は、お礼を言われたときの定番表現です。",
+      "key_difference": "You're welcome.＝どういたしまして。",
+      "examples": [
+        "You're welcome."
+      ],
+      "example_translations": [
+        "どういたしまして。"
+      ],
+      "question_guide_ja": "「どういたしまして」ならどれ？",
+      "threads_answer_text": "💡 正解は A. welcome\n\nYou're welcome.は、お礼を言われたときの定番表現です。\n\n🗣️ You're welcome.\n「どういたしまして。」\n\n🔑 You're welcome.＝どういたしまして。",
+      "acceptable_answers": [
+        "welcome"
+      ],
+      "answer_type": "single",
+      "difficulty": "very_easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "You're welcome"
     },
     {
       "content_id": "ENG-000023",
@@ -59,7 +173,52 @@
       "answer_image": "artifacts/images/ENG-000023-answer.png",
       "caption": "今日の1問。答えは2枚目へ。",
       "hashtags": [],
-      "publish_at": "2026-08-22T19:30:00+09:00"
+      "publish_at": "2026-08-22T19:30:00+09:00",
+      "question": "She is ___ to close the window.",
+      "choices": [
+        "about",
+        "almost"
+      ],
+      "best_answer": "about",
+      "answer_hint": "to closeの前に置ける形は？",
+      "explanation": "be about to ...で「今にも〜する」を表します。",
+      "key_difference": "be about to＋動詞＝今にも〜する",
+      "examples": [
+        "She is about to close the window."
+      ],
+      "example_translations": [
+        "彼女は今、窓を閉めようとしています。"
+      ],
+      "threads_answer_text": "💡 正解は A. about\n\nbe about to ...で「今にも〜する」を表します。\n\n🗣️ She is about to close the window.\n「彼女は今、窓を閉めようとしています。」\n\n🔑 be about to＋動詞＝今にも〜する",
+      "acceptable_answers": [
+        "about"
+      ],
+      "answer_type": "single",
+      "difficulty": "easy",
+      "answer_hint_approved": true,
+      "tip": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "visual_required": false,
+      "visual_type": null,
+      "visual_description": null,
+      "problem_image_path": null,
+      "image_information_role": null,
+      "question_repeats_visual": null,
+      "question_guide_ja": "「今にも閉める」ならどっち？",
+      "question_role": "learning_sentence",
+      "learning_point": "be about to＋動詞",
+      "threads_parent_text": "答えを決めてからどうぞ。",
+      "difficulty_level": "L2"
     },
     {
       "content_id": "ENG-100004",

@@ -46,7 +46,20 @@
       "publish_at": "2026-08-23T07:00:00+09:00",
       "answer_point": "than があれば比較級",
       "question_guide_ja": "「私のより重い」ならどれ？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "比較級"
     },
     {
       "content_id": "ENG-000025",
@@ -89,7 +102,20 @@
       "publish_at": "2026-08-23T09:30:00+09:00",
       "answer_point": "now → be動詞＋動詞ing",
       "question_guide_ja": "「今、夕食中」ならどっち？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "現在進行形"
     },
     {
       "content_id": "ENG-000026",
@@ -97,27 +123,27 @@
       "production_category": "visual_vocabulary",
       "difficulty": "very_easy",
       "seasonal": false,
-      "question": "The cup is ___.",
+      "question": "There isn't ___ in the cup.",
       "choices": [
-        "empty",
-        "full",
-        "hot",
-        "broken"
+        "anything",
+        "something",
+        "nothing",
+        "everything"
       ],
       "answer_type": "single",
-      "best_answer": "empty",
+      "best_answer": "anything",
       "acceptable_answers": [
-        "empty"
+        "anything"
       ],
-      "answer_hint": "カップの中を見てみよう。",
+      "answer_hint": "否定文で使う語を考えよう。",
       "answer_hint_approved": true,
-      "explanation": "empty は「空の」です。",
+      "explanation": "否定文ではanythingを使って「何も〜ない」を表します。",
       "key_difference": null,
       "examples": [
-        "My cup is empty."
+        "There isn't anything in the cup."
       ],
       "example_translations": [
-        "私のカップは空です。"
+        "カップには何も入っていません。"
       ],
       "also_natural": null,
       "tip": null,
@@ -130,10 +156,23 @@
       "instagram_caption": "日常で使える英語をチェック。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. empty\n\nempty は「空の」です。",
+      "threads_answer_text": "💡 正解は A. anything\n\n否定文ではanythingを使って「何も〜ない」を表します。\n\n📝 There isn't anything in the cup.\n「カップには何も入っていません。」\n\n🔑 not ... anything＝何も〜ない",
       "publish_at": "2026-08-23T12:00:00+09:00",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "否定文のanything"
     },
     {
       "content_id": "ENG-000027",
@@ -141,27 +180,25 @@
       "production_category": "visual_vocabulary",
       "difficulty": "easy",
       "seasonal": true,
-      "question": "The road is ___.",
+      "question": "There are ___ cars on the road.",
       "choices": [
-        "crowded",
-        "quiet",
-        "empty",
-        "closed"
+        "too many",
+        "too much"
       ],
       "answer_type": "single",
-      "best_answer": "crowded",
+      "best_answer": "too many",
       "acceptable_answers": [
-        "crowded"
+        "too many"
       ],
-      "answer_hint": "道路の混み具合は？",
+      "answer_hint": "carsは数えられる？",
       "answer_hint_approved": true,
-      "explanation": "crowded は「混雑した」です。",
+      "explanation": "carsは数えられる名詞なので、too manyを使います。",
       "key_difference": null,
       "examples": [
-        "The road is crowded today."
+        "There are too many cars on the road."
       ],
       "example_translations": [
-        "今日は道路が混んでいます。"
+        "道路には車が多すぎます。"
       ],
       "also_natural": null,
       "tip": null,
@@ -174,10 +211,23 @@
       "instagram_caption": "パッと選べる？",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. crowded\n\ncrowded は「混雑した」です。",
+      "threads_answer_text": "💡 正解は A. too many\n\ncarsは数えられるので、too manyを使います。\n\n📝 There are too many cars on the road.\n「道路には車が多すぎます。」\n\n🔑 too many＋数えられる名詞",
       "publish_at": "2026-08-23T15:00:00+09:00",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "manyとmuch"
     },
     {
       "content_id": "ENG-000028",
@@ -219,7 +269,20 @@
       "threads_answer_text": "💡 正解は A. at\n\nat 3 p.m. → 3時に\non Monday → 月曜に",
       "publish_at": "2026-08-23T18:00:00+09:00",
       "question_guide_ja": "自然なのはどっち？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "時刻のatと曜日のon"
     },
     {
       "content_id": "ENG-000029",
@@ -227,24 +290,28 @@
       "production_category": "situation",
       "difficulty": "easy",
       "seasonal": false,
-      "question": "Sorry I'm late.",
+      "question": "Sorry I'm late. Don't ___ about it.",
       "choices": [
-        "That's okay.",
-        "Here you are.",
-        "I am late.",
-        "Good night."
+        "worry",
+        "worries",
+        "worried",
+        "worrying"
       ],
-      "answer_type": "best",
-      "best_answer": "That's okay.",
+      "answer_type": "single",
+      "best_answer": "worry",
       "acceptable_answers": [
-        "That's okay."
+        "worry"
       ],
-      "answer_hint": "謝られたときの短い返事は？",
+      "answer_hint": "Don'tの後ろの形に注目。",
       "answer_hint_approved": true,
-      "explanation": "That's okay. は相手を安心させる返事です。",
-      "key_difference": null,
-      "examples": [],
-      "example_translations": [],
+      "explanation": "Don'tの後ろでは、動詞をそのままの形で使います。",
+      "key_difference": "Don't＋動詞＝〜しないで",
+      "examples": [
+        "Don't worry about it."
+      ],
+      "example_translations": [
+        "気にしないでください。"
+      ],
       "also_natural": "No worries.",
       "tip": null,
       "visual_required": false,
@@ -256,12 +323,25 @@
       "instagram_caption": "今日の1問。答えは2枚目へ。",
       "instagram_hashtags": [],
       "threads_parent_text": "これ分かったら基礎はOK。",
-      "threads_answer_text": "💡 正解は A. That's okay.\n\nThat's okay. は相手を安心させる返事です。",
+      "threads_answer_text": "💡 正解は A. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
       "publish_at": "2026-08-23T20:30:00+09:00",
       "situation_purpose": "respond_to_apology",
       "response_family": "social_response",
-      "question_guide_ja": "こんなとき、英語でどう言う？",
-      "question_role": "learning_sentence"
+      "question_guide_ja": "「気にしないで」ならどれ？",
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "Don't＋動詞"
     }
   ],
   "normal": {

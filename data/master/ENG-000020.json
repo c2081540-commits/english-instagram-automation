@@ -4,27 +4,25 @@
   "production_category": "visual_vocabulary",
   "difficulty": "easy",
   "seasonal": false,
-  "question": "She is ___ the box.",
+  "question": "She carries the box ___ both hands.",
   "choices": [
-    "carrying",
-    "opening",
-    "dropping",
-    "kicking"
+    "with",
+    "by"
   ],
   "answer_type": "single",
-  "best_answer": "carrying",
+  "best_answer": "with",
   "acceptable_answers": [
-    "carrying"
+    "with"
   ],
-  "answer_hint": "箱をどうしている？",
+  "answer_hint": "手段を表す前置詞を考えよう。",
   "answer_hint_approved": true,
-  "explanation": "carry は「運ぶ」です。",
+  "explanation": "with both handsで「両手で」という意味になります。",
   "key_difference": null,
   "examples": [
-    "She is carrying a box."
+    "She carries the box with both hands."
   ],
   "example_translations": [
-    "彼女は箱を運んでいます。"
+    "彼女は両手で箱を運びます。"
   ],
   "also_natural": null,
   "tip": null,
@@ -37,8 +35,21 @@
   "instagram_caption": "日常で使える英語をチェック。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. carrying\n\ncarry は「運ぶ」です。",
+  "threads_answer_text": "💡 正解は A. with\n\nwith both handsで「両手で」という意味になります。\n\n📝 She carries the box with both hands.\n「彼女は両手で箱を運びます。」\n\n🔑 with＋道具・体の一部＝〜を使って",
   "publish_at": "2026-08-22T12:00:00+09:00",
   "question_guide_ja": null,
-  "question_role": null
+  "question_role": null,
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": true,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "difficulty_level": "L3",
+  "learning_point": "手段を表すwith"
 }

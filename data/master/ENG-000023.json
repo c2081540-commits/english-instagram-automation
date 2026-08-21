@@ -4,37 +4,54 @@
   "production_category": "situation",
   "difficulty": "easy",
   "seasonal": true,
-  "question": "Could you close the window?",
+  "question": "She is ___ to close the window.",
   "choices": [
-    "Sure.",
-    "I like windows."
+    "about",
+    "almost"
   ],
-  "answer_type": "best",
-  "best_answer": "Sure.",
+  "answer_type": "single",
+  "best_answer": "about",
   "acceptable_answers": [
-    "Sure."
+    "about"
   ],
-  "answer_hint": "頼みを引き受けるなら？",
+  "answer_hint": "to closeの前に置ける形は？",
   "answer_hint_approved": true,
-  "explanation": "短い依頼には Sure. で自然に返せます。",
-  "key_difference": null,
-  "examples": [],
-  "example_translations": [],
+  "explanation": "be about to ...で「今にも〜する」を表します。",
+  "key_difference": "be about to＋動詞＝今にも〜する",
+  "examples": [
+    "She is about to close the window."
+  ],
+  "example_translations": [
+    "彼女は今、窓を閉めようとしています。"
+  ],
   "also_natural": "Of course.",
   "tip": null,
-  "visual_required": true,
-  "visual_type": "photo",
-  "visual_description": "A summer office with an open window letting in bright heat, one coworker politely gesturing toward it and another ready to close it. No text, logos, or watermark.",
-  "problem_image_path": "assets/source/ENG-000023-close-window.png",
-  "image_information_role": "essential",
-  "question_repeats_visual": false,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. Sure.\n\n短い依頼には Sure. で自然に返せます。",
+  "threads_parent_text": "答えを決めてからどうぞ。",
+  "threads_answer_text": "💡 正解は A. about\n\nbe about to ...で「今にも〜する」を表します。\n\n🗣️ She is about to close the window.\n「彼女は今、窓を閉めようとしています。」\n\n🔑 be about to＋動詞＝今にも〜する",
   "publish_at": "2026-08-22T20:30:00+09:00",
   "situation_purpose": "accept_action_request",
   "response_family": "short_affirmative_response",
-  "question_guide_ja": null,
-  "question_role": null
+  "question_guide_ja": "「今にも閉める」ならどっち？",
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "learning_point": "be about to＋動詞",
+  "difficulty_level": "L2"
 }

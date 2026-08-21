@@ -43,7 +43,20 @@
       "threads_answer_text": "💡 正解は B. seeing\n\nlook forward to の後ろは動名詞です。",
       "publish_at": "2026-08-20T07:00:00+09:00",
       "question_guide_ja": "「再会が楽しみ」ならどれ？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "look forward to＋-ing"
     },
     {
       "content_id": "ENG-000007",
@@ -84,7 +97,20 @@
       "threads_answer_text": "💡 正解は A. at\n\nat → 駅・会社などの地点\nin → 東京・日本などの地域",
       "publish_at": "2026-08-20T09:30:00+09:00",
       "question_guide_ja": "「会社に着いた」ならどれ？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "地点のat"
     },
     {
       "content_id": "ENG-000008",
@@ -92,27 +118,25 @@
       "production_category": "visual_vocabulary",
       "difficulty": "beginner",
       "seasonal": false,
-      "question": "He is ___ his sleeves.",
+      "question": "He is ___ up his sleeves.",
       "choices": [
-        "rolling up",
-        "tying",
-        "tearing",
-        "buttoning"
+        "rolling",
+        "roll"
       ],
       "answer_type": "single",
-      "best_answer": "rolling up",
+      "best_answer": "rolling",
       "acceptable_answers": [
-        "rolling up"
+        "rolling"
       ],
-      "answer_hint": "袖に起きている動きは？",
+      "answer_hint": "isの後ろの形に注目。",
       "answer_hint_approved": true,
-      "explanation": "roll up ＝ 巻き上げる、まくる",
+      "explanation": "今している動作なので、isの後ろにrollingを置きます。",
       "key_difference": null,
       "examples": [
-        "He rolled up his sleeves."
+        "He is rolling up his sleeves."
       ],
       "example_translations": [
-        "彼は袖をまくりました。"
+        "彼は袖をまくっています。"
       ],
       "tip": null,
       "visual_required": true,
@@ -124,10 +148,23 @@
       "instagram_caption": "身支度でよく使う動作です。写真を見て英語を選んでみてください。",
       "instagram_hashtags": [],
       "threads_parent_text": "この状態、英語なら？",
-      "threads_answer_text": "💡 正解は A. rolling up\n\nroll up ＝ 巻き上げる、まくる",
+      "threads_answer_text": "💡 正解は A. rolling\n\n今している動作なので、isの後ろにrollingを置きます。\n\n📝 He is rolling up his sleeves.\n「彼は袖をまくっています。」\n\n🔑 is＋-ing＝今している動作",
       "publish_at": "2026-08-20T12:00:00+09:00",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "現在進行形"
     },
     {
       "content_id": "ENG-000009",
@@ -176,26 +213,28 @@
       "production_category": "situation",
       "difficulty": "beginner",
       "seasonal": true,
-      "question": "Could you turn on the AC?",
+      "question": "It's hot. He'll turn ___ the AC.",
       "choices": [
-        "Sure.",
-        "Maybe yesterday.",
-        "It's a chair.",
-        "See you later."
+        "on",
+        "off"
       ],
-      "answer_type": "best",
-      "best_answer": "Sure.",
+      "answer_type": "single",
+      "best_answer": "on",
       "acceptable_answers": [
-        "Sure."
+        "on"
       ],
-      "answer_hint": "短く引き受けるなら？",
+      "answer_hint": "暑い部屋で、エアコンをどうする？",
       "answer_hint_approved": true,
-      "explanation": "依頼を引き受けるなら Sure. で自然です。",
+      "explanation": "turn onは、エアコンなどの電源を入れる定番表現です。",
       "situation_purpose": "accept_action_request",
       "response_family": "short_affirmative_response",
-      "key_difference": null,
-      "examples": [],
-      "example_translations": [],
+      "key_difference": "turn on＝つける / turn off＝消す",
+      "examples": [
+        "He'll turn on the AC."
+      ],
+      "example_translations": [
+        "彼がエアコンをつけます。"
+      ],
       "also_natural": "Of course.\nNo problem.",
       "tip": null,
       "visual_required": true,
@@ -207,10 +246,23 @@
       "instagram_caption": "暑い室内でこう頼まれたら、自然な返答はどれ？",
       "instagram_hashtags": [],
       "threads_parent_text": "とっさに返せる？",
-      "threads_answer_text": "💡 正解は A. Sure.\n\n依頼を引き受けるなら Sure. で自然です。",
+      "threads_answer_text": "💡 正解は A. on\n\n暑い部屋でエアコンをつけるので、turn onを使います。\n\n🗣️ He'll turn on the AC.\n「彼がエアコンをつけます。」\n\n🔑 turn on＝つける / turn off＝消す",
       "publish_at": "2026-08-20T18:00:00+09:00",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "turn onとturn off"
     },
     {
       "content_id": "ENG-000011",
@@ -218,26 +270,30 @@
       "production_category": "situation",
       "difficulty": "intermediate",
       "seasonal": false,
-      "question": "Would you like anything else?",
+      "question": "Would you like anything ___?",
       "choices": [
-        "That's all, thank you.",
-        "I like anything.",
-        "Yes, I am else.",
-        "It was nothing."
+        "else",
+        "other",
+        "another",
+        "again"
       ],
-      "answer_type": "best",
-      "best_answer": "That's all, thank you.",
+      "answer_type": "single",
+      "best_answer": "else",
       "acceptable_answers": [
-        "That's all, thank you."
+        "else"
       ],
-      "answer_hint": "追加がなければ、短くどう返す？",
+      "answer_hint": "anythingと一緒に使う語は？",
       "answer_hint_approved": true,
-      "explanation": "注文が以上だと丁寧に伝える返答です。",
+      "explanation": "anything elseで「ほかに何か」という定番のまとまりです。",
       "situation_purpose": "finish_ordering",
       "response_family": "information_response",
-      "key_difference": null,
-      "examples": [],
-      "example_translations": [],
+      "key_difference": "anything else＝ほかに何か",
+      "examples": [
+        "Would you like anything else?"
+      ],
+      "example_translations": [
+        "ほかに何かいかがですか？"
+      ],
       "also_natural": "No, that's everything.\nNo, thank you.",
       "tip": null,
       "visual_required": false,
@@ -247,10 +303,23 @@
       "instagram_caption": "カフェやレストランで聞かれる一言。追加がないときの自然な返し方は？",
       "instagram_hashtags": [],
       "threads_parent_text": "これ分かったら基礎はOK。",
-      "threads_answer_text": "💡 正解は A. That's all, thank you.\n\n注文が以上だと丁寧に伝える返答です。",
+      "threads_answer_text": "💡 正解は A. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
       "publish_at": "2026-08-20T20:30:00+09:00",
-      "question_guide_ja": "こう聞かれたら、どう返す？",
-      "question_role": "learning_sentence"
+      "question_guide_ja": "「ほかにも何か」ならどれ？",
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "anything else"
     }
   ],
   "normal": {

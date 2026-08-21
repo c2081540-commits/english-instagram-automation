@@ -21,7 +21,19 @@
     "may_reduce_to": 1,
     "must_contribute_to_answering": true,
     "question_must_not_repeat_visible_context": true,
-    "placeholder_fixture_forbidden": true
+    "placeholder_fixture_forbidden": true,
+    "difficulty_gate": {
+      "visual_only_solvable": false,
+      "common_sense_only": false,
+      "minimum_effective_choice_count": 2,
+      "two_choice_effective_choice_count": 2,
+      "four_choice_weak_distractor_count": 0,
+      "weak_distractor_definition": ["文法的に即排除", "品詞不一致", "問題と無関係", "visualと明確に矛盾", "常識だけで排除", "不自然すぎる表現", "正解と形式が違いすぎる", "初心者でも比較対象にならない"],
+      "choice_count_priority": "良質な4択が作れなければ2択、それでも成立しなければ問題を変更",
+      "visual_contributes_to_decision": true,
+      "unique_answer": true,
+      "required_difficulty": "TARGET"
+    }
   },
   "review_policy": {
     "single_batch": true,

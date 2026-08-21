@@ -44,7 +44,20 @@
       "publish_at": "2026-08-26T07:00:00+09:00",
       "answer_point": "単数の主語 → 動詞に s",
       "question_guide_ja": "「9時に開く」ならどっち？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L1",
+      "learning_point": "三単現"
     },
     {
       "content_id": "ENG-000043",
@@ -86,7 +99,20 @@
       "threads_answer_text": "💡 正解は A. since\n\nsince 2020 → 2020年から\nfor five years → 5年間",
       "publish_at": "2026-08-26T09:30:00+09:00",
       "question_guide_ja": "「2020年から」ならどっち？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "sinceとfor"
     },
     {
       "content_id": "ENG-000044",
@@ -94,27 +120,27 @@
       "production_category": "visual_vocabulary",
       "difficulty": "easy",
       "seasonal": false,
-      "question": "She is ___ the paper.",
+      "question": "She is folding the paper ___ half.",
       "choices": [
-        "folding",
-        "pouring",
-        "unlocking",
-        "throwing"
+        "in",
+        "on",
+        "at",
+        "to"
       ],
       "answer_type": "single",
-      "best_answer": "folding",
+      "best_answer": "in",
       "acceptable_answers": [
-        "folding"
+        "in"
       ],
-      "answer_hint": "紙をどうしている？",
+      "answer_hint": "「半分に」の定番表現は？",
       "answer_hint_approved": true,
-      "explanation": "fold は「折る」です。",
+      "explanation": "fold ... in halfで「〜を半分に折る」を表します。",
       "key_difference": null,
       "examples": [
-        "She is folding the paper."
+        "She is folding the paper in half."
       ],
       "example_translations": [
-        "彼女は紙を折っています。"
+        "彼女は紙を半分に折っています。"
       ],
       "also_natural": null,
       "tip": null,
@@ -127,10 +153,23 @@
       "instagram_caption": "日常で使える英語をチェック。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. folding\n\nfold は「折る」です。",
+      "threads_answer_text": "💡 正解は A. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 She is folding the paper in half.\n「彼女は紙を半分に折っています。」\n\n🔑 in half＝半分に",
       "publish_at": "2026-08-26T12:00:00+09:00",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "in half"
     },
     {
       "content_id": "ENG-000045",
@@ -172,7 +211,20 @@
       "threads_answer_text": "💡 正解は A. on\n\non Monday → 月曜に\nat nine → 9時に",
       "publish_at": "2026-08-26T15:00:00+09:00",
       "question_guide_ja": "自然なのはどっち？",
-      "question_role": "learning_sentence"
+      "question_role": "learning_sentence",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L3",
+      "learning_point": "曜日のonと時刻のat"
     },
     {
       "content_id": "ENG-000046",
@@ -180,22 +232,26 @@
       "production_category": "situation",
       "difficulty": "easy",
       "seasonal": true,
-      "question": "Is this seat taken?",
+      "question": "Is anyone ___ here?",
       "choices": [
-        "No, it's free.",
-        "It's very summer."
+        "sitting",
+        "sit"
       ],
-      "answer_type": "best",
-      "best_answer": "No, it's free.",
+      "answer_type": "single",
+      "best_answer": "sitting",
       "acceptable_answers": [
-        "No, it's free."
+        "sitting"
       ],
-      "answer_hint": "空いている席なら？",
+      "answer_hint": "今の状態を尋ねる形に注目。",
       "answer_hint_approved": true,
-      "explanation": "空席なら No, it's free. と伝えられます。",
-      "key_difference": null,
-      "examples": [],
-      "example_translations": [],
+      "explanation": "今そこに座っている人がいるか尋ねるので、isとsittingを使います。",
+      "key_difference": "be動詞＋-ing＝今していること",
+      "examples": [
+        "Is anyone sitting here?"
+      ],
+      "example_translations": [
+        "ここに誰か座っていますか？"
+      ],
       "also_natural": "No, go ahead.",
       "tip": null,
       "visual_required": true,
@@ -207,12 +263,25 @@
       "instagram_caption": "短い英語クイズです。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. No, it's free.\n\n空席なら No, it's free. と伝えられます。",
+      "threads_answer_text": "💡 正解は A. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
       "publish_at": "2026-08-26T18:00:00+09:00",
       "situation_purpose": "explain_seat_availability",
       "response_family": "information_response",
       "question_guide_ja": null,
-      "question_role": null
+      "question_role": null,
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 2,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": true,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TOO_EASY",
+        "decision": "REVISE"
+      },
+      "learning_point": "現在進行形の疑問文",
+      "difficulty_level": "L3"
     },
     {
       "content_id": "ENG-000047",
@@ -256,7 +325,20 @@
       "threads_answer_text": "💡 正解は A. take a break\n\n「休憩する」は take a break です。",
       "publish_at": "2026-08-26T20:30:00+09:00",
       "question_guide_ja": "「休憩する」の意味になるのはどれ？",
-      "question_role": "meta_instruction"
+      "question_role": "meta_instruction",
+      "difficulty_gate": {
+        "visual_only_solvable": false,
+        "common_sense_only": false,
+        "effective_choice_count": 3,
+        "weak_distractor_count": 0,
+        "unique_answer": true,
+        "visual_contributes_to_decision": null,
+        "difficulty": "TARGET",
+        "initial_difficulty": "TARGET",
+        "decision": "KEEP"
+      },
+      "difficulty_level": "L2",
+      "learning_point": "take a break"
     }
   ],
   "normal": {

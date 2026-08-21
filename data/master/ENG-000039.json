@@ -4,27 +4,27 @@
   "production_category": "visual_vocabulary",
   "difficulty": "very_easy",
   "seasonal": true,
-  "question": "The bottle is ___.",
+  "question": "Water is coming ___ of the bottle.",
   "choices": [
-    "leaking",
-    "shining",
-    "growing",
-    "sleeping"
+    "out",
+    "up",
+    "on",
+    "at"
   ],
   "answer_type": "single",
-  "best_answer": "leaking",
+  "best_answer": "out",
   "acceptable_answers": [
-    "leaking"
+    "out"
   ],
-  "answer_hint": "ボトルから何が起きている？",
+  "answer_hint": "水が動いている方向は？",
   "answer_hint_approved": true,
-  "explanation": "leak は「漏れる」です。",
+  "explanation": "come out of ...で「〜から出てくる」を表します。",
   "key_difference": null,
   "examples": [
-    "The bottle is leaking."
+    "Water is coming out of the bottle."
   ],
   "example_translations": [
-    "ボトルから漏れています。"
+    "ボトルから水が出ています。"
   ],
   "also_natural": null,
   "tip": null,
@@ -37,8 +37,21 @@
   "instagram_caption": "パッと選べる？",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. leaking\n\nleak は「漏れる」です。",
+  "threads_answer_text": "💡 正解は A. out\n\n水がボトルの中から外へ出ているので、out ofを使います。\n\n📝 Water is coming out of the bottle.\n「ボトルから水が出ています。」\n\n🔑 out of＝〜の中から外へ",
   "publish_at": "2026-08-25T15:00:00+09:00",
   "question_guide_ja": null,
-  "question_role": null
+  "question_role": null,
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": true,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TOO_EASY",
+    "decision": "REVISE"
+  },
+  "difficulty_level": "L2",
+  "learning_point": "out of"
 }
