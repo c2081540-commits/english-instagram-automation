@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-21T12:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -18,5 +18,8 @@
       "image_path": "artifacts/images/ENG-000014-answer.png"
     }
   ],
-  "caption": "日常で使える英語をチェック。"
+  "caption": "日常で使える英語をチェック。",
+  "remote_post_id": "18067845476721938",
+  "posted_at": "2026-08-21T12:00:33.232325+09:00",
+  "error": null
 }
