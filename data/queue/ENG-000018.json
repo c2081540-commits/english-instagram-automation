@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-22T07:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "まずは3秒で考えてみよう。",
-  "difficulty_level": "L1"
+  "difficulty_level": "L1",
+  "remote_post_id": "18100491434259362",
+  "posted_at": "2026-08-22T07:00:32.658958+09:00",
+  "error": null
 }
