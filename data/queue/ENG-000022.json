@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-22T18:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "短い英語クイズです。",
-  "difficulty_level": "L2"
+  "difficulty_level": "L2",
+  "remote_post_id": "18102857150076028",
+  "posted_at": "2026-08-22T18:02:10.219496+09:00",
+  "error": null
 }
