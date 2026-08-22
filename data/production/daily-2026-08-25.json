@@ -226,7 +226,18 @@
         "decision": "REVISE"
       },
       "difficulty_level": "L2",
-      "learning_point": "out of"
+      "learning_point": "out of",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "none",
+        "subject_count": 0,
+        "action": "water flowing",
+        "direction": "out",
+        "object": "one bottle",
+        "state": "open and leaking",
+        "location": "picnic table",
+        "completed_sentence": "Water is coming out of the bottle."
+      }
     },
     {
       "content_id": "ENG-000040",
@@ -344,7 +355,18 @@
         "decision": "REVISE"
       },
       "difficulty_level": "L2",
-      "learning_point": "offer to＋動詞"
+      "learning_point": "offer to＋動詞",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "female helper to male carrier",
+        "subject_count": 2,
+        "action": "offering help",
+        "direction": null,
+        "object": "multiple boxes",
+        "state": "being carried with difficulty",
+        "location": "office",
+        "completed_sentence": "She offers to help him with the boxes."
+      }
     }
   ],
   "normal": {

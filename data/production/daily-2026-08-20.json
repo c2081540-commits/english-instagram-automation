@@ -164,7 +164,18 @@
         "decision": "REVISE"
       },
       "difficulty_level": "L3",
-      "learning_point": "現在進行形"
+      "learning_point": "現在進行形",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "male",
+        "subject_count": 1,
+        "action": "rolling up a shirt sleeve",
+        "direction": null,
+        "object": "shirt sleeve",
+        "state": "being rolled",
+        "location": "office",
+        "completed_sentence": "He is rolling up his sleeves."
+      }
     },
     {
       "content_id": "ENG-000009",
@@ -262,7 +273,18 @@
         "decision": "REVISE"
       },
       "difficulty_level": "L2",
-      "learning_point": "turn onとturn off"
+      "learning_point": "turn onとturn off",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "male",
+        "subject_count": 2,
+        "action": "turning on an air conditioner",
+        "direction": null,
+        "object": "air conditioner remote",
+        "state": "AC currently needs activation",
+        "location": "office",
+        "completed_sentence": "It's hot. He'll turn on the AC."
+      }
     },
     {
       "content_id": "ENG-000011",

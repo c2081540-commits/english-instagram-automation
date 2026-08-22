@@ -63,6 +63,13 @@ class ReviewTests(unittest.TestCase):
     def test_rejects_missing_required_source_image(self):
         content = self._content("ENG-000002")
         content["problem_image_path"] = "assets/source/does-not-exist.png"
+        content["visual_semantic_consistency"] = True
+        content["visual_semantics"] = {
+            "subject_gender": "none", "subject_count": 0, "action": "melting",
+            "direction": None, "object": "ice cream", "state": "partly melted",
+            "location": "outdoors",
+            "completed_sentence": content["question"].replace("___", content["best_answer"]),
+        }
         result = self._check_mutation(content)
         self.assertEqual(result.status, "REJECT")
         self.assertIn("problem image not found", result.reason)

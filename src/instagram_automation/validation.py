@@ -17,6 +17,11 @@ GUIDE_INDEPENDENT = {
 }
 GUIDE_FORBIDDEN = ("前置詞", "動名詞", "三単現", "過去形", "現在完了", "不定詞", "原形", "受動態")
 QUESTION_ROLES = {"learning_sentence", "meta_instruction"}
+VISUAL_SEMANTIC_GRANDFATHERED = {"ENG-000001", "ENG-000002", "ENG-000014", "ENG-000016"}
+VISUAL_SEMANTIC_FIELDS = {
+    "subject_gender", "subject_count", "action", "direction", "object", "state",
+    "location", "completed_sentence",
+}
 META_INSTRUCTION = re.compile(
     r"^(?:Which\b.*\?|Choose\b.*|Select\b.*)", re.IGNORECASE
 )
@@ -50,6 +55,20 @@ def _validate_difficulty_gate(content: dict, choices: list[str], errors: list[st
         errors.append("difficulty_gate difficulty must be TARGET")
     if content.get("difficulty_level") not in {"L1", "L2", "L3"}:
         errors.append("difficulty_level must be L1, L2, or L3 when difficulty_gate is present")
+
+
+def _validate_visual_semantics(content: dict, errors: list[str]) -> None:
+    if not content.get("visual_required") or content.get("content_id") in VISUAL_SEMANTIC_GRANDFATHERED:
+        return
+    if content.get("visual_semantic_consistency") is not True:
+        errors.append("visual_semantic_consistency must be true before production READY")
+    semantics = content.get("visual_semantics")
+    if not isinstance(semantics, dict) or set(semantics) != VISUAL_SEMANTIC_FIELDS:
+        errors.append("visual_semantics must contain the fixed semantic fields")
+        return
+    completed = content.get("question", "").replace("___", content.get("best_answer", ""))
+    if semantics.get("completed_sentence") != completed:
+        errors.append("visual completed_sentence must match question plus best_answer")
 
 
 def _validate_question_guide(content: dict, choices: list[str], errors: list[str]) -> None:
@@ -127,6 +146,7 @@ def validate(content: dict) -> None:
             errors.append("visual_type is required when visual_required is true")
         if not isinstance(content.get("visual_description"), str) or not content.get("visual_description", "").strip():
             errors.append("visual_description is required when visual_required is true")
+        _validate_visual_semantics(content, errors)
     _validate_question_guide(content, choices, errors)
     _validate_difficulty_gate(content, choices, errors)
     try:

@@ -51,5 +51,16 @@
     "decision": "REVISE"
   },
   "learning_point": "upとup toの使い分け",
-  "difficulty_level": "L2"
+  "difficulty_level": "L2",
+  "visual_semantic_consistency": true,
+  "visual_semantics": {
+    "subject_gender": "male",
+    "subject_count": 1,
+    "action": "walking",
+    "direction": "up",
+    "object": "stairs",
+    "state": "ascending",
+    "location": "indoor stairs",
+    "completed_sentence": "He is walking up the stairs."
+  }
 }

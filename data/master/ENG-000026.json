@@ -53,5 +53,16 @@
     "decision": "REVISE"
   },
   "difficulty_level": "L2",
-  "learning_point": "否定文のanything"
+  "learning_point": "否定文のanything",
+  "visual_semantic_consistency": true,
+  "visual_semantics": {
+    "subject_gender": "none",
+    "subject_count": 0,
+    "action": null,
+    "direction": null,
+    "object": "one cup",
+    "state": "empty",
+    "location": "desk",
+    "completed_sentence": "There isn't anything in the cup."
+  }
 }

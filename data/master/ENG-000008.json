@@ -50,5 +50,16 @@
     "decision": "REVISE"
   },
   "difficulty_level": "L3",
-  "learning_point": "現在進行形"
+  "learning_point": "現在進行形",
+  "visual_semantic_consistency": true,
+  "visual_semantics": {
+    "subject_gender": "male",
+    "subject_count": 1,
+    "action": "rolling up a shirt sleeve",
+    "direction": null,
+    "object": "shirt sleeve",
+    "state": "being rolled",
+    "location": "office",
+    "completed_sentence": "He is rolling up his sleeves."
+  }
 }

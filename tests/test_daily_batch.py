@@ -100,6 +100,8 @@ class DailyBatchTests(unittest.TestCase):
         item["choices"] = ["A" * 25, "No."]
         item["best_answer"] = item["choices"][0]
         item["acceptable_answers"] = [item["choices"][0]]
+        item["visual_semantics"]["completed_sentence"] = item["question"].replace(
+            "___", item["best_answer"])
         with self.assertRaisesRegex(ValueError, "at-a-glance"):
             validate_daily_batch(broken, self.existing)
 

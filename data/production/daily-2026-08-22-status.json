@@ -56,7 +56,7 @@
       "caption": "日常で使える英語をチェック。",
       "hashtags": [],
       "publish_at": "2026-08-22T12:00:00+09:00",
-      "question": "She carries the box ___ both hands.",
+      "question": "He carries the box ___ both hands.",
       "choices": [
         "with",
         "by"
@@ -66,12 +66,12 @@
       "explanation": "with both handsで「両手で」という意味になります。",
       "key_difference": null,
       "examples": [
-        "She carries the box with both hands."
+        "He carries the box with both hands."
       ],
       "example_translations": [
-        "彼女は両手で箱を運びます。"
+        "彼は両手で箱を運びます。"
       ],
-      "threads_answer_text": "💡 正解は A. with\n\nwith both handsで「両手で」という意味になります。\n\n📝 She carries the box with both hands.\n「彼女は両手で箱を運びます。」\n\n🔑 with＋道具・体の一部＝〜を使って",
+      "threads_answer_text": "💡 正解は A. with\n\nwith both handsで「両手で」という意味になります。\n\n📝 He carries the box with both hands.\n「彼は両手で箱を運びます。」\n\n🔑 with＋道具・体の一部＝〜を使って",
       "acceptable_answers": [
         "with"
       ],
@@ -91,7 +91,18 @@
         "decision": "REVISE"
       },
       "difficulty_level": "L3",
-      "learning_point": "手段を表すwith"
+      "learning_point": "手段を表すwith",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "male",
+        "subject_count": 1,
+        "action": "carrying",
+        "direction": null,
+        "object": "one cardboard box",
+        "state": "held with both hands",
+        "location": "office",
+        "completed_sentence": "He carries the box with both hands."
+      }
     },
     {
       "content_id": "ENG-000021",

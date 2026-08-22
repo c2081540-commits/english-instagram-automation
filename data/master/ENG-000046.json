@@ -53,5 +53,16 @@
     "decision": "REVISE"
   },
   "learning_point": "現在進行形の疑問文",
-  "difficulty_level": "L3"
+  "difficulty_level": "L3",
+  "visual_semantic_consistency": true,
+  "visual_semantics": {
+    "subject_gender": "male speaker",
+    "subject_count": 1,
+    "action": "indicating an empty seat",
+    "direction": null,
+    "object": "one empty train seat",
+    "state": "unoccupied",
+    "location": "train",
+    "completed_sentence": "Is anyone sitting here?"
+  }
 }

@@ -93,7 +93,18 @@
         "decision": "REVISE"
       },
       "difficulty_level": "L2",
-      "learning_point": "否定文のanything"
+      "learning_point": "否定文のanything",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "none",
+        "subject_count": 0,
+        "action": null,
+        "direction": null,
+        "object": "one cup",
+        "state": "empty",
+        "location": "desk",
+        "completed_sentence": "There isn't anything in the cup."
+      }
     },
     {
       "content_id": "ENG-000027",
@@ -139,7 +150,18 @@
         "decision": "REVISE"
       },
       "difficulty_level": "L3",
-      "learning_point": "manyとmuch"
+      "learning_point": "manyとmuch",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "mixed",
+        "subject_count": "many",
+        "action": "slow traffic",
+        "direction": null,
+        "object": "multiple cars",
+        "state": "too many cars",
+        "location": "city road",
+        "completed_sentence": "There are too many cars on the road."
+      }
     },
     {
       "content_id": "ENG-000028",

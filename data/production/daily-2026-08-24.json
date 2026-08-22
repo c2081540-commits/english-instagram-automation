@@ -170,7 +170,18 @@
         "decision": "REVISE"
       },
       "learning_point": "upとup toの使い分け",
-      "difficulty_level": "L2"
+      "difficulty_level": "L2",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "male",
+        "subject_count": 1,
+        "action": "walking",
+        "direction": "up",
+        "object": "stairs",
+        "state": "ascending",
+        "location": "indoor stairs",
+        "completed_sentence": "He is walking up the stairs."
+      }
     },
     {
       "content_id": "ENG-000033",
@@ -282,7 +293,18 @@
         "decision": "REVISE"
       },
       "learning_point": "会話でのyouとIの使い分け",
-      "difficulty_level": "L2"
+      "difficulty_level": "L2",
+      "visual_semantic_consistency": true,
+      "visual_semantics": {
+        "subject_gender": "female speaker to male listener",
+        "subject_count": 2,
+        "action": "offering a seat",
+        "direction": null,
+        "object": "one empty chair",
+        "state": "available",
+        "location": "office break area",
+        "completed_sentence": "What does she say to him?"
+      }
     },
     {
       "content_id": "ENG-000035",
