@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-23T07:00:00+09:00",
-  "status": "pending",
+  "status": "failed",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -19,5 +19,9 @@
     }
   ],
   "caption": "まずは3秒で考えてみよう。",
-  "difficulty_level": "L2"
+  "difficulty_level": "L2",
+  "error": {
+    "code": "PUBLISH_FAILURE",
+    "reason": "Meta HTTP failure: 400"
+  }
 }
