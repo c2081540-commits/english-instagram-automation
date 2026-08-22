@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-22T15:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "パッと選べる？",
-  "difficulty_level": "L3"
+  "difficulty_level": "L3",
+  "remote_post_id": "17886551772454725",
+  "posted_at": "2026-08-22T15:00:32.891494+09:00",
+  "error": null
 }
