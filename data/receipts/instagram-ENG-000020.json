@@ -1,6 +1,12 @@
 {
   "content_id": "ENG-000020",
   "platform": "instagram",
-  "remote_post_id": "18094212914562550",
-  "posted_at": "2026-08-22T12:00:33.082442+09:00"
+  "remote_post_id": "17869494879635991",
+  "posted_at": "2026-08-22T12:30:26.186571+09:00",
+  "replacement_reason": "human_deleted_visual_semantic_correction",
+  "child_container_ids": [
+    "18082797626389599",
+    "18082797647389599"
+  ],
+  "carousel_container_id": "18082797674389599"
 }
