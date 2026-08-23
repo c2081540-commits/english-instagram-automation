@@ -1,12 +1,27 @@
 from __future__ import annotations
 
 from collections import Counter
+from dataclasses import dataclass
 from datetime import date, datetime
+from typing import Callable
 
-FORMATS = {"text", "visual", "error_hunt", "pattern", "save_list", "difference"}
+CANONICAL_FORMATS = ("text", "visual", "difference", "pattern", "error_hunt", "save_list")
+FORMATS = frozenset(CANONICAL_FORMATS)
 NEW_FORMATS = {"error_hunt", "pattern", "save_list", "difference"}
 DIFFICULTIES = {"L1", "L2", "L3"}
 VERDICTS = {"CORRECT", "INCORRECT"}
+COMMON_SYNC_FIELDS = (
+    "content_id", "format", "difficulty", "learning_point", "question",
+    "correct_answer", "publish_at", "english_correctness", "unique_answer",
+)
+
+
+@dataclass(frozen=True)
+class FormatDefinition:
+    name: str
+    master_validator: Callable[[dict], None]
+    uses_choices: bool
+    sync_fields: tuple[str, ...]
 
 
 class FormatValidationError(ValueError):
@@ -33,7 +48,7 @@ def _choices(record):
 
 
 def _common(record):
-    if record.get("format") not in FORMATS:
+    if record.get("format") not in FORMAT_REGISTRY:
         raise FormatValidationError("unsupported format")
     for field in ("content_id", "learning_point", "question", "correct_answer", "publish_at"):
         _text(record.get(field), field)
@@ -170,14 +185,38 @@ def _text_visual(record):
             raise FormatValidationError("question_guide_ja must be one trimmed line of at most 30 characters")
 
 
+FORMAT_REGISTRY = {
+    "text": FormatDefinition(
+        "text", _text_visual, True,
+        ("choices", "completed_sentence", "japanese_translation", "explanation", "question_guide_ja"),
+    ),
+    "visual": FormatDefinition(
+        "visual", _text_visual, True,
+        ("choices", "completed_sentence", "japanese_translation", "explanation", "visual_semantics",
+         "visual_semantic_consistency", "visual_answer_uniqueness", "visual_only_solvable"),
+    ),
+    "difference": FormatDefinition(
+        "difference", _difference, True,
+        ("choices", "completed_sentence", "choice_explanations"),
+    ),
+    "pattern": FormatDefinition(
+        "pattern", _pattern, True,
+        ("examples", "target", "choices", "pattern_rule", "examples_learning_point", "target_learning_point"),
+    ),
+    "error_hunt": FormatDefinition(
+        "error_hunt", _error_hunt, False,
+        ("sentences", "answer_mode", "displayed_answer", "answer_sentences"),
+    ),
+    "save_list": FormatDefinition(
+        "save_list", _save_list, True,
+        ("list_items", "list_theme", "target_item", "choices", "complete_list"),
+    ),
+}
+
+
 def validate_format_master(record):
     _common(record)
-    dispatch = {"text": _text_visual, "visual": _text_visual,
-                "error_hunt": _error_hunt, "pattern": _pattern,
-                "save_list": _save_list, "difference": _difference}
-    validator = dispatch.get(record["format"])
-    if validator:
-        validator(record)
+    FORMAT_REGISTRY[record["format"]].master_validator(record)
 
 
 def validate_threads_reply(record, text):

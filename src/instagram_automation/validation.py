@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
 
-from .formats import FORMATS, FormatValidationError, validate_format_master
+from .formats import FORMAT_REGISTRY, FormatValidationError, validate_format_master
 
 CONTENT_ID = re.compile(r"^ENG-\d{6}$")
 ANSWER_TYPES = {"single", "best", "multiple"}
@@ -119,13 +119,33 @@ class ValidationError(ValueError):
     pass
 
 
-def validate(content: dict) -> None:
-    if content.get("format") in FORMATS:
-        try:
-            validate_format_master(content)
-        except FormatValidationError as exc:
-            raise ValidationError(str(exc)) from exc
+def validate_current_production(content: dict) -> None:
+    if "format" not in content:
+        raise ValidationError("format is required for current production content")
+    if content.get("format") not in FORMAT_REGISTRY:
+        raise ValidationError("unsupported format")
+    try:
+        validate_format_master(content)
+    except FormatValidationError as exc:
+        raise ValidationError(str(exc)) from exc
+
+
+def validate_historical(content: dict) -> None:
+    if "format" in content:
+        validate_current_production(content)
         return
+    _validate_legacy(content)
+
+
+def validate(content: dict) -> None:
+    """Compatibility wrapper with fail-closed routing for explicit format values."""
+    if "format" in content:
+        validate_current_production(content)
+    else:
+        validate_historical(content)
+
+
+def _validate_legacy(content: dict) -> None:
     missing = sorted(REQUIRED - content.keys())
     errors = [f"missing fields: {', '.join(missing)}"] if missing else []
     content_id = content.get("content_id")
