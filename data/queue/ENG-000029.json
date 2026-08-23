@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-23T20:30:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "今日の1問。答えは2枚目へ。",
-  "difficulty_level": "L3"
+  "difficulty_level": "L3",
+  "remote_post_id": "18113567665950485",
+  "posted_at": "2026-08-23T20:30:35.200533+09:00",
+  "error": null
 }
