@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-23T09:30:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "基礎表現をひとつ確認。",
-  "difficulty_level": "L1"
+  "difficulty_level": "L1",
+  "remote_post_id": "18090552722531974",
+  "posted_at": "2026-08-23T09:30:34.215458+09:00",
+  "error": null
 }
