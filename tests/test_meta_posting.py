@@ -125,6 +125,22 @@ class InstagramMetaPostingTests(unittest.TestCase):
         self.assertEqual(plan["container_action"], "reuse_only")
         self.assertEqual(plan["publish_payload"], {"creation_id": "container"})
 
+    def test_failed_repost_requires_exact_id_and_no_saved_container(self):
+        target = self.queue_copy("ENG-000009")
+        queue = json.loads(target.read_text())
+        queue["status"] = "failed"
+        queue["error"] = {"code": "PUBLISH_FAILURE", "reason": "old failure"}
+        target.write_text(json.dumps(queue), encoding="utf-8")
+        with self.assertRaises(PostingError) as caught:
+            posting.post_one(target, FakeInstagramClient(), self.resolver,
+                             datetime.fromisoformat("2026-08-20T16:00:00+09:00"),
+                             failed_repost_content_id="ENG-999999")
+        self.assertEqual(caught.exception.code, "DUPLICATE_PREVENTED")
+        result = posting.post_one(target, FakeInstagramClient(), self.resolver,
+                                  datetime.fromisoformat("2026-08-20T16:00:00+09:00"),
+                                  failed_repost_content_id="ENG-000009")
+        self.assertEqual(result["status"], "posted")
+
     def test_http_400_response_is_parsed_without_token(self):
         error_body = json.dumps({"error": {"message": "Container is not ready", "type": "OAuthException",
                                            "code": 9007, "error_subcode": 2207027,

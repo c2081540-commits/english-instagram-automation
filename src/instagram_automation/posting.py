@@ -141,16 +141,21 @@ def final_quiz_caption(queue: dict) -> str:
 
 
 def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
-             now: datetime | None = None) -> dict:
+             now: datetime | None = None, *, failed_repost_content_id: str | None = None) -> dict:
     now = now or datetime.now(ZoneInfo("Asia/Tokyo"))
     queue = json.loads(queue_path.read_text(encoding="utf-8"))
     validate_queue_for_post(queue)
-    if queue.get("status") != "pending":
+    is_explicit_failed_repost = (queue.get("status") == "failed" and
+                                 queue.get("content_id") == failed_repost_content_id)
+    if queue.get("status") != "pending" and not is_explicit_failed_repost:
         raise PostingError("DUPLICATE_PREVENTED", "Only pending content may be posted")
     if queue.get("execution_eligibility") != "scheduled" or datetime.fromisoformat(queue["publish_at"]) > now:
         raise PostingError("NOT_DUE", "Queue item is not eligible and due")
     receipt_path = RECEIPT_DIR / f"instagram-{queue['content_id']}.json"
     container_receipt_path = RECEIPT_DIR / f"instagram-{queue['content_id']}-container.json"
+    if is_explicit_failed_repost and container_receipt_path.is_file():
+        raise PostingError("DUPLICATE_PREVENTED",
+                           "Failed repost cannot replace an existing container receipt")
     if receipt_path.is_file():
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         queue.update(status="posted", remote_post_id=receipt["remote_post_id"], posted_at=receipt["posted_at"])
