@@ -15,7 +15,7 @@ THREADS_ROOT = REPO_ROOT.parent / "english-threads-automation"
 sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(THREADS_ROOT / "src"))
 
-from instagram_automation.formats import (NEW_FORMATS, from_dryrun,
+from instagram_automation.formats import (NEW_FORMATS, build_answer_payload, from_dryrun,
                                            validate_answer_payload,
                                            validate_format_master,
                                            validate_quiz_schedule)
@@ -50,15 +50,6 @@ def enrich_standard(record: dict, item: dict, visual_audit: dict) -> None:
                       "completed_sentence":record["completed_sentence"]})
 
 
-def payload(record: dict) -> dict:
-    result = {"format":record["format"], "correct_answer":record["correct_answer"]}
-    if record["format"] == "error_hunt": result["answer_sentences"] = record["answer_sentences"]
-    elif record["format"] == "pattern": result.update(pattern_rule=record["pattern_rule"], examples=record["examples"])
-    elif record["format"] == "save_list": result["complete_list"] = record["complete_list"]
-    elif record["format"] == "difference": result["choice_explanations"] = record["choice_explanations"]
-    return result
-
-
 def main() -> None:
     parser=argparse.ArgumentParser()
     parser.add_argument("dataset", type=Path)
@@ -77,7 +68,7 @@ def main() -> None:
         if threads_record["format"] in {"text","visual"}: enrich_standard(threads_record,item,visuals)
         if record != threads_record: raise ValueError(f"Instagram/Threads master mismatch: {record['content_id']}")
         validate_format_master(record); validate_threads_master(record)
-        if record["format"] in NEW_FORMATS: validate_answer_payload(record,payload(record))
+        if record["format"] in NEW_FORMATS: validate_answer_payload(record,build_answer_payload(record))
         validate_threads_reply(record,item["threads_reply"])
         records[record["content_id"]]=record
         queue.append({"content_id":record["content_id"],"publish_at":record["publish_at"],"status":"pending"})

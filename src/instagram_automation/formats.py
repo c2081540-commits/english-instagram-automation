@@ -22,6 +22,9 @@ class FormatDefinition:
     master_validator: Callable[[dict], None]
     uses_choices: bool
     sync_fields: tuple[str, ...]
+    dryrun_adapter: Callable[[dict, dict], None]
+    answer_payload_adapter: Callable[[dict], dict]
+    answer_validator: Callable[[dict, dict], None]
 
 
 class FormatValidationError(ValueError):
@@ -185,35 +188,6 @@ def _text_visual(record):
             raise FormatValidationError("question_guide_ja must be one trimmed line of at most 30 characters")
 
 
-FORMAT_REGISTRY = {
-    "text": FormatDefinition(
-        "text", _text_visual, True,
-        ("choices", "completed_sentence", "japanese_translation", "explanation", "question_guide_ja"),
-    ),
-    "visual": FormatDefinition(
-        "visual", _text_visual, True,
-        ("choices", "completed_sentence", "japanese_translation", "explanation", "visual_semantics",
-         "visual_semantic_consistency", "visual_answer_uniqueness", "visual_only_solvable"),
-    ),
-    "difference": FormatDefinition(
-        "difference", _difference, True,
-        ("choices", "completed_sentence", "choice_explanations"),
-    ),
-    "pattern": FormatDefinition(
-        "pattern", _pattern, True,
-        ("examples", "target", "choices", "pattern_rule", "examples_learning_point", "target_learning_point"),
-    ),
-    "error_hunt": FormatDefinition(
-        "error_hunt", _error_hunt, False,
-        ("sentences", "answer_mode", "displayed_answer", "answer_sentences"),
-    ),
-    "save_list": FormatDefinition(
-        "save_list", _save_list, True,
-        ("list_items", "list_theme", "target_item", "choices", "complete_list"),
-    ),
-}
-
-
 def validate_format_master(record):
     _common(record)
     FORMAT_REGISTRY[record["format"]].master_validator(record)
@@ -245,66 +219,152 @@ def validate_threads_reply(record, text):
                 raise FormatValidationError("difference reply must explain every choice")
 
 
+def _adapt_standard_dryrun(record, item, visual_required):
+    reply_lines = [line.strip() for line in item.get("threads_reply", "").splitlines() if line.strip()]
+    answer_index = next((i for i, line in enumerate(reply_lines) if "正解は" in line), -1)
+    reply_explanation = reply_lines[answer_index + 1] if 0 <= answer_index < len(reply_lines) - 1 else None
+    record.update(choices=item.get("choices", []), explanation=item.get("explanation"),
+                  completed_sentence=item.get("example"), japanese_translation=item.get("translation"),
+                  instagram_caption=item.get("caption"), threads_parent_text=item.get("threads_parent"),
+                  threads_answer_text=item.get("threads_reply"), threads_reply=item.get("threads_reply"),
+                  threads_reply_explanation=reply_explanation, question_guide_ja=item.get("question_guide_ja"),
+                  visual_required=visual_required)
+
+
+def _adapt_text_dryrun(record, item):
+    _adapt_standard_dryrun(record, item, False)
+
+
+def _adapt_visual_dryrun(record, item):
+    _adapt_standard_dryrun(record, item, True)
+
+
+def _adapt_error_hunt_dryrun(record, item):
+    rows = [{k:row[k] for k in ("sentence","verdict","corrected_sentence","grammar_rule","reason_ja")}
+            for row in item["sentence_audit"]]
+    record.update(sentences=rows, answer_mode="count" if "何個" in item["question"] else "position",
+                  displayed_answer=item["correct_answer"],
+                  answer_sentences=[{"verdict":r["verdict"],"corrected_sentence":r["corrected_sentence"],
+                                     "reason_ja":r["reason_ja"]} for r in rows])
+
+
+def _adapt_pattern_dryrun(record, item):
+    rule = next(value for heading,value in item["answer_sections"] if heading in {"パターン","ルール"})
+    record.update(examples=item["examples"][:-1], target=item["examples"][-1], choices=item["choices"],
+                  pattern_rule=rule, examples_learning_point=item["learning_point"],
+                  target_learning_point=item["learning_point"])
+
+
+def _adapt_save_list_dryrun(record, item):
+    known=item["list_items"][:-1]; target=item["list_items"][-1]; complete=item["complete_items"]
+    record.update(list_items=[{"english":a,"japanese":b} for a,b in known], list_theme=item["question"],
+                  target_item={"prompt":target[0],"completed":complete[-1][0],"japanese":target[1],"list_theme":item["question"]},
+                  choices=item["choices"], complete_list=[{"english":a,"japanese":b} for a,b in complete])
+
+
+def _adapt_difference_dryrun(record, item):
+    record.update(choices=item["choices"], choice_explanations=dict(item["differences"]),
+                  completed_sentence=item["question"].replace("___",item["correct_answer"]))
+
+
+def _base_answer_payload(record):
+    return {"format":record["format"], "correct_answer":record["correct_answer"]}
+
+
+def _standard_answer_payload(record):
+    return _base_answer_payload(record)
+
+
+def _error_hunt_answer_payload(record):
+    return dict(_base_answer_payload(record), answer_sentences=record["answer_sentences"])
+
+
+def _pattern_answer_payload(record):
+    return dict(_base_answer_payload(record), pattern_rule=record["pattern_rule"], examples=record["examples"])
+
+
+def _save_list_answer_payload(record):
+    return dict(_base_answer_payload(record), complete_list=record["complete_list"])
+
+
+def _difference_answer_payload(record):
+    return dict(_base_answer_payload(record), choice_explanations=record["choice_explanations"])
+
+
+def _validate_standard_answer(record, payload):
+    return None
+
+
+def _validate_error_hunt_answer(record, payload):
+    if payload.get("answer_sentences") != record.get("answer_sentences"):
+        raise FormatValidationError("Error Hunt answer payload mismatch")
+
+
+def _validate_pattern_answer(record, payload):
+    if payload.get("pattern_rule") != record.get("pattern_rule") or payload.get("examples") != record.get("examples"):
+        raise FormatValidationError("Pattern answer payload mismatch")
+
+
+def _validate_save_list_answer(record, payload):
+    if payload.get("complete_list") != record.get("complete_list"):
+        raise FormatValidationError("Save List answer payload mismatch")
+
+
+def _validate_difference_answer(record, payload):
+    if payload.get("choice_explanations") != record.get("choice_explanations"):
+        raise FormatValidationError("Difference answer payload mismatch")
+
+
+FORMAT_REGISTRY = {
+    "text": FormatDefinition("text", _text_visual, True,
+        ("choices", "completed_sentence", "japanese_translation", "explanation", "question_guide_ja"),
+        _adapt_text_dryrun, _standard_answer_payload, _validate_standard_answer),
+    "visual": FormatDefinition("visual", _text_visual, True,
+        ("choices", "completed_sentence", "japanese_translation", "explanation", "visual_semantics",
+         "visual_semantic_consistency", "visual_answer_uniqueness", "visual_only_solvable"),
+        _adapt_visual_dryrun, _standard_answer_payload, _validate_standard_answer),
+    "difference": FormatDefinition("difference", _difference, True,
+        ("choices", "completed_sentence", "choice_explanations"),
+        _adapt_difference_dryrun, _difference_answer_payload, _validate_difference_answer),
+    "pattern": FormatDefinition("pattern", _pattern, True,
+        ("examples", "target", "choices", "pattern_rule", "examples_learning_point", "target_learning_point"),
+        _adapt_pattern_dryrun, _pattern_answer_payload, _validate_pattern_answer),
+    "error_hunt": FormatDefinition("error_hunt", _error_hunt, False,
+        ("sentences", "answer_mode", "displayed_answer", "answer_sentences"),
+        _adapt_error_hunt_dryrun, _error_hunt_answer_payload, _validate_error_hunt_answer),
+    "save_list": FormatDefinition("save_list", _save_list, True,
+        ("list_items", "list_theme", "target_item", "choices", "complete_list"),
+        _adapt_save_list_dryrun, _save_list_answer_payload, _validate_save_list_answer),
+}
+
+
+def build_answer_payload(record):
+    return FORMAT_REGISTRY[record["format"]].answer_payload_adapter(record)
+
+
 def validate_answer_payload(record, payload):
     if not isinstance(payload, dict) or payload.get("format") != record.get("format"):
         raise FormatValidationError("answer payload format mismatch")
     if payload.get("correct_answer") != record.get("correct_answer"):
         raise FormatValidationError("answer payload correct_answer mismatch")
-    fmt = record["format"]
-    if fmt == "error_hunt" and payload.get("answer_sentences") != record.get("answer_sentences"):
-        raise FormatValidationError("Error Hunt answer payload mismatch")
-    if fmt == "pattern" and (payload.get("pattern_rule") != record.get("pattern_rule") or payload.get("examples") != record.get("examples")):
-        raise FormatValidationError("Pattern answer payload mismatch")
-    if fmt == "save_list" and payload.get("complete_list") != record.get("complete_list"):
-        raise FormatValidationError("Save List answer payload mismatch")
-    if fmt == "difference" and payload.get("choice_explanations") != record.get("choice_explanations"):
-        raise FormatValidationError("Difference answer payload mismatch")
+    FORMAT_REGISTRY[record["format"]].answer_validator(record, payload)
 
 
 def from_dryrun(item, publish_at):
     """Convert an approved review record to the canonical production-format schema in memory."""
     names = {"Text":"text", "Visual":"visual", "Error Hunt":"error_hunt",
              "Pattern":"pattern", "Save List":"save_list", "Difference":"difference"}
-    record = {"content_id":item["content_id"], "format":names[item["format"]],
+    return adapt_dryrun_record(item, publish_at, names[item["format"]])
+
+
+def adapt_dryrun_record(item, publish_at, fmt):
+    if fmt not in FORMAT_REGISTRY:
+        raise FormatValidationError("unsupported format")
+    record = {"content_id":item["content_id"], "format":fmt,
               "difficulty":item["difficulty"], "learning_point":item["learning_point"],
               "question":item["question"], "correct_answer":item["correct_answer"],
               "publish_at":publish_at, "english_correctness":True, "unique_answer":True}
-    fmt = record["format"]
-    if fmt == "error_hunt":
-        rows = [{k:row[k] for k in ("sentence","verdict","corrected_sentence","grammar_rule","reason_ja")}
-                for row in item["sentence_audit"]]
-        record.update(sentences=rows, answer_mode="count" if "何個" in item["question"] else "position",
-                      displayed_answer=item["correct_answer"],
-                      answer_sentences=[{"verdict":r["verdict"],"corrected_sentence":r["corrected_sentence"],
-                                         "reason_ja":r["reason_ja"]} for r in rows])
-    elif fmt == "pattern":
-        rule = next(value for heading,value in item["answer_sections"] if heading in {"パターン","ルール"})
-        record.update(examples=item["examples"][:-1], target=item["examples"][-1], choices=item["choices"],
-                      pattern_rule=rule, examples_learning_point=item["learning_point"],
-                      target_learning_point=item["learning_point"])
-    elif fmt == "save_list":
-        known=item["list_items"][:-1]; target=item["list_items"][-1]; complete=item["complete_items"]
-        record.update(list_items=[{"english":a,"japanese":b} for a,b in known], list_theme=item["question"],
-                      target_item={"prompt":target[0],"completed":complete[-1][0],"japanese":target[1],"list_theme":item["question"]},
-                      choices=item["choices"], complete_list=[{"english":a,"japanese":b} for a,b in complete])
-    elif fmt == "difference":
-        record.update(choices=item["choices"], choice_explanations=dict(item["differences"]),
-                      completed_sentence=item["question"].replace("___",item["correct_answer"]))
-    else:
-        reply_lines = [line.strip() for line in item.get("threads_reply", "").splitlines() if line.strip()]
-        answer_index = next((i for i, line in enumerate(reply_lines) if "正解は" in line), -1)
-        reply_explanation = reply_lines[answer_index + 1] if 0 <= answer_index < len(reply_lines) - 1 else None
-        record.update(choices=item.get("choices", []),
-                      explanation=item.get("explanation"),
-                      completed_sentence=item.get("example"),
-                      japanese_translation=item.get("translation"),
-                      instagram_caption=item.get("caption"),
-                      threads_parent_text=item.get("threads_parent"),
-                      threads_answer_text=item.get("threads_reply"),
-                      threads_reply=item.get("threads_reply"),
-                      threads_reply_explanation=reply_explanation,
-                      question_guide_ja=item.get("question_guide_ja"),
-                      visual_required=fmt == "visual")
+    FORMAT_REGISTRY[fmt].dryrun_adapter(record, item)
     return record
 
 
