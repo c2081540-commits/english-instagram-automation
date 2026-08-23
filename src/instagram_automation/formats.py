@@ -154,6 +154,16 @@ def _text_visual(record):
             raise FormatValidationError("visual_semantics fields mismatch")
         if semantics["completed_sentence"] != record["completed_sentence"]:
             raise FormatValidationError("visual completed_sentence mismatch")
+        if any(not isinstance(semantics[field], str) or not semantics[field].strip()
+               or semantics[field].strip().lower() == "mismatch"
+               for field in required - {"completed_sentence"}):
+            raise FormatValidationError("visual semantic dimensions must be verified")
+        if "___" in record["question"]:
+            expected = record["question"].replace("___", record["correct_answer"])
+            if record["completed_sentence"] != expected:
+                raise FormatValidationError("fill-in visual completed_sentence mismatch")
+        elif record["correct_answer"].casefold() not in record["completed_sentence"].casefold():
+            raise FormatValidationError("question visual completed_sentence must reflect correct_answer")
     else:
         guide = _text(record.get("question_guide_ja"), "question_guide_ja")
         if guide != guide.strip() or "\n" in guide or "\r" in guide or len(guide) > 30:

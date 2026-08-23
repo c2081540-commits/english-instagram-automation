@@ -68,9 +68,14 @@ def _validate_visual_semantics(content: dict, errors: list[str]) -> None:
     if not isinstance(semantics, dict) or set(semantics) != VISUAL_SEMANTIC_FIELDS:
         errors.append("visual_semantics must contain the fixed semantic fields")
         return
-    completed = content.get("question", "").replace("___", content.get("best_answer", ""))
-    if semantics.get("completed_sentence") != completed:
-        errors.append("visual completed_sentence must match question plus best_answer")
+    completed = semantics.get("completed_sentence")
+    question = content.get("question", "")
+    answer = content.get("best_answer", "")
+    if "___" in question:
+        if completed != question.replace("___", answer):
+            errors.append("fill-in visual completed_sentence must insert best_answer")
+    elif not isinstance(completed, str) or not completed.strip():
+        errors.append("question visual completed_sentence must be non-empty")
 
 
 def _validate_question_guide(content: dict, choices: list[str], errors: list[str]) -> None:
