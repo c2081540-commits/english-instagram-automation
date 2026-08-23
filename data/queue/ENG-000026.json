@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-23T12:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "日常で使える英語をチェック。",
-  "difficulty_level": "L2"
+  "difficulty_level": "L2",
+  "remote_post_id": "18099103034013712",
+  "posted_at": "2026-08-23T12:00:32.436303+09:00",
+  "error": null
 }
