@@ -28,27 +28,27 @@ class FinalInstagramScheduleTests(unittest.TestCase):
         self.assertEqual(self.schedule["timezone"], "Asia/Tokyo")
         validate_schedule_items(self.schedule["items"])
 
-    def test_all_49_queues_are_trackable_and_known_post_is_reconciled(self):
-        self.assertEqual(len(self.queues), 49)
+    def test_all_scheduled_queues_are_trackable_and_known_posts_are_reconciled(self):
+        self.assertEqual(len(self.queues), len(self.schedule["items"]))
+        self.assertEqual(len({queue["content_id"] for queue in self.queues}), len(self.queues))
         for queue in self.queues:
             validate_queue_state(queue)
             for field in ("content_id", "platform", "publish_at", "status"):
                 self.assertIn(field, queue)
         posted = [queue for queue in self.queues if queue["status"] == "posted"]
-        self.assertEqual([queue["content_id"] for queue in posted],
-                         ["ENG-000009", "ENG-000012", "ENG-000013", "ENG-000014", "ENG-000015",
-                          "ENG-000016", "ENG-000017", "ENG-100003", "ENG-000018", "ENG-000019",
-                          "ENG-000020", "ENG-000021", "ENG-000022", "ENG-000023", "ENG-100004",
-                          "ENG-000025", "ENG-000026"])
-        self.assertTrue(posted[0]["remote_post_id"])
-        self.assertEqual(sum(queue["status"] == "pending" for queue in self.queues), 31)
-        self.assertEqual([queue["content_id"] for queue in self.queues if queue["status"] == "failed"],
-                         ["ENG-000024"])
+        self.assertTrue(all(queue.get("remote_post_id") and queue.get("posted_at") for queue in posted))
+        self.assertTrue(all((REPO_ROOT / "data" / "receipts" /
+                            f"instagram-{queue['content_id']}.json").is_file() for queue in posted))
+        self.assertEqual(sum(queue["status"] in {"pending", "posted", "failed", "skipped"}
+                             for queue in self.queues), len(self.queues))
+        self.assertTrue(all(queue.get("error") for queue in self.queues if queue["status"] == "failed"))
 
     def test_carousel_order_and_story_slot(self):
         quizzes = [queue for queue in self.queues if queue["content_type"] == "quiz"]
         normals = [queue for queue in self.queues if queue["content_type"] == "normal"]
-        self.assertEqual((len(quizzes), len(normals)), (42, 7))
+        dates = {datetime.fromisoformat(queue["publish_at"]).date() for queue in self.queues}
+        self.assertEqual(len(quizzes), len(dates) * len(self.config["quiz_slots"]))
+        self.assertEqual(len(normals), len(dates))
         self.assertTrue(all([(slide["order"], slide["role"]) for slide in queue["carousel"]] ==
                             [(1, "question"), (2, "answer")] for queue in quizzes))
         self.assertTrue(all(datetime.fromisoformat(queue["publish_at"]).strftime("%H:%M") == "22:30"

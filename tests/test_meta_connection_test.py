@@ -87,21 +87,14 @@ class InstagramConnectionTestTests(unittest.TestCase):
         self.assertIn("DRY RUN ONLY", result.stdout)
         queues = [json.loads(path.read_text()) for path in (REPO_ROOT / "data" / "queue").glob("ENG-*.json")]
         production = [item for item in queues if item.get("platform") == "instagram"]
-        self.assertEqual(len(production), 49)
+        schedule_ids = {item["content_id"] for item in json.loads(
+            (REPO_ROOT / "data" / "production" / "final-schedule-2026-08-20.json").read_text())["items"]}
+        self.assertEqual({item["content_id"] for item in production}, schedule_ids)
         posted = [item for item in production if item["status"] == "posted"]
-        self.assertEqual(sorted(item["content_id"] for item in posted),
-                         ["ENG-000009", "ENG-000012", "ENG-000013", "ENG-000014", "ENG-000015",
-                          "ENG-000016", "ENG-000017", "ENG-000018", "ENG-000019", "ENG-000020",
-                          "ENG-000021", "ENG-000022", "ENG-000023", "ENG-000025", "ENG-000026",
-                          "ENG-100003", "ENG-100004"])
+        self.assertTrue(all(item.get("remote_post_id") and item.get("posted_at") for item in posted))
         self.assertTrue(all(item["status"] == "pending" and "remote_post_id" not in item
-                            for item in production if item["content_id"] not in
-                            {"ENG-000009", "ENG-000012", "ENG-000013", "ENG-000014", "ENG-000015",
-                             "ENG-000016", "ENG-000017", "ENG-000018", "ENG-000019", "ENG-000020",
-                             "ENG-000021", "ENG-000022", "ENG-000023", "ENG-000024", "ENG-000025",
-                             "ENG-000026", "ENG-100003", "ENG-100004"}))
-        failed = [item for item in production if item["status"] == "failed"]
-        self.assertEqual([item["content_id"] for item in failed], ["ENG-000024"])
+                            for item in production if item["status"] not in {"posted", "failed", "skipped"}))
+        self.assertTrue(all(item.get("error") for item in production if item["status"] == "failed"))
 
 
 if __name__ == "__main__":

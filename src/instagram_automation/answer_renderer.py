@@ -6,6 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 from .paths import IMAGE_DIR, require_file
 from .renderer import BACKGROUND, CANVAS_SIZE, RenderError, TEXT, _font, _wrap
 from .validation import validate
+from .formats import NEW_FORMATS, validate_answer_payload
 
 HEADINGS = {
     "answer": "答え",
@@ -31,6 +32,19 @@ STYLES = {
     "also_natural": {"accent": "#7653A6", "background": "#FFFFFF", "border": "#DED2EC"},
     "tip": {"accent": "#5E6268", "background": "#FFFFFF", "border": "#D9D9D6"},
 }
+
+
+def validate_production_answer(content: dict, image_path: Path) -> None:
+    """Validate new-format answer semantics plus the immutable PNG contract."""
+    if content.get("format") not in NEW_FORMATS:
+        raise RenderError("format-specific answer validation requires a new production format")
+    try:
+        validate_answer_payload(content, content.get("answer_payload"))
+        with Image.open(image_path) as image:
+            if (image.format, image.mode, image.size) != ("PNG", "RGB", (1080, 1350)):
+                raise RenderError("answer image must be 1080x1350 RGB PNG")
+    except (OSError, ValueError) as exc:
+        raise RenderError(str(exc)) from exc
 
 
 def _required_text(content: dict, field: str) -> str:
