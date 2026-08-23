@@ -81,8 +81,8 @@
       "publish_at": "2026-08-25T15:00:00+09:00",
       "question": "Water is coming ___ of the bottle.",
       "choices": [
-        "out",
         "up",
+        "out",
         "on",
         "at"
       ],
@@ -96,7 +96,7 @@
       "example_translations": [
         "ボトルから水が出ています。"
       ],
-      "threads_answer_text": "💡 正解は A. out\n\n水がボトルの中から外へ出ているので、out ofを使います。\n\n📝 Water is coming out of the bottle.\n「ボトルから水が出ています。」\n\n🔑 out of＝〜の中から外へ",
+      "threads_answer_text": "💡 正解は B. out\n\n水がボトルの中から外へ出ているので、out ofを使います。\n\n📝 Water is coming out of the bottle.\n「ボトルから水が出ています。」\n\n🔑 out of＝〜の中から外へ",
       "acceptable_answers": [
         "out"
       ],
@@ -140,9 +140,9 @@
       "publish_at": "2026-08-25T17:30:00+09:00",
       "question": "I didn't catch that. Could you ___ that?",
       "choices": [
-        "repeat",
         "repeats",
         "repeated",
+        "repeat",
         "repeating"
       ],
       "best_answer": "repeat",
@@ -156,7 +156,7 @@
         "もう一度言っていただけますか？"
       ],
       "question_guide_ja": "「もう一度言って」ならどれ？",
-      "threads_answer_text": "💡 正解は A. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
+      "threads_answer_text": "💡 正解は C. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
       "acceptable_answers": [
         "repeat"
       ],
@@ -189,10 +189,10 @@
       "publish_at": "2026-08-25T19:30:00+09:00",
       "question": "She offers ___ him with the boxes.",
       "choices": [
-        "to help",
         "help",
         "helping",
-        "helped"
+        "helped",
+        "to help"
       ],
       "best_answer": "to help",
       "answer_hint": "offerの後ろの形に注目。",
@@ -204,7 +204,7 @@
       "example_translations": [
         "彼女は箱を運ぶのを手伝うと申し出ています。"
       ],
-      "threads_answer_text": "💡 正解は A. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
+      "threads_answer_text": "💡 正解は D. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
       "acceptable_answers": [
         "to help"
       ],

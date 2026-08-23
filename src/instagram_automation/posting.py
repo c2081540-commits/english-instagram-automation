@@ -58,6 +58,13 @@ def _write_json_atomic(path: Path, value: dict) -> None:
     os.replace(temporary, path)
 
 
+def _safe_error(exc: PostingError, code: str | None = None) -> dict:
+    result = {"code": code or exc.code, "reason": str(exc)[:500]}
+    if exc.details:
+        result["meta"] = exc.details
+    return result
+
+
 class PublicMediaResolver:
     def __init__(self, checker=None):
         config = json.loads(MEDIA_CONFIG.read_text(encoding="utf-8"))
@@ -143,6 +150,7 @@ def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
     if queue.get("execution_eligibility") != "scheduled" or datetime.fromisoformat(queue["publish_at"]) > now:
         raise PostingError("NOT_DUE", "Queue item is not eligible and due")
     receipt_path = RECEIPT_DIR / f"instagram-{queue['content_id']}.json"
+    container_receipt_path = RECEIPT_DIR / f"instagram-{queue['content_id']}-container.json"
     if receipt_path.is_file():
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         queue.update(status="posted", remote_post_id=receipt["remote_post_id"], posted_at=receipt["posted_at"])
@@ -153,8 +161,16 @@ def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
             child_ids = [client.create_child_container(resolver.resolve(slide["image_path"]))
                          for slide in queue["carousel"]]
             container_id = client.create_carousel_container(child_ids, final_quiz_caption(queue))
+            container_receipt = {"content_id": queue["content_id"], "platform": "instagram",
+                                 "child_container_ids": child_ids,
+                                 "container_id": container_id, "container_type": "carousel",
+                                 "stage": "container_created", "created_at": now.isoformat()}
         else:
             container_id = client.create_story_container(resolver.resolve(queue["story_image"]))
+            container_receipt = {"content_id": queue["content_id"], "platform": "instagram",
+                                 "container_id": container_id, "container_type": "story",
+                                 "stage": "container_created", "created_at": now.isoformat()}
+        _write_json_atomic(container_receipt_path, container_receipt)
         remote_id = client.publish(container_id)
         posted_at = now.isoformat()
         _write_json_atomic(receipt_path, {"content_id": queue["content_id"], "platform": "instagram",
@@ -163,6 +179,45 @@ def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
         _write_json_atomic(queue_path, queue)
         return queue
     except PostingError as exc:
-        queue.update(status="failed", error={"code": exc.code, "reason": str(exc)[:200]})
+        queue.update(status="failed", error=_safe_error(exc))
         _write_json_atomic(queue_path, queue)
         raise
+
+
+def recover_publish(queue_path: Path, client=None, *, dry_run_only: bool = True,
+                    now: datetime | None = None) -> dict:
+    """Resume a failed item from its saved container without creating new media."""
+    now = now or datetime.now(ZoneInfo("Asia/Tokyo"))
+    queue = json.loads(queue_path.read_text(encoding="utf-8"))
+    validate_queue_for_post(queue)
+    if queue.get("status") != "failed":
+        raise PostingError("RECOVERY_NOT_ALLOWED", "Publish recovery requires failed status")
+    receipt_path = RECEIPT_DIR / f"instagram-{queue['content_id']}.json"
+    container_path = RECEIPT_DIR / f"instagram-{queue['content_id']}-container.json"
+    if receipt_path.is_file():
+        raise PostingError("DUPLICATE_PREVENTED", "Final receipt already exists")
+    if not container_path.is_file():
+        raise PostingError("RECOVERY_NOT_ALLOWED", "Saved Instagram container is required")
+    saved = json.loads(container_path.read_text(encoding="utf-8"))
+    container_id = saved.get("container_id")
+    if saved.get("content_id") != queue.get("content_id") or not isinstance(container_id, str) or not container_id:
+        raise PostingError("RECOVERY_NOT_ALLOWED", "Container receipt does not match queue")
+    plan = {
+        "content_id": queue["content_id"], "container_id": container_id,
+        "container_action": "reuse_only",
+        "status_endpoint": f"https://graph.instagram.com/<VERSION>/{container_id}?fields=status_code",
+        "publish_endpoint": "https://graph.instagram.com/<VERSION>/<IG_ID>/media_publish",
+        "publish_payload": {"creation_id": container_id},
+    }
+    if dry_run_only:
+        return plan
+    if client is None:
+        raise PostingError("RECOVERY_NOT_ALLOWED", "Live recovery requires a Meta client")
+    remote_id = client.publish(container_id)
+    posted_at = now.isoformat()
+    _write_json_atomic(receipt_path, {"content_id": queue["content_id"],
+                                     "platform": "instagram", "remote_post_id": remote_id,
+                                     "posted_at": posted_at, "recovered_from_container": container_id})
+    queue.update(status="posted", remote_post_id=remote_id, posted_at=posted_at, error=None)
+    _write_json_atomic(queue_path, queue)
+    return queue

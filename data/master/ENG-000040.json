@@ -6,9 +6,9 @@
   "seasonal": false,
   "question": "I didn't catch that. Could you ___ that?",
   "choices": [
-    "repeat",
     "repeats",
     "repeated",
+    "repeat",
     "repeating"
   ],
   "answer_type": "single",
@@ -37,7 +37,7 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "ここ、よく迷います。",
-  "threads_answer_text": "💡 正解は A. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
+  "threads_answer_text": "💡 正解は C. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
   "publish_at": "2026-08-25T18:00:00+09:00",
   "situation_purpose": "ask_for_repetition",
   "response_family": "clarification_request",

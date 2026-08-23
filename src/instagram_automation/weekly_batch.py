@@ -6,6 +6,7 @@ from difflib import SequenceMatcher
 
 from .daily_batch import validate_normal_candidate, validate_quiz_candidate
 from .difficulty import validate_distribution
+from .choice_positions import validate_position_distribution
 
 TARGET_CATEGORIES = {
     "grammar_usage": 15,
@@ -80,6 +81,9 @@ def validate_weekly_batch(week: dict, existing: list[dict]) -> dict:
         validate_normal_candidate(item)
     if week.get("difficulty_distribution_required") is True:
         validate_distribution(quizzes)
+    position_report = None
+    if week.get("position_distribution_required") is True:
+        position_report = validate_position_distribution(quizzes)
 
     categories = Counter(item["production_category"] for item in quizzes)
     difficulties = Counter(difficulty_bucket(item["difficulty"]) for item in quizzes)
@@ -165,6 +169,7 @@ def validate_weekly_batch(week: dict, existing: list[dict]) -> dict:
         "reject": 0,
         "replacements": 0,
         "duplicate_reject": 0,
+        "correct_position_distribution": position_report,
     }
 
 

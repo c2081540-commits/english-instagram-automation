@@ -125,8 +125,8 @@
       "publish_at": "2026-08-20T17:30:00+09:00",
       "question": "It's hot. He'll turn ___ the AC.",
       "choices": [
-        "on",
-        "off"
+        "off",
+        "on"
       ],
       "best_answer": "on",
       "answer_hint": "暑い部屋で、エアコンをどうする？",
@@ -138,7 +138,7 @@
       "example_translations": [
         "彼がエアコンをつけます。"
       ],
-      "threads_answer_text": "💡 正解は A. on\n\n暑い部屋でエアコンをつけるので、turn onを使います。\n\n🗣️ He'll turn on the AC.\n「彼がエアコンをつけます。」\n\n🔑 turn on＝つける / turn off＝消す",
+      "threads_answer_text": "💡 正解は B. on\n\n暑い部屋でエアコンをつけるので、turn onを使います。\n\n🗣️ He'll turn on the AC.\n「彼がエアコンをつけます。」\n\n🔑 turn on＝つける / turn off＝消す",
       "acceptable_answers": [
         "on"
       ],
@@ -182,10 +182,10 @@
       "publish_at": "2026-08-20T19:30:00+09:00",
       "question": "Would you like anything ___?",
       "choices": [
-        "else",
         "other",
         "another",
-        "again"
+        "again",
+        "else"
       ],
       "best_answer": "else",
       "answer_hint": "anythingと一緒に使う語は？",
@@ -198,7 +198,7 @@
         "ほかに何かいかがですか？"
       ],
       "question_guide_ja": "「ほかにも何か」ならどれ？",
-      "threads_answer_text": "💡 正解は A. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
+      "threads_answer_text": "💡 正解は D. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
       "acceptable_answers": [
         "else"
       ],

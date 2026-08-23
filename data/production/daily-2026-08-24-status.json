@@ -58,8 +58,8 @@
       "publish_at": "2026-08-24T12:00:00+09:00",
       "question": "He is walking ___ the stairs.",
       "choices": [
-        "up",
-        "up to"
+        "up to",
+        "up"
       ],
       "best_answer": "up",
       "answer_hint": "階段の途中？ それとも手前まで？",
@@ -71,7 +71,7 @@
       "example_translations": [
         "彼は階段を上っています。"
       ],
-      "threads_answer_text": "💡 正解は A. up\n\n写真では階段の途中を上っているので、up the stairsです。\n\n📝 He is walking up the stairs.\n「彼は階段を上っています。」\n\n🔑 up＝上る / up to＝〜まで行く",
+      "threads_answer_text": "💡 正解は B. up\n\n写真では階段の途中を上っているので、up the stairsです。\n\n📝 He is walking up the stairs.\n「彼は階段を上っています。」\n\n🔑 up＝上る / up to＝〜まで行く",
       "acceptable_answers": [
         "up"
       ],
@@ -138,8 +138,8 @@
       "publish_at": "2026-08-24T17:30:00+09:00",
       "question": "What does she say to him?",
       "choices": [
-        "You can sit here.",
-        "I can sit here."
+        "I can sit here.",
+        "You can sit here."
       ],
       "best_answer": "You can sit here.",
       "answer_hint": "話している相手は誰？",
@@ -151,7 +151,7 @@
       "example_translations": [
         "ここに座っていいですよ。"
       ],
-      "threads_answer_text": "💡 正解は A. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
+      "threads_answer_text": "💡 正解は B. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
       "acceptable_answers": [
         "You can sit here."
       ],

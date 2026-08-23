@@ -6,8 +6,8 @@
   "seasonal": false,
   "question": "I have a meeting ___ 3 p.m.",
   "choices": [
-    "at",
-    "on"
+    "on",
+    "at"
   ],
   "answer_type": "best",
   "best_answer": "at",
@@ -35,7 +35,7 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "ここ、よく迷います。",
-  "threads_answer_text": "💡 正解は A. at\n\nat 3 p.m. → 3時に\non Monday → 月曜に",
+  "threads_answer_text": "💡 正解は B. at\n\nat 3 p.m. → 3時に\non Monday → 月曜に",
   "publish_at": "2026-08-23T18:00:00+09:00",
   "question_guide_ja": "自然なのはどっち？",
   "question_role": "learning_sentence",

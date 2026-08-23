@@ -11,9 +11,10 @@ from dataclasses import dataclass
 
 
 class PostingError(RuntimeError):
-    def __init__(self, code: str, message: str):
+    def __init__(self, code: str, message: str, details: dict | None = None):
         super().__init__(message)
         self.code = code
+        self.details = details or {}
 
 
 @dataclass(frozen=True)
@@ -48,15 +49,35 @@ class HttpTransport:
                     raise PostingError("MALFORMED_API_RESPONSE", "Meta response must be a JSON object")
                 return payload
             except urllib.error.HTTPError as exc:
-                exc.read()
+                raw = exc.read().decode("utf-8", errors="replace")
+                try:
+                    response = json.loads(raw)
+                except json.JSONDecodeError:
+                    response = {}
+                error = response.get("error") if isinstance(response, dict) else None
+                error = error if isinstance(error, dict) else {}
+                details = {
+                    "http_status": exc.code, "endpoint": url, "method": "POST",
+                    "payload": {key: value for key, value in fields.items()
+                                if key != "access_token"},
+                    "message": str(error.get("message") or "Meta returned no JSON error message"),
+                    "type": error.get("type"), "code": error.get("code"),
+                    "subcode": error.get("error_subcode"),
+                    "fbtrace_id": error.get("fbtrace_id"),
+                }
                 if exc.code in {401, 403}:
-                    raise PostingError("INVALID_TOKEN", f"Meta authentication failed with HTTP {exc.code}") from exc
+                    raise PostingError("INVALID_TOKEN", f"Meta authentication failed with HTTP {exc.code}",
+                                       details) from exc
                 if exc.code == 429 or 500 <= exc.code < 600:
                     if attempt < self.retries:
                         time.sleep(.25 * (attempt + 1))
                         continue
-                    raise PostingError("NETWORK_TIMEOUT", f"Temporary Meta HTTP failure: {exc.code}") from exc
-                raise PostingError("META_API_ERROR", f"Meta HTTP failure: {exc.code}") from exc
+                    raise PostingError("NETWORK_TIMEOUT", f"Temporary Meta HTTP failure: {exc.code}",
+                                       details) from exc
+                summary = (f"Meta HTTP {exc.code}: {details['message']} "
+                           f"(type={details['type']}, code={details['code']}, "
+                           f"subcode={details['subcode']})")
+                raise PostingError("META_API_ERROR", summary, details) from exc
             except (urllib.error.URLError, TimeoutError, socket.timeout) as exc:
                 if attempt < self.retries:
                     time.sleep(.25 * (attempt + 1))
@@ -77,9 +98,22 @@ class HttpGetTransport:
             with urllib.request.urlopen(request_url, timeout=self.timeout) as response:
                 payload = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
-            exc.read()
+            raw = exc.read().decode("utf-8", errors="replace")
+            try:
+                error = json.loads(raw).get("error", {})
+            except json.JSONDecodeError:
+                error = {}
+            details = {
+                "http_status": exc.code, "endpoint": url, "method": "GET",
+                "payload": {key: value for key, value in fields.items()
+                            if key != "access_token"},
+                "message": error.get("message") or "Meta returned no JSON error message",
+                "type": error.get("type"), "code": error.get("code"),
+                "subcode": error.get("error_subcode"),
+                "fbtrace_id": error.get("fbtrace_id"),
+            }
             raise PostingError("CONTAINER_STATUS_FAILURE",
-                               f"Instagram container status failed with HTTP {exc.code}") from exc
+                               f"Instagram container status failed with HTTP {exc.code}", details) from exc
         except (urllib.error.URLError, TimeoutError, socket.timeout) as exc:
             raise PostingError("NETWORK_TIMEOUT", "Instagram container status request failed") from exc
         except json.JSONDecodeError as exc:
@@ -91,12 +125,13 @@ class HttpGetTransport:
 
 class InstagramMetaClient:
     def __init__(self, secrets: InstagramSecrets, transport=None, get_transport=None,
-                 sleep=None, status_attempts: int = 10):
+                 sleep=None, status_attempts: int = 5, status_interval: float = 60.0):
         self.secrets = secrets
         self.transport = transport or HttpTransport()
         self.get_transport = get_transport or HttpGetTransport()
         self.sleep = sleep or time.sleep
         self.status_attempts = status_attempts
+        self.status_interval = status_interval
         self.base_url = f"https://graph.instagram.com/{secrets.api_version}"
 
     def _post(self, path: str, fields: dict, failure_code: str) -> str:
@@ -106,7 +141,7 @@ class InstagramMetaClient:
         except PostingError as exc:
             if exc.code in {"MISSING_SECRET", "INVALID_TOKEN", "NETWORK_TIMEOUT", "MALFORMED_API_RESPONSE"}:
                 raise
-            raise PostingError(failure_code, str(exc)) from exc
+            raise PostingError(failure_code, str(exc), exc.details) from exc
         except Exception as exc:
             raise PostingError(failure_code, "Meta transport failed") from exc
         remote_id = payload.get("id") if isinstance(payload, dict) else None
@@ -136,14 +171,16 @@ class InstagramMetaClient:
                 {"fields": "status_code,status", "access_token": self.secrets.access_token},
             )
             status = payload.get("status_code")
-            if status in {"FINISHED", "PUBLISHED"}:
+            if status == "FINISHED":
                 return
+            if status == "PUBLISHED":
+                raise PostingError("DUPLICATE_PREVENTED", "Instagram container is already published")
             if status in {"ERROR", "EXPIRED"}:
                 raise PostingError("CONTAINER_STATUS_FAILURE", f"Instagram container status: {status}")
             if status != "IN_PROGRESS":
                 raise PostingError("MALFORMED_API_RESPONSE", "Unknown Instagram container status")
             if attempt + 1 < self.status_attempts:
-                self.sleep(2)
+                self.sleep(self.status_interval)
         raise PostingError("CONTAINER_STATUS_FAILURE", "Instagram container was not ready in time")
 
     def publish(self, creation_id: str) -> str:

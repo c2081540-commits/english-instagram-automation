@@ -3,6 +3,8 @@ import os
 import sys
 import tempfile
 import unittest
+import urllib.error
+from io import BytesIO
 from datetime import datetime
 from pathlib import Path
 from unittest.mock import patch
@@ -11,7 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 import instagram_automation.posting as posting
-from instagram_automation.meta_client import (InstagramMetaClient,
+from instagram_automation.meta_client import (HttpTransport, InstagramMetaClient,
                                                InstagramSecrets, PostingError)
 
 
@@ -95,7 +97,46 @@ class InstagramMetaPostingTests(unittest.TestCase):
                 posting.post_one(target, FakeInstagramClient(failure), self.resolver,
                                  datetime.fromisoformat("2026-08-20T16:00:00+09:00"))
             self.assertEqual(caught.exception.code, expected)
+            if failure == "publish":
+                saved = json.loads((self.receipts / "instagram-ENG-000009-container.json").read_text())
+                self.assertEqual(saved["container_id"], "remote-carousel-3")
             target.unlink()
+
+    def test_failed_publish_has_safe_meta_details_and_recovery_dry_run(self):
+        target = self.queue_copy("ENG-000009")
+        details = {"http_status": 400, "endpoint": "https://graph.instagram.com/v25.0/user/media_publish",
+                   "method": "POST", "payload": {"creation_id": "container"},
+                   "message": "Container is not ready", "type": "OAuthException",
+                   "code": 9007, "subcode": 2207027, "fbtrace_id": "trace"}
+        client = InstagramMetaClient(
+            InstagramSecrets("secret-token", "user", "v25.0"),
+            transport=lambda url, fields: ({"id": "container"} if not url.endswith("media_publish")
+                                           else (_ for _ in ()).throw(
+                                               PostingError("META_API_ERROR", "Meta HTTP 400", details))),
+            get_transport=lambda *_: {"status_code": "FINISHED"}, sleep=lambda _: None)
+        with self.assertRaises(PostingError):
+            posting.post_one(target, client, self.resolver,
+                             datetime.fromisoformat("2026-08-20T16:00:00+09:00"))
+        queue = json.loads(target.read_text())
+        self.assertEqual(queue["error"]["meta"]["message"], "Container is not ready")
+        self.assertEqual(queue["error"]["meta"]["subcode"], 2207027)
+        self.assertNotIn("secret-token", json.dumps(queue))
+        plan = posting.recover_publish(target, dry_run_only=True)
+        self.assertEqual(plan["container_action"], "reuse_only")
+        self.assertEqual(plan["publish_payload"], {"creation_id": "container"})
+
+    def test_http_400_response_is_parsed_without_token(self):
+        error_body = json.dumps({"error": {"message": "Container is not ready", "type": "OAuthException",
+                                           "code": 9007, "error_subcode": 2207027,
+                                           "fbtrace_id": "trace"}}).encode()
+        error = urllib.error.HTTPError("https://graph.instagram.com/v25.0/user/media_publish",
+                                      400, "Bad Request", {}, BytesIO(error_body))
+        with patch("urllib.request.urlopen", side_effect=error), self.assertRaises(PostingError) as caught:
+            HttpTransport(retries=0)("https://graph.instagram.com/v25.0/user/media_publish",
+                                     {"creation_id": "container", "access_token": "secret-token"})
+        self.assertEqual(caught.exception.details["message"], "Container is not ready")
+        self.assertEqual(caught.exception.details["subcode"], 2207027)
+        self.assertNotIn("secret-token", json.dumps(caught.exception.details))
 
     def test_media_url_and_missing_secret_fail_closed(self):
         blocked = posting.PublicMediaResolver(checker=lambda _: False)
@@ -165,7 +206,8 @@ class InstagramMetaPostingTests(unittest.TestCase):
         client = InstagramMetaClient(
             InstagramSecrets("token", "user", "v25.0"),
             transport=lambda url, fields: posts.append(url) or {"id": "published"},
-            get_transport=lambda *_: next(statuses), sleep=lambda _: None, status_attempts=2)
+            get_transport=lambda *_: next(statuses), sleep=lambda _: None,
+            status_attempts=2, status_interval=60)
         self.assertEqual(client.publish("carousel"), "published")
         self.assertEqual(posts, ["https://graph.instagram.com/v25.0/user/media_publish"])
 
@@ -173,10 +215,18 @@ class InstagramMetaPostingTests(unittest.TestCase):
             InstagramSecrets("token", "user", "v25.0"),
             transport=lambda *_: {"id": "must-not-publish"},
             get_transport=lambda *_: {"status_code": "IN_PROGRESS"},
-            sleep=lambda _: None, status_attempts=2)
+            sleep=lambda _: None, status_attempts=2, status_interval=60)
         with self.assertRaises(PostingError) as caught:
             blocked.publish("carousel")
         self.assertEqual(caught.exception.code, "CONTAINER_STATUS_FAILURE")
+
+        published = InstagramMetaClient(
+            InstagramSecrets("token", "user", "v25.0"),
+            transport=lambda *_: {"id": "must-not-publish"},
+            get_transport=lambda *_: {"status_code": "PUBLISHED"}, sleep=lambda _: None)
+        with self.assertRaises(PostingError) as caught:
+            published.publish("carousel")
+        self.assertEqual(caught.exception.code, "DUPLICATE_PREVENTED")
 
 
 if __name__ == "__main__":

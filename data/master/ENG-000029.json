@@ -6,10 +6,10 @@
   "seasonal": false,
   "question": "Sorry I'm late. Don't ___ about it.",
   "choices": [
-    "worry",
     "worries",
     "worried",
-    "worrying"
+    "worrying",
+    "worry"
   ],
   "answer_type": "single",
   "best_answer": "worry",
@@ -37,7 +37,7 @@
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
   "threads_parent_text": "これ分かったら基礎はOK。",
-  "threads_answer_text": "💡 正解は A. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
+  "threads_answer_text": "💡 正解は D. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
   "publish_at": "2026-08-23T20:30:00+09:00",
   "situation_purpose": "respond_to_apology",
   "response_family": "social_response",

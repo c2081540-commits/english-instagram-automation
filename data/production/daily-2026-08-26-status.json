@@ -58,8 +58,8 @@
       "publish_at": "2026-08-26T12:00:00+09:00",
       "question": "He is folding the paper ___ half.",
       "choices": [
-        "in",
         "on",
+        "in",
         "at",
         "to"
       ],
@@ -73,7 +73,7 @@
       "example_translations": [
         "彼は紙を半分に折っています。"
       ],
-      "threads_answer_text": "💡 正解は A. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 He is folding the paper in half.\n「彼は紙を半分に折っています。」\n\n🔑 in half＝半分に",
+      "threads_answer_text": "💡 正解は B. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 He is folding the paper in half.\n「彼は紙を半分に折っています。」\n\n🔑 in half＝半分に",
       "acceptable_answers": [
         "in"
       ],
@@ -140,8 +140,8 @@
       "publish_at": "2026-08-26T17:30:00+09:00",
       "question": "Is anyone ___ here?",
       "choices": [
-        "sitting",
-        "sit"
+        "sit",
+        "sitting"
       ],
       "best_answer": "sitting",
       "answer_hint": "今の状態を尋ねる形に注目。",
@@ -153,7 +153,7 @@
       "example_translations": [
         "ここに誰か座っていますか？"
       ],
-      "threads_answer_text": "💡 正解は A. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
+      "threads_answer_text": "💡 正解は B. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
       "acceptable_answers": [
         "sitting"
       ],

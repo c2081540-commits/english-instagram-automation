@@ -259,8 +259,8 @@
       "seasonal": false,
       "question": "I have a meeting ___ 3 p.m.",
       "choices": [
-        "at",
-        "on"
+        "on",
+        "at"
       ],
       "answer_type": "best",
       "best_answer": "at",
@@ -288,7 +288,7 @@
       "instagram_caption": "短い英語クイズです。",
       "instagram_hashtags": [],
       "threads_parent_text": "ここ、よく迷います。",
-      "threads_answer_text": "💡 正解は A. at\n\nat 3 p.m. → 3時に\non Monday → 月曜に",
+      "threads_answer_text": "💡 正解は B. at\n\nat 3 p.m. → 3時に\non Monday → 月曜に",
       "publish_at": "2026-08-23T18:00:00+09:00",
       "question_guide_ja": "自然なのはどっち？",
       "question_role": "learning_sentence",
@@ -314,10 +314,10 @@
       "seasonal": false,
       "question": "Sorry I'm late. Don't ___ about it.",
       "choices": [
-        "worry",
         "worries",
         "worried",
-        "worrying"
+        "worrying",
+        "worry"
       ],
       "answer_type": "single",
       "best_answer": "worry",
@@ -345,7 +345,7 @@
       "instagram_caption": "今日の1問。答えは2枚目へ。",
       "instagram_hashtags": [],
       "threads_parent_text": "これ分かったら基礎はOK。",
-      "threads_answer_text": "💡 正解は A. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
+      "threads_answer_text": "💡 正解は D. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
       "publish_at": "2026-08-23T20:30:00+09:00",
       "situation_purpose": "respond_to_apology",
       "response_family": "social_response",

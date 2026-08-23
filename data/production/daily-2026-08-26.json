@@ -122,8 +122,8 @@
       "seasonal": false,
       "question": "He is folding the paper ___ half.",
       "choices": [
-        "in",
         "on",
+        "in",
         "at",
         "to"
       ],
@@ -153,7 +153,7 @@
       "instagram_caption": "日常で使える英語をチェック。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 He is folding the paper in half.\n「彼は紙を半分に折っています。」\n\n🔑 in half＝半分に",
+      "threads_answer_text": "💡 正解は B. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 He is folding the paper in half.\n「彼は紙を半分に折っています。」\n\n🔑 in half＝半分に",
       "publish_at": "2026-08-26T12:00:00+09:00",
       "question_guide_ja": null,
       "question_role": null,
@@ -245,8 +245,8 @@
       "seasonal": true,
       "question": "Is anyone ___ here?",
       "choices": [
-        "sitting",
-        "sit"
+        "sit",
+        "sitting"
       ],
       "answer_type": "single",
       "best_answer": "sitting",
@@ -274,7 +274,7 @@
       "instagram_caption": "短い英語クイズです。",
       "instagram_hashtags": [],
       "threads_parent_text": "3秒でどうぞ。",
-      "threads_answer_text": "💡 正解は A. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
+      "threads_answer_text": "💡 正解は B. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
       "publish_at": "2026-08-26T18:00:00+09:00",
       "situation_purpose": "explain_seat_availability",
       "response_family": "information_response",
@@ -313,9 +313,9 @@
       "seasonal": false,
       "question": "Which one means '休憩する'?",
       "choices": [
-        "take a break",
         "make a break",
         "do a break",
+        "take a break",
         "get a breaking"
       ],
       "answer_type": "single",
@@ -344,7 +344,7 @@
       "instagram_caption": "今日の1問。答えは2枚目へ。",
       "instagram_hashtags": [],
       "threads_parent_text": "これ分かったら基礎はOK。",
-      "threads_answer_text": "💡 正解は A. take a break\n\n「休憩する」は take a break です。",
+      "threads_answer_text": "💡 正解は C. take a break\n\n「休憩する」は take a break です。",
       "publish_at": "2026-08-26T20:30:00+09:00",
       "question_guide_ja": "「休憩する」の意味になるのはどれ？",
       "question_role": "meta_instruction",

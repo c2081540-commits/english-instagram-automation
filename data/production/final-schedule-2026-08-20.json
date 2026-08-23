@@ -119,8 +119,8 @@
       "execution_eligibility": "past_due_hold",
       "question": "It's hot. He'll turn ___ the AC.",
       "choices": [
-        "on",
-        "off"
+        "off",
+        "on"
       ],
       "best_answer": "on",
       "answer_hint": "暑い部屋で、エアコンをどうする？",
@@ -132,7 +132,7 @@
       "example_translations": [
         "彼がエアコンをつけます。"
       ],
-      "threads_answer_text": "💡 正解は A. on\n\n暑い部屋でエアコンをつけるので、turn onを使います。\n\n🗣️ He'll turn on the AC.\n「彼がエアコンをつけます。」\n\n🔑 turn on＝つける / turn off＝消す",
+      "threads_answer_text": "💡 正解は B. on\n\n暑い部屋でエアコンをつけるので、turn onを使います。\n\n🗣️ He'll turn on the AC.\n「彼がエアコンをつけます。」\n\n🔑 turn on＝つける / turn off＝消す",
       "acceptable_answers": [
         "on"
       ],
@@ -174,10 +174,10 @@
       "execution_eligibility": "past_due_hold",
       "question": "Would you like anything ___?",
       "choices": [
-        "else",
         "other",
         "another",
-        "again"
+        "again",
+        "else"
       ],
       "best_answer": "else",
       "answer_hint": "anythingと一緒に使う語は？",
@@ -190,7 +190,7 @@
         "ほかに何かいかがですか？"
       ],
       "question_guide_ja": "「ほかにも何か」ならどれ？",
-      "threads_answer_text": "💡 正解は A. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
+      "threads_answer_text": "💡 正解は D. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
       "acceptable_answers": [
         "else"
       ],
@@ -761,10 +761,10 @@
       "execution_eligibility": "scheduled",
       "question": "Sorry I'm late. Don't ___ about it.",
       "choices": [
-        "worry",
         "worries",
         "worried",
-        "worrying"
+        "worrying",
+        "worry"
       ],
       "best_answer": "worry",
       "answer_hint": "Don'tの後ろの形に注目。",
@@ -777,7 +777,7 @@
         "気にしないでください。"
       ],
       "question_guide_ja": "「気にしないで」ならどれ？",
-      "threads_answer_text": "💡 正解は A. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
+      "threads_answer_text": "💡 正解は D. worry\n\nDon'tの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Don't worry about it.\n「気にしないでください。」\n\n🔑 Don't＋動詞＝〜しないで",
       "acceptable_answers": [
         "worry"
       ],
@@ -858,8 +858,8 @@
       "execution_eligibility": "scheduled",
       "question": "He is walking ___ the stairs.",
       "choices": [
-        "up",
-        "up to"
+        "up to",
+        "up"
       ],
       "best_answer": "up",
       "answer_hint": "階段の途中？ それとも手前まで？",
@@ -871,7 +871,7 @@
       "example_translations": [
         "彼は階段を上っています。"
       ],
-      "threads_answer_text": "💡 正解は A. up\n\n写真では階段の途中を上っているので、up the stairsです。\n\n📝 He is walking up the stairs.\n「彼は階段を上っています。」\n\n🔑 up＝上る / up to＝〜まで行く",
+      "threads_answer_text": "💡 正解は B. up\n\n写真では階段の途中を上っているので、up the stairsです。\n\n📝 He is walking up the stairs.\n「彼は階段を上っています。」\n\n🔑 up＝上る / up to＝〜まで行く",
       "acceptable_answers": [
         "up"
       ],
@@ -934,8 +934,8 @@
       "execution_eligibility": "scheduled",
       "question": "What does she say to him?",
       "choices": [
-        "You can sit here.",
-        "I can sit here."
+        "I can sit here.",
+        "You can sit here."
       ],
       "best_answer": "You can sit here.",
       "answer_hint": "話している相手は誰？",
@@ -947,7 +947,7 @@
       "example_translations": [
         "ここに座っていいですよ。"
       ],
-      "threads_answer_text": "💡 正解は A. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
+      "threads_answer_text": "💡 正解は B. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
       "acceptable_answers": [
         "You can sit here."
       ],
@@ -1081,8 +1081,8 @@
       "execution_eligibility": "scheduled",
       "question": "Water is coming ___ of the bottle.",
       "choices": [
-        "out",
         "up",
+        "out",
         "on",
         "at"
       ],
@@ -1096,7 +1096,7 @@
       "example_translations": [
         "ボトルから水が出ています。"
       ],
-      "threads_answer_text": "💡 正解は A. out\n\n水がボトルの中から外へ出ているので、out ofを使います。\n\n📝 Water is coming out of the bottle.\n「ボトルから水が出ています。」\n\n🔑 out of＝〜の中から外へ",
+      "threads_answer_text": "💡 正解は B. out\n\n水がボトルの中から外へ出ているので、out ofを使います。\n\n📝 Water is coming out of the bottle.\n「ボトルから水が出ています。」\n\n🔑 out of＝〜の中から外へ",
       "acceptable_answers": [
         "out"
       ],
@@ -1138,9 +1138,9 @@
       "execution_eligibility": "scheduled",
       "question": "I didn't catch that. Could you ___ that?",
       "choices": [
-        "repeat",
         "repeats",
         "repeated",
+        "repeat",
         "repeating"
       ],
       "best_answer": "repeat",
@@ -1154,7 +1154,7 @@
         "もう一度言っていただけますか？"
       ],
       "question_guide_ja": "「もう一度言って」ならどれ？",
-      "threads_answer_text": "💡 正解は A. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
+      "threads_answer_text": "💡 正解は C. repeat\n\nCould youの後ろでは、動詞をそのままの形で使います。\n\n🗣️ Could you repeat that?\n「もう一度言っていただけますか？」\n\n🔑 Could you＋動詞＝〜していただけますか",
       "acceptable_answers": [
         "repeat"
       ],
@@ -1185,10 +1185,10 @@
       "execution_eligibility": "scheduled",
       "question": "She offers ___ him with the boxes.",
       "choices": [
-        "to help",
         "help",
         "helping",
-        "helped"
+        "helped",
+        "to help"
       ],
       "best_answer": "to help",
       "answer_hint": "offerの後ろの形に注目。",
@@ -1200,7 +1200,7 @@
       "example_translations": [
         "彼女は箱を運ぶのを手伝うと申し出ています。"
       ],
-      "threads_answer_text": "💡 正解は A. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
+      "threads_answer_text": "💡 正解は D. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
       "acceptable_answers": [
         "to help"
       ],
@@ -1292,8 +1292,8 @@
       "execution_eligibility": "scheduled",
       "question": "He is folding the paper ___ half.",
       "choices": [
-        "in",
         "on",
+        "in",
         "at",
         "to"
       ],
@@ -1307,7 +1307,7 @@
       "example_translations": [
         "彼は紙を半分に折っています。"
       ],
-      "threads_answer_text": "💡 正解は A. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 He is folding the paper in half.\n「彼は紙を半分に折っています。」\n\n🔑 in half＝半分に",
+      "threads_answer_text": "💡 正解は B. in\n\nfold ... in halfで「〜を半分に折る」を表します。\n\n📝 He is folding the paper in half.\n「彼は紙を半分に折っています。」\n\n🔑 in half＝半分に",
       "acceptable_answers": [
         "in"
       ],
@@ -1370,8 +1370,8 @@
       "execution_eligibility": "scheduled",
       "question": "Is anyone ___ here?",
       "choices": [
-        "sitting",
-        "sit"
+        "sit",
+        "sitting"
       ],
       "best_answer": "sitting",
       "answer_hint": "今の状態を尋ねる形に注目。",
@@ -1383,7 +1383,7 @@
       "example_translations": [
         "ここに誰か座っていますか？"
       ],
-      "threads_answer_text": "💡 正解は A. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
+      "threads_answer_text": "💡 正解は B. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
       "acceptable_answers": [
         "sitting"
       ],

@@ -1,0 +1,236 @@
+{
+  "quiz_total": 42,
+  "protected_posted": [
+    "ENG-000009",
+    "ENG-000012",
+    "ENG-000013",
+    "ENG-000014",
+    "ENG-000015",
+    "ENG-000016",
+    "ENG-000017",
+    "ENG-000018",
+    "ENG-000019",
+    "ENG-000020",
+    "ENG-000021",
+    "ENG-000022",
+    "ENG-000023",
+    "ENG-000024",
+    "ENG-000025",
+    "ENG-000026"
+  ],
+  "unposted_count": 26,
+  "changed_count": 17,
+  "changes": [
+    {
+      "content_id": "ENG-000007",
+      "before": "A",
+      "after": "C",
+      "best_answer": "at",
+      "publish_at": "2026-08-20T09:30:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000010",
+      "before": "A",
+      "after": "B",
+      "best_answer": "on",
+      "publish_at": "2026-08-20T18:00:00+09:00",
+      "choice_count": 2
+    },
+    {
+      "content_id": "ENG-000011",
+      "before": "A",
+      "after": "D",
+      "best_answer": "else",
+      "publish_at": "2026-08-20T20:30:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000028",
+      "before": "A",
+      "after": "B",
+      "best_answer": "at",
+      "publish_at": "2026-08-23T18:00:00+09:00",
+      "choice_count": 2
+    },
+    {
+      "content_id": "ENG-000029",
+      "before": "A",
+      "after": "D",
+      "best_answer": "worry",
+      "publish_at": "2026-08-23T20:30:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000030",
+      "before": "A",
+      "after": "B",
+      "best_answer": "is",
+      "publish_at": "2026-08-24T07:00:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000032",
+      "before": "A",
+      "after": "B",
+      "best_answer": "up",
+      "publish_at": "2026-08-24T12:00:00+09:00",
+      "choice_count": 2
+    },
+    {
+      "content_id": "ENG-000034",
+      "before": "A",
+      "after": "B",
+      "best_answer": "You can sit here.",
+      "publish_at": "2026-08-24T18:00:00+09:00",
+      "choice_count": 2
+    },
+    {
+      "content_id": "ENG-000035",
+      "before": "A",
+      "after": "C",
+      "best_answer": "He plays tennis.",
+      "publish_at": "2026-08-24T20:30:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000037",
+      "before": "A",
+      "after": "B",
+      "best_answer": "yet",
+      "publish_at": "2026-08-25T09:30:00+09:00",
+      "choice_count": 2
+    },
+    {
+      "content_id": "ENG-000038",
+      "before": "A",
+      "after": "D",
+      "best_answer": "that",
+      "publish_at": "2026-08-25T12:00:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000039",
+      "before": "A",
+      "after": "B",
+      "best_answer": "out",
+      "publish_at": "2026-08-25T15:00:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000040",
+      "before": "A",
+      "after": "C",
+      "best_answer": "repeat",
+      "publish_at": "2026-08-25T18:00:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000041",
+      "before": "A",
+      "after": "D",
+      "best_answer": "to help",
+      "publish_at": "2026-08-25T20:30:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000044",
+      "before": "A",
+      "after": "B",
+      "best_answer": "in",
+      "publish_at": "2026-08-26T12:00:00+09:00",
+      "choice_count": 4
+    },
+    {
+      "content_id": "ENG-000046",
+      "before": "A",
+      "after": "B",
+      "best_answer": "sitting",
+      "publish_at": "2026-08-26T18:00:00+09:00",
+      "choice_count": 2
+    },
+    {
+      "content_id": "ENG-000047",
+      "before": "A",
+      "after": "C",
+      "best_answer": "take a break",
+      "publish_at": "2026-08-26T20:30:00+09:00",
+      "choice_count": 4
+    }
+  ],
+  "before": {
+    "distribution": {
+      "2": {
+        "A": 17,
+        "B": 4
+      },
+      "4": {
+        "A": 19,
+        "B": 2,
+        "C": 0,
+        "D": 0
+      }
+    },
+    "max_same_position_streak": 16
+  },
+  "after": {
+    "distribution": {
+      "2": {
+        "A": 11,
+        "B": 10
+      },
+      "4": {
+        "A": 8,
+        "B": 5,
+        "C": 4,
+        "D": 4
+      }
+    },
+    "unposted_distribution": {
+      "2": {
+        "A": 7,
+        "B": 7
+      },
+      "4": {
+        "A": 0,
+        "B": 4,
+        "C": 4,
+        "D": 4
+      }
+    },
+    "max_same_position_streak": 10
+  },
+  "difficulty_cross_tab": {
+    "L1": {
+      "B": 4,
+      "A": 2
+    },
+    "L2": {
+      "C": 3,
+      "B": 8,
+      "A": 7,
+      "D": 1
+    },
+    "L3": {
+      "A": 7,
+      "D": 3,
+      "C": 1,
+      "B": 1
+    },
+    "beginner": {
+      "A": 1
+    },
+    "very_easy": {
+      "B": 1,
+      "A": 1
+    },
+    "easy": {
+      "B": 1,
+      "A": 1
+    }
+  },
+  "immutable_history_exception": {
+    "four_choice_target": "mathematically minimal max-min after protecting posted content",
+    "max_streak": "historical posted streak remains immutable; unposted sequence <= 2"
+  }
+}

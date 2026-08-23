@@ -1,0 +1,9 @@
+{
+  "allowed_choice_counts": [2, 4],
+  "two_choice_weekly_max_difference": 1,
+  "four_choice_weekly_max_difference": 1,
+  "max_same_position_streak": 2,
+  "daily_max_difference": 1,
+  "assignment_strategy": "least_used_balanced",
+  "difficulty_independent": true
+}

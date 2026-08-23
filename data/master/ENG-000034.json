@@ -6,8 +6,8 @@
   "seasonal": false,
   "question": "What does she say to him?",
   "choices": [
-    "You can sit here.",
-    "I can sit here."
+    "I can sit here.",
+    "You can sit here."
   ],
   "answer_type": "single",
   "best_answer": "You can sit here.",
@@ -35,7 +35,7 @@
   "instagram_caption": "短い英語クイズです。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
+  "threads_answer_text": "💡 正解は B. You can sit here.\n\n相手に席を勧めるので、主語はyouです。\n\n🗣️ You can sit here.\n「ここに座っていいですよ。」\n\n🔑 you＝相手 / I＝自分",
   "publish_at": "2026-08-24T18:00:00+09:00",
   "situation_purpose": "grant_permission",
   "response_family": "short_affirmative_response",

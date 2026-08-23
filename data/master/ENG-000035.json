@@ -6,9 +6,9 @@
   "seasonal": false,
   "question": "Which sentence is correct?",
   "choices": [
-    "He plays tennis.",
     "He play tennis.",
     "He playing tennis.",
+    "He plays tennis.",
     "He is play tennis."
   ],
   "answer_type": "single",
@@ -37,7 +37,7 @@
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
   "threads_parent_text": "これ分かったら基礎はOK。",
-  "threads_answer_text": "💡 正解は A. He plays tennis.\n\nhe の現在形には動詞へ -s を付けます。",
+  "threads_answer_text": "💡 正解は C. He plays tennis.\n\nhe の現在形には動詞へ -s を付けます。",
   "publish_at": "2026-08-24T20:30:00+09:00",
   "question_guide_ja": "正しい英文はどれ？",
   "question_role": "meta_instruction",

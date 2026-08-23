@@ -9,6 +9,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 from instagram_automation.answer_renderer import render_answer  # noqa: E402
+from instagram_automation.choice_positions import assign_balanced_positions  # noqa: E402
 from instagram_automation.daily_batch import build_daily_status  # noqa: E402
 from instagram_automation.paths import MASTER_DIR, THREADS_REPO_ROOT  # noqa: E402
 from instagram_automation.renderer import render_question  # noqa: E402
@@ -54,13 +55,14 @@ def existing_masters(week_ids: set[str]) -> list[dict]:
 def main() -> None:
     start = date.fromisoformat(sys.argv[1]) if len(sys.argv) == 2 else date.today()
     first = read_json(REPO_ROOT / "data" / "production" / f"daily-{start.isoformat()}.json")
-    quizzes = first["quizzes"] + dated_items(start)
+    quizzes = assign_balanced_positions(first["quizzes"] + dated_items(start))
     normals = [first["normal"]] + [normal_item(raw, start + timedelta(days=index + 1))
                                            for index, raw in enumerate(NORMALS)]
     week = {
         "start_date": start.isoformat(),
         "end_date": (start + timedelta(days=6)).isoformat(),
         "quality_profile": "restart_adult_jp",
+        "position_distribution_required": True,
         "quizzes": quizzes,
         "normals": normals,
     }

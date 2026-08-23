@@ -31,7 +31,7 @@ class ProductionDifficultyGateTests(unittest.TestCase):
 
     def test_all_unposted_are_target_and_not_visual_or_common_sense_only(self):
         items = self.unposted()
-        self.assertEqual(len(items), 32)
+        self.assertEqual(len(items), 26)
         for content_id in items:
             master = json.loads((REPO_ROOT / "data" / "master" / f"{content_id}.json").read_text())
             validate(master)

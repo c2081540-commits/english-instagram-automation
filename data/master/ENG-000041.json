@@ -6,10 +6,10 @@
   "seasonal": false,
   "question": "She offers ___ him with the boxes.",
   "choices": [
-    "to help",
     "help",
     "helping",
-    "helped"
+    "helped",
+    "to help"
   ],
   "answer_type": "single",
   "best_answer": "to help",
@@ -37,7 +37,7 @@
   "instagram_caption": "今日の1問。答えは2枚目へ。",
   "instagram_hashtags": [],
   "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は A. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
+  "threads_answer_text": "💡 正解は D. to help\n\noffer to helpで「手伝うと申し出る」という意味になります。\n\n🗣️ She offers to help him with the boxes.\n「彼女は箱を運ぶのを手伝うと申し出ています。」\n\n🔑 offer to＋動詞＝〜すると申し出る",
   "publish_at": "2026-08-25T20:30:00+09:00",
   "situation_purpose": "accept_help_offer",
   "response_family": "short_affirmative_response",

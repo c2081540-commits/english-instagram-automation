@@ -6,10 +6,10 @@
   "seasonal": false,
   "question": "Would you like anything ___?",
   "choices": [
-    "else",
     "other",
     "another",
-    "again"
+    "again",
+    "else"
   ],
   "answer_type": "single",
   "best_answer": "else",
@@ -37,7 +37,7 @@
   "instagram_caption": "カフェやレストランで聞かれる一言。追加がないときの自然な返し方は？",
   "instagram_hashtags": [],
   "threads_parent_text": "これ分かったら基礎はOK。",
-  "threads_answer_text": "💡 正解は A. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
+  "threads_answer_text": "💡 正解は D. else\n\nanything elseで「ほかに何か」という意味になります。\n\n🗣️ Would you like anything else?\n「ほかに何かいかがですか？」\n\n🔑 anything else＝ほかに何か",
   "publish_at": "2026-08-20T20:30:00+09:00",
   "question_guide_ja": "「ほかにも何か」ならどれ？",
   "question_role": "learning_sentence",
