@@ -4,7 +4,10 @@
   "content_type": "normal",
   "channel": "stories",
   "publish_at": "2026-08-23T22:30:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
-  "story_image": "artifacts/stories/ENG-100005-story.png"
+  "story_image": "artifacts/stories/ENG-100005-story.png",
+  "remote_post_id": "18586742578065706",
+  "posted_at": "2026-08-23T22:30:34.135549+09:00",
+  "error": null
 }
