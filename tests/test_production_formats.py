@@ -10,7 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from instagram_automation.formats import (FormatValidationError, validate_answer_payload,
-                                           validate_format_master, validate_quiz_schedule)
+                                           validate_format_master, validate_quiz_schedule,
+                                           validate_schedule_manifests)
 from instagram_automation.answer_renderer import validate_production_answer
 
 
@@ -44,9 +45,29 @@ def difference():
     return x
 
 
+def standard(fmt="text"):
+    x=base(fmt); x.update(choices=["wrong","right"], explanation="短い説明です。",
+        completed_sentence="Test right here.", japanese_translation="短い日本語訳です。",
+        instagram_caption="caption", threads_parent_text="hook",
+        threads_answer_text="✅ 正解は B. right\n\n短い説明です。",threads_reply_explanation="短い説明です。",
+        visual_required=fmt=="visual", question_guide_ja="入るのはどっち？")
+    if fmt=="visual":
+        x.update(question_guide_ja=None,visual_semantic_consistency=True,
+                 visual_answer_uniqueness=True,visual_only_solvable=False,
+                 visual_semantics={"subject_gender":"verified","subject_count":"verified",
+                 "action":"verified","direction":"verified","object":"verified",
+                 "state":"verified","location":"verified","completed_sentence":"Test right here."})
+    return x
+
+
 class ProductionFormatTests(unittest.TestCase):
     def test_valid_cases(self):
-        for value in (error_hunt(),pattern(),save_list(),difference()): validate_format_master(value)
+        for value in (standard(),standard("visual"),error_hunt(),pattern(),save_list(),difference()): validate_format_master(value)
+    def test_text_and_visual_contracts_fail_closed(self):
+        x=standard(); x["japanese_translation"]=""
+        with self.assertRaises(FormatValidationError): validate_format_master(x)
+        x=standard("visual"); x["visual_answer_uniqueness"]=False
+        with self.assertRaises(FormatValidationError): validate_format_master(x)
     def test_error_hunt_correct_sentence_cannot_be_changed(self):
         x=error_hunt(); x["sentences"][0]["corrected_sentence"]="changed"
         with self.assertRaises(FormatValidationError): validate_format_master(x)
@@ -90,5 +111,10 @@ class ProductionFormatTests(unittest.TestCase):
                for i,(day,slot) in enumerate((d,s) for d in (24,25) for s in slots)]
         validate_quiz_schedule(items,"2026-08-24","2026-08-25",slots)
         with self.assertRaises(FormatValidationError): validate_quiz_schedule(items[:-1],"2026-08-24","2026-08-25",slots)
+    def test_old_and_new_schedule_manifests_can_coexist(self):
+        slots=["07:00"]
+        old={"start_date":"2026-08-24","end_date":"2026-08-24","items":[{"content_id":"ENG-900001","publish_at":"2026-08-24T07:00:00+09:00","status":"posted","content_type":"quiz"}]}
+        new={"start_date":"2026-08-25","end_date":"2026-08-25","items":[{"content_id":"ENG-900002","publish_at":"2026-08-25T07:00:00+09:00","status":"pending","content_type":"quiz"}]}
+        self.assertEqual(len(validate_schedule_manifests([old,new],slots)),2)
 
 if __name__ == "__main__": unittest.main()

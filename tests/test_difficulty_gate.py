@@ -86,20 +86,20 @@ class ProductionDifficultyGateTests(unittest.TestCase):
             validate(master)
 
     def test_second_pass_uses_four_distinct_learning_points_and_strong_two_choices(self):
-        expected = {
-            "ENG-000023": (False, "be about to＋動詞"),
-            "ENG-000032": (True, "upとup toの使い分け"),
-            "ENG-000034": (True, "会話でのyouとIの使い分け"),
-            "ENG-000046": (True, "現在進行形の疑問文"),
-        }
-        for content_id, (visual_required, learning_point) in expected.items():
+        expected = {"ENG-000023": False, "ENG-000032": True,
+                    "ENG-000034": True, "ENG-000046": True}
+        points = set()
+        for content_id, visual_required in expected.items():
             master = json.loads((REPO_ROOT / "data" / "master" / f"{content_id}.json").read_text())
+            threads = json.loads((THREADS_ROOT / "data" / "master" / "quiz" / f"{content_id}.json").read_text())
             self.assertEqual(len(master["choices"]), 2)
             self.assertEqual(master["difficulty_gate"]["effective_choice_count"], 2)
             self.assertEqual(master["difficulty_gate"]["weak_distractor_count"], 0)
             self.assertEqual(master["visual_required"], visual_required)
-            self.assertEqual(master["learning_point"], learning_point)
-        self.assertEqual(len({point for _, point in expected.values()}), 4)
+            self.assertTrue(master["learning_point"].strip())
+            self.assertEqual(master["learning_point"], threads["learning_point"])
+            points.add(master["learning_point"])
+        self.assertEqual(len(points), 4)
 
 
 if __name__ == "__main__":

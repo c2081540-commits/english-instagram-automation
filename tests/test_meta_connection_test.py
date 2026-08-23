@@ -89,7 +89,7 @@ class InstagramConnectionTestTests(unittest.TestCase):
         production = [item for item in queues if item.get("platform") == "instagram"]
         schedule_ids = {item["content_id"] for item in json.loads(
             (REPO_ROOT / "data" / "production" / "final-schedule-2026-08-20.json").read_text())["items"]}
-        self.assertEqual({item["content_id"] for item in production}, schedule_ids)
+        self.assertTrue(schedule_ids.issubset({item["content_id"] for item in production}))
         posted = [item for item in production if item["status"] == "posted"]
         self.assertTrue(all(item.get("remote_post_id") and item.get("posted_at") for item in posted))
         self.assertTrue(all(item["status"] == "pending" and "remote_post_id" not in item

@@ -132,9 +132,38 @@ def _difference(record):
         raise FormatValidationError("completed_sentence must use the exact correct_answer")
 
 
+def _text_visual(record):
+    _choices(record)
+    for field in ("explanation", "completed_sentence", "japanese_translation", "threads_reply_explanation",
+                  "instagram_caption", "threads_parent_text", "threads_answer_text"):
+        _text(record.get(field), field)
+    visual = record["format"] == "visual"
+    if record.get("visual_required") is not visual:
+        raise FormatValidationError("format and visual_required mismatch")
+    if visual:
+        if record.get("visual_semantic_consistency") is not True:
+            raise FormatValidationError("visual_semantic_consistency must be true")
+        if record.get("visual_answer_uniqueness") is not True:
+            raise FormatValidationError("visual_answer_uniqueness must be true")
+        if record.get("visual_only_solvable") is not False:
+            raise FormatValidationError("visual_only_solvable must be false")
+        semantics = record.get("visual_semantics")
+        required = {"subject_gender", "subject_count", "action", "direction", "object",
+                    "state", "location", "completed_sentence"}
+        if not isinstance(semantics, dict) or set(semantics) != required:
+            raise FormatValidationError("visual_semantics fields mismatch")
+        if semantics["completed_sentence"] != record["completed_sentence"]:
+            raise FormatValidationError("visual completed_sentence mismatch")
+    else:
+        guide = _text(record.get("question_guide_ja"), "question_guide_ja")
+        if guide != guide.strip() or "\n" in guide or "\r" in guide or len(guide) > 30:
+            raise FormatValidationError("question_guide_ja must be one trimmed line of at most 30 characters")
+
+
 def validate_format_master(record):
     _common(record)
-    dispatch = {"error_hunt": _error_hunt, "pattern": _pattern,
+    dispatch = {"text": _text_visual, "visual": _text_visual,
+                "error_hunt": _error_hunt, "pattern": _pattern,
                 "save_list": _save_list, "difference": _difference}
     validator = dispatch.get(record["format"])
     if validator:
@@ -213,7 +242,20 @@ def from_dryrun(item, publish_at):
         record.update(choices=item["choices"], choice_explanations=dict(item["differences"]),
                       completed_sentence=item["question"].replace("___",item["correct_answer"]))
     else:
-        record["choices"] = item.get("choices", [])
+        reply_lines = [line.strip() for line in item.get("threads_reply", "").splitlines() if line.strip()]
+        answer_index = next((i for i, line in enumerate(reply_lines) if "正解は" in line), -1)
+        reply_explanation = reply_lines[answer_index + 1] if 0 <= answer_index < len(reply_lines) - 1 else None
+        record.update(choices=item.get("choices", []),
+                      explanation=item.get("explanation"),
+                      completed_sentence=item.get("example"),
+                      japanese_translation=item.get("translation"),
+                      instagram_caption=item.get("caption"),
+                      threads_parent_text=item.get("threads_parent"),
+                      threads_answer_text=item.get("threads_reply"),
+                      threads_reply=item.get("threads_reply"),
+                      threads_reply_explanation=reply_explanation,
+                      question_guide_ja=item.get("question_guide_ja"),
+                      visual_required=fmt == "visual")
     return record
 
 
@@ -237,3 +279,17 @@ def validate_quiz_schedule(items, start_date, end_date, slots):
         counts[parsed.date()]+=1
     if set(counts.values()) != {len(slots)} or len(counts) != expected_days:
         raise FormatValidationError("each date must contain every daily quiz slot")
+
+
+def validate_schedule_manifests(manifests, slots):
+    """Validate coexisting immutable/current quiz manifests; newest assignment wins by ID."""
+    active = {}
+    for manifest in sorted(manifests, key=lambda value: value["start_date"]):
+        quizzes = [item for item in manifest["items"] if item.get("content_type", "quiz") == "quiz"]
+        validate_quiz_schedule([dict(item, status="pending") for item in quizzes],
+                               manifest["start_date"], manifest["end_date"], slots)
+        active.update({item["content_id"]: item for item in quizzes})
+    timestamps = [item["publish_at"] for item in active.values()]
+    if len(timestamps) != len(set(timestamps)):
+        raise FormatValidationError("active schedule manifests contain a duplicate publish_at")
+    return sorted(active.values(), key=lambda item: item["publish_at"])

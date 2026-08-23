@@ -46,9 +46,9 @@ class FinalInstagramScheduleTests(unittest.TestCase):
     def test_carousel_order_and_story_slot(self):
         quizzes = [queue for queue in self.queues if queue["content_type"] == "quiz"]
         normals = [queue for queue in self.queues if queue["content_type"] == "normal"]
-        dates = {datetime.fromisoformat(queue["publish_at"]).date() for queue in self.queues}
-        self.assertEqual(len(quizzes), len(dates) * len(self.config["quiz_slots"]))
-        self.assertEqual(len(normals), len(dates))
+        expected_quizzes = sum(item["content_type"] == "quiz" for item in self.schedule["items"])
+        expected_normals = sum(item["content_type"] == "normal" for item in self.schedule["items"])
+        self.assertEqual((len(quizzes), len(normals)), (expected_quizzes, expected_normals))
         self.assertTrue(all([(slide["order"], slide["role"]) for slide in queue["carousel"]] ==
                             [(1, "question"), (2, "answer")] for queue in quizzes))
         self.assertTrue(all(datetime.fromisoformat(queue["publish_at"]).strftime("%H:%M") == "22:30"
