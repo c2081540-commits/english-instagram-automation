@@ -3,7 +3,7 @@
   "platform": "instagram",
   "content_type": "quiz",
   "channel": "feed",
-  "publish_at": "2026-08-25T09:30:00+09:00",
+  "publish_at": "2026-08-28T07:00:00+09:00",
   "status": "pending",
   "execution_eligibility": "scheduled",
   "carousel": [
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "基礎表現をひとつ確認。",
-  "difficulty_level": "L2"
+  "difficulty_level": "L2",
+  "format": "text",
+  "quiz_format": "text",
+  "correct_position": "B"
 }

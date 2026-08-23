@@ -1,0 +1,176 @@
+{
+  "content_id": "ENG-000050",
+  "format": "error_hunt",
+  "difficulty": "L3",
+  "learning_point": "不要な前置詞を置かない動詞",
+  "question": "4つの英文、何個間違ってる？",
+  "correct_answer": "2個",
+  "publish_at": "2026-08-24T15:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "sentences": [
+    {
+      "sentence": "I explained the plan to him.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "I explained the plan to him.",
+      "grammar_rule": "explain A to B",
+      "reason_ja": "説明する内容の後ろにto＋相手を置く自然な形です。"
+    },
+    {
+      "sentence": "She discussed about the issue.",
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She discussed the issue.",
+      "grammar_rule": "discuss + 目的語",
+      "reason_ja": "discussの直後には話題を置き、aboutは付けません。"
+    },
+    {
+      "sentence": "We entered to the room.",
+      "verdict": "INCORRECT",
+      "corrected_sentence": "We entered the room.",
+      "grammar_rule": "enter + 場所",
+      "reason_ja": "enterの直後には場所を置き、toは付けません。"
+    },
+    {
+      "sentence": "He replied to my message.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "He replied to my message.",
+      "grammar_rule": "reply to + 対象",
+      "reason_ja": "replyは返答の対象をtoの後ろに置けます。"
+    }
+  ],
+  "answer_mode": "count",
+  "displayed_answer": "2個",
+  "answer_sentences": [
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "I explained the plan to him.",
+      "reason_ja": "説明する内容の後ろにto＋相手を置く自然な形です。"
+    },
+    {
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She discussed the issue.",
+      "reason_ja": "discussの直後には話題を置き、aboutは付けません。"
+    },
+    {
+      "verdict": "INCORRECT",
+      "corrected_sentence": "We entered the room.",
+      "reason_ja": "enterの直後には場所を置き、toは付けません。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "He replied to my message.",
+      "reason_ja": "replyは返答の対象をtoの後ろに置けます。"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "error_hunt",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
+  "choices": [],
+  "answer_type": "single",
+  "best_answer": "2個",
+  "acceptable_answers": [
+    "2個"
+  ],
+  "answer_hint": "4つの英文、何個間違ってる？",
+  "answer_hint_approved": true,
+  "explanation": "1. CORRECT: 説明する内容の後ろにto＋相手を置く自然な形です。\n2. INCORRECT: discussの直後には話題を置き、aboutは付けません。\n3. INCORRECT: enterの直後には場所を置き、toは付けません。\n4. CORRECT: replyは返答の対象をtoの後ろに置けます。",
+  "key_difference": null,
+  "examples": [
+    "I explained the plan to him.",
+    "She discussed the issue.",
+    "We entered the room.",
+    "He replied to my message."
+  ],
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "前置詞を足しすぎている英文は？\n4つ全部を判定してみよう。",
+  "threads_answer_text": "✅ 間違いは2個です。\n\n1 ○ I explained the plan to him.\n説明する内容の後ろにto＋相手を置く自然な形です。\n2 × She discussed the issue.\ndiscussの直後には話題を置き、aboutは付けません。\n3 × We entered the room.\nenterの直後には場所を置き、toは付けません。\n4 ○ He replied to my message.\nreplyは返答の対象をtoの後ろに置けます。",
+  "question_guide_ja": "4つの英文、何個間違ってる？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": null,
+  "correct_position": null,
+  "format_data": {
+    "items": [
+      "I explained the plan to him.",
+      "She discussed about the issue.",
+      "We entered to the room.",
+      "He replied to my message."
+    ],
+    "sentence_audit": [
+      {
+        "sentence": "I explained the plan to him.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "I explained the plan to him.",
+        "grammar_rule": "explain A to B",
+        "reason_ja": "説明する内容の後ろにto＋相手を置く自然な形です。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "She discussed about the issue.",
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She discussed the issue.",
+        "grammar_rule": "discuss + 目的語",
+        "reason_ja": "discussの直後には話題を置き、aboutは付けません。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "We entered to the room.",
+        "verdict": "INCORRECT",
+        "corrected_sentence": "We entered the room.",
+        "grammar_rule": "enter + 場所",
+        "reason_ja": "enterの直後には場所を置き、toは付けません。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "He replied to my message.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "He replied to my message.",
+        "grammar_rule": "reply to + 対象",
+        "reason_ja": "replyは返答の対象をtoの後ろに置けます。",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "threads_reply": "✅ 間違いは2個です。\n\n1 ○ I explained the plan to him.\n説明する内容の後ろにto＋相手を置く自然な形です。\n2 × She discussed the issue.\ndiscussの直後には話題を置き、aboutは付けません。\n3 × We entered the room.\nenterの直後には場所を置き、toは付けません。\n4 ○ He replied to my message.\nreplyは返答の対象をtoの後ろに置けます。",
+  "answer_payload": {
+    "format": "error_hunt",
+    "correct_answer": "2個",
+    "answer_sentences": [
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "I explained the plan to him.",
+        "reason_ja": "説明する内容の後ろにto＋相手を置く自然な形です。"
+      },
+      {
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She discussed the issue.",
+        "reason_ja": "discussの直後には話題を置き、aboutは付けません。"
+      },
+      {
+        "verdict": "INCORRECT",
+        "corrected_sentence": "We entered the room.",
+        "reason_ja": "enterの直後には場所を置き、toは付けません。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "He replied to my message.",
+        "reason_ja": "replyは返答の対象をtoの後ろに置けます。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "content_id": "ENG-000067",
+  "format": "text",
+  "difficulty": "L2",
+  "learning_point": "when節の時",
+  "question": "Please let me know ___ you arrive.",
+  "correct_answer": "when",
+  "publish_at": "2026-08-31T15:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "when",
+    "until",
+    "during",
+    "while"
+  ],
+  "explanation": "whenは「〜するとき」。arriveのような出来事の時点を示せます。",
+  "completed_sentence": "Call me when you get home.",
+  "japanese_translation": "家に着いたら電話して。",
+  "instagram_caption": "短く考えて、答えは2枚目で確認。",
+  "threads_parent_text": "到着したら知らせて、なら？",
+  "threads_answer_text": "💡 到着した時点を表します。\n\n✅ 正解は A. when\n\nwhenは「〜するとき」。arriveのような出来事の時点を示せます。\n\n📝 Call me when you get home.\n「家に着いたら電話して。」",
+  "threads_reply": "💡 到着した時点を表します。\n\n✅ 正解は A. when\n\nwhenは「〜するとき」。arriveのような出来事の時点を示せます。\n\n📝 Call me when you get home.\n「家に着いたら電話して。」",
+  "threads_reply_explanation": "whenは「〜するとき」。arriveのような出来事の時点を示せます。",
+  "question_guide_ja": "到着する「とき」ならどれ？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "when",
+  "acceptable_answers": [
+    "when"
+  ],
+  "answer_hint": "到着した時点を表します。",
+  "answer_hint_approved": true,
+  "key_difference": null,
+  "examples": [
+    "Call me when you get home."
+  ],
+  "example_translations": [
+    "家に着いたら電話して。"
+  ],
+  "tip": null,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_hashtags": [],
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "A",
+  "format_data": {}
+}

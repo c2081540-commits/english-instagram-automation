@@ -1,0 +1,196 @@
+{
+  "content_id": "ENG-000054",
+  "format": "save_list",
+  "difficulty": "L2",
+  "learning_point": "仕事で使う基本句動詞",
+  "question": "仕事でよく使う句動詞",
+  "correct_answer": "off",
+  "publish_at": "2026-09-01T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "list_items": [
+    {
+      "english": "turn down",
+      "japanese": "断る"
+    },
+    {
+      "english": "look over",
+      "japanese": "目を通す"
+    },
+    {
+      "english": "fill out",
+      "japanese": "記入する"
+    },
+    {
+      "english": "set up",
+      "japanese": "準備・設定する"
+    }
+  ],
+  "list_theme": "仕事でよく使う句動詞",
+  "target_item": {
+    "prompt": "put ___",
+    "completed": "put off",
+    "japanese": "延期する",
+    "list_theme": "仕事でよく使う句動詞"
+  },
+  "choices": [
+    "in",
+    "off",
+    "on",
+    "out"
+  ],
+  "complete_list": [
+    {
+      "english": "turn down",
+      "japanese": "断る（依頼・提案など）"
+    },
+    {
+      "english": "look over",
+      "japanese": "ざっと目を通す"
+    },
+    {
+      "english": "fill out",
+      "japanese": "書類に記入する"
+    },
+    {
+      "english": "set up",
+      "japanese": "準備する・設定する"
+    },
+    {
+      "english": "put off",
+      "japanese": "延期する"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "save_list",
+  "category": "vocabulary",
+  "production_category": "review",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "off",
+  "acceptable_answers": [
+    "off"
+  ],
+  "answer_hint": "仕事でよく使う句動詞",
+  "answer_hint_approved": true,
+  "explanation": "句動詞は動詞＋短い語をセットで覚えます。",
+  "key_difference": null,
+  "examples": [
+    "turn down",
+    "look over",
+    "fill out",
+    "set up",
+    "put off"
+  ],
+  "example_translations": [
+    "断る（依頼・提案など）",
+    "ざっと目を通す",
+    "書類に記入する",
+    "準備する・設定する",
+    "延期する"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "仕事で使う句動詞を5つ。\n最後の空欄はどれ？",
+  "threads_answer_text": "✅ 正解は B. off\n\nturn down＝断る（依頼・提案など）\nlook over＝ざっと目を通す\nfill out＝書類に記入する\nset up＝準備する・設定する\nput off＝延期する\n\n句動詞は動詞＋短い語をセットで覚えます。",
+  "question_guide_ja": "仕事でよく使う句動詞",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "B",
+  "format_data": {
+    "list_items": [
+      [
+        "turn down",
+        "断る"
+      ],
+      [
+        "look over",
+        "目を通す"
+      ],
+      [
+        "fill out",
+        "記入する"
+      ],
+      [
+        "set up",
+        "準備・設定する"
+      ],
+      [
+        "put ___",
+        "延期する"
+      ]
+    ],
+    "complete_items": [
+      [
+        "turn down",
+        "断る（依頼・提案など）"
+      ],
+      [
+        "look over",
+        "ざっと目を通す"
+      ],
+      [
+        "fill out",
+        "書類に記入する"
+      ],
+      [
+        "set up",
+        "準備する・設定する"
+      ],
+      [
+        "put off",
+        "延期する"
+      ]
+    ],
+    "note": "句動詞は動詞＋短い語をセットで覚えます。"
+  },
+  "threads_reply": "✅ 正解は B. off\n\nturn down＝断る（依頼・提案など）\nlook over＝ざっと目を通す\nfill out＝書類に記入する\nset up＝準備する・設定する\nput off＝延期する\n\n句動詞は動詞＋短い語をセットで覚えます。",
+  "answer_payload": {
+    "format": "save_list",
+    "correct_answer": "off",
+    "complete_list": [
+      {
+        "english": "turn down",
+        "japanese": "断る（依頼・提案など）"
+      },
+      {
+        "english": "look over",
+        "japanese": "ざっと目を通す"
+      },
+      {
+        "english": "fill out",
+        "japanese": "書類に記入する"
+      },
+      {
+        "english": "set up",
+        "japanese": "準備する・設定する"
+      },
+      {
+        "english": "put off",
+        "japanese": "延期する"
+      }
+    ]
+  }
+}

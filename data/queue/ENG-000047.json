@@ -19,5 +19,8 @@
     }
   ],
   "caption": "今日の1問。答えは2枚目へ。",
-  "difficulty_level": "L2"
+  "difficulty_level": "L2",
+  "format": "text",
+  "quiz_format": "text",
+  "correct_position": "C"
 }

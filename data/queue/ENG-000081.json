@@ -1,0 +1,26 @@
+{
+  "content_id": "ENG-000081",
+  "platform": "instagram",
+  "content_type": "quiz",
+  "channel": "feed",
+  "publish_at": "2026-08-30T18:00:00+09:00",
+  "status": "pending",
+  "execution_eligibility": "scheduled",
+  "carousel": [
+    {
+      "order": 1,
+      "role": "question",
+      "image_path": "artifacts/images/ENG-000081-question.png"
+    },
+    {
+      "order": 2,
+      "role": "answer",
+      "image_path": "artifacts/images/ENG-000081-answer.png"
+    }
+  ],
+  "caption": "例から規則を見つける英語クイズ。",
+  "difficulty_level": "L2",
+  "format": "pattern",
+  "quiz_format": "pattern",
+  "correct_position": "B"
+}

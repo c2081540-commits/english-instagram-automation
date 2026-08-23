@@ -1,0 +1,105 @@
+{
+  "content_id": "ENG-000078",
+  "format": "difference",
+  "difficulty": "L3",
+  "learning_point": "do / make / give / take",
+  "question": "Could you ___ me a favor?",
+  "correct_answer": "do",
+  "publish_at": "2026-09-02T18:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "make",
+    "do",
+    "give",
+    "take"
+  ],
+  "choice_explanations": {
+    "do": "do someone a favor",
+    "make": "作る",
+    "give": "与える",
+    "take": "取る"
+  },
+  "completed_sentence": "Could you do me a favor?",
+  "content_type": "quiz",
+  "quiz_format": "difference",
+  "category": "vocabulary",
+  "production_category": "natural_choice",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "do",
+  "acceptable_answers": [
+    "do"
+  ],
+  "answer_hint": "文全体の形と語の組み合わせを比べよう。",
+  "answer_hint_approved": true,
+  "explanation": "do = do someone a favor\nmake = 作る\ngive = 与える\ntake = 取る",
+  "key_difference": "do = do someone a favor\nmake = 作る\ngive = 与える\ntake = 取る",
+  "examples": [
+    "Could you do me a favor?"
+  ],
+  "example_translations": [
+    "お願いを聞いてもらえますか？"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "短く考えて、答えは2枚目で確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "似た基本語、使い分けられる？",
+  "threads_answer_text": "✅ 正解は B. do\n\ndo＝do someone a favor\nmake＝作る\ngive＝与える\ntake＝取る\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
+  "question_guide_ja": "文全体の形と語の組み合わせを比べよう。",
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "B",
+  "format_data": {
+    "differences": [
+      [
+        "do",
+        "do someone a favor"
+      ],
+      [
+        "make",
+        "作る"
+      ],
+      [
+        "give",
+        "与える"
+      ],
+      [
+        "take",
+        "取る"
+      ]
+    ]
+  },
+  "threads_reply": "✅ 正解は B. do\n\ndo＝do someone a favor\nmake＝作る\ngive＝与える\ntake＝取る\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
+  "answer_payload": {
+    "format": "difference",
+    "correct_answer": "do",
+    "choice_explanations": {
+      "do": "do someone a favor",
+      "make": "作る",
+      "give": "与える",
+      "take": "取る"
+    }
+  }
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "content_id": "ENG-000032",
+    "question": "He is walking ___ the stairs.",
+    "choices": [
+      "up to",
+      "up"
+    ],
+    "correct_answer": "up",
+    "visual_evidence": "男性が階段上を上方向へ歩いている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "階段へ近づくup toではなく、階段上を進むupへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000039",
+    "question": "Water is coming ___ of the bottle.",
+    "choices": [
+      "up",
+      "out",
+      "on",
+      "at"
+    ],
+    "correct_answer": "out",
+    "visual_evidence": "ボトル口から水が外へ流れている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "水の方向が外向きなのでoutへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000044",
+    "question": "He is folding the paper ___ half.",
+    "choices": [
+      "on",
+      "in",
+      "at",
+      "to"
+    ],
+    "correct_answer": "in",
+    "visual_evidence": "紙を中央で二つ折りにしている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "半分に折る状態が見え、in halfへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000034",
+    "question": "What does she say to him?",
+    "choices": [
+      "I can sit here.",
+      "You can sit here."
+    ],
+    "correct_answer": "You can sit here.",
+    "visual_evidence": "女性が男性へ空席を示している",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "話者が女性で相手を座らせる場面なのでYou can sit hereへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000041",
+    "question": "What is she offering to do?",
+    "choices": [
+      "open the door",
+      "make coffee",
+      "call a taxi",
+      "carry the boxes"
+    ],
+    "correct_answer": "carry the boxes",
+    "visual_evidence": "女性が箱を抱えた男性へ手を伸ばしている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "提示された動作の中でcarry the boxesだけが場面と一致する",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000046",
+    "question": "What is he showing her?",
+    "choices": [
+      "A train ticket",
+      "A free seat"
+    ],
+    "correct_answer": "A free seat",
+    "visual_evidence": "男性が隣の空席を手で示している",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "切符はなく、示している対象がfree seatだと分かる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000090",
+    "question": "She is pouring water ___ a glass.",
+    "choices": [
+      "onto",
+      "into"
+    ],
+    "correct_answer": "into",
+    "visual_evidence": "水がピッチャーからグラス内部へ流れている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "表面へのontoではなく内部へのintoへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000060",
+    "question": "Her umbrella is ___.",
+    "choices": [
+      "open",
+      "closed"
+    ],
+    "correct_answer": "open",
+    "visual_evidence": "開いた傘を持っている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "傘の状態がopenで、closedではないと判断できる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000091",
+    "question": "He is riding ___ the tunnel.",
+    "choices": [
+      "across",
+      "over",
+      "through",
+      "along"
+    ],
+    "correct_answer": "through",
+    "visual_evidence": "自転車がトンネル内部を出口へ進んでいる",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "内部を通り抜けるthroughへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000061",
+    "question": "The cup is almost ___.",
+    "choices": [
+      "empty",
+      "full"
+    ],
+    "correct_answer": "empty",
+    "visual_evidence": "カップに飲み物がわずかだけ残っている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "almost emptyでありfullではないと判断できる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000092",
+    "question": "He is holding ___ grocery bags.",
+    "choices": [
+      "three",
+      "two"
+    ],
+    "correct_answer": "two",
+    "visual_evidence": "男性が左右に1袋ずつ、合計2袋を持っている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "画像の数量からtwoへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000062",
+    "question": "He is getting ___ the bus.",
+    "choices": [
+      "off",
+      "at",
+      "to",
+      "on"
+    ],
+    "correct_answer": "on",
+    "visual_evidence": "男性がバス入口へ足を掛けて乗り込んでいる",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "移動方向からget onへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000093",
+    "question": "He is ___ the chair.",
+    "choices": [
+      "painting",
+      "moving",
+      "repairing",
+      "cleaning"
+    ],
+    "correct_answer": "repairing",
+    "visual_evidence": "男性がドライバーで椅子脚の金具を締めている",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "painting/moving/cleaningではなくrepairingへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  },
+  {
+    "content_id": "ENG-000063",
+    "question": "The books are ___ the laptop.",
+    "choices": [
+      "under",
+      "on",
+      "behind",
+      "next to"
+    ],
+    "correct_answer": "next to",
+    "visual_evidence": "本がノートPCのすぐ隣にある",
+    "visual_semantic_consistency": true,
+    "visual_answer_uniqueness": true,
+    "uniqueness_reason": "under/on/behindではなくnext toへ絞れる",
+    "visual_only_solvable": false,
+    "verdict": "PASS"
+  }
+]

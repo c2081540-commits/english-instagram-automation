@@ -1,0 +1,72 @@
+{
+  "content_id": "ENG-000071",
+  "format": "text",
+  "difficulty": "L2",
+  "learning_point": "turn the volume down",
+  "question": "Could you ___ the volume down?",
+  "correct_answer": "turn",
+  "publish_at": "2026-09-02T15:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "turn",
+    "take",
+    "make",
+    "do"
+  ],
+  "explanation": "turn the volume downで「音量を下げる」です。",
+  "completed_sentence": "Could you turn the volume down?",
+  "japanese_translation": "音量を下げてもらえますか？",
+  "instagram_caption": "短く考えて、答えは2枚目で確認。",
+  "threads_parent_text": "音量を下げる時の動詞は？",
+  "threads_answer_text": "💡 volumeと一緒に使う動詞は？\n\n✅ 正解は A. turn\n\nturn the volume downで「音量を下げる」です。\n\n📝 Could you turn the volume down?\n「音量を下げてもらえますか？」",
+  "threads_reply": "💡 volumeと一緒に使う動詞は？\n\n✅ 正解は A. turn\n\nturn the volume downで「音量を下げる」です。\n\n📝 Could you turn the volume down?\n「音量を下げてもらえますか？」",
+  "threads_reply_explanation": "turn the volume downで「音量を下げる」です。",
+  "question_guide_ja": "音量を下げる表現はどれ？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "turn",
+  "acceptable_answers": [
+    "turn"
+  ],
+  "answer_hint": "volumeと一緒に使う動詞は？",
+  "answer_hint_approved": true,
+  "key_difference": null,
+  "examples": [
+    "Could you turn the volume down?"
+  ],
+  "example_translations": [
+    "音量を下げてもらえますか？"
+  ],
+  "tip": null,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_hashtags": [],
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "A",
+  "format_data": {}
+}

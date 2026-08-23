@@ -1,0 +1,104 @@
+{
+  "content_id": "ENG-000083",
+  "format": "pattern",
+  "difficulty": "L3",
+  "learning_point": "un-で作る反対語",
+  "question": "反対の意味になる語はどれ？",
+  "correct_answer": "uncertain",
+  "publish_at": "2026-09-01T18:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "examples": [
+    "happy → unhappy",
+    "fair → unfair",
+    "usual → unusual"
+  ],
+  "target": "certain → ___",
+  "choices": [
+    "uncertain",
+    "incertain",
+    "discertain",
+    "uncertainly"
+  ],
+  "pattern_rule": "例に共通するun-で作る反対語を確認します。",
+  "examples_learning_point": "un-で作る反対語",
+  "target_learning_point": "un-で作る反対語",
+  "content_type": "quiz",
+  "quiz_format": "pattern",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "uncertain",
+  "acceptable_answers": [
+    "uncertain"
+  ],
+  "answer_hint": "反対の意味になる語はどれ？",
+  "answer_hint_approved": true,
+  "explanation": "例に共通するun-で作る反対語を確認します。\nhappy → unhappy / fair → unfair / usual → unusual / certain → uncertain",
+  "key_difference": null,
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "例から規則を見つける英語クイズ。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "例の並びから、最後の形を考えてみよう。",
+  "threads_answer_text": "✅ 正解は A. uncertain\n\nhappy → unhappy\nfair → unfair\nusual → unusual\ncertain → uncertain\n\n例の共通点をまとめて確認しましょう。",
+  "question_guide_ja": "反対の意味になる語はどれ？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "A",
+  "format_data": {
+    "examples": [
+      "happy → unhappy",
+      "fair → unfair",
+      "usual → unusual",
+      "certain → ___"
+    ],
+    "answer_sections": [
+      [
+        "答え",
+        "A. uncertain"
+      ],
+      [
+        "パターン",
+        "例に共通するun-で作る反対語を確認します。"
+      ],
+      [
+        "まとめ",
+        "happy → unhappy / fair → unfair / usual → unusual / certain → uncertain"
+      ]
+    ]
+  },
+  "threads_reply": "✅ 正解は A. uncertain\n\nhappy → unhappy\nfair → unfair\nusual → unusual\ncertain → uncertain\n\n例の共通点をまとめて確認しましょう。",
+  "answer_payload": {
+    "format": "pattern",
+    "correct_answer": "uncertain",
+    "pattern_rule": "例に共通するun-で作る反対語を確認します。",
+    "examples": [
+      "happy → unhappy",
+      "fair → unfair",
+      "usual → unusual"
+    ]
+  }
+}

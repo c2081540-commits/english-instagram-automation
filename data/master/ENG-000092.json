@@ -1,0 +1,92 @@
+{
+  "content_id": "ENG-000092",
+  "format": "visual",
+  "difficulty": "L1",
+  "learning_point": "複数の物の数",
+  "question": "He is holding ___ grocery bags.",
+  "correct_answer": "two",
+  "publish_at": "2026-09-01T07:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "three",
+    "two"
+  ],
+  "explanation": "two grocery bagsで「2つの買い物袋」です。",
+  "completed_sentence": "He is holding two grocery bags.",
+  "japanese_translation": "彼は買い物袋を2つ持っています。",
+  "instagram_caption": "短く考えて、答えは2枚目で確認。",
+  "threads_parent_text": "袋の数を英語で答えよう。",
+  "threads_answer_text": "💡 男性が持っている袋はいくつ？\n\n✅ 正解は B. two\n\ntwo grocery bagsで「2つの買い物袋」です。\n\n📝 He is holding two grocery bags.\n「彼は買い物袋を2つ持っています。」",
+  "threads_reply": "💡 男性が持っている袋はいくつ？\n\n✅ 正解は B. two\n\ntwo grocery bagsで「2つの買い物袋」です。\n\n📝 He is holding two grocery bags.\n「彼は買い物袋を2つ持っています。」",
+  "threads_reply_explanation": "two grocery bagsで「2つの買い物袋」です。",
+  "question_guide_ja": null,
+  "visual_required": true,
+  "content_type": "quiz",
+  "quiz_format": "visual",
+  "category": "vocabulary",
+  "production_category": "visual_vocabulary",
+  "difficulty_label": "beginner",
+  "difficulty_level": "L1",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "two",
+  "acceptable_answers": [
+    "two"
+  ],
+  "answer_hint": "男性が持っている袋はいくつ？",
+  "answer_hint_approved": true,
+  "key_difference": null,
+  "examples": [
+    "He is holding two grocery bags."
+  ],
+  "example_translations": [
+    "彼は買い物袋を2つ持っています。"
+  ],
+  "tip": null,
+  "visual_type": "photo",
+  "visual_description": "男性が左右に1袋ずつ、合計2袋を持っている",
+  "problem_image_path": "artifacts/images/ENG-000092-question.png",
+  "image_information_role": "decision_evidence",
+  "question_repeats_visual": false,
+  "visual_semantic_consistency": true,
+  "visual_answer_uniqueness": true,
+  "visual_only_solvable": false,
+  "instagram_hashtags": [],
+  "question_role": null,
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": true,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "B",
+  "format_data": {},
+  "visual_semantics": {
+    "subject_gender": "verified",
+    "subject_count": "verified",
+    "action": "男性が左右に1袋ずつ、合計2袋を持っている",
+    "direction": "verified",
+    "object": "verified",
+    "state": "verified",
+    "location": "verified",
+    "completed_sentence": "He is holding two grocery bags."
+  },
+  "visual_semantic_checks": {
+    "subject": true,
+    "gender": true,
+    "count": true,
+    "action": true,
+    "direction": true,
+    "object": true,
+    "state": true,
+    "location": true,
+    "completed_sentence": true,
+    "result": true
+  }
+}

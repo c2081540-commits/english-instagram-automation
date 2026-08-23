@@ -1,0 +1,176 @@
+{
+  "content_id": "ENG-000049",
+  "format": "error_hunt",
+  "difficulty": "L1",
+  "learning_point": "数えられない名詞information",
+  "question": "間違っている英文はどれ？",
+  "correct_answer": "2番",
+  "publish_at": "2026-08-26T09:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "sentences": [
+    {
+      "sentence": "I need some advice.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "I need some advice.",
+      "grammar_rule": "adviceは不可算名詞",
+      "reason_ja": "adviceは通常数えない名詞で、some adviceは自然です。"
+    },
+    {
+      "sentence": "She gave me an information.",
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She gave me some information.",
+      "grammar_rule": "informationは不可算名詞",
+      "reason_ja": "informationには通常anを付けません。"
+    },
+    {
+      "sentence": "We bought two chairs.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "We bought two chairs.",
+      "grammar_rule": "chairは可算名詞",
+      "reason_ja": "chairは数えられるため、two chairsが自然です。"
+    },
+    {
+      "sentence": "There is some water.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "There is some water.",
+      "grammar_rule": "waterは不可算名詞",
+      "reason_ja": "waterは通常数えない名詞で、some waterが自然です。"
+    }
+  ],
+  "answer_mode": "position",
+  "displayed_answer": "2番",
+  "answer_sentences": [
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "I need some advice.",
+      "reason_ja": "adviceは通常数えない名詞で、some adviceは自然です。"
+    },
+    {
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She gave me some information.",
+      "reason_ja": "informationには通常anを付けません。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "We bought two chairs.",
+      "reason_ja": "chairは数えられるため、two chairsが自然です。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "There is some water.",
+      "reason_ja": "waterは通常数えない名詞で、some waterが自然です。"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "error_hunt",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "beginner",
+  "difficulty_level": "L1",
+  "seasonal": false,
+  "choices": [],
+  "answer_type": "single",
+  "best_answer": "2番",
+  "acceptable_answers": [
+    "2番"
+  ],
+  "answer_hint": "間違っている英文はどれ？",
+  "answer_hint_approved": true,
+  "explanation": "1. CORRECT: adviceは通常数えない名詞で、some adviceは自然です。\n2. INCORRECT: informationには通常anを付けません。\n3. CORRECT: chairは数えられるため、two chairsが自然です。\n4. CORRECT: waterは通常数えない名詞で、some waterが自然です。",
+  "key_difference": null,
+  "examples": [
+    "I need some advice.",
+    "She gave me some information.",
+    "We bought two chairs.",
+    "There is some water."
+  ],
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "正しくない英文が1つあります。\nどれか見つけられる？",
+  "threads_answer_text": "✅ 間違いは2番です。\n\n1 ○ I need some advice.\nadviceは通常数えない名詞で、some adviceは自然です。\n2 × She gave me some information.\ninformationには通常anを付けません。\n3 ○ We bought two chairs.\nchairは数えられるため、two chairsが自然です。\n4 ○ There is some water.\nwaterは通常数えない名詞で、some waterが自然です。",
+  "question_guide_ja": "間違っている英文はどれ？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": null,
+  "correct_position": null,
+  "format_data": {
+    "items": [
+      "I need some advice.",
+      "She gave me an information.",
+      "We bought two chairs.",
+      "There is some water."
+    ],
+    "sentence_audit": [
+      {
+        "sentence": "I need some advice.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "I need some advice.",
+        "grammar_rule": "adviceは不可算名詞",
+        "reason_ja": "adviceは通常数えない名詞で、some adviceは自然です。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "She gave me an information.",
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She gave me some information.",
+        "grammar_rule": "informationは不可算名詞",
+        "reason_ja": "informationには通常anを付けません。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "We bought two chairs.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "We bought two chairs.",
+        "grammar_rule": "chairは可算名詞",
+        "reason_ja": "chairは数えられるため、two chairsが自然です。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "There is some water.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "There is some water.",
+        "grammar_rule": "waterは不可算名詞",
+        "reason_ja": "waterは通常数えない名詞で、some waterが自然です。",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "threads_reply": "✅ 間違いは2番です。\n\n1 ○ I need some advice.\nadviceは通常数えない名詞で、some adviceは自然です。\n2 × She gave me some information.\ninformationには通常anを付けません。\n3 ○ We bought two chairs.\nchairは数えられるため、two chairsが自然です。\n4 ○ There is some water.\nwaterは通常数えない名詞で、some waterが自然です。",
+  "answer_payload": {
+    "format": "error_hunt",
+    "correct_answer": "2番",
+    "answer_sentences": [
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "I need some advice.",
+        "reason_ja": "adviceは通常数えない名詞で、some adviceは自然です。"
+      },
+      {
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She gave me some information.",
+        "reason_ja": "informationには通常anを付けません。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "We bought two chairs.",
+        "reason_ja": "chairは数えられるため、two chairsが自然です。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "There is some water.",
+        "reason_ja": "waterは通常数えない名詞で、some waterが自然です。"
+      }
+    ]
+  }
+}

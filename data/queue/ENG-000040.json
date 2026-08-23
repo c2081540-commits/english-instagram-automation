@@ -19,5 +19,8 @@
     }
   ],
   "caption": "短い英語クイズです。",
-  "difficulty_level": "L3"
+  "difficulty_level": "L3",
+  "format": "text",
+  "quiz_format": "text",
+  "correct_position": "C"
 }

@@ -1,0 +1,196 @@
+{
+  "content_id": "ENG-000087",
+  "format": "save_list",
+  "difficulty": "L3",
+  "learning_point": "メール操作の基本動詞",
+  "question": "メールで使う基本動詞",
+  "correct_answer": "save",
+  "publish_at": "2026-08-27T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "list_items": [
+    {
+      "english": "attach a file",
+      "japanese": "ファイルを添付する"
+    },
+    {
+      "english": "forward an email",
+      "japanese": "メールを転送する"
+    },
+    {
+      "english": "reply to a message",
+      "japanese": "メッセージに返信する"
+    },
+    {
+      "english": "delete a message",
+      "japanese": "メッセージを削除する"
+    }
+  ],
+  "list_theme": "メールで使う基本動詞",
+  "target_item": {
+    "prompt": "___ a draft for later",
+    "completed": "save a draft for later",
+    "japanese": "下書きを後で使えるよう保存する",
+    "list_theme": "メールで使う基本動詞"
+  },
+  "choices": [
+    "send",
+    "save",
+    "open",
+    "print"
+  ],
+  "complete_list": [
+    {
+      "english": "attach a file",
+      "japanese": "ファイルを添付する"
+    },
+    {
+      "english": "forward an email",
+      "japanese": "メールを転送する"
+    },
+    {
+      "english": "reply to a message",
+      "japanese": "メッセージに返信する"
+    },
+    {
+      "english": "delete a message",
+      "japanese": "メッセージを削除する"
+    },
+    {
+      "english": "save a draft for later",
+      "japanese": "下書きを後で使えるよう保存する"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "save_list",
+  "category": "vocabulary",
+  "production_category": "review",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "save",
+  "acceptable_answers": [
+    "save"
+  ],
+  "answer_hint": "メールで使う基本動詞",
+  "answer_hint_approved": true,
+  "explanation": "英語表現と日本語をセットで確認します。",
+  "key_difference": null,
+  "examples": [
+    "attach a file",
+    "forward an email",
+    "reply to a message",
+    "delete a message",
+    "save a draft for later"
+  ],
+  "example_translations": [
+    "ファイルを添付する",
+    "メールを転送する",
+    "メッセージに返信する",
+    "メッセージを削除する",
+    "下書きを後で使えるよう保存する"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "保存して見返せる基礎英語リスト。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "一覧を確認して、最後の空欄に挑戦。",
+  "threads_answer_text": "✅ 正解は B. save\n\nattach a file＝ファイルを添付する\nforward an email＝メールを転送する\nreply to a message＝メッセージに返信する\ndelete a message＝メッセージを削除する\nsave a draft for later＝下書きを後で使えるよう保存する\n\n英語表現と日本語をセットで確認します。",
+  "question_guide_ja": "メールで使う基本動詞",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "B",
+  "format_data": {
+    "list_items": [
+      [
+        "attach a file",
+        "ファイルを添付する"
+      ],
+      [
+        "forward an email",
+        "メールを転送する"
+      ],
+      [
+        "reply to a message",
+        "メッセージに返信する"
+      ],
+      [
+        "delete a message",
+        "メッセージを削除する"
+      ],
+      [
+        "___ a draft for later",
+        "下書きを後で使えるよう保存する"
+      ]
+    ],
+    "complete_items": [
+      [
+        "attach a file",
+        "ファイルを添付する"
+      ],
+      [
+        "forward an email",
+        "メールを転送する"
+      ],
+      [
+        "reply to a message",
+        "メッセージに返信する"
+      ],
+      [
+        "delete a message",
+        "メッセージを削除する"
+      ],
+      [
+        "save a draft for later",
+        "下書きを後で使えるよう保存する"
+      ]
+    ],
+    "note": "英語表現と日本語をセットで確認します。"
+  },
+  "threads_reply": "✅ 正解は B. save\n\nattach a file＝ファイルを添付する\nforward an email＝メールを転送する\nreply to a message＝メッセージに返信する\ndelete a message＝メッセージを削除する\nsave a draft for later＝下書きを後で使えるよう保存する\n\n英語表現と日本語をセットで確認します。",
+  "answer_payload": {
+    "format": "save_list",
+    "correct_answer": "save",
+    "complete_list": [
+      {
+        "english": "attach a file",
+        "japanese": "ファイルを添付する"
+      },
+      {
+        "english": "forward an email",
+        "japanese": "メールを転送する"
+      },
+      {
+        "english": "reply to a message",
+        "japanese": "メッセージに返信する"
+      },
+      {
+        "english": "delete a message",
+        "japanese": "メッセージを削除する"
+      },
+      {
+        "english": "save a draft for later",
+        "japanese": "下書きを後で使えるよう保存する"
+      }
+    ]
+  }
+}

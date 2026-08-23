@@ -1,0 +1,549 @@
+{
+  "start_date": "2026-08-24",
+  "end_date": "2026-09-02",
+  "timezone": "Asia/Tokyo",
+  "generated_at": "2026-08-23T00:00:00+09:00",
+  "past_slot_policy": "hold",
+  "items": [
+    {
+      "content_id": "ENG-000030",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-24T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000051",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-08-24T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000032",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-24T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000050",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "error_hunt",
+      "publish_at": "2026-08-24T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000057",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-24T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000035",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-24T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000036",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-25T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000058",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-25T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000055",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "save_list",
+      "publish_at": "2026-08-25T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000039",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-25T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000040",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-25T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000052",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-08-25T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000042",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-26T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000049",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "error_hunt",
+      "publish_at": "2026-08-26T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000044",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-26T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000059",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-26T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000056",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "save_list",
+      "publish_at": "2026-08-26T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000047",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-26T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000031",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-27T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000072",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-27T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000034",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-27T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000033",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-27T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000079",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-08-27T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000087",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "save_list",
+      "publish_at": "2026-08-27T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000037",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-28T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000073",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-28T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000041",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-28T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000038",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-28T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000080",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-08-28T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000084",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "error_hunt",
+      "publish_at": "2026-08-28T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000043",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-29T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000074",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-29T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000046",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-29T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000045",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-29T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000085",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "error_hunt",
+      "publish_at": "2026-08-29T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000088",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "save_list",
+      "publish_at": "2026-08-29T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000090",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-30T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000075",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-30T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000060",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-30T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000065",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-30T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000081",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-08-30T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000089",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "save_list",
+      "publish_at": "2026-08-30T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000091",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-31T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000082",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-08-31T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000061",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-08-31T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000067",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-08-31T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000076",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-08-31T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000086",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "error_hunt",
+      "publish_at": "2026-08-31T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000092",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-09-01T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000077",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-09-01T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000062",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-09-01T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000069",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-09-01T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000083",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-09-01T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000054",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "save_list",
+      "publish_at": "2026-09-01T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000093",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-09-02T07:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000048",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "error_hunt",
+      "publish_at": "2026-09-02T09:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000063",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "visual",
+      "publish_at": "2026-09-02T12:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000071",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "text",
+      "publish_at": "2026-09-02T15:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000078",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "difference",
+      "publish_at": "2026-09-02T18:00:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    },
+    {
+      "content_id": "ENG-000053",
+      "platform": "instagram",
+      "content_type": "quiz",
+      "format": "pattern",
+      "publish_at": "2026-09-02T20:30:00+09:00",
+      "status": "pending",
+      "execution_eligibility": "scheduled"
+    }
+  ]
+}

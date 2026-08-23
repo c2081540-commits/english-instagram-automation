@@ -1,0 +1,105 @@
+{
+  "content_id": "ENG-000072",
+  "format": "difference",
+  "difficulty": "L1",
+  "learning_point": "take / make / do / catch",
+  "question": "I ___ a photo of the sunset.",
+  "correct_answer": "take",
+  "publish_at": "2026-08-27T09:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "make",
+    "do",
+    "catch",
+    "take"
+  ],
+  "choice_explanations": {
+    "take": "写真を撮る",
+    "make": "作る",
+    "do": "行う",
+    "catch": "捕まえる"
+  },
+  "completed_sentence": "I take a photo of the sunset.",
+  "content_type": "quiz",
+  "quiz_format": "difference",
+  "category": "vocabulary",
+  "production_category": "natural_choice",
+  "difficulty_label": "beginner",
+  "difficulty_level": "L1",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "take",
+  "acceptable_answers": [
+    "take"
+  ],
+  "answer_hint": "文全体の形と語の組み合わせを比べよう。",
+  "answer_hint_approved": true,
+  "explanation": "take = 写真を撮る\nmake = 作る\ndo = 行う\ncatch = 捕まえる",
+  "key_difference": "take = 写真を撮る\nmake = 作る\ndo = 行う\ncatch = 捕まえる",
+  "examples": [
+    "I take a photo of the sunset."
+  ],
+  "example_translations": [
+    "夕焼けの写真を撮りました。"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "短く考えて、答えは2枚目で確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "似た基本語、使い分けられる？",
+  "threads_answer_text": "✅ 正解は D. take\n\ntake＝写真を撮る\nmake＝作る\ndo＝行う\ncatch＝捕まえる\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
+  "question_guide_ja": "文全体の形と語の組み合わせを比べよう。",
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "D",
+  "format_data": {
+    "differences": [
+      [
+        "take",
+        "写真を撮る"
+      ],
+      [
+        "make",
+        "作る"
+      ],
+      [
+        "do",
+        "行う"
+      ],
+      [
+        "catch",
+        "捕まえる"
+      ]
+    ]
+  },
+  "threads_reply": "✅ 正解は D. take\n\ntake＝写真を撮る\nmake＝作る\ndo＝行う\ncatch＝捕まえる\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
+  "answer_payload": {
+    "format": "difference",
+    "correct_answer": "take",
+    "choice_explanations": {
+      "take": "写真を撮る",
+      "make": "作る",
+      "do": "行う",
+      "catch": "捕まえる"
+    }
+  }
+}

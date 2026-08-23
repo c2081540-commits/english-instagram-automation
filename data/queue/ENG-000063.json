@@ -1,0 +1,26 @@
+{
+  "content_id": "ENG-000063",
+  "platform": "instagram",
+  "content_type": "quiz",
+  "channel": "feed",
+  "publish_at": "2026-09-02T12:00:00+09:00",
+  "status": "pending",
+  "execution_eligibility": "scheduled",
+  "carousel": [
+    {
+      "order": 1,
+      "role": "question",
+      "image_path": "artifacts/images/ENG-000063-question.png"
+    },
+    {
+      "order": 2,
+      "role": "answer",
+      "image_path": "artifacts/images/ENG-000063-answer.png"
+    }
+  ],
+  "caption": "短く考えて、答えは2枚目で確認。",
+  "difficulty_level": "L1",
+  "format": "visual",
+  "quiz_format": "visual",
+  "correct_position": "D"
+}

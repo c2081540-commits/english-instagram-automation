@@ -1,16 +1,36 @@
 {
   "content_id": "ENG-000035",
-  "category": "grammar",
-  "production_category": "review",
-  "difficulty": "easy",
-  "seasonal": false,
+  "format": "text",
+  "difficulty": "L2",
+  "learning_point": "he の現在形には動詞へ -s を付けます。",
   "question": "Which sentence is correct?",
+  "correct_answer": "He plays tennis.",
+  "publish_at": "2026-08-24T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
   "choices": [
     "He play tennis.",
     "He playing tennis.",
     "He plays tennis.",
     "He is play tennis."
   ],
+  "explanation": "he の現在形には動詞へ -s を付けます。",
+  "completed_sentence": "He works on Fridays.",
+  "japanese_translation": "彼は金曜日に働きます。",
+  "instagram_caption": "今日の1問。答えは2枚目へ。",
+  "threads_parent_text": "正しそうな英文、見抜ける？",
+  "threads_answer_text": "💡 正解は C. He plays tennis.\n\n主語がHeなので、playにsを付けた文が正しい形です。\n\n📝 He plays tennis.\n「彼はテニスをします。」\n\n🔑 he / she → 動詞にs",
+  "threads_reply": "💡 正解は C. He plays tennis.\n\n主語がHeなので、playにsを付けた文が正しい形です。\n\n📝 He plays tennis.\n「彼はテニスをします。」\n\n🔑 he / she → 動詞にs",
+  "threads_reply_explanation": "主語がHeなので、playにsを付けた文が正しい形です。",
+  "question_guide_ja": "正しい英文はどれ？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "review",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
   "answer_type": "single",
   "best_answer": "He plays tennis.",
   "acceptable_answers": [
@@ -18,7 +38,6 @@
   ],
   "answer_hint": "he と現在形に注目。",
   "answer_hint_approved": true,
-  "explanation": "he の現在形には動詞へ -s を付けます。",
   "key_difference": null,
   "examples": [
     "He works on Fridays."
@@ -26,25 +45,21 @@
   "example_translations": [
     "彼は金曜日に働きます。"
   ],
-  "also_natural": null,
   "tip": null,
-  "visual_required": false,
   "visual_type": null,
   "visual_description": null,
   "problem_image_path": null,
   "image_information_role": null,
   "question_repeats_visual": null,
-  "instagram_caption": "今日の1問。答えは2枚目へ。",
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "これ分かったら基礎はOK。",
-  "threads_answer_text": "💡 正解は C. He plays tennis.\n\nhe の現在形には動詞へ -s を付けます。",
-  "publish_at": "2026-08-24T20:30:00+09:00",
-  "question_guide_ja": "正しい英文はどれ？",
   "question_role": "meta_instruction",
   "difficulty_gate": {
     "visual_only_solvable": false,
     "common_sense_only": false,
-    "effective_choice_count": 3,
+    "effective_choice_count": 4,
     "weak_distractor_count": 0,
     "unique_answer": true,
     "visual_contributes_to_decision": null,
@@ -52,6 +67,6 @@
     "initial_difficulty": "TARGET",
     "decision": "KEEP"
   },
-  "difficulty_level": "L2",
-  "learning_point": "三単現"
+  "correct_position": "C",
+  "format_data": {}
 }

@@ -3,7 +3,7 @@
   "platform": "instagram",
   "content_type": "quiz",
   "channel": "feed",
-  "publish_at": "2026-08-25T20:30:00+09:00",
+  "publish_at": "2026-08-28T12:00:00+09:00",
   "status": "pending",
   "execution_eligibility": "scheduled",
   "carousel": [
@@ -19,5 +19,8 @@
     }
   ],
   "caption": "今日の1問。答えは2枚目へ。",
-  "difficulty_level": "L2"
+  "difficulty_level": "L2",
+  "format": "visual",
+  "quiz_format": "visual",
+  "correct_position": "D"
 }

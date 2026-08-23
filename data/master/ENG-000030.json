@@ -1,16 +1,36 @@
 {
   "content_id": "ENG-000030",
-  "category": "grammar",
-  "production_category": "grammar_usage",
-  "difficulty": "very_easy",
-  "seasonal": false,
+  "format": "text",
+  "difficulty": "L1",
+  "learning_point": "単数の a bank には There is を使います。",
   "question": "There ___ a bank near here.",
+  "correct_answer": "is",
+  "publish_at": "2026-08-24T07:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
   "choices": [
     "are",
     "is",
     "be",
     "have"
   ],
+  "explanation": "単数の a bank には There is を使います。",
+  "completed_sentence": "There is a cafe nearby.",
+  "japanese_translation": "近くにカフェがあります。",
+  "instagram_caption": "まずは3秒で考えてみよう。",
+  "threads_parent_text": "ここは基礎をサクッと。",
+  "threads_answer_text": "💡 正解は B. is\n\na bankは1つなので、There isを使います。\n\n📝 There is a bank near here.\n「この近くに銀行があります。」\n\n🔑 1つならThere is / 複数ならThere are",
+  "threads_reply": "💡 正解は B. is\n\na bankは1つなので、There isを使います。\n\n📝 There is a bank near here.\n「この近くに銀行があります。」\n\n🔑 1つならThere is / 複数ならThere are",
+  "threads_reply_explanation": "a bankは1つなので、There isを使います。",
+  "question_guide_ja": "「近くに銀行がある」ならどれ？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "beginner",
+  "difficulty_level": "L1",
+  "seasonal": false,
   "answer_type": "single",
   "best_answer": "is",
   "acceptable_answers": [
@@ -18,7 +38,6 @@
   ],
   "answer_hint": "後ろの名詞は単数？",
   "answer_hint_approved": true,
-  "explanation": "単数の a bank には There is を使います。",
   "key_difference": null,
   "examples": [
     "There is a cafe nearby."
@@ -26,26 +45,21 @@
   "example_translations": [
     "近くにカフェがあります。"
   ],
-  "also_natural": null,
   "tip": null,
-  "visual_required": false,
   "visual_type": null,
   "visual_description": null,
   "problem_image_path": null,
   "image_information_role": null,
   "question_repeats_visual": null,
-  "instagram_caption": "まずは3秒で考えてみよう。",
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "これ、意外と迷う。",
-  "threads_answer_text": "💡 正解は B. is\n\n単数の a bank には There is を使います。",
-  "publish_at": "2026-08-24T07:00:00+09:00",
-  "answer_point": "a bank は単数 → There is",
-  "question_guide_ja": "「近くに銀行がある」ならどれ？",
   "question_role": "learning_sentence",
   "difficulty_gate": {
     "visual_only_solvable": false,
     "common_sense_only": false,
-    "effective_choice_count": 3,
+    "effective_choice_count": 4,
     "weak_distractor_count": 0,
     "unique_answer": true,
     "visual_contributes_to_decision": null,
@@ -53,6 +67,6 @@
     "initial_difficulty": "TARGET",
     "decision": "KEEP"
   },
-  "difficulty_level": "L1",
-  "learning_point": "There isとThere are"
+  "correct_position": "B",
+  "format_data": {}
 }

@@ -1,0 +1,242 @@
+[
+  {
+    "content_id": "ENG-000050",
+    "sentence_no": 1,
+    "sentence": "I explained the plan to him.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "I explained the plan to him.",
+    "grammar_rule": "explain A to B",
+    "reason_ja": "説明する内容の後ろにto＋相手を置く自然な形です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000050",
+    "sentence_no": 2,
+    "sentence": "She discussed about the issue.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "She discussed the issue.",
+    "grammar_rule": "discuss + 目的語",
+    "reason_ja": "discussの直後には話題を置き、aboutは付けません。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000050",
+    "sentence_no": 3,
+    "sentence": "We entered to the room.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "We entered the room.",
+    "grammar_rule": "enter + 場所",
+    "reason_ja": "enterの直後には場所を置き、toは付けません。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000050",
+    "sentence_no": 4,
+    "sentence": "He replied to my message.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "He replied to my message.",
+    "grammar_rule": "reply to + 対象",
+    "reason_ja": "replyは返答の対象をtoの後ろに置けます。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000049",
+    "sentence_no": 1,
+    "sentence": "I need some advice.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "I need some advice.",
+    "grammar_rule": "adviceは不可算名詞",
+    "reason_ja": "adviceは通常数えない名詞で、some adviceは自然です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000049",
+    "sentence_no": 2,
+    "sentence": "She gave me an information.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "She gave me some information.",
+    "grammar_rule": "informationは不可算名詞",
+    "reason_ja": "informationには通常anを付けません。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000049",
+    "sentence_no": 3,
+    "sentence": "We bought two chairs.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "We bought two chairs.",
+    "grammar_rule": "chairは可算名詞",
+    "reason_ja": "chairは数えられるため、two chairsが自然です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000049",
+    "sentence_no": 4,
+    "sentence": "There is some water.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "There is some water.",
+    "grammar_rule": "waterは不可算名詞",
+    "reason_ja": "waterは通常数えない名詞で、some waterが自然です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000084",
+    "sentence_no": 1,
+    "sentence": "I arrived at the station.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "I arrived at the station.",
+    "grammar_rule": "arrive at + 地点",
+    "reason_ja": "駅のような地点にはatを使います。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000084",
+    "sentence_no": 2,
+    "sentence": "She went to home early.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "She went home early.",
+    "grammar_rule": "go home",
+    "reason_ja": "homeの前には通常toを置きません。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000084",
+    "sentence_no": 3,
+    "sentence": "We had lunch at noon.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "We had lunch at noon.",
+    "grammar_rule": "at noon",
+    "reason_ja": "noonにはatを使います。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000084",
+    "sentence_no": 4,
+    "sentence": "He is at work now.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "He is at work now.",
+    "grammar_rule": "at work",
+    "reason_ja": "at workで「仕事中」です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000085",
+    "sentence_no": 1,
+    "sentence": "They let me leave early.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "They let me leave early.",
+    "grammar_rule": "let + 人 + 原形",
+    "reason_ja": "letの後ろは人＋動詞の原形です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000085",
+    "sentence_no": 2,
+    "sentence": "She made me waited.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "She made me wait.",
+    "grammar_rule": "make + 人 + 原形",
+    "reason_ja": "能動態のmakeの後ろは人＋動詞の原形です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000085",
+    "sentence_no": 3,
+    "sentence": "He helped me carry the bags.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "He helped me carry the bags.",
+    "grammar_rule": "help + 人 + 原形",
+    "reason_ja": "helpの後ろではtoなしの原形を使えます。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000085",
+    "sentence_no": 4,
+    "sentence": "I want you to be careful.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "I want you to be careful.",
+    "grammar_rule": "want + 人 + to do",
+    "reason_ja": "wantの後ろは人＋to不定詞です。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000086",
+    "sentence_no": 1,
+    "sentence": "This soup tastes good.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "This soup tastes good.",
+    "grammar_rule": "taste + 形容詞",
+    "reason_ja": "tasteの後ろに状態を表す形容詞を置けます。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000086",
+    "sentence_no": 2,
+    "sentence": "I feel happily today.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "I feel happy today.",
+    "grammar_rule": "feel + 形容詞",
+    "reason_ja": "気分の状態はfeel＋形容詞で表します。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000086",
+    "sentence_no": 3,
+    "sentence": "The test was easy.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "The test was easy.",
+    "grammar_rule": "be + 形容詞",
+    "reason_ja": "be動詞の後ろのeasyが状態を説明します。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000086",
+    "sentence_no": 4,
+    "sentence": "She looks tired.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "She looks tired.",
+    "grammar_rule": "look + 形容詞",
+    "reason_ja": "look＋形容詞で見た様子を表します。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000048",
+    "sentence_no": 1,
+    "sentence": "I enjoy to cook on weekends.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "I enjoy cooking on weekends.",
+    "grammar_rule": "enjoy + -ing",
+    "reason_ja": "enjoyの直後に動作を置くときは-ing形を使います。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000048",
+    "sentence_no": 2,
+    "sentence": "She decided to leave early.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "She decided to leave early.",
+    "grammar_rule": "decide + to不定詞",
+    "reason_ja": "decideの後ろにはto不定詞を置けます。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000048",
+    "sentence_no": 3,
+    "sentence": "We finished cleaning the room.",
+    "verdict": "CORRECT",
+    "corrected_sentence": "We finished cleaning the room.",
+    "grammar_rule": "finish + -ing",
+    "reason_ja": "finishの直後に動作を置くときは-ing形を使います。",
+    "confidence": "HIGH"
+  },
+  {
+    "content_id": "ENG-000048",
+    "sentence_no": 4,
+    "sentence": "He suggested to take a taxi.",
+    "verdict": "INCORRECT",
+    "corrected_sentence": "He suggested taking a taxi.",
+    "grammar_rule": "suggest + -ing",
+    "reason_ja": "suggestの直後に動作を置くときは-ing形を使います。",
+    "confidence": "HIGH"
+  }
+]

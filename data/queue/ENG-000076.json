@@ -1,0 +1,26 @@
+{
+  "content_id": "ENG-000076",
+  "platform": "instagram",
+  "content_type": "quiz",
+  "channel": "feed",
+  "publish_at": "2026-08-31T18:00:00+09:00",
+  "status": "pending",
+  "execution_eligibility": "scheduled",
+  "carousel": [
+    {
+      "order": 1,
+      "role": "question",
+      "image_path": "artifacts/images/ENG-000076-question.png"
+    },
+    {
+      "order": 2,
+      "role": "answer",
+      "image_path": "artifacts/images/ENG-000076-answer.png"
+    }
+  ],
+  "caption": "短く考えて、答えは2枚目で確認。",
+  "difficulty_level": "L3",
+  "format": "difference",
+  "quiz_format": "difference",
+  "correct_position": "B"
+}

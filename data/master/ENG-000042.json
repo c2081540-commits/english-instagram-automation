@@ -1,14 +1,34 @@
 {
   "content_id": "ENG-000042",
-  "category": "grammar",
-  "production_category": "grammar_usage",
-  "difficulty": "very_easy",
-  "seasonal": false,
+  "format": "text",
+  "difficulty": "L1",
+  "learning_point": "単数の主語には opens を使います。",
   "question": "My office ___ at nine.",
+  "correct_answer": "opens",
+  "publish_at": "2026-08-26T07:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
   "choices": [
     "open",
     "opens"
   ],
+  "explanation": "単数の主語には opens を使います。",
+  "completed_sentence": "The store opens at ten.",
+  "japanese_translation": "店は10時に開きます。",
+  "instagram_caption": "まずは3秒で考えてみよう。",
+  "threads_parent_text": "朝のルーティンで基礎確認。",
+  "threads_answer_text": "💡 正解は B. opens\n\nMy officeは1つで、普段の開始時刻なのでopenにsを付けます。\n\n📝 My office opens at nine.\n「私の会社は9時に始まります。」\n\n🔑 he / she / 1つのもの → 動詞にs",
+  "threads_reply": "💡 正解は B. opens\n\nMy officeは1つで、普段の開始時刻なのでopenにsを付けます。\n\n📝 My office opens at nine.\n「私の会社は9時に始まります。」\n\n🔑 he / she / 1つのもの → 動詞にs",
+  "threads_reply_explanation": "My officeは1つで、普段の開始時刻なのでopenにsを付けます。",
+  "question_guide_ja": "「9時に開く」ならどっち？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "beginner",
+  "difficulty_level": "L1",
+  "seasonal": false,
   "answer_type": "single",
   "best_answer": "opens",
   "acceptable_answers": [
@@ -16,7 +36,6 @@
   ],
   "answer_hint": "主語は単数。動詞の形は？",
   "answer_hint_approved": true,
-  "explanation": "単数の主語には opens を使います。",
   "key_difference": null,
   "examples": [
     "The store opens at ten."
@@ -24,21 +43,16 @@
   "example_translations": [
     "店は10時に開きます。"
   ],
-  "also_natural": null,
   "tip": null,
-  "visual_required": false,
   "visual_type": null,
   "visual_description": null,
   "problem_image_path": null,
   "image_information_role": null,
   "question_repeats_visual": null,
-  "instagram_caption": "まずは3秒で考えてみよう。",
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "これ、意外と迷う。",
-  "threads_answer_text": "💡 正解は B. opens\n\n単数の主語には opens を使います。",
-  "publish_at": "2026-08-26T07:00:00+09:00",
-  "answer_point": "単数の主語 → 動詞に s",
-  "question_guide_ja": "「9時に開く」ならどっち？",
   "question_role": "learning_sentence",
   "difficulty_gate": {
     "visual_only_solvable": false,
@@ -51,6 +65,6 @@
     "initial_difficulty": "TARGET",
     "decision": "KEEP"
   },
-  "difficulty_level": "L1",
-  "learning_point": "三単現"
+  "correct_position": "B",
+  "format_data": {}
 }

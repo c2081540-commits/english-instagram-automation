@@ -1,0 +1,196 @@
+{
+  "content_id": "ENG-000056",
+  "format": "save_list",
+  "difficulty": "L2",
+  "learning_point": "日常頻出の不規則動詞3変化",
+  "question": "よく使う不規則動詞",
+  "correct_answer": "spoke",
+  "publish_at": "2026-08-26T18:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "list_items": [
+    {
+      "english": "go–went–gone",
+      "japanese": "行く"
+    },
+    {
+      "english": "write–wrote–written",
+      "japanese": "書く"
+    },
+    {
+      "english": "choose–chose–chosen",
+      "japanese": "選ぶ"
+    },
+    {
+      "english": "break–broke–broken",
+      "japanese": "壊す"
+    }
+  ],
+  "list_theme": "よく使う不規則動詞",
+  "target_item": {
+    "prompt": "speak–___–spoken",
+    "completed": "speak–spoke–spoken",
+    "japanese": "話す",
+    "list_theme": "よく使う不規則動詞"
+  },
+  "choices": [
+    "spoke",
+    "speaked",
+    "spoken",
+    "speaking"
+  ],
+  "complete_list": [
+    {
+      "english": "go–went–gone",
+      "japanese": "行く"
+    },
+    {
+      "english": "write–wrote–written",
+      "japanese": "書く"
+    },
+    {
+      "english": "choose–chose–chosen",
+      "japanese": "選ぶ"
+    },
+    {
+      "english": "break–broke–broken",
+      "japanese": "壊す"
+    },
+    {
+      "english": "speak–spoke–spoken",
+      "japanese": "話す"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "save_list",
+  "category": "vocabulary",
+  "production_category": "review",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "spoke",
+  "acceptable_answers": [
+    "spoke"
+  ],
+  "answer_hint": "よく使う不規則動詞",
+  "answer_hint_approved": true,
+  "explanation": "原形・過去形・過去分詞を3つまとめて確認します。",
+  "key_difference": null,
+  "examples": [
+    "go–went–gone",
+    "write–wrote–written",
+    "choose–chose–chosen",
+    "break–broke–broken",
+    "speak–spoke–spoken"
+  ],
+  "example_translations": [
+    "行く",
+    "書く",
+    "選ぶ",
+    "壊す",
+    "話す"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "日常で使う不規則動詞5つ。\n空欄に入る過去形は？",
+  "threads_answer_text": "✅ 正解は A. spoke\n\ngo–went–gone＝行く\nwrite–wrote–written＝書く\nchoose–chose–chosen＝選ぶ\nbreak–broke–broken＝壊す\nspeak–spoke–spoken＝話す\n\n原形・過去形・過去分詞を3つまとめて確認します。",
+  "question_guide_ja": "よく使う不規則動詞",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "A",
+  "format_data": {
+    "list_items": [
+      [
+        "go–went–gone",
+        "行く"
+      ],
+      [
+        "write–wrote–written",
+        "書く"
+      ],
+      [
+        "choose–chose–chosen",
+        "選ぶ"
+      ],
+      [
+        "break–broke–broken",
+        "壊す"
+      ],
+      [
+        "speak–___–spoken",
+        "話す"
+      ]
+    ],
+    "complete_items": [
+      [
+        "go–went–gone",
+        "行く"
+      ],
+      [
+        "write–wrote–written",
+        "書く"
+      ],
+      [
+        "choose–chose–chosen",
+        "選ぶ"
+      ],
+      [
+        "break–broke–broken",
+        "壊す"
+      ],
+      [
+        "speak–spoke–spoken",
+        "話す"
+      ]
+    ],
+    "note": "原形・過去形・過去分詞を3つまとめて確認します。"
+  },
+  "threads_reply": "✅ 正解は A. spoke\n\ngo–went–gone＝行く\nwrite–wrote–written＝書く\nchoose–chose–chosen＝選ぶ\nbreak–broke–broken＝壊す\nspeak–spoke–spoken＝話す\n\n原形・過去形・過去分詞を3つまとめて確認します。",
+  "answer_payload": {
+    "format": "save_list",
+    "correct_answer": "spoke",
+    "complete_list": [
+      {
+        "english": "go–went–gone",
+        "japanese": "行く"
+      },
+      {
+        "english": "write–wrote–written",
+        "japanese": "書く"
+      },
+      {
+        "english": "choose–chose–chosen",
+        "japanese": "選ぶ"
+      },
+      {
+        "english": "break–broke–broken",
+        "japanese": "壊す"
+      },
+      {
+        "english": "speak–spoke–spoken",
+        "japanese": "話す"
+      }
+    ]
+  }
+}

@@ -19,5 +19,8 @@
     }
   ],
   "caption": "まずは3秒で考えてみよう。",
-  "difficulty_level": "L1"
+  "difficulty_level": "L1",
+  "format": "text",
+  "quiz_format": "text",
+  "correct_position": "A"
 }

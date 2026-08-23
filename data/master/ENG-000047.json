@@ -1,16 +1,36 @@
 {
   "content_id": "ENG-000047",
-  "category": "vocabulary",
-  "production_category": "review",
-  "difficulty": "very_easy",
-  "seasonal": false,
+  "format": "text",
+  "difficulty": "L2",
+  "learning_point": "「休憩する」は take a break です。",
   "question": "Which one means '休憩する'?",
+  "correct_answer": "take a break",
+  "publish_at": "2026-08-26T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
   "choices": [
     "make a break",
     "do a break",
     "take a break",
     "get a breaking"
   ],
+  "explanation": "「休憩する」は take a break です。",
+  "completed_sentence": "Let's take a short break.",
+  "japanese_translation": "少し休憩しましょう。",
+  "instagram_caption": "今日の1問。答えは2枚目へ。",
+  "threads_parent_text": "仕事中にも使う定番表現。",
+  "threads_answer_text": "💡 正解は C. take a break\n\ntake a breakで「休憩する」という意味になります。\n\n🗣️ Let's take a break.\n「休憩しましょう。」\n\n🔑 take a break＝休憩する",
+  "threads_reply": "💡 正解は C. take a break\n\ntake a breakで「休憩する」という意味になります。\n\n🗣️ Let's take a break.\n「休憩しましょう。」\n\n🔑 take a break＝休憩する",
+  "threads_reply_explanation": "take a breakで「休憩する」という意味になります。",
+  "question_guide_ja": "「休憩する」の意味になるのはどれ？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "vocabulary",
+  "production_category": "review",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
   "answer_type": "single",
   "best_answer": "take a break",
   "acceptable_answers": [
@@ -18,7 +38,6 @@
   ],
   "answer_hint": "break と一緒に使う動詞は？",
   "answer_hint_approved": true,
-  "explanation": "「休憩する」は take a break です。",
   "key_difference": null,
   "examples": [
     "Let's take a short break."
@@ -26,25 +45,21 @@
   "example_translations": [
     "少し休憩しましょう。"
   ],
-  "also_natural": null,
   "tip": null,
-  "visual_required": false,
   "visual_type": null,
   "visual_description": null,
   "problem_image_path": null,
   "image_information_role": null,
   "question_repeats_visual": null,
-  "instagram_caption": "今日の1問。答えは2枚目へ。",
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "これ分かったら基礎はOK。",
-  "threads_answer_text": "💡 正解は C. take a break\n\n「休憩する」は take a break です。",
-  "publish_at": "2026-08-26T20:30:00+09:00",
-  "question_guide_ja": "「休憩する」の意味になるのはどれ？",
   "question_role": "meta_instruction",
   "difficulty_gate": {
     "visual_only_solvable": false,
     "common_sense_only": false,
-    "effective_choice_count": 3,
+    "effective_choice_count": 4,
     "weak_distractor_count": 0,
     "unique_answer": true,
     "visual_contributes_to_decision": null,
@@ -52,6 +67,6 @@
     "initial_difficulty": "TARGET",
     "decision": "KEEP"
   },
-  "difficulty_level": "L2",
-  "learning_point": "take a break"
+  "correct_position": "C",
+  "format_data": {}
 }

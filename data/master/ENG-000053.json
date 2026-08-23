@@ -1,0 +1,104 @@
+{
+  "content_id": "ENG-000053",
+  "format": "pattern",
+  "difficulty": "L2",
+  "learning_point": "身近な名詞の不規則複数形",
+  "question": "複数形のパターン、最後はどれ？",
+  "correct_answer": "teeth",
+  "publish_at": "2026-09-02T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "examples": [
+    "one child → two children",
+    "one person → two people",
+    "one foot → two feet"
+  ],
+  "target": "one tooth → two ___",
+  "choices": [
+    "tooths",
+    "toothes",
+    "teeth",
+    "tooth"
+  ],
+  "pattern_rule": "どれも-sを付けるだけではない、不規則な複数形です。",
+  "examples_learning_point": "身近な名詞の不規則複数形",
+  "target_learning_point": "身近な名詞の不規則複数形",
+  "content_type": "quiz",
+  "quiz_format": "pattern",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "teeth",
+  "acceptable_answers": [
+    "teeth"
+  ],
+  "answer_hint": "複数形のパターン、最後はどれ？",
+  "answer_hint_approved": true,
+  "explanation": "どれも-sを付けるだけではない、不規則な複数形です。\nchild–children / person–people\nfoot–feet / tooth–teeth",
+  "key_difference": null,
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "-sを付けない複数形。\n最後の1つ、覚えてる？",
+  "threads_answer_text": "✅ 正解は C. teeth\n\none child → two children\none person → two people\none foot → two feet\none tooth → two teeth\n\n例の共通点をまとめて確認しましょう。",
+  "question_guide_ja": "複数形のパターン、最後はどれ？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "C",
+  "format_data": {
+    "examples": [
+      "one child → two children",
+      "one person → two people",
+      "one foot → two feet",
+      "one tooth → two ___"
+    ],
+    "answer_sections": [
+      [
+        "答え",
+        "C. teeth"
+      ],
+      [
+        "パターン",
+        "どれも-sを付けるだけではない、不規則な複数形です。"
+      ],
+      [
+        "まとめ",
+        "child–children / person–people\nfoot–feet / tooth–teeth"
+      ]
+    ]
+  },
+  "threads_reply": "✅ 正解は C. teeth\n\none child → two children\none person → two people\none foot → two feet\none tooth → two teeth\n\n例の共通点をまとめて確認しましょう。",
+  "answer_payload": {
+    "format": "pattern",
+    "correct_answer": "teeth",
+    "pattern_rule": "どれも-sを付けるだけではない、不規則な複数形です。",
+    "examples": [
+      "one child → two children",
+      "one person → two people",
+      "one foot → two feet"
+    ]
+  }
+}

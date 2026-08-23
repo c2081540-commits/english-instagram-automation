@@ -1,0 +1,196 @@
+{
+  "content_id": "ENG-000089",
+  "format": "save_list",
+  "difficulty": "L3",
+  "learning_point": "旅行で使う基本表現",
+  "question": "旅行で使う基本表現",
+  "correct_answer": "up",
+  "publish_at": "2026-08-30T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "list_items": [
+    {
+      "english": "check in",
+      "japanese": "チェックインする"
+    },
+    {
+      "english": "board a plane",
+      "japanese": "飛行機に乗る"
+    },
+    {
+      "english": "miss a flight",
+      "japanese": "飛行機に乗り遅れる"
+    },
+    {
+      "english": "book a room",
+      "japanese": "部屋を予約する"
+    }
+  ],
+  "list_theme": "旅行で使う基本表現",
+  "target_item": {
+    "prompt": "pick ___ your luggage",
+    "completed": "pick up your luggage",
+    "japanese": "荷物を受け取る",
+    "list_theme": "旅行で使う基本表現"
+  },
+  "choices": [
+    "on",
+    "up",
+    "out",
+    "at"
+  ],
+  "complete_list": [
+    {
+      "english": "check in",
+      "japanese": "チェックインする"
+    },
+    {
+      "english": "board a plane",
+      "japanese": "飛行機に乗る"
+    },
+    {
+      "english": "miss a flight",
+      "japanese": "飛行機に乗り遅れる"
+    },
+    {
+      "english": "book a room",
+      "japanese": "部屋を予約する"
+    },
+    {
+      "english": "pick up your luggage",
+      "japanese": "荷物を受け取る"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "save_list",
+  "category": "vocabulary",
+  "production_category": "review",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "up",
+  "acceptable_answers": [
+    "up"
+  ],
+  "answer_hint": "旅行で使う基本表現",
+  "answer_hint_approved": true,
+  "explanation": "英語表現と日本語をセットで確認します。",
+  "key_difference": null,
+  "examples": [
+    "check in",
+    "board a plane",
+    "miss a flight",
+    "book a room",
+    "pick up your luggage"
+  ],
+  "example_translations": [
+    "チェックインする",
+    "飛行機に乗る",
+    "飛行機に乗り遅れる",
+    "部屋を予約する",
+    "荷物を受け取る"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "保存して見返せる基礎英語リスト。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "一覧を確認して、最後の空欄に挑戦。",
+  "threads_answer_text": "✅ 正解は B. up\n\ncheck in＝チェックインする\nboard a plane＝飛行機に乗る\nmiss a flight＝飛行機に乗り遅れる\nbook a room＝部屋を予約する\npick up your luggage＝荷物を受け取る\n\n英語表現と日本語をセットで確認します。",
+  "question_guide_ja": "旅行で使う基本表現",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "B",
+  "format_data": {
+    "list_items": [
+      [
+        "check in",
+        "チェックインする"
+      ],
+      [
+        "board a plane",
+        "飛行機に乗る"
+      ],
+      [
+        "miss a flight",
+        "飛行機に乗り遅れる"
+      ],
+      [
+        "book a room",
+        "部屋を予約する"
+      ],
+      [
+        "pick ___ your luggage",
+        "荷物を受け取る"
+      ]
+    ],
+    "complete_items": [
+      [
+        "check in",
+        "チェックインする"
+      ],
+      [
+        "board a plane",
+        "飛行機に乗る"
+      ],
+      [
+        "miss a flight",
+        "飛行機に乗り遅れる"
+      ],
+      [
+        "book a room",
+        "部屋を予約する"
+      ],
+      [
+        "pick up your luggage",
+        "荷物を受け取る"
+      ]
+    ],
+    "note": "英語表現と日本語をセットで確認します。"
+  },
+  "threads_reply": "✅ 正解は B. up\n\ncheck in＝チェックインする\nboard a plane＝飛行機に乗る\nmiss a flight＝飛行機に乗り遅れる\nbook a room＝部屋を予約する\npick up your luggage＝荷物を受け取る\n\n英語表現と日本語をセットで確認します。",
+  "answer_payload": {
+    "format": "save_list",
+    "correct_answer": "up",
+    "complete_list": [
+      {
+        "english": "check in",
+        "japanese": "チェックインする"
+      },
+      {
+        "english": "board a plane",
+        "japanese": "飛行機に乗る"
+      },
+      {
+        "english": "miss a flight",
+        "japanese": "飛行機に乗り遅れる"
+      },
+      {
+        "english": "book a room",
+        "japanese": "部屋を予約する"
+      },
+      {
+        "english": "pick up your luggage",
+        "japanese": "荷物を受け取る"
+      }
+    ]
+  }
+}

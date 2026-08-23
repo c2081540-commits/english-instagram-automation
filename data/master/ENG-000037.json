@@ -1,14 +1,34 @@
 {
   "content_id": "ENG-000037",
-  "category": "grammar",
-  "production_category": "grammar_usage",
-  "difficulty": "easy",
-  "seasonal": false,
+  "format": "text",
+  "difficulty": "L2",
+  "learning_point": "否定文の「まだ」には yet を使います。",
   "question": "I haven't eaten lunch ___.",
+  "correct_answer": "yet",
+  "publish_at": "2026-08-28T07:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
   "choices": [
     "already",
     "yet"
   ],
+  "explanation": "否定文の「まだ」には yet を使います。",
+  "completed_sentence": "I haven't finished yet.",
+  "japanese_translation": "まだ終わっていません。",
+  "instagram_caption": "基礎表現をひとつ確認。",
+  "threads_parent_text": "似てるけど、違い分かる？",
+  "threads_answer_text": "💡 正解は B. yet\n\n否定文のyetは「まだ」という意味で、文末に置きます。\n\n📝 I haven't eaten lunch yet.\n「私はまだ昼食を食べていません。」\n\n🔑 否定文のyet＝まだ",
+  "threads_reply": "💡 正解は B. yet\n\n否定文のyetは「まだ」という意味で、文末に置きます。\n\n📝 I haven't eaten lunch yet.\n「私はまだ昼食を食べていません。」\n\n🔑 否定文のyet＝まだ",
+  "threads_reply_explanation": "否定文のyetは「まだ」という意味で、文末に置きます。",
+  "question_guide_ja": "「昼食はまだ」ならどっち？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
   "answer_type": "single",
   "best_answer": "yet",
   "acceptable_answers": [
@@ -16,7 +36,6 @@
   ],
   "answer_hint": "まだ食べていないなら？",
   "answer_hint_approved": true,
-  "explanation": "否定文の「まだ」には yet を使います。",
   "key_difference": null,
   "examples": [
     "I haven't finished yet."
@@ -24,20 +43,16 @@
   "example_translations": [
     "まだ終わっていません。"
   ],
-  "also_natural": null,
   "tip": null,
-  "visual_required": false,
   "visual_type": null,
   "visual_description": null,
   "problem_image_path": null,
   "image_information_role": null,
   "question_repeats_visual": null,
-  "instagram_caption": "基礎表現をひとつ確認。",
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "パッと答えられる？",
-  "threads_answer_text": "💡 正解は B. yet\n\n否定文の「まだ」には yet を使います。",
-  "publish_at": "2026-08-25T09:30:00+09:00",
-  "question_guide_ja": "「昼食はまだ」ならどっち？",
   "question_role": "learning_sentence",
   "difficulty_gate": {
     "visual_only_solvable": false,
@@ -50,6 +65,6 @@
     "initial_difficulty": "TARGET",
     "decision": "KEEP"
   },
-  "difficulty_level": "L2",
-  "learning_point": "否定文のyet"
+  "correct_position": "B",
+  "format_data": {}
 }

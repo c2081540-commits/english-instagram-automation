@@ -1,0 +1,196 @@
+{
+  "content_id": "ENG-000088",
+  "format": "save_list",
+  "difficulty": "L2",
+  "learning_point": "名詞＋前置詞の定番セット",
+  "question": "名詞＋前置詞セット",
+  "correct_answer": "to",
+  "publish_at": "2026-08-29T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "list_items": [
+    {
+      "english": "reason for",
+      "japanese": "～の理由"
+    },
+    {
+      "english": "solution to",
+      "japanese": "～の解決策"
+    },
+    {
+      "english": "increase in",
+      "japanese": "～の増加"
+    },
+    {
+      "english": "need for",
+      "japanese": "～の必要性"
+    }
+  ],
+  "list_theme": "名詞＋前置詞セット",
+  "target_item": {
+    "prompt": "access ___",
+    "completed": "access to",
+    "japanese": "～へのアクセス",
+    "list_theme": "名詞＋前置詞セット"
+  },
+  "choices": [
+    "for",
+    "to",
+    "of",
+    "with"
+  ],
+  "complete_list": [
+    {
+      "english": "reason for",
+      "japanese": "～の理由"
+    },
+    {
+      "english": "solution to",
+      "japanese": "～の解決策"
+    },
+    {
+      "english": "increase in",
+      "japanese": "～の増加"
+    },
+    {
+      "english": "need for",
+      "japanese": "～の必要性"
+    },
+    {
+      "english": "access to",
+      "japanese": "～へのアクセス"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "save_list",
+  "category": "vocabulary",
+  "production_category": "review",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "to",
+  "acceptable_answers": [
+    "to"
+  ],
+  "answer_hint": "名詞＋前置詞セット",
+  "answer_hint_approved": true,
+  "explanation": "英語表現と日本語をセットで確認します。",
+  "key_difference": null,
+  "examples": [
+    "reason for",
+    "solution to",
+    "increase in",
+    "need for",
+    "access to"
+  ],
+  "example_translations": [
+    "～の理由",
+    "～の解決策",
+    "～の増加",
+    "～の必要性",
+    "～へのアクセス"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "保存して見返せる基礎英語リスト。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "一覧を確認して、最後の空欄に挑戦。",
+  "threads_answer_text": "✅ 正解は B. to\n\nreason for＝～の理由\nsolution to＝～の解決策\nincrease in＝～の増加\nneed for＝～の必要性\naccess to＝～へのアクセス\n\n英語表現と日本語をセットで確認します。",
+  "question_guide_ja": "名詞＋前置詞セット",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "B",
+  "format_data": {
+    "list_items": [
+      [
+        "reason for",
+        "～の理由"
+      ],
+      [
+        "solution to",
+        "～の解決策"
+      ],
+      [
+        "increase in",
+        "～の増加"
+      ],
+      [
+        "need for",
+        "～の必要性"
+      ],
+      [
+        "access ___",
+        "～へのアクセス"
+      ]
+    ],
+    "complete_items": [
+      [
+        "reason for",
+        "～の理由"
+      ],
+      [
+        "solution to",
+        "～の解決策"
+      ],
+      [
+        "increase in",
+        "～の増加"
+      ],
+      [
+        "need for",
+        "～の必要性"
+      ],
+      [
+        "access to",
+        "～へのアクセス"
+      ]
+    ],
+    "note": "英語表現と日本語をセットで確認します。"
+  },
+  "threads_reply": "✅ 正解は B. to\n\nreason for＝～の理由\nsolution to＝～の解決策\nincrease in＝～の増加\nneed for＝～の必要性\naccess to＝～へのアクセス\n\n英語表現と日本語をセットで確認します。",
+  "answer_payload": {
+    "format": "save_list",
+    "correct_answer": "to",
+    "complete_list": [
+      {
+        "english": "reason for",
+        "japanese": "～の理由"
+      },
+      {
+        "english": "solution to",
+        "japanese": "～の解決策"
+      },
+      {
+        "english": "increase in",
+        "japanese": "～の増加"
+      },
+      {
+        "english": "need for",
+        "japanese": "～の必要性"
+      },
+      {
+        "english": "access to",
+        "japanese": "～へのアクセス"
+      }
+    ]
+  }
+}

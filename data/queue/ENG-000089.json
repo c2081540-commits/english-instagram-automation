@@ -1,0 +1,26 @@
+{
+  "content_id": "ENG-000089",
+  "platform": "instagram",
+  "content_type": "quiz",
+  "channel": "feed",
+  "publish_at": "2026-08-30T20:30:00+09:00",
+  "status": "pending",
+  "execution_eligibility": "scheduled",
+  "carousel": [
+    {
+      "order": 1,
+      "role": "question",
+      "image_path": "artifacts/images/ENG-000089-question.png"
+    },
+    {
+      "order": 2,
+      "role": "answer",
+      "image_path": "artifacts/images/ENG-000089-answer.png"
+    }
+  ],
+  "caption": "保存して見返せる基礎英語リスト。",
+  "difficulty_level": "L3",
+  "format": "save_list",
+  "quiz_format": "save_list",
+  "correct_position": "B"
+}

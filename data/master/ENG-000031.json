@@ -1,14 +1,34 @@
 {
   "content_id": "ENG-000031",
-  "category": "grammar",
-  "production_category": "grammar_usage",
-  "difficulty": "easy",
-  "seasonal": false,
+  "format": "text",
+  "difficulty": "L2",
+  "learning_point": "I には have to を使います。",
   "question": "I ___ get up early tomorrow.",
+  "correct_answer": "have to",
+  "publish_at": "2026-08-27T07:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
   "choices": [
     "have to",
     "has to"
   ],
+  "explanation": "I には have to を使います。",
+  "completed_sentence": "I have to leave now.",
+  "japanese_translation": "もう出なければなりません。",
+  "instagram_caption": "基礎表現をひとつ確認。",
+  "threads_parent_text": "短い文ほど形で迷いやすい。",
+  "threads_answer_text": "💡 正解は A. have to\n\n明日早起きする必要があることをhave toで表します。\n\n📝 I have to get up early tomorrow.\n「私は明日早起きしなければなりません。」\n\n🔑 have to＝〜する必要がある",
+  "threads_reply": "💡 正解は A. have to\n\n明日早起きする必要があることをhave toで表します。\n\n📝 I have to get up early tomorrow.\n「私は明日早起きしなければなりません。」\n\n🔑 have to＝〜する必要がある",
+  "threads_reply_explanation": "明日早起きする必要があることをhave toで表します。",
+  "question_guide_ja": "「早起きしないと」ならどっち？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
   "answer_type": "single",
   "best_answer": "have to",
   "acceptable_answers": [
@@ -16,7 +36,6 @@
   ],
   "answer_hint": "主語は I。どちらの形？",
   "answer_hint_approved": true,
-  "explanation": "I には have to を使います。",
   "key_difference": null,
   "examples": [
     "I have to leave now."
@@ -24,21 +43,16 @@
   "example_translations": [
     "もう出なければなりません。"
   ],
-  "also_natural": null,
   "tip": null,
-  "visual_required": false,
   "visual_type": null,
   "visual_description": null,
   "problem_image_path": null,
   "image_information_role": null,
   "question_repeats_visual": null,
-  "instagram_caption": "基礎表現をひとつ確認。",
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "パッと答えられる？",
-  "threads_answer_text": "💡 正解は A. have to\n\nI には have to を使います。",
-  "publish_at": "2026-08-24T09:30:00+09:00",
-  "answer_point": "I / you / we / they → have to",
-  "question_guide_ja": "「早起きしないと」ならどっち？",
   "question_role": "learning_sentence",
   "difficulty_gate": {
     "visual_only_solvable": false,
@@ -51,6 +65,6 @@
     "initial_difficulty": "TARGET",
     "decision": "KEEP"
   },
-  "difficulty_level": "L2",
-  "learning_point": "have to"
+  "correct_position": "A",
+  "format_data": {}
 }

@@ -1,45 +1,58 @@
 {
   "content_id": "ENG-000046",
+  "format": "visual",
+  "difficulty": "L3",
+  "learning_point": "available seat in a situation",
+  "question": "What is he showing her?",
+  "correct_answer": "A free seat",
+  "publish_at": "2026-08-29T12:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "A train ticket",
+    "A free seat"
+  ],
+  "explanation": "男性は隣の空席を手で示しています。free seatは「空いている席」です。",
+  "completed_sentence": "He is showing her a free seat.",
+  "japanese_translation": "彼は彼女に空席を示しています。",
+  "instagram_caption": "短い英語クイズです。",
+  "threads_parent_text": "男性が示しているのは何？",
+  "threads_answer_text": "💡 男性の手の先を見てみよう。\n\n✅ 正解は B. A free seat\n\n隣の空いている席を示しています。",
+  "threads_reply": "💡 男性の手の先を見てみよう。\n\n✅ 正解は B. A free seat\n\n隣の空いている席を示しています。",
+  "threads_reply_explanation": "隣の空いている席を示しています。",
+  "question_guide_ja": null,
+  "visual_required": true,
+  "content_type": "quiz",
+  "quiz_format": "visual",
   "category": "situation",
   "production_category": "situation",
-  "difficulty": "easy",
-  "seasonal": true,
-  "question": "Is anyone ___ here?",
-  "choices": [
-    "sit",
-    "sitting"
-  ],
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
   "answer_type": "single",
-  "best_answer": "sitting",
+  "best_answer": "A free seat",
   "acceptable_answers": [
-    "sitting"
+    "A free seat"
   ],
-  "answer_hint": "今の状態を尋ねる形に注目。",
+  "answer_hint": "男性の手の先にあるものは？",
   "answer_hint_approved": true,
-  "explanation": "今そこに座っている人がいるか尋ねるので、isとsittingを使います。",
-  "key_difference": "be動詞＋-ing＝今していること",
+  "key_difference": null,
   "examples": [
-    "Is anyone sitting here?"
+    "He is showing her a free seat."
   ],
   "example_translations": [
-    "ここに誰か座っていますか？"
+    "彼は彼女に空席を示しています。"
   ],
-  "also_natural": "No, go ahead.",
   "tip": null,
-  "visual_required": true,
   "visual_type": "photo",
-  "visual_description": "A commuter train with one clearly empty seat beside an adult passenger who makes a welcoming gesture toward it. Summer clothing, no readable signs, logos, or watermark.",
-  "problem_image_path": "assets/source/ENG-000046-empty-train-seat.png",
-  "image_information_role": "essential",
+  "visual_description": "男性が隣の空席を手で示している",
+  "problem_image_path": "artifacts/images/ENG-000046-question.png",
+  "image_information_role": "decision_evidence",
   "question_repeats_visual": false,
-  "instagram_caption": "短い英語クイズです。",
+  "visual_semantic_consistency": true,
+  "visual_answer_uniqueness": true,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "3秒でどうぞ。",
-  "threads_answer_text": "💡 正解は B. sitting\n\n今そこに座っている人がいるか尋ねるので、is＋sittingです。\n\n🗣️ Is anyone sitting here?\n「ここに誰か座っていますか？」\n\n🔑 be動詞＋-ing＝今していること",
-  "publish_at": "2026-08-26T18:00:00+09:00",
-  "situation_purpose": "explain_seat_availability",
-  "response_family": "information_response",
-  "question_guide_ja": null,
   "question_role": null,
   "difficulty_gate": {
     "visual_only_solvable": false,
@@ -49,20 +62,20 @@
     "unique_answer": true,
     "visual_contributes_to_decision": true,
     "difficulty": "TARGET",
-    "initial_difficulty": "TOO_EASY",
-    "decision": "REVISE"
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
   },
-  "learning_point": "現在進行形の疑問文",
-  "difficulty_level": "L3",
-  "visual_semantic_consistency": true,
+  "correct_position": "B",
+  "format_data": {},
   "visual_semantics": {
-    "subject_gender": "male speaker",
-    "subject_count": 1,
-    "action": "indicating an empty seat",
-    "direction": null,
-    "object": "one empty train seat",
-    "state": "unoccupied",
-    "location": "train",
-    "completed_sentence": "Is anyone sitting here?"
-  }
+    "subject_gender": "verified",
+    "subject_count": "verified",
+    "action": "男性が隣の空席を手で示している",
+    "direction": "verified",
+    "object": "verified",
+    "state": "verified",
+    "location": "verified",
+    "completed_sentence": "He is showing her a free seat."
+  },
+  "visual_semantic_checks": true
 }

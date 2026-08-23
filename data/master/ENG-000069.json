@@ -1,0 +1,70 @@
+{
+  "content_id": "ENG-000069",
+  "format": "text",
+  "difficulty": "L2",
+  "learning_point": "現在完了の過去分詞",
+  "question": "I've just ___ the email.",
+  "correct_answer": "sent",
+  "publish_at": "2026-09-01T15:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "sent",
+    "send"
+  ],
+  "explanation": "現在完了はhave＋過去分詞です。sendの過去分詞はsentです。",
+  "completed_sentence": "I've just sent the email.",
+  "japanese_translation": "ちょうどメールを送りました。",
+  "instagram_caption": "短く考えて、答えは2枚目で確認。",
+  "threads_parent_text": "送った直後をどう言う？",
+  "threads_answer_text": "💡 haveの後ろの形に注目。\n\n✅ 正解は A. sent\n\n現在完了はhave＋過去分詞です。sendの過去分詞はsentです。\n\n📝 I've just sent the email.\n「ちょうどメールを送りました。」",
+  "threads_reply": "💡 haveの後ろの形に注目。\n\n✅ 正解は A. sent\n\n現在完了はhave＋過去分詞です。sendの過去分詞はsentです。\n\n📝 I've just sent the email.\n「ちょうどメールを送りました。」",
+  "threads_reply_explanation": "現在完了はhave＋過去分詞です。sendの過去分詞はsentです。",
+  "question_guide_ja": "haveの後ろに置く形は？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "sent",
+  "acceptable_answers": [
+    "sent"
+  ],
+  "answer_hint": "haveの後ろの形に注目。",
+  "answer_hint_approved": true,
+  "key_difference": null,
+  "examples": [
+    "I've just sent the email."
+  ],
+  "example_translations": [
+    "ちょうどメールを送りました。"
+  ],
+  "tip": null,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_hashtags": [],
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "A",
+  "format_data": {}
+}

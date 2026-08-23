@@ -1,0 +1,176 @@
+{
+  "content_id": "ENG-000086",
+  "format": "error_hunt",
+  "difficulty": "L2",
+  "learning_point": "感覚動詞＋形容詞",
+  "question": "4つの英文、何個間違ってる？",
+  "correct_answer": "1個",
+  "publish_at": "2026-08-31T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "sentences": [
+    {
+      "sentence": "This soup tastes good.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "This soup tastes good.",
+      "grammar_rule": "taste + 形容詞",
+      "reason_ja": "tasteの後ろに状態を表す形容詞を置けます。"
+    },
+    {
+      "sentence": "I feel happily today.",
+      "verdict": "INCORRECT",
+      "corrected_sentence": "I feel happy today.",
+      "grammar_rule": "feel + 形容詞",
+      "reason_ja": "気分の状態はfeel＋形容詞で表します。"
+    },
+    {
+      "sentence": "The test was easy.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "The test was easy.",
+      "grammar_rule": "be + 形容詞",
+      "reason_ja": "be動詞の後ろのeasyが状態を説明します。"
+    },
+    {
+      "sentence": "She looks tired.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "She looks tired.",
+      "grammar_rule": "look + 形容詞",
+      "reason_ja": "look＋形容詞で見た様子を表します。"
+    }
+  ],
+  "answer_mode": "count",
+  "displayed_answer": "1個",
+  "answer_sentences": [
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "This soup tastes good.",
+      "reason_ja": "tasteの後ろに状態を表す形容詞を置けます。"
+    },
+    {
+      "verdict": "INCORRECT",
+      "corrected_sentence": "I feel happy today.",
+      "reason_ja": "気分の状態はfeel＋形容詞で表します。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "The test was easy.",
+      "reason_ja": "be動詞の後ろのeasyが状態を説明します。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "She looks tired.",
+      "reason_ja": "look＋形容詞で見た様子を表します。"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "error_hunt",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "choices": [],
+  "answer_type": "single",
+  "best_answer": "1個",
+  "acceptable_answers": [
+    "1個"
+  ],
+  "answer_hint": "4つの英文、何個間違ってる？",
+  "answer_hint_approved": true,
+  "explanation": "1. CORRECT: tasteの後ろに状態を表す形容詞を置けます。\n2. INCORRECT: 気分の状態はfeel＋形容詞で表します。\n3. CORRECT: be動詞の後ろのeasyが状態を説明します。\n4. CORRECT: look＋形容詞で見た様子を表します。",
+  "key_difference": null,
+  "examples": [
+    "This soup tastes good.",
+    "I feel happy today.",
+    "The test was easy.",
+    "She looks tired."
+  ],
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "正しい文も含めて、全部確認する間違い探し。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "4つの英文を、1文ずつ判定してみよう。",
+  "threads_answer_text": "✅ 間違いは1個です。\n\n1 ○ This soup tastes good.\ntasteの後ろに状態を表す形容詞を置けます。\n2 × I feel happy today.\n気分の状態はfeel＋形容詞で表します。\n3 ○ The test was easy.\nbe動詞の後ろのeasyが状態を説明します。\n4 ○ She looks tired.\nlook＋形容詞で見た様子を表します。",
+  "question_guide_ja": "4つの英文、何個間違ってる？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": null,
+  "correct_position": null,
+  "format_data": {
+    "items": [
+      "This soup tastes good.",
+      "I feel happily today.",
+      "The test was easy.",
+      "She looks tired."
+    ],
+    "sentence_audit": [
+      {
+        "sentence": "This soup tastes good.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "This soup tastes good.",
+        "grammar_rule": "taste + 形容詞",
+        "reason_ja": "tasteの後ろに状態を表す形容詞を置けます。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "I feel happily today.",
+        "verdict": "INCORRECT",
+        "corrected_sentence": "I feel happy today.",
+        "grammar_rule": "feel + 形容詞",
+        "reason_ja": "気分の状態はfeel＋形容詞で表します。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "The test was easy.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "The test was easy.",
+        "grammar_rule": "be + 形容詞",
+        "reason_ja": "be動詞の後ろのeasyが状態を説明します。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "She looks tired.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "She looks tired.",
+        "grammar_rule": "look + 形容詞",
+        "reason_ja": "look＋形容詞で見た様子を表します。",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "threads_reply": "✅ 間違いは1個です。\n\n1 ○ This soup tastes good.\ntasteの後ろに状態を表す形容詞を置けます。\n2 × I feel happy today.\n気分の状態はfeel＋形容詞で表します。\n3 ○ The test was easy.\nbe動詞の後ろのeasyが状態を説明します。\n4 ○ She looks tired.\nlook＋形容詞で見た様子を表します。",
+  "answer_payload": {
+    "format": "error_hunt",
+    "correct_answer": "1個",
+    "answer_sentences": [
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "This soup tastes good.",
+        "reason_ja": "tasteの後ろに状態を表す形容詞を置けます。"
+      },
+      {
+        "verdict": "INCORRECT",
+        "corrected_sentence": "I feel happy today.",
+        "reason_ja": "気分の状態はfeel＋形容詞で表します。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "The test was easy.",
+        "reason_ja": "be動詞の後ろのeasyが状態を説明します。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "She looks tired.",
+        "reason_ja": "look＋形容詞で見た様子を表します。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "content_id": "ENG-000085",
+  "format": "error_hunt",
+  "difficulty": "L2",
+  "learning_point": "使役動詞と不定詞",
+  "question": "4つの英文、何個間違ってる？",
+  "correct_answer": "1個",
+  "publish_at": "2026-08-29T18:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "sentences": [
+    {
+      "sentence": "They let me leave early.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "They let me leave early.",
+      "grammar_rule": "let + 人 + 原形",
+      "reason_ja": "letの後ろは人＋動詞の原形です。"
+    },
+    {
+      "sentence": "She made me waited.",
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She made me wait.",
+      "grammar_rule": "make + 人 + 原形",
+      "reason_ja": "能動態のmakeの後ろは人＋動詞の原形です。"
+    },
+    {
+      "sentence": "He helped me carry the bags.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "He helped me carry the bags.",
+      "grammar_rule": "help + 人 + 原形",
+      "reason_ja": "helpの後ろではtoなしの原形を使えます。"
+    },
+    {
+      "sentence": "I want you to be careful.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "I want you to be careful.",
+      "grammar_rule": "want + 人 + to do",
+      "reason_ja": "wantの後ろは人＋to不定詞です。"
+    }
+  ],
+  "answer_mode": "count",
+  "displayed_answer": "1個",
+  "answer_sentences": [
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "They let me leave early.",
+      "reason_ja": "letの後ろは人＋動詞の原形です。"
+    },
+    {
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She made me wait.",
+      "reason_ja": "能動態のmakeの後ろは人＋動詞の原形です。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "He helped me carry the bags.",
+      "reason_ja": "helpの後ろではtoなしの原形を使えます。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "I want you to be careful.",
+      "reason_ja": "wantの後ろは人＋to不定詞です。"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "error_hunt",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "choices": [],
+  "answer_type": "single",
+  "best_answer": "1個",
+  "acceptable_answers": [
+    "1個"
+  ],
+  "answer_hint": "4つの英文、何個間違ってる？",
+  "answer_hint_approved": true,
+  "explanation": "1. CORRECT: letの後ろは人＋動詞の原形です。\n2. INCORRECT: 能動態のmakeの後ろは人＋動詞の原形です。\n3. CORRECT: helpの後ろではtoなしの原形を使えます。\n4. CORRECT: wantの後ろは人＋to不定詞です。",
+  "key_difference": null,
+  "examples": [
+    "They let me leave early.",
+    "She made me wait.",
+    "He helped me carry the bags.",
+    "I want you to be careful."
+  ],
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "正しい文も含めて、全部確認する間違い探し。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "4つの英文を、1文ずつ判定してみよう。",
+  "threads_answer_text": "✅ 間違いは1個です。\n\n1 ○ They let me leave early.\nletの後ろは人＋動詞の原形です。\n2 × She made me wait.\n能動態のmakeの後ろは人＋動詞の原形です。\n3 ○ He helped me carry the bags.\nhelpの後ろではtoなしの原形を使えます。\n4 ○ I want you to be careful.\nwantの後ろは人＋to不定詞です。",
+  "question_guide_ja": "4つの英文、何個間違ってる？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": null,
+  "correct_position": null,
+  "format_data": {
+    "items": [
+      "They let me leave early.",
+      "She made me waited.",
+      "He helped me carry the bags.",
+      "I want you to be careful."
+    ],
+    "sentence_audit": [
+      {
+        "sentence": "They let me leave early.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "They let me leave early.",
+        "grammar_rule": "let + 人 + 原形",
+        "reason_ja": "letの後ろは人＋動詞の原形です。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "She made me waited.",
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She made me wait.",
+        "grammar_rule": "make + 人 + 原形",
+        "reason_ja": "能動態のmakeの後ろは人＋動詞の原形です。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "He helped me carry the bags.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "He helped me carry the bags.",
+        "grammar_rule": "help + 人 + 原形",
+        "reason_ja": "helpの後ろではtoなしの原形を使えます。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "I want you to be careful.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "I want you to be careful.",
+        "grammar_rule": "want + 人 + to do",
+        "reason_ja": "wantの後ろは人＋to不定詞です。",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "threads_reply": "✅ 間違いは1個です。\n\n1 ○ They let me leave early.\nletの後ろは人＋動詞の原形です。\n2 × She made me wait.\n能動態のmakeの後ろは人＋動詞の原形です。\n3 ○ He helped me carry the bags.\nhelpの後ろではtoなしの原形を使えます。\n4 ○ I want you to be careful.\nwantの後ろは人＋to不定詞です。",
+  "answer_payload": {
+    "format": "error_hunt",
+    "correct_answer": "1個",
+    "answer_sentences": [
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "They let me leave early.",
+        "reason_ja": "letの後ろは人＋動詞の原形です。"
+      },
+      {
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She made me wait.",
+        "reason_ja": "能動態のmakeの後ろは人＋動詞の原形です。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "He helped me carry the bags.",
+        "reason_ja": "helpの後ろではtoなしの原形を使えます。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "I want you to be careful.",
+        "reason_ja": "wantの後ろは人＋to不定詞です。"
+      }
+    ]
+  }
+}

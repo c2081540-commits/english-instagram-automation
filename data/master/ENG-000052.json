@@ -1,0 +1,102 @@
+{
+  "content_id": "ENG-000052",
+  "format": "pattern",
+  "difficulty": "L2",
+  "learning_point": "make＋名詞の基本コロケーション",
+  "question": "同じ組み合わせになるのは？",
+  "correct_answer": "make",
+  "publish_at": "2026-08-25T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "examples": [
+    "make a decision",
+    "make a mistake",
+    "make progress"
+  ],
+  "target": "___ an effort",
+  "choices": [
+    "do",
+    "make"
+  ],
+  "pattern_rule": "decision / mistake / progress / effort は、基本的にmakeと組み合わせます。",
+  "examples_learning_point": "make＋名詞の基本コロケーション",
+  "target_learning_point": "make＋名詞の基本コロケーション",
+  "content_type": "quiz",
+  "quiz_format": "pattern",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy",
+  "difficulty_level": "L2",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "make",
+  "acceptable_answers": [
+    "make"
+  ],
+  "answer_hint": "同じ組み合わせになるのは？",
+  "answer_hint_approved": true,
+  "explanation": "decision / mistake / progress / effort は、基本的にmakeと組み合わせます。\nmake an effort ＝ 努力する\nmake progress ＝ 進歩する",
+  "key_difference": null,
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "decision、mistake、progress。\n共通する動詞は？",
+  "threads_answer_text": "✅ 正解は B. make\n\nmake a decision\nmake a mistake\nmake progress\nmake an effort\n\n例の共通点をまとめて確認しましょう。",
+  "question_guide_ja": "同じ組み合わせになるのは？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 2,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "B",
+  "format_data": {
+    "examples": [
+      "make a decision",
+      "make a mistake",
+      "make progress",
+      "___ an effort"
+    ],
+    "answer_sections": [
+      [
+        "答え",
+        "B. make"
+      ],
+      [
+        "パターン",
+        "decision / mistake / progress / effort は、基本的にmakeと組み合わせます。"
+      ],
+      [
+        "まとめ",
+        "make an effort ＝ 努力する\nmake progress ＝ 進歩する"
+      ]
+    ]
+  },
+  "threads_reply": "✅ 正解は B. make\n\nmake a decision\nmake a mistake\nmake progress\nmake an effort\n\n例の共通点をまとめて確認しましょう。",
+  "answer_payload": {
+    "format": "pattern",
+    "correct_answer": "make",
+    "pattern_rule": "decision / mistake / progress / effort は、基本的にmakeと組み合わせます。",
+    "examples": [
+      "make a decision",
+      "make a mistake",
+      "make progress"
+    ]
+  }
+}

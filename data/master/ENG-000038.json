@@ -1,16 +1,36 @@
 {
   "content_id": "ENG-000038",
-  "category": "grammar",
-  "production_category": "grammar_usage",
-  "difficulty": "easy_plus",
-  "seasonal": false,
+  "format": "text",
+  "difficulty": "L3",
+  "learning_point": "物を説明する関係代名詞に that を使えます。",
   "question": "This is the book ___ I bought.",
+  "correct_answer": "that",
+  "publish_at": "2026-08-28T15:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
   "choices": [
     "where",
     "when",
     "what",
     "that"
   ],
+  "explanation": "物を説明する関係代名詞に that を使えます。",
+  "completed_sentence": "This is the bag that I bought.",
+  "japanese_translation": "これは私が買ったバッグです。",
+  "instagram_caption": "日常で使える英語をチェック。",
+  "threads_parent_text": "実際に使うならどっち？",
+  "threads_answer_text": "💡 正解は D. that\n\nthatがbookとI boughtをつなぎ、「私が買った本」を表します。\n\n📝 This is the book that I bought.\n「これは私が買った本です。」\n\n🔑 the book that I bought＝私が買った本",
+  "threads_reply": "💡 正解は D. that\n\nthatがbookとI boughtをつなぎ、「私が買った本」を表します。\n\n📝 This is the book that I bought.\n「これは私が買った本です。」\n\n🔑 the book that I bought＝私が買った本",
+  "threads_reply_explanation": "thatがbookとI boughtをつなぎ、「私が買った本」を表します。",
+  "question_guide_ja": "「私が買った本」ならどれ？",
+  "visual_required": false,
+  "content_type": "quiz",
+  "quiz_format": "text",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
   "answer_type": "single",
   "best_answer": "that",
   "acceptable_answers": [
@@ -18,7 +38,6 @@
   ],
   "answer_hint": "book を後ろから説明する語は？",
   "answer_hint_approved": true,
-  "explanation": "物を説明する関係代名詞に that を使えます。",
   "key_difference": null,
   "examples": [
     "This is the bag that I bought."
@@ -26,25 +45,21 @@
   "example_translations": [
     "これは私が買ったバッグです。"
   ],
-  "also_natural": null,
   "tip": null,
-  "visual_required": false,
   "visual_type": null,
   "visual_description": null,
   "problem_image_path": null,
   "image_information_role": null,
   "question_repeats_visual": null,
-  "instagram_caption": "日常で使える英語をチェック。",
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
   "instagram_hashtags": [],
-  "threads_parent_text": "10秒でどうぞ。",
-  "threads_answer_text": "💡 正解は D. that\n\n物を説明する関係代名詞に that を使えます。",
-  "publish_at": "2026-08-25T12:00:00+09:00",
-  "question_guide_ja": "「私が買った本」ならどれ？",
   "question_role": "learning_sentence",
   "difficulty_gate": {
     "visual_only_solvable": false,
     "common_sense_only": false,
-    "effective_choice_count": 3,
+    "effective_choice_count": 4,
     "weak_distractor_count": 0,
     "unique_answer": true,
     "visual_contributes_to_decision": null,
@@ -52,6 +67,6 @@
     "initial_difficulty": "TARGET",
     "decision": "KEEP"
   },
-  "difficulty_level": "L3",
-  "learning_point": "物を表すthat"
+  "correct_position": "D",
+  "format_data": {}
 }

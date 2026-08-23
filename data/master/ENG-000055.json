@@ -1,0 +1,196 @@
+{
+  "content_id": "ENG-000055",
+  "format": "save_list",
+  "difficulty": "L3",
+  "learning_point": "形容詞＋前置詞の定番セット",
+  "question": "形容詞＋前置詞セット",
+  "correct_answer": "with",
+  "publish_at": "2026-08-25T12:00:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "list_items": [
+    {
+      "english": "similar to",
+      "japanese": "～に似ている"
+    },
+    {
+      "english": "different from",
+      "japanese": "～と異なる"
+    },
+    {
+      "english": "famous for",
+      "japanese": "～で有名"
+    },
+    {
+      "english": "responsible for",
+      "japanese": "～を担当している"
+    }
+  ],
+  "list_theme": "形容詞＋前置詞セット",
+  "target_item": {
+    "prompt": "familiar ___",
+    "completed": "familiar with",
+    "japanese": "～に詳しい",
+    "list_theme": "形容詞＋前置詞セット"
+  },
+  "choices": [
+    "with",
+    "at",
+    "on",
+    "for"
+  ],
+  "complete_list": [
+    {
+      "english": "similar to",
+      "japanese": "～に似ている"
+    },
+    {
+      "english": "different from",
+      "japanese": "～と異なる"
+    },
+    {
+      "english": "famous for",
+      "japanese": "～で有名"
+    },
+    {
+      "english": "responsible for",
+      "japanese": "～を担当している"
+    },
+    {
+      "english": "familiar with",
+      "japanese": "～に詳しい・慣れている"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "save_list",
+  "category": "vocabulary",
+  "production_category": "review",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "with",
+  "acceptable_answers": [
+    "with"
+  ],
+  "answer_hint": "形容詞＋前置詞セット",
+  "answer_hint_approved": true,
+  "explanation": "形容詞の後ろまで1セットとして覚えます。",
+  "key_difference": null,
+  "examples": [
+    "similar to",
+    "different from",
+    "famous for",
+    "responsible for",
+    "familiar with"
+  ],
+  "example_translations": [
+    "～に似ている",
+    "～と異なる",
+    "～で有名",
+    "～を担当している",
+    "～に詳しい・慣れている"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "前置詞まで言えると、英文が安定します。\n最後のセットは？",
+  "threads_answer_text": "✅ 正解は A. with\n\nsimilar to＝～に似ている\ndifferent from＝～と異なる\nfamous for＝～で有名\nresponsible for＝～を担当している\nfamiliar with＝～に詳しい・慣れている\n\n形容詞の後ろまで1セットとして覚えます。",
+  "question_guide_ja": "形容詞＋前置詞セット",
+  "question_role": "meta_instruction",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "A",
+  "format_data": {
+    "list_items": [
+      [
+        "similar to",
+        "～に似ている"
+      ],
+      [
+        "different from",
+        "～と異なる"
+      ],
+      [
+        "famous for",
+        "～で有名"
+      ],
+      [
+        "responsible for",
+        "～を担当している"
+      ],
+      [
+        "familiar ___",
+        "～に詳しい"
+      ]
+    ],
+    "complete_items": [
+      [
+        "similar to",
+        "～に似ている"
+      ],
+      [
+        "different from",
+        "～と異なる"
+      ],
+      [
+        "famous for",
+        "～で有名"
+      ],
+      [
+        "responsible for",
+        "～を担当している"
+      ],
+      [
+        "familiar with",
+        "～に詳しい・慣れている"
+      ]
+    ],
+    "note": "形容詞の後ろまで1セットとして覚えます。"
+  },
+  "threads_reply": "✅ 正解は A. with\n\nsimilar to＝～に似ている\ndifferent from＝～と異なる\nfamous for＝～で有名\nresponsible for＝～を担当している\nfamiliar with＝～に詳しい・慣れている\n\n形容詞の後ろまで1セットとして覚えます。",
+  "answer_payload": {
+    "format": "save_list",
+    "correct_answer": "with",
+    "complete_list": [
+      {
+        "english": "similar to",
+        "japanese": "～に似ている"
+      },
+      {
+        "english": "different from",
+        "japanese": "～と異なる"
+      },
+      {
+        "english": "famous for",
+        "japanese": "～で有名"
+      },
+      {
+        "english": "responsible for",
+        "japanese": "～を担当している"
+      },
+      {
+        "english": "familiar with",
+        "japanese": "～に詳しい・慣れている"
+      }
+    ]
+  }
+}

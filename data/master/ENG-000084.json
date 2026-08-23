@@ -1,0 +1,176 @@
+{
+  "content_id": "ENG-000084",
+  "format": "error_hunt",
+  "difficulty": "L3",
+  "learning_point": "場所・時刻の前置詞",
+  "question": "4つの英文、何個間違ってる？",
+  "correct_answer": "1個",
+  "publish_at": "2026-08-28T20:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "sentences": [
+    {
+      "sentence": "I arrived at the station.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "I arrived at the station.",
+      "grammar_rule": "arrive at + 地点",
+      "reason_ja": "駅のような地点にはatを使います。"
+    },
+    {
+      "sentence": "She went to home early.",
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She went home early.",
+      "grammar_rule": "go home",
+      "reason_ja": "homeの前には通常toを置きません。"
+    },
+    {
+      "sentence": "We had lunch at noon.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "We had lunch at noon.",
+      "grammar_rule": "at noon",
+      "reason_ja": "noonにはatを使います。"
+    },
+    {
+      "sentence": "He is at work now.",
+      "verdict": "CORRECT",
+      "corrected_sentence": "He is at work now.",
+      "grammar_rule": "at work",
+      "reason_ja": "at workで「仕事中」です。"
+    }
+  ],
+  "answer_mode": "count",
+  "displayed_answer": "1個",
+  "answer_sentences": [
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "I arrived at the station.",
+      "reason_ja": "駅のような地点にはatを使います。"
+    },
+    {
+      "verdict": "INCORRECT",
+      "corrected_sentence": "She went home early.",
+      "reason_ja": "homeの前には通常toを置きません。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "We had lunch at noon.",
+      "reason_ja": "noonにはatを使います。"
+    },
+    {
+      "verdict": "CORRECT",
+      "corrected_sentence": "He is at work now.",
+      "reason_ja": "at workで「仕事中」です。"
+    }
+  ],
+  "content_type": "quiz",
+  "quiz_format": "error_hunt",
+  "category": "grammar",
+  "production_category": "grammar_usage",
+  "difficulty_label": "easy_plus",
+  "difficulty_level": "L3",
+  "seasonal": false,
+  "choices": [],
+  "answer_type": "single",
+  "best_answer": "1個",
+  "acceptable_answers": [
+    "1個"
+  ],
+  "answer_hint": "4つの英文、何個間違ってる？",
+  "answer_hint_approved": true,
+  "explanation": "1. CORRECT: 駅のような地点にはatを使います。\n2. INCORRECT: homeの前には通常toを置きません。\n3. CORRECT: noonにはatを使います。\n4. CORRECT: at workで「仕事中」です。",
+  "key_difference": null,
+  "examples": [
+    "I arrived at the station.",
+    "She went home early.",
+    "We had lunch at noon.",
+    "He is at work now."
+  ],
+  "example_translations": [],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "正しい文も含めて、全部確認する間違い探し。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "4つの英文を、1文ずつ判定してみよう。",
+  "threads_answer_text": "✅ 間違いは1個です。\n\n1 ○ I arrived at the station.\n駅のような地点にはatを使います。\n2 × She went home early.\nhomeの前には通常toを置きません。\n3 ○ We had lunch at noon.\nnoonにはatを使います。\n4 ○ He is at work now.\nat workで「仕事中」です。",
+  "question_guide_ja": "4つの英文、何個間違ってる？",
+  "question_role": "meta_instruction",
+  "difficulty_gate": null,
+  "correct_position": null,
+  "format_data": {
+    "items": [
+      "I arrived at the station.",
+      "She went to home early.",
+      "We had lunch at noon.",
+      "He is at work now."
+    ],
+    "sentence_audit": [
+      {
+        "sentence": "I arrived at the station.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "I arrived at the station.",
+        "grammar_rule": "arrive at + 地点",
+        "reason_ja": "駅のような地点にはatを使います。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "She went to home early.",
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She went home early.",
+        "grammar_rule": "go home",
+        "reason_ja": "homeの前には通常toを置きません。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "We had lunch at noon.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "We had lunch at noon.",
+        "grammar_rule": "at noon",
+        "reason_ja": "noonにはatを使います。",
+        "confidence": "HIGH"
+      },
+      {
+        "sentence": "He is at work now.",
+        "verdict": "CORRECT",
+        "corrected_sentence": "He is at work now.",
+        "grammar_rule": "at work",
+        "reason_ja": "at workで「仕事中」です。",
+        "confidence": "HIGH"
+      }
+    ]
+  },
+  "threads_reply": "✅ 間違いは1個です。\n\n1 ○ I arrived at the station.\n駅のような地点にはatを使います。\n2 × She went home early.\nhomeの前には通常toを置きません。\n3 ○ We had lunch at noon.\nnoonにはatを使います。\n4 ○ He is at work now.\nat workで「仕事中」です。",
+  "answer_payload": {
+    "format": "error_hunt",
+    "correct_answer": "1個",
+    "answer_sentences": [
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "I arrived at the station.",
+        "reason_ja": "駅のような地点にはatを使います。"
+      },
+      {
+        "verdict": "INCORRECT",
+        "corrected_sentence": "She went home early.",
+        "reason_ja": "homeの前には通常toを置きません。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "We had lunch at noon.",
+        "reason_ja": "noonにはatを使います。"
+      },
+      {
+        "verdict": "CORRECT",
+        "corrected_sentence": "He is at work now.",
+        "reason_ja": "at workで「仕事中」です。"
+      }
+    ]
+  }
+}

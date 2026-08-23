@@ -1,0 +1,105 @@
+{
+  "content_id": "ENG-000074",
+  "format": "difference",
+  "difficulty": "L1",
+  "learning_point": "remember / remind / recall / memorize",
+  "question": "Please ___ me to call Ken.",
+  "correct_answer": "remind",
+  "publish_at": "2026-08-29T09:30:00+09:00",
+  "english_correctness": true,
+  "unique_answer": true,
+  "choices": [
+    "remind",
+    "remember",
+    "recall",
+    "memorize"
+  ],
+  "choice_explanations": {
+    "remember": "自分で覚えている",
+    "remind": "人に思い出させる",
+    "recall": "記憶を呼び戻す",
+    "memorize": "暗記する"
+  },
+  "completed_sentence": "Please remind me to call Ken.",
+  "content_type": "quiz",
+  "quiz_format": "difference",
+  "category": "vocabulary",
+  "production_category": "natural_choice",
+  "difficulty_label": "beginner",
+  "difficulty_level": "L1",
+  "seasonal": false,
+  "answer_type": "single",
+  "best_answer": "remind",
+  "acceptable_answers": [
+    "remind"
+  ],
+  "answer_hint": "文全体の形と語の組み合わせを比べよう。",
+  "answer_hint_approved": true,
+  "explanation": "remember = 自分で覚えている\nremind = 人に思い出させる\nrecall = 記憶を呼び戻す\nmemorize = 暗記する",
+  "key_difference": "remember = 自分で覚えている\nremind = 人に思い出させる\nrecall = 記憶を呼び戻す\nmemorize = 暗記する",
+  "examples": [
+    "Please remind me to call Ken."
+  ],
+  "example_translations": [
+    "ケンに電話するよう私に念押ししてください。"
+  ],
+  "tip": null,
+  "visual_required": false,
+  "visual_type": null,
+  "visual_description": null,
+  "problem_image_path": null,
+  "image_information_role": null,
+  "question_repeats_visual": null,
+  "visual_semantic_consistency": null,
+  "visual_answer_uniqueness": null,
+  "visual_only_solvable": false,
+  "instagram_caption": "短く考えて、答えは2枚目で確認。",
+  "instagram_hashtags": [],
+  "threads_parent_text": "似た基本語、使い分けられる？",
+  "threads_answer_text": "✅ 正解は A. remind\n\nremember＝自分で覚えている\nremind＝人に思い出させる\nrecall＝記憶を呼び戻す\nmemorize＝暗記する\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
+  "question_guide_ja": "文全体の形と語の組み合わせを比べよう。",
+  "question_role": "learning_sentence",
+  "difficulty_gate": {
+    "visual_only_solvable": false,
+    "common_sense_only": false,
+    "effective_choice_count": 4,
+    "weak_distractor_count": 0,
+    "unique_answer": true,
+    "visual_contributes_to_decision": null,
+    "difficulty": "TARGET",
+    "initial_difficulty": "TARGET",
+    "decision": "KEEP"
+  },
+  "correct_position": "A",
+  "format_data": {
+    "differences": [
+      [
+        "remember",
+        "自分で覚えている"
+      ],
+      [
+        "remind",
+        "人に思い出させる"
+      ],
+      [
+        "recall",
+        "記憶を呼び戻す"
+      ],
+      [
+        "memorize",
+        "暗記する"
+      ]
+    ]
+  },
+  "threads_reply": "✅ 正解は A. remind\n\nremember＝自分で覚えている\nremind＝人に思い出させる\nrecall＝記憶を呼び戻す\nmemorize＝暗記する\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
+  "answer_payload": {
+    "format": "difference",
+    "correct_answer": "remind",
+    "choice_explanations": {
+      "remember": "自分で覚えている",
+      "remind": "人に思い出させる",
+      "recall": "記憶を呼び戻す",
+      "memorize": "暗記する"
+    }
+  }
+}

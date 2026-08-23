@@ -1,0 +1,26 @@
+{
+  "content_id": "ENG-000056",
+  "platform": "instagram",
+  "content_type": "quiz",
+  "channel": "feed",
+  "publish_at": "2026-08-26T18:00:00+09:00",
+  "status": "pending",
+  "execution_eligibility": "scheduled",
+  "carousel": [
+    {
+      "order": 1,
+      "role": "question",
+      "image_path": "artifacts/images/ENG-000056-question.png"
+    },
+    {
+      "order": 2,
+      "role": "answer",
+      "image_path": "artifacts/images/ENG-000056-answer.png"
+    }
+  ],
+  "caption": "新しい形式で、基礎英語をもう一度確認。",
+  "difficulty_level": "L2",
+  "format": "save_list",
+  "quiz_format": "save_list",
+  "correct_position": "A"
+}
