@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-24T12:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -22,5 +22,8 @@
   "difficulty_level": "L2",
   "format": "visual",
   "quiz_format": "visual",
-  "correct_position": "B"
+  "correct_position": "B",
+  "remote_post_id": "18012495971947711",
+  "posted_at": "2026-08-24T12:00:34.357852+09:00",
+  "error": null
 }
