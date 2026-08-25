@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-25T18:00:00+09:00",
-  "status": "pending",
+  "status": "failed",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -22,5 +22,23 @@
   "difficulty_level": "L3",
   "format": "text",
   "quiz_format": "text",
-  "correct_position": "C"
+  "correct_position": "C",
+  "error": {
+    "code": "META_API_ERROR",
+    "reason": "Meta HTTP 400: Only photo or video can be accepted as media type. (type=OAuthException, code=9004, subcode=2207052)",
+    "meta": {
+      "http_status": 400,
+      "endpoint": "https://graph.instagram.com/v25.0/29195305783393311/media",
+      "method": "POST",
+      "payload": {
+        "image_url": "https://raw.githubusercontent.com/c2081540-commits/english-instagram-automation/main/artifacts/images/ENG-000040-question.png",
+        "is_carousel_item": "true"
+      },
+      "message": "Only photo or video can be accepted as media type.",
+      "type": "OAuthException",
+      "code": 9004,
+      "subcode": 2207052,
+      "fbtrace_id": "A7sqoKHngwK1ASPBSZM8dWD"
+    }
+  }
 }
