@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-25T15:00:00+09:00",
-  "status": "pending",
+  "status": "failed",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -22,5 +22,22 @@
   "difficulty_level": "L2",
   "format": "visual",
   "quiz_format": "visual",
-  "correct_position": "B"
+  "correct_position": "B",
+  "error": {
+    "code": "INVALID_TOKEN",
+    "reason": "Meta authentication failed with HTTP 403",
+    "meta": {
+      "http_status": 403,
+      "endpoint": "https://graph.instagram.com/v25.0/29195305783393311/media_publish",
+      "method": "POST",
+      "payload": {
+        "creation_id": "18083535380389599"
+      },
+      "message": "Application request limit reached",
+      "type": "OAuthException",
+      "code": 4,
+      "subcode": 2207051,
+      "fbtrace_id": "AKv9gmgm34cTZ4x6Zg3Os6x"
+    }
+  }
 }
