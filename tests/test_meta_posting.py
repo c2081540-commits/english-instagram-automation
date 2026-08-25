@@ -35,6 +35,21 @@ class FakeInstagramClient:
     def publish(self, creation_id): return self._call("publish", creation_id)
 
 
+class ReconciliationClient(FakeInstagramClient):
+    def __init__(self, matches):
+        super().__init__()
+        self.matches = matches
+
+    def publish(self, creation_id):
+        self.calls.append(("publish", (creation_id,)))
+        raise PostingError("RATE_LIMIT", "request limited",
+                           {"http_status": 403, "code": 4, "subcode": 2207051})
+
+    def find_unique_recent_media(self, **criteria):
+        self.calls.append(("reconcile_get", (criteria,)))
+        return self.matches
+
+
 class InstagramMetaPostingTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
@@ -82,6 +97,60 @@ class InstagramMetaPostingTests(unittest.TestCase):
         result = posting.post_one(target, client, self.resolver, datetime.fromisoformat("2026-08-21T00:00:00+09:00"))
         self.assertEqual([call[0] for call in client.calls], ["story", "publish"])
         self.assertEqual(result["status"], "posted")
+
+    def test_publish_error_with_unique_media_is_reconciled_without_republish(self):
+        target = self.queue_copy("ENG-000009")
+        client = ReconciliationClient({"id": "published-media",
+                                       "timestamp": "2026-08-20T07:00:12+0000"})
+        result = posting.post_one(
+            target, client, self.resolver, datetime.fromisoformat("2026-08-20T16:00:00+09:00"))
+        self.assertEqual(result["status"], "posted")
+        self.assertEqual(result["remote_post_id"], "published-media")
+        self.assertEqual([name for name, _ in client.calls].count("publish"), 1)
+        self.assertEqual([name for name, _ in client.calls].count("reconcile_get"), 1)
+        receipt = json.loads((self.receipts / "instagram-ENG-000009.json").read_text())
+        self.assertTrue(receipt["reconciled_after_publish_error"])
+        self.assertEqual(receipt["publish_error"]["code"], "RATE_LIMIT")
+        self.assertIsNone(result["error"])
+
+    def test_publish_error_without_unique_media_remains_failed(self):
+        for match in (None, None):
+            target = self.queue_copy("ENG-000009")
+            client = ReconciliationClient(match)
+            with self.assertRaises(PostingError) as caught:
+                posting.post_one(target, client, self.resolver,
+                                 datetime.fromisoformat("2026-08-20T16:00:00+09:00"))
+            self.assertEqual(caught.exception.code, "RATE_LIMIT")
+            self.assertEqual(json.loads(target.read_text())["status"], "failed")
+            self.assertFalse((self.receipts / "instagram-ENG-000009.json").exists())
+            target.unlink()
+
+    def test_reconciled_post_is_not_due_or_recoverable(self):
+        queue_dir = self.root / "queue"
+        queue_dir.mkdir()
+        source = REPO_ROOT / "data" / "queue" / "ENG-000039.json"
+        target = queue_dir / source.name
+        target.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+        now = datetime.fromisoformat("2026-08-25T16:00:00+09:00")
+        self.assertIsNone(posting.select_one_due(now, queue_dir))
+        with self.assertRaises(PostingError) as caught:
+            posting.recover_publish(target, dry_run_only=True)
+        self.assertEqual(caught.exception.code, "RECOVERY_NOT_ALLOWED")
+
+    def test_recent_media_matching_is_exact_and_ambiguous_results_fail_closed(self):
+        expected = datetime.fromisoformat("2026-08-20T16:00:00+09:00")
+        base = {"caption": "approved caption", "media_type": "CAROUSEL_ALBUM",
+                "media_product_type": "FEED", "timestamp": "2026-08-20T07:00:12+0000",
+                "children": {"data": [{"id": "child-1"}, {"id": "child-2"}]}}
+        for rows, expected_id in [([dict(base, id="one")], "one"),
+                                  ([dict(base, id="one"), dict(base, id="two")], None),
+                                  ([dict(base, id="one", caption="different")], None)]:
+            client = InstagramMetaClient(
+                InstagramSecrets("token", "user", "v25.0"),
+                get_transport=lambda *_, rows=rows: {"data": rows})
+            match = client.find_unique_recent_media(caption="approved caption", expected_at=expected,
+                                                    expected_child_count=2)
+            self.assertEqual(match and match["id"], expected_id)
 
     def test_dry_run_covers_carousel_and_story_without_secrets(self):
         quiz = json.loads(self.queue_copy("ENG-000009").read_text())
@@ -153,6 +222,28 @@ class InstagramMetaPostingTests(unittest.TestCase):
         self.assertEqual(caught.exception.details["message"], "Container is not ready")
         self.assertEqual(caught.exception.details["subcode"], 2207027)
         self.assertNotIn("secret-token", json.dumps(caught.exception.details))
+
+    def test_meta_error_classification_distinguishes_rate_limit_and_authentication(self):
+        cases = [
+            (403, {"message": "Application request limit reached", "type": "OAuthException",
+                   "code": 4, "error_subcode": 2207051}, "RATE_LIMIT"),
+            (400, {"message": "Invalid OAuth access token", "type": "OAuthException",
+                   "code": 190}, "AUTHENTICATION_ERROR"),
+            (403, {"message": "Permission denied", "type": "OAuthException",
+                   "code": 200}, "PERMISSION_ERROR"),
+            (400, {"message": "Other Meta error", "type": "OAuthException",
+                   "code": 100}, "META_API_ERROR"),
+        ]
+        for status, meta_error, expected in cases:
+            body = json.dumps({"error": meta_error}).encode()
+            error = urllib.error.HTTPError("https://graph.instagram.com/v25.0/user/media_publish",
+                                          status, "error", {}, BytesIO(body))
+            with self.subTest(expected=expected), patch("urllib.request.urlopen", side_effect=error):
+                with self.assertRaises(PostingError) as caught:
+                    HttpTransport(retries=0)(
+                        "https://graph.instagram.com/v25.0/user/media_publish",
+                        {"creation_id": "container", "access_token": "secret"})
+                self.assertEqual(caught.exception.code, expected)
 
     def test_media_url_and_missing_secret_fail_closed(self):
         blocked = posting.PublicMediaResolver(checker=lambda _: False)

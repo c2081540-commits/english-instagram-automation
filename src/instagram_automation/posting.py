@@ -65,6 +65,22 @@ def _safe_error(exc: PostingError, code: str | None = None) -> dict:
     return result
 
 
+def _publish_error_may_have_succeeded(exc: PostingError) -> bool:
+    return exc.code in {"RATE_LIMIT", "NETWORK_TIMEOUT"}
+
+
+def _reconcile_quiz_publish(client, *, caption: str, expected_at: datetime,
+                            publish_error: PostingError) -> dict | None:
+    if not _publish_error_may_have_succeeded(publish_error):
+        return None
+    finder = getattr(client, "find_unique_recent_media", None)
+    if not callable(finder):
+        return None
+    return finder(caption=caption, expected_at=expected_at,
+                  media_type="CAROUSEL_ALBUM", media_product_type="FEED",
+                  expected_child_count=2)
+
+
 class PublicMediaResolver:
     def __init__(self, checker=None):
         config = json.loads(MEDIA_CONFIG.read_text(encoding="utf-8"))
@@ -176,7 +192,36 @@ def post_one(queue_path: Path, client, resolver: PublicMediaResolver,
                                  "container_id": container_id, "container_type": "story",
                                  "stage": "container_created", "created_at": now.isoformat()}
         _write_json_atomic(container_receipt_path, container_receipt)
-        remote_id = client.publish(container_id)
+        approved_caption = final_quiz_caption(queue) if queue["content_type"] == "quiz" else None
+        try:
+            remote_id = client.publish(container_id)
+        except PostingError as publish_error:
+            try:
+                matched = (_reconcile_quiz_publish(client, caption=approved_caption,
+                                                   expected_at=now, publish_error=publish_error)
+                           if approved_caption is not None else None)
+            except PostingError as reconciliation_error:
+                details = dict(publish_error.details)
+                details["reconciliation_error"] = _safe_error(reconciliation_error)
+                raise PostingError(publish_error.code, str(publish_error), details) from publish_error
+            if matched is None:
+                raise
+            remote_id = matched["id"]
+            posted_at = matched["timestamp"]
+            audit = _safe_error(publish_error)
+            receipt = {"content_id": queue["content_id"], "platform": "instagram",
+                       "remote_post_id": remote_id, "posted_at": posted_at,
+                       "reconciled_after_publish_error": True,
+                       "reconciliation_source": "instagram_recent_media_get",
+                       "container_id": container_id, "publish_error": audit}
+            _write_json_atomic(receipt_path, receipt)
+            history = list(queue.get("audit_history") or [])
+            history.append({"event": "publish_error_reconciled_as_posted",
+                            "recorded_at": now.isoformat(), "publish_error": audit})
+            queue.update(status="posted", remote_post_id=remote_id, posted_at=posted_at,
+                         error=None, audit_history=history)
+            _write_json_atomic(queue_path, queue)
+            return queue
         posted_at = now.isoformat()
         _write_json_atomic(receipt_path, {"content_id": queue["content_id"], "platform": "instagram",
                                          "remote_post_id": remote_id, "posted_at": posted_at})

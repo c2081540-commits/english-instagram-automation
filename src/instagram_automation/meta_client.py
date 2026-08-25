@@ -8,6 +8,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
+from datetime import datetime, timezone
 
 
 class PostingError(RuntimeError):
@@ -65,10 +66,19 @@ class HttpTransport:
                     "subcode": error.get("error_subcode"),
                     "fbtrace_id": error.get("fbtrace_id"),
                 }
-                if exc.code in {401, 403}:
-                    raise PostingError("INVALID_TOKEN", f"Meta authentication failed with HTTP {exc.code}",
-                                       details) from exc
-                if exc.code == 429 or 500 <= exc.code < 600:
+                meta_code = details["code"]
+                meta_subcode = details["subcode"]
+                if meta_code == 190 or exc.code == 401:
+                    raise PostingError("AUTHENTICATION_ERROR",
+                                       f"Meta authentication failed with HTTP {exc.code}", details) from exc
+                if meta_code in {10, 200, 294}:
+                    raise PostingError("PERMISSION_ERROR",
+                                       f"Meta permission check failed with HTTP {exc.code}", details) from exc
+                if meta_code in {4, 17, 32, 613} or exc.code == 429:
+                    raise PostingError("RATE_LIMIT",
+                                       f"Meta request limit reached with HTTP {exc.code} "
+                                       f"(code={meta_code}, subcode={meta_subcode})", details) from exc
+                if 500 <= exc.code < 600:
                     if attempt < self.retries:
                         time.sleep(.25 * (attempt + 1))
                         continue
@@ -139,7 +149,8 @@ class InstagramMetaClient:
         try:
             payload = self.transport(f"{self.base_url}/{path.lstrip('/')}", safe_fields)
         except PostingError as exc:
-            if exc.code in {"MISSING_SECRET", "INVALID_TOKEN", "NETWORK_TIMEOUT", "MALFORMED_API_RESPONSE"}:
+            if exc.code in {"MISSING_SECRET", "AUTHENTICATION_ERROR", "PERMISSION_ERROR", "RATE_LIMIT",
+                            "META_API_ERROR", "NETWORK_TIMEOUT", "MALFORMED_API_RESPONSE"}:
                 raise
             raise PostingError(failure_code, str(exc), exc.details) from exc
         except Exception as exc:
@@ -187,3 +198,44 @@ class InstagramMetaClient:
         self.wait_until_ready(creation_id)
         return self._post(f"{self.secrets.user_id}/media_publish", {"creation_id": creation_id},
                           "PUBLISH_FAILURE")
+
+    def find_unique_recent_media(self, *, caption: str, expected_at: datetime,
+                                 media_type: str = "CAROUSEL_ALBUM",
+                                 media_product_type: str = "FEED",
+                                 expected_child_count: int | None = None,
+                                 window_seconds: int = 300) -> dict | None:
+        """Return one exact recent-media match, otherwise fail closed with no match."""
+        payload = self.get_transport(
+            f"{self.base_url}/{self.secrets.user_id}/media",
+            {"fields": "id,caption,media_type,media_product_type,timestamp,permalink,children{id}",
+             "limit": "25", "access_token": self.secrets.access_token},
+        )
+        rows = payload.get("data") if isinstance(payload, dict) else None
+        if not isinstance(rows, list):
+            raise PostingError("MALFORMED_API_RESPONSE", "Instagram media list did not contain data")
+        expected = expected_at.astimezone(timezone.utc)
+        matches = []
+        for row in rows:
+            if not isinstance(row, dict) or row.get("caption") != caption:
+                continue
+            if row.get("media_type") != media_type or row.get("media_product_type") != media_product_type:
+                continue
+            if expected_child_count is not None:
+                children = row.get("children")
+                child_rows = children.get("data") if isinstance(children, dict) else None
+                if not isinstance(child_rows, list) or len(child_rows) != expected_child_count:
+                    continue
+            try:
+                raw_timestamp = str(row["timestamp"]).replace("Z", "+00:00")
+                if (len(raw_timestamp) >= 5 and raw_timestamp[-5] in "+-" and
+                        raw_timestamp[-3] != ":"):
+                    raw_timestamp = raw_timestamp[:-2] + ":" + raw_timestamp[-2:]
+                timestamp = datetime.fromisoformat(raw_timestamp)
+            except (KeyError, TypeError, ValueError):
+                continue
+            if timestamp.tzinfo is None:
+                continue
+            if abs((timestamp.astimezone(timezone.utc) - expected).total_seconds()) <= window_seconds:
+                if isinstance(row.get("id"), str) and row["id"]:
+                    matches.append(row)
+        return matches[0] if len(matches) == 1 else None

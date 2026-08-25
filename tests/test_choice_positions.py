@@ -56,7 +56,9 @@ class ChoicePositionTests(unittest.TestCase):
         self.assertLessEqual(max_same_position_streak(unposted), 2)
         report = position_report(unposted)["distribution"]
         self.assertLessEqual(abs(report["2"]["A"] - report["2"]["B"]), 1)
-        self.assertEqual(max(report["4"].values()) - min(report["4"].values()), 4)
+        # Posted items leave this legacy window over time; keep the approved maximum bias cap
+        # without pinning the test to yesterday's exact set of unposted records.
+        self.assertLessEqual(max(report["4"].values()) - min(report["4"].values()), 4)
 
     def test_platform_choices_answers_and_question_images_match(self):
         for item in self.items:

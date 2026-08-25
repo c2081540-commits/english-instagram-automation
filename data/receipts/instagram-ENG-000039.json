@@ -1,0 +1,26 @@
+{
+  "content_id": "ENG-000039",
+  "platform": "instagram",
+  "remote_post_id": "18011220641954698",
+  "posted_at": "2026-08-25T15:00:48+09:00",
+  "reconciled_after_publish_error": true,
+  "reconciliation_source": "human-confirmed-and-meta-read-only-get",
+  "container_id": "18083535380389599",
+  "publish_error": {
+    "code": "RATE_LIMIT",
+    "reason": "Meta request limit reached after the media was published",
+    "meta": {
+      "http_status": 403,
+      "endpoint": "https://graph.instagram.com/v25.0/29195305783393311/media_publish",
+      "method": "POST",
+      "payload": {
+        "creation_id": "18083535380389599"
+      },
+      "message": "Application request limit reached",
+      "type": "OAuthException",
+      "code": 4,
+      "subcode": 2207051,
+      "fbtrace_id": "AKv9gmgm34cTZ4x6Zg3Os6x"
+    }
+  }
+}
