@@ -4,8 +4,8 @@
   "new": 42,
   "stock": 0,
   "format_distribution": {
-    "Text": 16,
-    "Visual": 14,
+    "Text": 17,
+    "Visual": 13,
     "Error Hunt": 6,
     "Pattern": 8,
     "Save List": 6,
@@ -19,73 +19,73 @@
   "daily_format_distribution": {
     "2026-08-24": {
       "Text": 2,
-      "Pattern": 1,
       "Visual": 1,
       "Error Hunt": 1,
+      "Pattern": 1,
       "Difference": 1
     },
     "2026-08-25": {
       "Text": 2,
-      "Difference": 1,
-      "Save List": 1,
       "Visual": 1,
-      "Pattern": 1
+      "Pattern": 1,
+      "Save List": 1,
+      "Difference": 1
     },
     "2026-08-26": {
       "Text": 2,
-      "Error Hunt": 1,
       "Visual": 1,
-      "Difference": 1,
-      "Save List": 1
+      "Error Hunt": 1,
+      "Save List": 1,
+      "Difference": 1
     },
     "2026-08-27": {
       "Text": 2,
-      "Difference": 1,
       "Visual": 1,
+      "Difference": 1,
       "Pattern": 1,
       "Save List": 1
     },
     "2026-08-28": {
       "Text": 2,
-      "Difference": 1,
       "Visual": 1,
+      "Difference": 1,
       "Pattern": 1,
       "Error Hunt": 1
     },
     "2026-08-29": {
       "Text": 2,
-      "Difference": 1,
       "Visual": 1,
+      "Difference": 1,
       "Error Hunt": 1,
       "Save List": 1
     },
     "2026-08-30": {
       "Visual": 2,
-      "Difference": 1,
       "Text": 1,
+      "Difference": 1,
       "Pattern": 1,
       "Save List": 1
     },
     "2026-08-31": {
       "Visual": 2,
-      "Pattern": 1,
       "Text": 1,
       "Difference": 1,
+      "Pattern": 1,
       "Error Hunt": 1
     },
     "2026-09-01": {
+      "Save List": 1,
       "Visual": 2,
-      "Difference": 1,
-      "Text": 1,
-      "Pattern": 1,
-      "Save List": 1
-    },
-    "2026-09-02": {
-      "Visual": 2,
-      "Error Hunt": 1,
       "Text": 1,
       "Difference": 1,
       "Pattern": 1
+    },
+    "2026-09-02": {
+      "Error Hunt": 1,
+      "Pattern": 1,
+      "Text": 2,
+      "Difference": 1,
+      "Visual": 1
     }
   },
   "daily_difficulty_distribution": {
@@ -153,9 +153,9 @@
   "max_position_streak": 2,
   "learning_point_duplicates_within_20": [],
   "instagram_threads_sync": "PASS",
-  "visual_semantic_consistency": "PASS (14/14)",
-  "visual_answer_uniqueness": "PASS (14/14)",
-  "visual_only_solvable": "PASS (0/14)",
+  "visual_semantic_consistency": "PASS (13/13)",
+  "visual_answer_uniqueness": "PASS (13/13)",
+  "visual_only_solvable": "PASS (0/13)",
   "english_correctness": "PASS (60/60)",
   "unique_answer": "PASS (60/60)",
   "error_hunt_sentence_gate": "PASS (24/24)",
@@ -164,5 +164,12 @@
   "period": "2026-08-24/2026-09-02",
   "error_hunt_count": 6,
   "error_hunt_sentence_count": 24,
-  "stock_ids": []
+  "stock_ids": [],
+  "answer_leakage": "PASS (60/60)",
+  "pattern_leakage": "PASS",
+  "duplicate_audit": {
+    "EXACT": 0,
+    "NEAR_DUPLICATE": 0,
+    "SAME_LEARNING_POINT": 0
+  }
 }

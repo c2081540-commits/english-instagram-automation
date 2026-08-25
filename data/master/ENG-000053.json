@@ -2,16 +2,16 @@
   "content_id": "ENG-000053",
   "format": "pattern",
   "difficulty": "L2",
-  "learning_point": "身近な名詞の不規則複数形",
-  "question": "複数形のパターン、最後はどれ？",
+  "learning_point": "身近な名詞の複数形",
+  "question": "正しい複数形はどれ？",
   "correct_answer": "teeth",
   "publish_at": "2026-09-02T20:30:00+09:00",
   "english_correctness": true,
   "unique_answer": true,
   "examples": [
     "one child → two children",
-    "one person → two people",
-    "one foot → two feet"
+    "one book → two books",
+    "one car → two cars"
   ],
   "target": "one tooth → two ___",
   "choices": [
@@ -20,9 +20,9 @@
     "teeth",
     "tooth"
   ],
-  "pattern_rule": "どれも-sを付けるだけではない、不規則な複数形です。",
-  "examples_learning_point": "身近な名詞の不規則複数形",
-  "target_learning_point": "身近な名詞の不規則複数形",
+  "pattern_rule": "規則形と不規則形を見分けます。toothの複数形はteethです。",
+  "examples_learning_point": "身近な名詞の複数形",
+  "target_learning_point": "身近な名詞の複数形",
   "content_type": "quiz",
   "quiz_format": "pattern",
   "category": "grammar",
@@ -35,9 +35,9 @@
   "acceptable_answers": [
     "teeth"
   ],
-  "answer_hint": "複数形のパターン、最後はどれ？",
+  "answer_hint": "正しい複数形はどれ？",
   "answer_hint_approved": true,
-  "explanation": "どれも-sを付けるだけではない、不規則な複数形です。\nchild–children / person–people\nfoot–feet / tooth–teeth",
+  "explanation": "規則形と不規則形を見分けます。toothの複数形はteethです。\nbook–books / child–children / car–cars / tooth–teeth",
   "key_difference": null,
   "example_translations": [],
   "tip": null,
@@ -52,9 +52,9 @@
   "visual_only_solvable": false,
   "instagram_caption": "新しい形式で、基礎英語をもう一度確認。",
   "instagram_hashtags": [],
-  "threads_parent_text": "-sを付けない複数形。\n最後の1つ、覚えてる？",
-  "threads_answer_text": "✅ 正解は C. teeth\n\none child → two children\none person → two people\none foot → two feet\none tooth → two teeth\n\n例の共通点をまとめて確認しましょう。",
-  "question_guide_ja": "複数形のパターン、最後はどれ？",
+  "threads_parent_text": "規則形と不規則形、見分けられる？",
+  "threads_answer_text": "✅ 正解は C. teeth\n\none child → two children\none book → two books\none car → two cars\none tooth → two teeth\n\n規則形と不規則形を見分けます。toothの複数形はteethです。",
+  "question_guide_ja": "正しい複数形はどれ？",
   "question_role": "meta_instruction",
   "difficulty_gate": {
     "visual_only_solvable": false,
@@ -71,8 +71,8 @@
   "format_data": {
     "examples": [
       "one child → two children",
-      "one person → two people",
-      "one foot → two feet",
+      "one book → two books",
+      "one car → two cars",
       "one tooth → two ___"
     ],
     "answer_sections": [
@@ -81,24 +81,39 @@
         "C. teeth"
       ],
       [
-        "パターン",
-        "どれも-sを付けるだけではない、不規則な複数形です。"
+        "ルール",
+        "規則形と不規則形を見分けます。toothの複数形はteethです。"
       ],
       [
         "まとめ",
-        "child–children / person–people\nfoot–feet / tooth–teeth"
+        "book–books / child–children / car–cars / tooth–teeth"
       ]
     ]
   },
-  "threads_reply": "✅ 正解は C. teeth\n\none child → two children\none person → two people\none foot → two feet\none tooth → two teeth\n\n例の共通点をまとめて確認しましょう。",
+  "threads_reply": "✅ 正解は C. teeth\n\none child → two children\none book → two books\none car → two cars\none tooth → two teeth\n\n規則形と不規則形を見分けます。toothの複数形はteethです。",
   "answer_payload": {
     "format": "pattern",
     "correct_answer": "teeth",
-    "pattern_rule": "どれも-sを付けるだけではない、不規則な複数形です。",
+    "pattern_rule": "規則形と不規則形を見分けます。toothの複数形はteethです。",
     "examples": [
       "one child → two children",
-      "one person → two people",
-      "one foot → two feet"
+      "one book → two books",
+      "one car → two cars"
+    ]
+  },
+  "answer_leakage": "PASS",
+  "answer_leakage_review": {
+    "original_failure": "TRANSFORMATION_LEAKAGE",
+    "review_result": "PASS",
+    "human_approved": true,
+    "mechanical_issues": [],
+    "checks": [
+      "pattern_repetition",
+      "transformation",
+      "choice_elimination",
+      "visual",
+      "explanation",
+      "sequence"
     ]
   }
 }

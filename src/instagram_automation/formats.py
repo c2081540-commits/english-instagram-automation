@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import Counter
 from dataclasses import dataclass
 from datetime import date, datetime
+import re
 from typing import Callable
 
 CANONICAL_FORMATS = ("text", "visual", "difference", "pattern", "error_hunt", "save_list")
@@ -29,6 +30,75 @@ class FormatDefinition:
 
 class FormatValidationError(ValueError):
     pass
+
+
+def answer_leakage_issues(record: dict) -> list[str]:
+    """Return mechanically detectable clues that expose an answer.
+
+    Semantic leakage remains part of the single content review. This helper targets
+    deterministic failures: repeated answer tokens and one choice copying a repeated
+    transformation affix.
+    """
+    issues: list[str] = []
+    choices = record.get("choices") or []
+    answer = record.get("correct_answer")
+    if record.get("format") != "pattern" or not choices or not isinstance(answer, str):
+        return issues
+
+    examples = record.get("examples") or []
+    completed = [x for x in examples if isinstance(x, str) and "___" not in x]
+    folded_answer = answer.casefold()
+    exposed = sum(
+        bool(re.search(rf"(?<![A-Za-z]){re.escape(folded_answer)}(?![A-Za-z])", x.casefold()))
+        for x in completed
+    )
+    if exposed >= 2:
+        issues.append("PATTERN_REPETITION_LEAKAGE")
+
+    exposed_choices = {
+        choice for choice in choices
+        if any(re.search(rf"(?<![A-Za-z]){re.escape(choice.casefold())}(?![A-Za-z])", x.casefold())
+               for x in completed)
+    }
+    if len(choices) >= 3 and answer not in exposed_choices and len(exposed_choices) == len(choices) - 1:
+        issues.append("SEQUENCE_LEAKAGE")
+
+    outputs = []
+    for example in completed:
+        if "→" in example:
+            outputs.append(example.rsplit("→", 1)[1].strip().casefold())
+    if len(outputs) >= 3:
+        for width in range(5, 2, -1):
+            prefixes = {value[:width] for value in outputs if len(value) >= width}
+            suffixes = {value[-width:] for value in outputs if len(value) >= width}
+            for affix, mode in [
+                (next(iter(prefixes)) if len(prefixes) == 1 else None, "prefix"),
+                (next(iter(suffixes)) if len(suffixes) == 1 else None, "suffix"),
+            ]:
+                if not affix:
+                    continue
+                matching = [choice for choice in choices if (
+                    choice.casefold().startswith(affix) if mode == "prefix"
+                    else choice.casefold().endswith(affix)
+                )]
+                if matching == [answer]:
+                    issues.append("TRANSFORMATION_LEAKAGE")
+                    return issues
+    return issues
+
+
+def validate_answer_leakage(record: dict) -> None:
+    """Fail closed for declared review status and detectable leakage."""
+    if record.get("answer_leakage") != "PASS":
+        raise FormatValidationError("answer_leakage must be PASS")
+    issues = answer_leakage_issues(record)
+    if issues:
+        raise FormatValidationError("; ".join(issues))
+
+
+def validate_answer_leakage_batch(records) -> None:
+    for record in records:
+        validate_answer_leakage(record)
 
 
 def _text(value, field):
@@ -191,6 +261,8 @@ def _text_visual(record):
 def validate_format_master(record):
     _common(record)
     FORMAT_REGISTRY[record["format"]].master_validator(record)
+    if "answer_leakage" in record:
+        validate_answer_leakage(record)
 
 
 def validate_threads_reply(record, text):
@@ -364,6 +436,8 @@ def adapt_dryrun_record(item, publish_at, fmt):
               "difficulty":item["difficulty"], "learning_point":item["learning_point"],
               "question":item["question"], "correct_answer":item["correct_answer"],
               "publish_at":publish_at, "english_correctness":True, "unique_answer":True}
+    if "answer_leakage" in item:
+        record["answer_leakage"] = item["answer_leakage"]
     FORMAT_REGISTRY[fmt].dryrun_adapter(record, item)
     return record
 

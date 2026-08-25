@@ -20,7 +20,7 @@
   ],
   "caption": "短く考えて、答えは2枚目で確認。",
   "difficulty_level": "L1",
-  "format": "visual",
-  "quiz_format": "visual",
+  "format": "text",
+  "quiz_format": "text",
   "correct_position": "D"
 }

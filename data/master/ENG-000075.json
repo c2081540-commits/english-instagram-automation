@@ -2,25 +2,25 @@
   "content_id": "ENG-000075",
   "format": "difference",
   "difficulty": "L2",
-  "learning_point": "say / tell / speak / talk",
-  "question": "She ___ hello to everyone.",
-  "correct_answer": "said",
+  "learning_point": "hear / listen / sound / voice",
+  "question": "Please ___ carefully to the instructions.",
+  "correct_answer": "listen",
   "publish_at": "2026-08-30T09:30:00+09:00",
   "english_correctness": true,
   "unique_answer": true,
   "choices": [
-    "told",
-    "spoke",
-    "said",
-    "talked"
+    "hear",
+    "sound",
+    "listen",
+    "voice"
   ],
   "choice_explanations": {
-    "said": "言葉・内容を言った",
-    "told": "人に情報を伝えた",
-    "spoke": "話した",
-    "talked": "会話した"
+    "hear": "自然に耳に入る・聞こえる",
+    "sound": "〜に聞こえる／音",
+    "listen": "意識して聞く（listen to）",
+    "voice": "人の声（名詞）"
   },
-  "completed_sentence": "She said hello to everyone.",
+  "completed_sentence": "Please listen carefully to the instructions.",
   "content_type": "quiz",
   "quiz_format": "difference",
   "category": "vocabulary",
@@ -29,19 +29,19 @@
   "difficulty_level": "L2",
   "seasonal": false,
   "answer_type": "single",
-  "best_answer": "said",
+  "best_answer": "listen",
   "acceptable_answers": [
-    "said"
+    "listen"
   ],
-  "answer_hint": "文全体の形と語の組み合わせを比べよう。",
+  "answer_hint": "後ろのtoまで含めて考えよう。",
   "answer_hint_approved": true,
-  "explanation": "said = 言葉・内容を言った\ntold = 人に情報を伝えた\nspoke = 話した\ntalked = 会話した",
-  "key_difference": "said = 言葉・内容を言った\ntold = 人に情報を伝えた\nspoke = 話した\ntalked = 会話した",
+  "explanation": "hear = 自然に耳に入る・聞こえる\nsound = 〜に聞こえる／音\nlisten = 意識して聞く（listen to）\nvoice = 人の声（名詞）",
+  "key_difference": "hear = 自然に耳に入る・聞こえる\nsound = 〜に聞こえる／音\nlisten = 意識して聞く（listen to）\nvoice = 人の声（名詞）",
   "examples": [
-    "She said hello to everyone."
+    "Please listen carefully to the instructions."
   ],
   "example_translations": [
-    "彼女は全員にこんにちはと言いました。"
+    "説明を注意して聞いてください。"
   ],
   "tip": null,
   "visual_required": false,
@@ -55,9 +55,9 @@
   "visual_only_solvable": false,
   "instagram_caption": "短く考えて、答えは2枚目で確認。",
   "instagram_hashtags": [],
-  "threads_parent_text": "似た基本語、使い分けられる？",
-  "threads_answer_text": "✅ 正解は C. said\n\nsaid＝言葉・内容を言った\ntold＝人に情報を伝えた\nspoke＝話した\ntalked＝会話した\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
-  "question_guide_ja": "文全体の形と語の組み合わせを比べよう。",
+  "threads_parent_text": "「聞く」に近い4語、使い分けられる？",
+  "threads_answer_text": "✅ 正解は C. listen\n\nhear＝自然に耳に入る・聞こえる\nsound＝〜に聞こえる／音\nlisten＝意識して聞く（listen to）\nvoice＝人の声（名詞）\n\n似た語の品詞と使い方を比べます。",
+  "question_guide_ja": "toと一緒に使うのはどれ？",
   "question_role": "learning_sentence",
   "difficulty_gate": {
     "visual_only_solvable": false,
@@ -74,32 +74,47 @@
   "format_data": {
     "differences": [
       [
-        "said",
-        "言葉・内容を言った"
+        "hear",
+        "自然に耳に入る・聞こえる"
       ],
       [
-        "told",
-        "人に情報を伝えた"
+        "sound",
+        "〜に聞こえる／音"
       ],
       [
-        "spoke",
-        "話した"
+        "listen",
+        "意識して聞く（listen to）"
       ],
       [
-        "talked",
-        "会話した"
+        "voice",
+        "人の声（名詞）"
       ]
     ]
   },
-  "threads_reply": "✅ 正解は C. said\n\nsaid＝言葉・内容を言った\ntold＝人に情報を伝えた\nspoke＝話した\ntalked＝会話した\n\n正解だけでなく、似た語の役割を文型ごとに確認します。",
+  "threads_reply": "✅ 正解は C. listen\n\nhear＝自然に耳に入る・聞こえる\nsound＝〜に聞こえる／音\nlisten＝意識して聞く（listen to）\nvoice＝人の声（名詞）\n\n似た語の品詞と使い方を比べます。",
   "answer_payload": {
     "format": "difference",
-    "correct_answer": "said",
+    "correct_answer": "listen",
     "choice_explanations": {
-      "said": "言葉・内容を言った",
-      "told": "人に情報を伝えた",
-      "spoke": "話した",
-      "talked": "会話した"
+      "hear": "自然に耳に入る・聞こえる",
+      "sound": "〜に聞こえる／音",
+      "listen": "意識して聞く（listen to）",
+      "voice": "人の声（名詞）"
     }
+  },
+  "answer_leakage": "PASS",
+  "answer_leakage_review": {
+    "original_failure": "SAME_LEARNING_POINT",
+    "review_result": "PASS",
+    "human_approved": true,
+    "mechanical_issues": [],
+    "checks": [
+      "pattern_repetition",
+      "transformation",
+      "choice_elimination",
+      "visual",
+      "explanation",
+      "sequence"
+    ]
   }
 }

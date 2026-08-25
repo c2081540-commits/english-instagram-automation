@@ -192,5 +192,20 @@
         "japanese": "下書きを後で使えるよう保存する"
       }
     ]
+  },
+  "answer_leakage": "PASS",
+  "answer_leakage_review": {
+    "original_failure": null,
+    "review_result": "PASS",
+    "human_approved": true,
+    "mechanical_issues": [],
+    "checks": [
+      "pattern_repetition",
+      "transformation",
+      "choice_elimination",
+      "visual",
+      "explanation",
+      "sequence"
+    ]
   }
 }

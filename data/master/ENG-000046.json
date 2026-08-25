@@ -77,5 +77,20 @@
     "location": "verified",
     "completed_sentence": "He is showing her a free seat."
   },
-  "visual_semantic_checks": true
+  "visual_semantic_checks": true,
+  "answer_leakage": "PASS",
+  "answer_leakage_review": {
+    "original_failure": null,
+    "review_result": "PASS",
+    "human_approved": true,
+    "mechanical_issues": [],
+    "checks": [
+      "pattern_repetition",
+      "transformation",
+      "choice_elimination",
+      "visual",
+      "explanation",
+      "sequence"
+    ]
+  }
 }

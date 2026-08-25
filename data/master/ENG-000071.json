@@ -68,5 +68,20 @@
     "decision": "KEEP"
   },
   "correct_position": "A",
-  "format_data": {}
+  "format_data": {},
+  "answer_leakage": "PASS",
+  "answer_leakage_review": {
+    "original_failure": null,
+    "review_result": "PASS",
+    "human_approved": true,
+    "mechanical_issues": [],
+    "checks": [
+      "pattern_repetition",
+      "transformation",
+      "choice_elimination",
+      "visual",
+      "explanation",
+      "sequence"
+    ]
+  }
 }
