@@ -50,6 +50,19 @@ class ReconciliationClient(FakeInstagramClient):
         return self.matches
 
 
+class FakeImageResponse:
+    def __init__(self, data, *, content_type="image/png", url="https://example.com/image.png"):
+        self.data = data
+        self.status = 200
+        self.headers = {"Content-Type": content_type, "Content-Length": str(len(data))}
+        self.url = url
+
+    def __enter__(self): return self
+    def __exit__(self, *_): return False
+    def read(self): return self.data
+    def geturl(self): return self.url
+
+
 class InstagramMetaPostingTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
@@ -253,6 +266,30 @@ class InstagramMetaPostingTests(unittest.TestCase):
         with patch.dict(os.environ, {}, clear=True), self.assertRaises(PostingError) as caught:
             InstagramSecrets.from_env()
         self.assertEqual(caught.exception.code, "MISSING_SECRET")
+
+    def test_public_image_preflight_gets_and_decodes_exact_approved_png(self):
+        image_path = REPO_ROOT / "artifacts" / "images" / "ENG-000040-question.png"
+        approved = image_path.read_bytes()
+        self.assertEqual(posting.PublicMediaResolver._decode_png(approved), (1080, 1350, "RGB"))
+        with patch("urllib.request.urlopen", return_value=FakeImageResponse(approved)) as opened:
+            self.assertTrue(posting.PublicMediaResolver._get_and_validate(
+                "https://example.com/image.png", approved))
+        self.assertEqual(opened.call_args.args[0].get_method(), "GET")
+
+        with patch("urllib.request.urlopen",
+                   return_value=FakeImageResponse(approved, content_type="text/plain")):
+            self.assertFalse(posting.PublicMediaResolver._get_and_validate(
+                "https://example.com/image.png", approved))
+        with self.assertRaises(ValueError):
+            posting.PublicMediaResolver._decode_png(b"not a png")
+
+    def test_github_actions_uses_immutable_raw_commit_url(self):
+        sha = "a" * 40
+        with patch.dict(os.environ, {"GITHUB_SHA": sha}):
+            resolver = posting.PublicMediaResolver(checker=lambda _: True)
+            url = resolver.resolve("artifacts/images/ENG-000040-question.png")
+        self.assertIn(f"/{sha}/artifacts/images/ENG-000040-question.png", url)
+        self.assertNotIn("/main/", url)
 
     def test_malformed_queue_and_placeholder_fail_closed(self):
         queue = json.loads(self.queue_copy("ENG-000009").read_text())

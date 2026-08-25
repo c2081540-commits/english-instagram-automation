@@ -2,8 +2,11 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import struct
 import urllib.error
 import urllib.request
+import zlib
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -84,19 +87,81 @@ def _reconcile_quiz_publish(client, *, caption: str, expected_at: datetime,
 class PublicMediaResolver:
     def __init__(self, checker=None):
         config = json.loads(MEDIA_CONFIG.read_text(encoding="utf-8"))
-        self.base_url = config["base_url"]
+        self.base_url = self._immutable_raw_base(config["base_url"])
         self.require_https = config["require_https"]
         self.verify_remote = config["verify_remote_before_post"]
-        self.checker = checker or self._head
+        self.checker = checker
 
     @staticmethod
-    def _head(url: str) -> bool:
-        try:
-            request = urllib.request.Request(url, method="HEAD")
-            with urllib.request.urlopen(request, timeout=15) as response:
-                return 200 <= response.status < 400
-        except (urllib.error.URLError, TimeoutError):
-            return False
+    def _immutable_raw_base(base_url: str) -> str:
+        checkout_sha = os.environ.get("GITHUB_SHA", "").strip()
+        if (re.fullmatch(r"[0-9a-fA-F]{40}", checkout_sha) and
+                base_url.startswith("https://raw.githubusercontent.com/") and "/main/" in base_url):
+            return base_url.replace("/main/", f"/{checkout_sha}/", 1)
+        return base_url
+
+    @staticmethod
+    def _decode_png(data: bytes) -> tuple[int, int, str]:
+        if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+            raise ValueError("invalid PNG signature")
+        offset = 8
+        width = height = bit_depth = color_type = interlace = None
+        idat = []
+        saw_iend = False
+        while offset + 12 <= len(data):
+            length = struct.unpack(">I", data[offset:offset + 4])[0]
+            chunk_type = data[offset + 4:offset + 8]
+            chunk = data[offset + 8:offset + 8 + length]
+            crc_bytes = data[offset + 8 + length:offset + 12 + length]
+            if len(chunk) != length or len(crc_bytes) != 4:
+                raise ValueError("truncated PNG chunk")
+            expected_crc = struct.unpack(">I", crc_bytes)[0]
+            if zlib.crc32(chunk_type + chunk) & 0xffffffff != expected_crc:
+                raise ValueError("invalid PNG CRC")
+            if chunk_type == b"IHDR":
+                if length != 13:
+                    raise ValueError("invalid PNG IHDR")
+                width, height, bit_depth, color_type, compression, filtering, interlace = struct.unpack(
+                    ">IIBBBBB", chunk)
+                if (bit_depth, color_type, compression, filtering, interlace) != (8, 2, 0, 0, 0):
+                    raise ValueError("PNG must be non-interlaced 8-bit RGB")
+            elif chunk_type == b"IDAT":
+                idat.append(chunk)
+            elif chunk_type == b"IEND":
+                saw_iend = True
+                break
+            offset += 12 + length
+        if not saw_iend or not width or not height or not idat:
+            raise ValueError("incomplete PNG")
+        decoded = zlib.decompress(b"".join(idat))
+        if len(decoded) != height * (1 + width * 3):
+            raise ValueError("PNG pixel data did not decode to RGB dimensions")
+        return width, height, "RGB"
+
+    @classmethod
+    def _get_and_validate(cls, url: str, local_bytes: bytes) -> bool:
+        for _attempt in range(3):
+            try:
+                request = urllib.request.Request(url, headers={"User-Agent": "english-instagram-preflight/1"},
+                                                 method="GET")
+                with urllib.request.urlopen(request, timeout=20) as response:
+                    remote_bytes = response.read()
+                    content_type = (response.headers.get("Content-Type") or "").split(";", 1)[0].lower()
+                    content_length = response.headers.get("Content-Length")
+                    final_url = response.geturl()
+                    if response.status != 200 or not content_type.startswith("image/"):
+                        continue
+                    if urlparse(final_url).scheme != "https":
+                        continue
+                    if content_length is not None and int(content_length) != len(remote_bytes):
+                        continue
+                    if remote_bytes != local_bytes:
+                        continue
+                    cls._decode_png(remote_bytes)
+                    return True
+            except (urllib.error.URLError, TimeoutError, ValueError, zlib.error):
+                continue
+        return False
 
     def resolve(self, asset: str) -> str:
         local = Path(asset)
@@ -112,8 +177,12 @@ class PublicMediaResolver:
         url = urljoin(self.base_url, relative.as_posix())
         if self.require_https and urlparse(url).scheme != "https":
             raise PostingError("BLOCKED_MEDIA_URL", "Public media URL must use HTTPS")
-        if self.verify_remote and not self.checker(url):
-            raise PostingError("BLOCKED_MEDIA_URL", "Public media URL is not anonymously reachable")
+        if self.verify_remote:
+            valid = self.checker(url) if self.checker is not None else self._get_and_validate(
+                url, resolved.read_bytes())
+            if not valid:
+                raise PostingError("BLOCKED_MEDIA_URL",
+                                   "Public media URL did not return the approved decodable image")
         return url
 
 
