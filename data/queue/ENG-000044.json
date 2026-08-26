@@ -4,7 +4,7 @@
   "content_type": "quiz",
   "channel": "feed",
   "publish_at": "2026-08-26T12:00:00+09:00",
-  "status": "pending",
+  "status": "posted",
   "execution_eligibility": "scheduled",
   "carousel": [
     {
@@ -22,5 +22,31 @@
   "difficulty_level": "L2",
   "format": "visual",
   "quiz_format": "visual",
-  "correct_position": "B"
+  "correct_position": "B",
+  "remote_post_id": "18109959824173318",
+  "posted_at": "2026-08-26T03:01:48+0000",
+  "error": null,
+  "audit_history": [
+    {
+      "event": "publish_error_reconciled_as_posted",
+      "recorded_at": "2026-08-26T12:00:33.639742+09:00",
+      "publish_error": {
+        "code": "RATE_LIMIT",
+        "reason": "Meta request limit reached with HTTP 403 (code=4, subcode=2207051)",
+        "meta": {
+          "http_status": 403,
+          "endpoint": "https://graph.instagram.com/v25.0/29195305783393311/media_publish",
+          "method": "POST",
+          "payload": {
+            "creation_id": "18083734634389599"
+          },
+          "message": "Application request limit reached",
+          "type": "OAuthException",
+          "code": 4,
+          "subcode": 2207051,
+          "fbtrace_id": "AHg_KcvZjTo2ak9hT6jVJSE"
+        }
+      }
+    }
+  ]
 }
