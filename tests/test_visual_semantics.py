@@ -48,8 +48,8 @@ class VisualSemanticTests(unittest.TestCase):
         for question, choices, answer, completed in (
             ("What is she offering to do?", ["open the door","carry the boxes"],
              "carry the boxes", "She is offering to carry the boxes."),
-            ("What is he showing her?", ["A ticket","A free seat"],
-             "A free seat", "He is showing her a free seat."),
+            ("What is he showing?", ["A ticket","A free seat"],
+             "A free seat", "He is showing a free seat."),
             ("She is walking ___ the stairs.", ["up","down"], "up",
              "She is walking up the stairs.")):
             validate_format_master(self._canonical_visual(question,choices,answer,completed))
