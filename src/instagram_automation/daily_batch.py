@@ -10,6 +10,7 @@ from .paths import (IMAGE_DIR, QUALITY_CONFIG_PATH, REPO_ROOT,
                     SOURCE_IMAGE_DIR, require_file)
 from .review import _check_lengths
 from .validation import validate
+from .visual_quality import validate_visual_candidate
 
 EXPECTED_MIX = {
     "grammar_usage": 2,
@@ -82,6 +83,7 @@ def validate_quiz_candidate(item: dict) -> None:
     if len(sentences) > limits["explanation_sentences_max"]:
         raise ValueError("explanation exceeds two sentences")
     if item["visual_required"]:
+        validate_visual_candidate(item)
         if item.get("image_information_role") != "essential":
             raise ValueError("visual must provide essential information, not decoration")
         if item.get("question_repeats_visual") is not False:
